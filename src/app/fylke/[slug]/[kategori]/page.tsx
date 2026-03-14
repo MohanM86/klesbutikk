@@ -56,7 +56,7 @@ export default function FylkeCategoryPage({ params }: PageProps) {
     cat.keywords.some((kw) => s.navn.toLowerCase().includes(kw))
   );
 
-  const citiesWithMatches = [...new Set(matchingStores.map((s) => s.poststed))].sort();
+  const citiesWithMatches = Array.from(new Set(matchingStores.map((s) => s.poststed))).sort();
 
   const faqs = [
     {

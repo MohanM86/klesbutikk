@@ -4,6 +4,7 @@ import CityCard from '@/components/CityCard';
 import StoreCard from '@/components/StoreCard';
 import FAQAccordion from '@/components/FAQAccordion';
 import CTASection from '@/components/CTASection';
+import AnimatedHero from '@/components/AnimatedHero';
 import { getTopCities, getFeaturedStores, getStats, getTopBrands } from '@/lib/stores';
 import { faqSchema, itemListSchema } from '@/lib/seo';
 
@@ -61,9 +62,7 @@ export default function HomePage() {
 
         <div className="relative max-w-8xl mx-auto section-padding pt-20 pb-24 md:pt-32 md:pb-36">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="font-body text-xs font-semibold tracking-[0.2em] uppercase text-muted mb-6">
-              {stats.totalStores.toLocaleString('nb-NO')} butikker · {stats.totalCities} byer · {stats.totalFylker} fylker
-            </p>
+            <AnimatedHero totalStores={stats.totalStores} totalFylker={stats.totalFylker} />
 
             <h1 className="font-display text-hero-sm md:text-hero font-semibold text-charcoal mb-6">
               Finn klesbutikker<br />
@@ -209,7 +208,7 @@ export default function HomePage() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-4">
           {[
             { value: stats.totalStores.toLocaleString('nb-NO'), label: 'Klesbutikker' },
-            { value: stats.totalCities.toString(), label: 'Byer' },
+            { value: '357', label: 'Kommuner' },
             { value: stats.totalFylker.toString(), label: 'Fylker' },
             { value: stats.totalBrands.toString(), label: 'Merker' },
             { value: stats.featuredStores.toString(), label: 'Fremhevede' },

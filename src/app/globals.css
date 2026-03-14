@@ -78,3 +78,14 @@
   transform: translateY(0);
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
+
+/* Floating brand bubbles */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Tabular numbers for counters */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}

@@ -9,6 +9,7 @@
   "dataSource": "Brønnøysundregistrene",
   "naeringsKode": "47.710",
   "entityCount": 1566,
+  "kommuneCount": 357,
   "brandCount": 58,
   "entities": [
     {

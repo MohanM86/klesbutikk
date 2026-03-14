@@ -60,6 +60,32 @@ export default function HomePage() {
           backgroundSize: '60px 60px',
         }} />
 
+        {/* Floating brand bubbles — pinned to the outer hero, well away from center content */}
+        <div className="hidden xl:block absolute inset-0 pointer-events-none" aria-hidden="true">
+          {[
+            { name: 'Holzweiler', style: { left: '4%', top: '18%' }, delay: 0 },
+            { name: 'Ganni', style: { right: '4%', top: '14%' }, delay: 0.7 },
+            { name: 'Filippa K', style: { left: '3%', bottom: '30%' }, delay: 1.4 },
+            { name: 'GANT', style: { right: '5%', bottom: '26%' }, delay: 2.0 },
+            { name: 'Dressmann', style: { left: '8%', top: '48%' }, delay: 0.3 },
+            { name: 'Stormberg', style: { right: '7%', top: '52%' }, delay: 1.1 },
+            { name: 'H&M', style: { left: '6%', bottom: '14%' }, delay: 1.7 },
+            { name: 'Cubus', style: { right: '3%', bottom: '48%' }, delay: 0.9 },
+          ].map((b) => (
+            <span
+              key={b.name}
+              className="absolute inline-block bg-charcoal/[0.03] border border-charcoal/[0.05] rounded-full px-4 py-1.5 font-body text-xs text-muted/40 select-none"
+              style={{
+                ...b.style,
+                animation: `float ${3.5 + b.delay * 0.5}s ease-in-out infinite`,
+                animationDelay: `${b.delay}s`,
+              }}
+            >
+              {b.name}
+            </span>
+          ))}
+        </div>
+
         <div className="relative max-w-8xl mx-auto section-padding pt-20 pb-24 md:pt-32 md:pb-36">
           <div className="max-w-3xl mx-auto text-center">
             <AnimatedHero totalStores={stats.totalStores} totalFylker={stats.totalFylker} />

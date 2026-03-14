@@ -15,6 +15,7 @@ const FOOTER_LINKS = {
     { label: 'Alle byer', href: '/by' },
     { label: 'Alle fylker', href: '/fylker' },
     { label: 'Klesmerker', href: '/merker' },
+    { label: 'Kategorier', href: '/kategorier' },
     { label: 'Alle butikker', href: '/butikk' },
     { label: 'Blogg', href: '/blogg' },
   ],

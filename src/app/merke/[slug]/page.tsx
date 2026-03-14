@@ -38,7 +38,7 @@ export default function BrandPage({ params }: PageProps) {
     { name: brand.name, url: `/merke/${brand.slug}` },
   ]);
 
-  const brandFaqs = [
+  const brandFaqs = brand.storeCount > 0 ? [
     {
       question: `Hvor kan jeg kjøpe ${brand.name} i Norge?`,
       answer: `${brand.name} selges i ${brand.storeCount} butikker i Norge, blant annet i ${brand.cities.slice(0, 5).join(', ')}. Se vår komplette liste over ${brand.name}-forhandlere nedenfor.`,
@@ -52,6 +52,15 @@ export default function BrandPage({ params }: PageProps) {
     {
       question: `Hvor mange ${brand.name}-butikker finnes i Norge?`,
       answer: `Det er ${brand.storeCount} registrerte butikker som fører ${brand.name} i Norge, fordelt over ${brand.cities.length} byer i ${brand.fylker.length} fylker.`,
+    },
+  ] : [
+    {
+      question: `Hvor kan jeg kjøpe ${brand.name} i Norge?`,
+      answer: `Vi har foreløpig ikke registrert dedikerte ${brand.name}-butikker i Norge basert på Brønnøysundregistrene. ${brand.name} kan likevel finnes hos multimerke-forhandlere og kjøpesentre. Sjekk butikkoversikten vår for å finne mulige forhandlere.`,
+    },
+    {
+      question: `Selges ${brand.name} i norske butikker?`,
+      answer: `${brand.name} er et kjent klesmerke som kan være tilgjengelig i norske butikker som fører flere merker. Bruk søkefunksjonen vår for å utforske klesbutikker i din by.`,
     },
   ];
 
@@ -83,7 +92,7 @@ export default function BrandPage({ params }: PageProps) {
             </div>
             <div>
               <p className="font-body text-xs font-semibold tracking-[0.2em] uppercase text-muted mb-1">
-                Klesmerke · {brand.storeCount} butikker · {brand.cities.length} byer
+                Klesmerke{brand.storeCount > 0 ? ` · ${brand.storeCount} butikker · ${brand.cities.length} byer` : ''}
               </p>
               <h1 className="font-display text-display-sm md:text-display font-semibold text-charcoal">
                 {brand.name} <span className="italic font-normal">i Norge</span>
@@ -92,11 +101,21 @@ export default function BrandPage({ params }: PageProps) {
           </div>
 
           <p className="editorial-text">
-            Finn alle butikker som fører {brand.name} i Norge. Merket er tilgjengelig
-            i {brand.storeCount} butikker fordelt over {brand.cities.length} byer
-            i {brand.fylker.length} fylker. {brand.cities.length > 3
-              ? `De største byene med ${brand.name} inkluderer ${brand.cities.slice(0, 3).join(', ')}.`
-              : `Du finner ${brand.name} i ${brand.cities.join(' og ')}.`}
+            {brand.storeCount > 0 ? (
+              <>
+                Finn alle butikker som fører {brand.name} i Norge. Merket er tilgjengelig
+                i {brand.storeCount} butikker fordelt over {brand.cities.length} byer
+                i {brand.fylker.length} fylker. {brand.cities.length > 3
+                  ? `De største byene med ${brand.name} inkluderer ${brand.cities.slice(0, 3).join(', ')}.`
+                  : `Du finner ${brand.name} i ${brand.cities.join(' og ')}.`}
+              </>
+            ) : (
+              <>
+                {brand.name} er et kjent klesmerke. Vi har foreløpig ikke registrert dedikerte
+                {' '}{brand.name}-butikker i Brønnøysundregistrene, men merket kan finnes hos
+                multimerke-forhandlere og kjøpesentre i norske byer.
+              </>
+            )}
           </p>
         </div>
 

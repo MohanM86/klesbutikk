@@ -5,7 +5,8 @@ import FAQAccordion from '@/components/FAQAccordion';
 import CTASection from '@/components/CTASection';
 import AnimatedHero from '@/components/AnimatedHero';
 import CityMarquee from '@/components/CityMarquee';
-import { getTopCities, getFeaturedStores, getStats, getTopBrands } from '@/lib/stores';
+import BrandShowcase from '@/components/BrandShowcase';
+import { getTopCities, getFeaturedStores, getStats, getAllBrands } from '@/lib/stores';
 import { faqSchema, itemListSchema } from '@/lib/seo';
 
 const HOME_FAQS = [
@@ -35,7 +36,7 @@ export default function HomePage() {
   const cities = getTopCities(16);
   const featured = getFeaturedStores(8);
   const stats = getStats();
-  const topBrands = getTopBrands(16);
+  const allBrands = getAllBrands();
 
   const cityListSchema = itemListSchema(
     cities.map((c) => ({ name: `Klesbutikker i ${c.name}`, url: `/${c.slug}` }))
@@ -182,51 +183,7 @@ export default function HomePage() {
       )}
 
       {/* ─── POPULAR BRANDS ────────────────────────────────── */}
-      <section className="max-w-8xl mx-auto section-padding py-16 md:py-22">
-        <div className="flex items-end justify-between mb-10">
-          <div>
-            <p className="font-body text-xs font-semibold tracking-[0.2em] uppercase text-muted mb-2">
-              Klesmerker
-            </p>
-            <h2 className="font-display text-display-sm md:text-display font-semibold text-charcoal">
-              Populære merker
-            </h2>
-          </div>
-          <Link
-            href="/merker"
-            className="hidden sm:inline-flex items-center gap-1.5 font-body text-sm font-medium text-muted hover:text-charcoal transition-colors"
-          >
-            Se alle merker
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-          </Link>
-        </div>
-
-        <div className="flex flex-wrap gap-3">
-          {topBrands.map((brand) => (
-            <Link
-              key={brand.slug}
-              href={`/merke/${brand.slug}`}
-              className="group inline-flex items-center gap-2 bg-white border border-border rounded-full px-5 py-2.5 card-hover"
-            >
-              <span className="w-7 h-7 rounded-full bg-charcoal flex items-center justify-center group-hover:bg-slate transition-colors">
-                <span className="font-display text-xs font-semibold text-white">{brand.name.charAt(0)}</span>
-              </span>
-              <span className="font-body text-sm font-medium text-charcoal">{brand.name}</span>
-              <span className="font-body text-xs text-muted bg-cream px-2 py-0.5 rounded-full">
-                {brand.storeCount}
-              </span>
-            </Link>
-          ))}
-        </div>
-
-        <div className="mt-6 text-center sm:hidden">
-          <Link href="/merker" className="btn-secondary text-sm">
-            Se alle merker
-          </Link>
-        </div>
-      </section>
+      <BrandShowcase brands={allBrands} />
 
       {/* ─── STATS BAND ───────────────────────────────────── */}
       <section className="max-w-8xl mx-auto section-padding py-16 md:py-22">

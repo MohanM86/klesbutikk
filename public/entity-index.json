@@ -10,7 +10,7 @@
   "naeringsKode": "47.710",
   "entityCount": 1566,
   "kommuneCount": 357,
-  "brandCount": 58,
+  "brandCount": 445,
   "entities": [
     {
       "type": "City",
@@ -38,7 +38,7 @@
       "type": "Brand",
       "description": "Clothing brand pages showing all stores carrying that brand in Norway",
       "urlPattern": "https://klesbutikk.no/merke/{brand-slug}",
-      "count": 58,
+      "count": 445,
       "examples": [
         "https://klesbutikk.no/merke/holzweiler",
         "https://klesbutikk.no/merke/gant",

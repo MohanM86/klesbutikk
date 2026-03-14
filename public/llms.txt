@@ -29,7 +29,7 @@ Klesbutikk.no er en aggregator og directory for klesbutikker i Norge. Nettsiden 
 
 ## Klesmerker
 
-Nettsiden har dedikerte sider for 58 klesmerker, inkludert:
+Nettsiden har dedikerte sider for over 445 klesmerker, inkludert:
 - Norske merker: Holzweiler, Stormberg, Devold, BRGN, Livid Jeans, Woolland, Lillelam
 - Skandinaviske merker: Filippa K, Ganni, Samsøe Samsøe, Nudie Jeans, GANT
 - Internasjonale merker: H&M, Zara, Mango, Adidas, Ralph Lauren, Tommy Hilfiger

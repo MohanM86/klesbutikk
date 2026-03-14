@@ -95,6 +95,15 @@
   100% { transform: translateX(0); }
 }
 
+/* Brand glow pulse */
+.brand-glow {
+  animation: brandGlow 4s ease-in-out infinite;
+}
+@keyframes brandGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+  50% { box-shadow: 0 0 20px 2px rgba(255,255,255,0.06); }
+}
+
 /* Tabular numbers for counters */
 .tabular-nums {
   font-variant-numeric: tabular-nums;

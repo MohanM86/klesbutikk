@@ -66,7 +66,7 @@ export default function AdvertisePage() {
           features={[
             'Alt i Fremhevet',
             'Toppplassering i din by',
-            'Bloggomtale',
+            'Artikleromtale',
             'Dedikert landingsside',
             'Månedlig rapport',
           ]}

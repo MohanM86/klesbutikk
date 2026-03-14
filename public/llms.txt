@@ -25,7 +25,7 @@ Klesbutikk.no er en aggregator og directory for klesbutikker i Norge. Nettsiden 
 - Bergen: https://klesbutikk.no/bergen
 - Trondheim: https://klesbutikk.no/trondheim
 - Stavanger: https://klesbutikk.no/stavanger
-- Blogg: https://klesbutikk.no/blogg
+- Artikler: https://klesbutikk.no/artikler
 
 ## Klesmerker
 

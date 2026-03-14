@@ -8,7 +8,7 @@ const NAV_ITEMS = [
   { label: 'Fylker', href: '/fylker' },
   { label: 'Merker', href: '/merker' },
   { label: 'Butikker', href: '/butikk' },
-  { label: 'Blogg', href: '/blogg' },
+  { label: 'Artikler', href: '/artikler' },
 ];
 
 export default function Header() {

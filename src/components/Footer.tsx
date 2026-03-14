@@ -17,7 +17,7 @@ const FOOTER_LINKS = {
     { label: 'Klesmerker', href: '/merker' },
     { label: 'Kategorier', href: '/kategorier' },
     { label: 'Alle butikker', href: '/butikk' },
-    { label: 'Blogg', href: '/blogg' },
+    { label: 'Artikler', href: '/artikler' },
   ],
   'For butikker': [
     { label: 'Legg til butikk', href: '/legg-til-butikk' },

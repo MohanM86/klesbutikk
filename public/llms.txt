@@ -1,0 +1,44 @@
+# Klesbutikk.no
+
+> Norges mest komplette oversikt over klesbutikker. Finn motebutikker, designerbutikker og lokale favoritter i hele Norge.
+
+Klesbutikk.no er en aggregator og directory for klesbutikker i Norge. Nettsiden lister over 1500 registrerte klesbutikker hentet fra Brønnøysundregistrene (næringskode 47.710 – Detaljhandel med klær).
+
+## Hva vi tilbyr
+
+- Komplett oversikt over klesbutikker i alle norske byer
+- Søk etter butikk, by eller fylke
+- Detaljert informasjon om hver butikk (adresse, kontaktinfo, nettside)
+- Bysider med lokale motebutikker
+- Fylkesoversikter
+- Fremhevede butikker med økt synlighet
+
+## Viktige sider
+
+- Forsiden: https://klesbutikk.no
+- Alle byer: https://klesbutikk.no/by
+- Alle fylker: https://klesbutikk.no/fylker
+- Alle butikker: https://klesbutikk.no/butikk
+- Oslo: https://klesbutikk.no/oslo
+- Bergen: https://klesbutikk.no/bergen
+- Trondheim: https://klesbutikk.no/trondheim
+- Stavanger: https://klesbutikk.no/stavanger
+- Blogg: https://klesbutikk.no/blogg
+
+## Datakilde
+
+Alle butikkdata er hentet fra Brønnøysundregistrene, Norges offisielle foretaksregister.
+Næringskode: 47.710 – Detaljhandel med klær.
+
+## Strukturert data
+
+Nettsiden bruker JSON-LD schema markup inkludert:
+- Organization
+- LocalBusiness / ClothingStore
+- FAQPage
+- BreadcrumbList
+- ItemList
+
+## Kontakt
+
+E-post: hei@klesbutikk.no

@@ -1,0 +1,38 @@
+{
+  "name": "Klesbutikk.no",
+  "description": "Norges mest komplette oversikt over klesbutikker",
+  "url": "https://klesbutikk.no",
+  "language": "nb",
+  "country": "NO",
+  "type": "Directory",
+  "category": "Fashion & Clothing Retail",
+  "dataSource": "Brønnøysundregistrene",
+  "naeringsKode": "47.710",
+  "entityCount": 1574,
+  "entities": [
+    {
+      "type": "City",
+      "description": "City pages listing clothing stores",
+      "urlPattern": "https://klesbutikk.no/{city-slug}",
+      "examples": [
+        "https://klesbutikk.no/oslo",
+        "https://klesbutikk.no/bergen",
+        "https://klesbutikk.no/trondheim"
+      ]
+    },
+    {
+      "type": "ClothingStore",
+      "description": "Individual clothing store listings",
+      "urlPattern": "https://klesbutikk.no/butikk/{store-slug}",
+      "count": 1574
+    },
+    {
+      "type": "Region",
+      "description": "Norwegian county (fylke) pages",
+      "urlPattern": "https://klesbutikk.no/fylke/{fylke-slug}",
+      "count": 16
+    }
+  ],
+  "structuredData": ["Organization", "ClothingStore", "FAQPage", "BreadcrumbList", "ItemList"],
+  "contact": "hei@klesbutikk.no"
+}

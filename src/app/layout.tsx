@@ -1,0 +1,41 @@
+import type { Metadata } from 'next';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import { organizationSchema, SITE_NAME, SITE_URL, SITE_DESC } from '@/lib/seo';
+import './globals.css';
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE_NAME} – Finn klesbutikker i hele Norge`,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESC,
+  openGraph: {
+    type: 'website',
+    locale: 'nb_NO',
+    siteName: SITE_NAME,
+  },
+  twitter: { card: 'summary_large_image' },
+  robots: { index: true, follow: true },
+  alternates: { canonical: SITE_URL },
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="nb">
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
+        />
+      </head>
+      <body className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1 pt-16 md:pt-18">{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+}

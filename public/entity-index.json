@@ -8,7 +8,7 @@
   "category": "Fashion & Clothing Retail",
   "dataSource": "Brønnøysundregistrene",
   "naeringsKode": "47.710",
-  "entityCount": 1574,
+  "entityCount": 1566,
   "brandCount": 58,
   "entities": [
     {
@@ -25,13 +25,13 @@
       "type": "ClothingStore",
       "description": "Individual clothing store listings with brand information",
       "urlPattern": "https://klesbutikk.no/butikk/{store-slug}",
-      "count": 1574
+      "count": 1566
     },
     {
       "type": "Region",
       "description": "Norwegian county (fylke) pages",
       "urlPattern": "https://klesbutikk.no/fylke/{fylke-slug}",
-      "count": 16
+      "count": 15
     },
     {
       "type": "Brand",

@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getAllStores, getAllCities, getAllFylker } from '@/lib/stores';
+import { getAllStores, getAllCities, getAllFylker, getAllBrands } from '@/lib/stores';
 
 const BASE_URL = 'https://klesbutikk.no';
 
@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: BASE_URL, lastModified: now, changeFrequency: 'daily', priority: 1.0 },
     { url: `${BASE_URL}/by`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE_URL}/fylker`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE_URL}/merker`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE_URL}/butikk`, lastModified: now, changeFrequency: 'daily', priority: 0.8 },
     { url: `${BASE_URL}/blogg`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE_URL}/annonser`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
@@ -38,5 +39,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...cityPages, ...fylkePages, ...storePages];
+  const brandPages: MetadataRoute.Sitemap = getAllBrands().map((b) => ({
+    url: `${BASE_URL}/merke/${b.slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...cityPages, ...fylkePages, ...brandPages, ...storePages];
 }

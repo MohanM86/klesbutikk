@@ -9,6 +9,7 @@
   "dataSource": "Brønnøysundregistrene",
   "naeringsKode": "47.710",
   "entityCount": 1574,
+  "brandCount": 58,
   "entities": [
     {
       "type": "City",
@@ -22,7 +23,7 @@
     },
     {
       "type": "ClothingStore",
-      "description": "Individual clothing store listings",
+      "description": "Individual clothing store listings with brand information",
       "urlPattern": "https://klesbutikk.no/butikk/{store-slug}",
       "count": 1574
     },
@@ -31,6 +32,19 @@
       "description": "Norwegian county (fylke) pages",
       "urlPattern": "https://klesbutikk.no/fylke/{fylke-slug}",
       "count": 16
+    },
+    {
+      "type": "Brand",
+      "description": "Clothing brand pages showing all stores carrying that brand in Norway",
+      "urlPattern": "https://klesbutikk.no/merke/{brand-slug}",
+      "count": 58,
+      "examples": [
+        "https://klesbutikk.no/merke/holzweiler",
+        "https://klesbutikk.no/merke/gant",
+        "https://klesbutikk.no/merke/filippa-k",
+        "https://klesbutikk.no/merke/hm",
+        "https://klesbutikk.no/merke/dressmann"
+      ]
     }
   ],
   "structuredData": ["Organization", "ClothingStore", "FAQPage", "BreadcrumbList", "ItemList"],

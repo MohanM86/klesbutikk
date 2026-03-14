@@ -106,6 +106,30 @@ export default function StorePage({ params }: PageProps) {
               <DetailRow label="Kategori" value={store.kategori} />
             </div>
 
+            {/* Brands / Merker */}
+            {store.merker && store.merker.length > 0 && (
+              <div className="mb-8">
+                <h2 className="font-display text-xl font-semibold text-charcoal mb-3">
+                  Merker hos {store.navn}
+                </h2>
+                <div className="flex flex-wrap gap-2">
+                  {store.merker.map((merke) => (
+                    <Link
+                      key={merke}
+                      href={`/merke/${merke.toLowerCase().replace(/ /g, '-').replace(/æ/g,'ae').replace(/ø/g,'oe').replace(/å/g,'aa').replace(/ö/g,'o').replace(/&/g,'and').replace(/\./g,'')}`}
+                      className="inline-flex items-center gap-1.5 font-body text-sm border border-border rounded-full px-4 py-2 hover:border-charcoal hover:text-charcoal transition-colors text-muted"
+                    >
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 6h.008v.008H6V6z" />
+                      </svg>
+                      {merke}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Description / SEO text */}
             <div className="mb-8">
               <h2 className="font-display text-xl font-semibold text-charcoal mb-3">

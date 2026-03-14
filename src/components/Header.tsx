@@ -6,6 +6,7 @@ import Link from 'next/link';
 const NAV_ITEMS = [
   { label: 'Byer', href: '/by' },
   { label: 'Fylker', href: '/fylker' },
+  { label: 'Merker', href: '/merker' },
   { label: 'Butikker', href: '/butikk' },
   { label: 'Blogg', href: '/blogg' },
 ];

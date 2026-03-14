@@ -1,8 +1,10 @@
 import storesData from '../data/stores.json';
-import { Store, CityData, FylkeData } from './types';
+import brandsData from '../data/brands.json';
+import { Store, CityData, FylkeData, BrandData } from './types';
 import { slugify } from './slugify';
 
 const stores: Store[] = storesData as Store[];
+const brands: BrandData[] = brandsData as BrandData[];
 
 // ─── ALL STORES ───────────────────────────────────────────
 export function getAllStores(): Store[] {
@@ -25,7 +27,8 @@ export function searchStores(query: string): Store[] {
       s.navn.toLowerCase().includes(q) ||
       s.poststed.toLowerCase().includes(q) ||
       s.kommune.toLowerCase().includes(q) ||
-      s.fylke.toLowerCase().includes(q)
+      s.fylke.toLowerCase().includes(q) ||
+      (s.merker && s.merker.some((m) => m.toLowerCase().includes(q)))
   );
 }
 
@@ -110,6 +113,38 @@ export function getStoresByFylkeSlug(slug: string): Store[] {
   return getStoresByFylke(fylke.name);
 }
 
+// ─── BRANDS ──────────────────────────────────────────────
+export function getAllBrands(): BrandData[] {
+  return brands;
+}
+
+export function getBrandBySlug(slug: string): BrandData | undefined {
+  return brands.find((b) => b.slug === slug);
+}
+
+export function getStoresByBrand(brandName: string): Store[] {
+  return stores.filter((s) => s.merker && s.merker.includes(brandName));
+}
+
+export function getStoresByBrandSlug(slug: string): Store[] {
+  const brand = getBrandBySlug(slug);
+  if (!brand) return [];
+  return getStoresByBrand(brand.name);
+}
+
+export function getBrandsByCity(cityName: string): BrandData[] {
+  const cityStores = getStoresByCity(cityName);
+  const brandNames = new Set<string>();
+  for (const s of cityStores) {
+    if (s.merker) s.merker.forEach((m) => brandNames.add(m));
+  }
+  return brands.filter((b) => brandNames.has(b.name));
+}
+
+export function getTopBrands(limit: number = 20): BrandData[] {
+  return brands.slice(0, limit);
+}
+
 // ─── RELATED ──────────────────────────────────────────────
 export function getRelatedStores(store: Store, limit: number = 6): Store[] {
   return stores
@@ -123,6 +158,7 @@ export function getStats() {
     totalStores: stores.length,
     totalCities: getAllCities().length,
     totalFylker: getAllFylker().length,
+    totalBrands: brands.length,
     featuredStores: stores.filter((s) => s.featured).length,
   };
 }

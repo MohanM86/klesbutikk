@@ -7,9 +7,10 @@ Klesbutikk.no er en aggregator og directory for klesbutikker i Norge. Nettsiden 
 ## Hva vi tilbyr
 
 - Komplett oversikt over klesbutikker i alle norske byer
-- Søk etter butikk, by eller fylke
-- Detaljert informasjon om hver butikk (adresse, kontaktinfo, nettside)
+- Søk etter butikk, by, fylke eller klesmerke
+- Detaljert informasjon om hver butikk (adresse, kontaktinfo, nettside, merker)
 - Bysider med lokale motebutikker
+- Merkesider med oversikt over forhandlere for hvert klesmerke
 - Fylkesoversikter
 - Fremhevede butikker med økt synlighet
 
@@ -18,12 +19,23 @@ Klesbutikk.no er en aggregator og directory for klesbutikker i Norge. Nettsiden 
 - Forsiden: https://klesbutikk.no
 - Alle byer: https://klesbutikk.no/by
 - Alle fylker: https://klesbutikk.no/fylker
+- Alle merker: https://klesbutikk.no/merker
 - Alle butikker: https://klesbutikk.no/butikk
 - Oslo: https://klesbutikk.no/oslo
 - Bergen: https://klesbutikk.no/bergen
 - Trondheim: https://klesbutikk.no/trondheim
 - Stavanger: https://klesbutikk.no/stavanger
 - Blogg: https://klesbutikk.no/blogg
+
+## Klesmerker
+
+Nettsiden har dedikerte sider for 58 klesmerker, inkludert:
+- Norske merker: Holzweiler, Stormberg, Devold, BRGN, Livid Jeans, Woolland, Lillelam
+- Skandinaviske merker: Filippa K, Ganni, Samsøe Samsøe, Nudie Jeans, GANT
+- Internasjonale merker: H&M, Zara, Mango, Adidas, Ralph Lauren, Tommy Hilfiger
+- Norske kjeder: Dressmann, Cubus, Bik Bok, Carlings, Høyer, Voice
+
+Eksempel-URL for merkesider: https://klesbutikk.no/merke/holzweiler
 
 ## Datakilde
 

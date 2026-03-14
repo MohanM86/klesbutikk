@@ -14,6 +14,7 @@ const FOOTER_LINKS = {
   'Utforsk': [
     { label: 'Alle byer', href: '/by' },
     { label: 'Alle fylker', href: '/fylker' },
+    { label: 'Klesmerker', href: '/merker' },
     { label: 'Alle butikker', href: '/butikk' },
     { label: 'Blogg', href: '/blogg' },
   ],

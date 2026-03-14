@@ -907,7 +907,10 @@
     "kategori": "Klesbutikk",
     "featured": false,
     "epost": "post@merlingruppen.no",
-    "antallAnsatte": 5
+    "antallAnsatte": 5,
+    "merker": [
+      "Best Kids"
+    ]
   },
   {
     "organisasjonsnummer": "994642197",
@@ -920,7 +923,10 @@
     "fylke": "Trøndelag",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 6
+    "antallAnsatte": 6,
+    "merker": [
+      "Best Kids"
+    ]
   },
   {
     "organisasjonsnummer": "938412340",
@@ -1690,7 +1696,10 @@
     "fylke": "Oslo",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 56
+    "antallAnsatte": 56,
+    "merker": [
+      "Camilla Pihl"
+    ]
   },
   {
     "organisasjonsnummer": "933064409",
@@ -2085,7 +2094,10 @@
     "telefon": "73 99 09 70",
     "nettside": "https://www.kleins.no",
     "epost": "post@kleins.no",
-    "antallAnsatte": 17
+    "antallAnsatte": 17,
+    "merker": [
+      "Companys"
+    ]
   },
   {
     "organisasjonsnummer": "915525857",
@@ -2098,7 +2110,10 @@
     "fylke": "Akershus",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 11
+    "antallAnsatte": 11,
+    "merker": [
+      "Companys"
+    ]
   },
   {
     "organisasjonsnummer": "915525806",
@@ -2111,7 +2126,10 @@
     "fylke": "Akershus",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 12
+    "antallAnsatte": 12,
+    "merker": [
+      "Companys"
+    ]
   },
   {
     "organisasjonsnummer": "824628742",
@@ -2139,7 +2157,10 @@
     "featured": true,
     "telefon": "56 51 98 00",
     "nettside": "https://www.activebrands.no",
-    "antallAnsatte": 18
+    "antallAnsatte": 18,
+    "merker": [
+      "Active Brands"
+    ]
   },
   {
     "organisasjonsnummer": "811673862",
@@ -3170,7 +3191,10 @@
     "telefon": "73 99 09 70",
     "nettside": "https://www.kleins.no",
     "epost": "post@kleins.no",
-    "antallAnsatte": 13
+    "antallAnsatte": 13,
+    "merker": [
+      "Companys"
+    ]
   },
   {
     "organisasjonsnummer": "934808819",
@@ -3183,7 +3207,10 @@
     "fylke": "Trøndelag",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 9
+    "antallAnsatte": 9,
+    "merker": [
+      "Companys"
+    ]
   },
   {
     "organisasjonsnummer": "933725871",
@@ -3196,7 +3223,10 @@
     "fylke": "Oslo",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 10
+    "antallAnsatte": 10,
+    "merker": [
+      "Companys"
+    ]
   },
   {
     "organisasjonsnummer": "926622617",
@@ -3751,7 +3781,10 @@
     "featured": true,
     "telefon": "22 40 38 40",
     "nettside": "https://www.filippa-k.com",
-    "antallAnsatte": 14
+    "antallAnsatte": 14,
+    "merker": [
+      "Filippa K"
+    ]
   },
   {
     "organisasjonsnummer": "918323783",
@@ -3977,7 +4010,10 @@
     "fylke": "Oslo",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 24
+    "antallAnsatte": 24,
+    "merker": [
+      "Ganni"
+    ]
   },
   {
     "organisasjonsnummer": "968052845",
@@ -4569,7 +4605,10 @@
     "fylke": "Akershus",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 12
+    "antallAnsatte": 12,
+    "merker": [
+      "Holzweiler"
+    ]
   },
   {
     "organisasjonsnummer": "928239497",
@@ -4720,7 +4759,10 @@
     "kommune": "Oslo",
     "fylke": "Oslo",
     "kategori": "Klesbutikk",
-    "featured": false
+    "featured": false,
+    "merker": [
+      "Høyer"
+    ]
   },
   {
     "organisasjonsnummer": "989163191",
@@ -4733,7 +4775,10 @@
     "fylke": "Oslo",
     "kategori": "Klesbutikk",
     "featured": false,
-    "telefon": "21 51 03 30"
+    "telefon": "21 51 03 30",
+    "merker": [
+      "Høyer"
+    ]
   },
   {
     "organisasjonsnummer": "997655826",
@@ -4746,7 +4791,10 @@
     "fylke": "Rogaland",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 7
+    "antallAnsatte": 7,
+    "merker": [
+      "Høyer"
+    ]
   },
   {
     "organisasjonsnummer": "971579978",
@@ -4760,7 +4808,10 @@
     "kategori": "Klesbutikk",
     "featured": false,
     "telefon": "22 51 03 30",
-    "epost": "sand@husetsandnorge.no"
+    "epost": "sand@husetsandnorge.no",
+    "merker": [
+      "Høyer"
+    ]
   },
   {
     "organisasjonsnummer": "916794940",
@@ -4773,7 +4824,10 @@
     "fylke": "Oslo",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 11
+    "antallAnsatte": 11,
+    "merker": [
+      "Høyer"
+    ]
   },
   {
     "organisasjonsnummer": "914949564",
@@ -4786,7 +4840,10 @@
     "fylke": "Oslo",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 27
+    "antallAnsatte": 27,
+    "merker": [
+      "Høyer"
+    ]
   },
   {
     "organisasjonsnummer": "916643594",
@@ -4799,7 +4856,10 @@
     "fylke": "Oslo",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 17
+    "antallAnsatte": 17,
+    "merker": [
+      "Høyer"
+    ]
   },
   {
     "organisasjonsnummer": "912246035",
@@ -4812,7 +4872,10 @@
     "fylke": "Rogaland",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 16
+    "antallAnsatte": 16,
+    "merker": [
+      "Høyer"
+    ]
   },
   {
     "organisasjonsnummer": "898533972",
@@ -4826,7 +4889,10 @@
     "kategori": "Klesbutikk",
     "featured": false,
     "telefon": "22 51 03 30",
-    "antallAnsatte": 14
+    "antallAnsatte": 14,
+    "merker": [
+      "Høyer"
+    ]
   },
   {
     "organisasjonsnummer": "912742970",
@@ -5280,7 +5346,10 @@
     "telefon": "73 99 09 70",
     "nettside": "https://www.kleins.no",
     "epost": "post@kleins.no",
-    "antallAnsatte": 31
+    "antallAnsatte": 31,
+    "merker": [
+      "Kleins"
+    ]
   },
   {
     "organisasjonsnummer": "945300523",
@@ -5296,7 +5365,10 @@
     "telefon": "73 99 09 70",
     "nettside": "https://www.kleins.no",
     "epost": "post@kleins.no",
-    "antallAnsatte": 17
+    "antallAnsatte": 17,
+    "merker": [
+      "Kleins"
+    ]
   },
   {
     "organisasjonsnummer": "952034146",
@@ -5809,7 +5881,10 @@
     "telefon": "22 44 68 85",
     "nettside": "https://www.lillelam.no",
     "epost": "pernille@lillelam.no",
-    "antallAnsatte": 18
+    "antallAnsatte": 18,
+    "merker": [
+      "Lillelam"
+    ]
   },
   {
     "organisasjonsnummer": "995691310",
@@ -6079,7 +6154,10 @@
     "fylke": "Oslo",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 9
+    "antallAnsatte": 9,
+    "merker": [
+      "Max Mara"
+    ]
   },
   {
     "organisasjonsnummer": "977326850",
@@ -6370,7 +6448,10 @@
     "fylke": "Oslo",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 19
+    "antallAnsatte": 19,
+    "merker": [
+      "Northern Playground"
+    ]
   },
   {
     "organisasjonsnummer": "982006163",
@@ -7000,7 +7081,10 @@
     "kategori": "Klesbutikk",
     "featured": false,
     "nettside": "https://www.ralphlauren.com",
-    "antallAnsatte": 9
+    "antallAnsatte": 9,
+    "merker": [
+      "Ralph Lauren"
+    ]
   },
   {
     "organisasjonsnummer": "832202452",
@@ -7214,7 +7298,10 @@
     "kategori": "Klesbutikk",
     "featured": false,
     "epost": "allan@samsoe.com",
-    "antallAnsatte": 23
+    "antallAnsatte": 23,
+    "merker": [
+      "Samsøe Samsøe"
+    ]
   },
   {
     "organisasjonsnummer": "997488555",
@@ -8175,7 +8262,10 @@
     "featured": true,
     "telefon": "67 16 79 50",
     "nettside": "https://www.triumph.com/no",
-    "antallAnsatte": 23
+    "antallAnsatte": 23,
+    "merker": [
+      "Triumph"
+    ]
   },
   {
     "organisasjonsnummer": "918885609",
@@ -8371,7 +8461,10 @@
     "fylke": "Akershus",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 344
+    "antallAnsatte": 344,
+    "merker": [
+      "Volt"
+    ]
   },
   {
     "organisasjonsnummer": "930652695",
@@ -9793,7 +9886,10 @@
     "telefon": "22 56 62 09",
     "nettside": "https://www.gant.no",
     "epost": "gant.bogstadveien@gantretail.no",
-    "antallAnsatte": 9
+    "antallAnsatte": 9,
+    "merker": [
+      "GANT"
+    ]
   },
   {
     "organisasjonsnummer": "912614077",
@@ -10815,7 +10911,10 @@
     "fylke": "Trøndelag",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 12
+    "antallAnsatte": 12,
+    "merker": [
+      "Kleins"
+    ]
   },
   {
     "organisasjonsnummer": "815772822",
@@ -13147,7 +13246,10 @@
     "featured": false,
     "telefon": "73 52 76 30",
     "epost": "retroas@online.no",
-    "antallAnsatte": 39
+    "antallAnsatte": 39,
+    "merker": [
+      "Retro"
+    ]
   },
   {
     "organisasjonsnummer": "987029137",
@@ -13162,7 +13264,10 @@
     "featured": false,
     "telefon": "73 52 76 30",
     "epost": "jorgen@retro.no",
-    "antallAnsatte": 11
+    "antallAnsatte": 11,
+    "merker": [
+      "Retro"
+    ]
   },
   {
     "organisasjonsnummer": "915143164",
@@ -16073,7 +16178,10 @@
     "fylke": "Vestfold",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 6
+    "antallAnsatte": 6,
+    "merker": [
+      "Høyer"
+    ]
   },
   {
     "organisasjonsnummer": "968258672",
@@ -16203,7 +16311,10 @@
     "featured": true,
     "telefon": "0046841052200",
     "nettside": "https://www.polarnpyret.no",
-    "antallAnsatte": 47
+    "antallAnsatte": 47,
+    "merker": [
+      "Polarn O. Pyret"
+    ]
   },
   {
     "organisasjonsnummer": "930007765",
@@ -16594,7 +16705,10 @@
     "kategori": "Klesbutikk",
     "featured": false,
     "telefon": "55310520",
-    "antallAnsatte": 6
+    "antallAnsatte": 6,
+    "merker": [
+      "Oleana"
+    ]
   },
   {
     "organisasjonsnummer": "965699384",
@@ -16815,7 +16929,10 @@
     "fylke": "Oslo",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 14
+    "antallAnsatte": 14,
+    "merker": [
+      "Brandy Melville"
+    ]
   },
   {
     "organisasjonsnummer": "918883185",
@@ -16919,7 +17036,10 @@
     "fylke": "Oslo",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 14
+    "antallAnsatte": 14,
+    "merker": [
+      "Companys"
+    ]
   },
   {
     "organisasjonsnummer": "915525652",
@@ -16932,7 +17052,10 @@
     "fylke": "Trøndelag",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 17
+    "antallAnsatte": 17,
+    "merker": [
+      "Companys"
+    ]
   },
   {
     "organisasjonsnummer": "934401530",
@@ -17142,7 +17265,10 @@
     "kategori": "Klesbutikk",
     "featured": false,
     "epost": "solfrid.persson@no.gt.com",
-    "antallAnsatte": 14
+    "antallAnsatte": 14,
+    "merker": [
+      "Guess"
+    ]
   },
   {
     "organisasjonsnummer": "929873556",
@@ -17182,7 +17308,10 @@
     "fylke": "Akershus",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 13
+    "antallAnsatte": 13,
+    "merker": [
+      "Høyer"
+    ]
   },
   {
     "organisasjonsnummer": "914637449",
@@ -17195,7 +17324,10 @@
     "fylke": "Oslo",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 19
+    "antallAnsatte": 19,
+    "merker": [
+      "Høyer"
+    ]
   },
   {
     "organisasjonsnummer": "811874132",
@@ -17208,7 +17340,10 @@
     "fylke": "Trøndelag",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 37
+    "antallAnsatte": 37,
+    "merker": [
+      "Høyer"
+    ]
   },
   {
     "organisasjonsnummer": "988426873",
@@ -17399,7 +17534,10 @@
     "fylke": "Oslo",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 8
+    "antallAnsatte": 8,
+    "merker": [
+      "Moncler"
+    ]
   },
   {
     "organisasjonsnummer": "917350922",
@@ -17467,7 +17605,10 @@
     "telefon": "+4721420582",
     "nettside": "https://www.nudiejeans.com",
     "epost": "invoice@nudiejeans.com",
-    "antallAnsatte": 6
+    "antallAnsatte": 6,
+    "merker": [
+      "Nudie Jeans"
+    ]
   },
   {
     "organisasjonsnummer": "914882443",
@@ -17750,7 +17891,10 @@
     "fylke": "Akershus",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 33
+    "antallAnsatte": 33,
+    "merker": [
+      "Tommy Hilfiger"
+    ]
   },
   {
     "organisasjonsnummer": "911690241",
@@ -17874,7 +18018,10 @@
     "featured": true,
     "telefon": "67 55 13 30",
     "nettside": "https://www.salomonsports.com/no",
-    "antallAnsatte": 87
+    "antallAnsatte": 87,
+    "merker": [
+      "Salomon"
+    ]
   },
   {
     "organisasjonsnummer": "981649184",
@@ -17999,7 +18146,10 @@
     "kategori": "Klesbutikk",
     "featured": false,
     "telefon": "70 19 25 40",
-    "antallAnsatte": 46
+    "antallAnsatte": 46,
+    "merker": [
+      "Devold"
+    ]
   },
   {
     "organisasjonsnummer": "813025582",
@@ -18028,7 +18178,10 @@
     "kategori": "Klesbutikk",
     "featured": false,
     "telefon": "33 05 46 50",
-    "antallAnsatte": 8
+    "antallAnsatte": 8,
+    "merker": [
+      "Floyd"
+    ]
   },
   {
     "organisasjonsnummer": "982197783",
@@ -18070,7 +18223,10 @@
     "fylke": "Akershus",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 90
+    "antallAnsatte": 90,
+    "merker": [
+      "Holzweiler"
+    ]
   },
   {
     "organisasjonsnummer": "976199960",
@@ -18084,7 +18240,10 @@
     "kategori": "Klesbutikk",
     "featured": false,
     "telefon": "22836595",
-    "antallAnsatte": 12
+    "antallAnsatte": 12,
+    "merker": [
+      "Høyer"
+    ]
   },
   {
     "organisasjonsnummer": "980643263",
@@ -18098,7 +18257,10 @@
     "kategori": "Klesbutikk",
     "featured": false,
     "epost": "accounting@dk.inditex.com",
-    "antallAnsatte": 370
+    "antallAnsatte": 370,
+    "merker": [
+      "Zara"
+    ]
   },
   {
     "organisasjonsnummer": "980521249",
@@ -18140,7 +18302,10 @@
     "telefon": "46 94 01 90",
     "nettside": "https://www.lividjeans.com",
     "epost": "jenso@lividjeans.com",
-    "antallAnsatte": 62
+    "antallAnsatte": 62,
+    "merker": [
+      "Livid Jeans"
+    ]
   },
   {
     "organisasjonsnummer": "936815642",
@@ -18211,7 +18376,10 @@
     "featured": false,
     "telefon": "73 52 76 30",
     "epost": "jorgen@retro.no",
-    "antallAnsatte": 16
+    "antallAnsatte": 16,
+    "merker": [
+      "Retro"
+    ]
   },
   {
     "organisasjonsnummer": "953782790",
@@ -18242,7 +18410,10 @@
     "telefon": "40 00 18 94",
     "nettside": "https://www.stormberg.com",
     "epost": "post@stormberg.no",
-    "antallAnsatte": 168
+    "antallAnsatte": 168,
+    "merker": [
+      "Stormberg"
+    ]
   },
   {
     "organisasjonsnummer": "951282774",
@@ -18593,7 +18764,10 @@
     "fylke": "Vestfold",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 56
+    "antallAnsatte": 56,
+    "merker": [
+      "Floyd"
+    ]
   },
   {
     "organisasjonsnummer": "981459644",
@@ -18715,7 +18889,10 @@
     "fylke": "Trøndelag",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 16
+    "antallAnsatte": 16,
+    "merker": [
+      "Kleins"
+    ]
   },
   {
     "organisasjonsnummer": "935542642",
@@ -18911,7 +19088,10 @@
     "kategori": "Klesbutikk",
     "featured": false,
     "telefon": "73 52 76 30",
-    "antallAnsatte": 18
+    "antallAnsatte": 18,
+    "merker": [
+      "Retro"
+    ]
   },
   {
     "organisasjonsnummer": "945659742",
@@ -19203,7 +19383,10 @@
     "fylke": "Vestfold",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 241
+    "antallAnsatte": 241,
+    "merker": [
+      "B.Young"
+    ]
   },
   {
     "organisasjonsnummer": "984992831",
@@ -19246,7 +19429,10 @@
     "fylke": "Buskerud",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 11
+    "antallAnsatte": 11,
+    "merker": [
+      "Best Kids"
+    ]
   },
   {
     "organisasjonsnummer": "981930010",
@@ -19260,7 +19446,10 @@
     "kategori": "Klesbutikk",
     "featured": false,
     "telefon": "66 77 34 50",
-    "antallAnsatte": 467
+    "antallAnsatte": 467,
+    "merker": [
+      "Bik Bok"
+    ]
   },
   {
     "organisasjonsnummer": "980310655",
@@ -19303,7 +19492,10 @@
     "kategori": "Klesbutikk",
     "featured": false,
     "telefon": "64 85 99 25",
-    "antallAnsatte": 444
+    "antallAnsatte": 444,
+    "merker": [
+      "Carlings"
+    ]
   },
   {
     "organisasjonsnummer": "989676547",
@@ -19318,7 +19510,10 @@
     "featured": true,
     "telefon": "32 84 62 90",
     "nettside": "https://www.change.com",
-    "antallAnsatte": 344
+    "antallAnsatte": 344,
+    "merker": [
+      "Change Lingerie"
+    ]
   },
   {
     "organisasjonsnummer": "935568609",
@@ -19427,7 +19622,10 @@
     "kategori": "Klesbutikk",
     "featured": false,
     "telefon": "23 37 01 00",
-    "antallAnsatte": 2474
+    "antallAnsatte": 2474,
+    "merker": [
+      "H&M"
+    ]
   },
   {
     "organisasjonsnummer": "884803292",
@@ -19472,7 +19670,10 @@
     "telefon": "73 51 34 95",
     "nettside": "https://www.hoyer.no",
     "epost": "solsiden@hoyer.no",
-    "antallAnsatte": 13
+    "antallAnsatte": 13,
+    "merker": [
+      "Høyer"
+    ]
   },
   {
     "organisasjonsnummer": "994593145",
@@ -19574,7 +19775,10 @@
     "featured": false,
     "telefon": "21 93 93 00",
     "epost": "ariadna.marti@mango.com",
-    "antallAnsatte": 37
+    "antallAnsatte": 37,
+    "merker": [
+      "Mango"
+    ]
   },
   {
     "organisasjonsnummer": "990536503",
@@ -19612,7 +19816,10 @@
     "fylke": "Oslo",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 49
+    "antallAnsatte": 49,
+    "merker": [
+      "Monsoon"
+    ]
   },
   {
     "organisasjonsnummer": "928341607",
@@ -19691,7 +19898,10 @@
     "kommune": "Fredrikstad",
     "fylke": "Østfold",
     "kategori": "Klesbutikk",
-    "featured": false
+    "featured": false,
+    "merker": [
+      "Retro"
+    ]
   },
   {
     "organisasjonsnummer": "998385903",
@@ -19705,7 +19915,10 @@
     "kategori": "Klesbutikk",
     "featured": false,
     "epost": "linda.rasmussen@bestseller.com",
-    "antallAnsatte": 296
+    "antallAnsatte": 296,
+    "merker": [
+      "ONLY"
+    ]
   },
   {
     "organisasjonsnummer": "994191373",
@@ -19804,7 +20017,10 @@
     "featured": false,
     "telefon": "+4737396402",
     "epost": "finance.accounting@stadium.se",
-    "antallAnsatte": 147
+    "antallAnsatte": 147,
+    "merker": [
+      "Stadium"
+    ]
   },
   {
     "organisasjonsnummer": "992878541",
@@ -19902,7 +20118,10 @@
     "telefon": "22 54 55 00",
     "nettside": "https://www.voice.no",
     "epost": "voice@voice.no",
-    "antallAnsatte": 1637
+    "antallAnsatte": 1637,
+    "merker": [
+      "Voice"
+    ]
   },
   {
     "organisasjonsnummer": "997026330",
@@ -19945,7 +20164,10 @@
     "fylke": "Oslo",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 100
+    "antallAnsatte": 100,
+    "merker": [
+      "Zizzi"
+    ]
   },
   {
     "organisasjonsnummer": "993113484",
@@ -20443,7 +20665,10 @@
     "featured": false,
     "nettside": "https://woolland.no",
     "epost": "post@wolland.no",
-    "antallAnsatte": 79
+    "antallAnsatte": 79,
+    "merker": [
+      "Woolland"
+    ]
   },
   {
     "organisasjonsnummer": "954690873",
@@ -20458,7 +20683,10 @@
     "featured": true,
     "telefon": "63 89 58 00",
     "nettside": "https://www.adidas.com",
-    "antallAnsatte": 46
+    "antallAnsatte": 46,
+    "merker": [
+      "Adidas"
+    ]
   },
   {
     "organisasjonsnummer": "952884840",
@@ -20505,7 +20733,10 @@
     "telefon": "23 25 19 00",
     "nettside": "https://www.bestseller.com",
     "epost": "espen.kimer@bestseller.com",
-    "antallAnsatte": 635
+    "antallAnsatte": 635,
+    "merker": [
+      "Bestseller"
+    ]
   },
   {
     "organisasjonsnummer": "983457681",
@@ -20535,7 +20766,10 @@
     "telefon": "+4748517713",
     "nettside": "https://www.brgn.com",
     "epost": "sales@brgn.com",
-    "antallAnsatte": 41
+    "antallAnsatte": 41,
+    "merker": [
+      "BRGN"
+    ]
   },
   {
     "organisasjonsnummer": "986139397",
@@ -20578,7 +20812,10 @@
     "telefon": "73 99 09 70",
     "nettside": "https://www.kleins.no",
     "epost": "post@kleins.no",
-    "antallAnsatte": 8
+    "antallAnsatte": 8,
+    "merker": [
+      "Companys"
+    ]
   },
   {
     "organisasjonsnummer": "939522719",
@@ -20592,7 +20829,10 @@
     "kategori": "Klesbutikk",
     "featured": false,
     "telefon": "66 77 32 00",
-    "antallAnsatte": 1510
+    "antallAnsatte": 1510,
+    "merker": [
+      "Cubus"
+    ]
   },
   {
     "organisasjonsnummer": "946927201",
@@ -20608,7 +20848,10 @@
     "telefon": "66 77 31 00",
     "nettside": "https://www.dressmann.com",
     "epost": "mail@dressmann.com",
-    "antallAnsatte": 1065
+    "antallAnsatte": 1065,
+    "merker": [
+      "Dressmann"
+    ]
   },
   {
     "organisasjonsnummer": "981018540",
@@ -20621,7 +20864,10 @@
     "fylke": "Akershus",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 332
+    "antallAnsatte": 332,
+    "merker": [
+      "Follestad"
+    ]
   },
   {
     "organisasjonsnummer": "980568970",
@@ -20634,7 +20880,10 @@
     "fylke": "Vestfold",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 43
+    "antallAnsatte": 43,
+    "merker": [
+      "Fransa"
+    ]
   },
   {
     "organisasjonsnummer": "911978768",
@@ -20666,7 +20915,10 @@
     "telefon": "31 29 23 00",
     "nettside": "https://www.gant.no",
     "epost": "dnb@gant.no",
-    "antallAnsatte": 85
+    "antallAnsatte": 85,
+    "merker": [
+      "GANT"
+    ]
   },
   {
     "organisasjonsnummer": "892380082",
@@ -20679,7 +20931,10 @@
     "fylke": "Oslo",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 469
+    "antallAnsatte": 469,
+    "merker": [
+      "Gina Tricot"
+    ]
   },
   {
     "organisasjonsnummer": "979684479",
@@ -20707,7 +20962,10 @@
     "fylke": "Akershus",
     "kategori": "Klesbutikk",
     "featured": false,
-    "antallAnsatte": 65
+    "antallAnsatte": 65,
+    "merker": [
+      "Hunkemöller"
+    ]
   },
   {
     "organisasjonsnummer": "971084995",
@@ -20722,7 +20980,10 @@
     "featured": false,
     "telefon": "66 981310",
     "epost": "post@vivikes.no",
-    "antallAnsatte": 181
+    "antallAnsatte": 181,
+    "merker": [
+      "Junkyard"
+    ]
   },
   {
     "organisasjonsnummer": "947659138",
@@ -20738,7 +20999,10 @@
     "telefon": "69 36 87 00",
     "nettside": "https://www.kappahl.no",
     "epost": "anders.tandberg@kappahl.no",
-    "antallAnsatte": 1176
+    "antallAnsatte": 1176,
+    "merker": [
+      "KappAhl"
+    ]
   },
   {
     "organisasjonsnummer": "920893368",
@@ -20752,7 +21016,10 @@
     "kategori": "Klesbutikk",
     "featured": false,
     "epost": "laila.hox@bdtviken.no",
-    "antallAnsatte": 348
+    "antallAnsatte": 348,
+    "merker": [
+      "Lager 157"
+    ]
   },
   {
     "organisasjonsnummer": "819282102",
@@ -20768,7 +21035,10 @@
     "telefon": "23 65 20 00",
     "nettside": "https://www.lindex.no",
     "epost": "caroline.kronstad@lindex.com",
-    "antallAnsatte": 1078
+    "antallAnsatte": 1078,
+    "merker": [
+      "Lindex"
+    ]
   },
   {
     "organisasjonsnummer": "987633549",
@@ -20811,7 +21081,10 @@
     "telefon": "23 11 43 70",
     "nettside": "https://www.newyorker.eu",
     "epost": "lerikson@newyorker.de",
-    "antallAnsatte": 221
+    "antallAnsatte": 221,
+    "merker": [
+      "New Yorker"
+    ]
   },
   {
     "organisasjonsnummer": "990381577",
@@ -20867,7 +21140,10 @@
     "kategori": "Klesbutikk",
     "featured": false,
     "telefon": "57874182",
-    "antallAnsatte": 153
+    "antallAnsatte": 153,
+    "merker": [
+      "Skogstad"
+    ]
   },
   {
     "organisasjonsnummer": "910021621",

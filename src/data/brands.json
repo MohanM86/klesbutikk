@@ -1,0 +1,874 @@
+[
+  {
+    "name": "Høyer",
+    "slug": "hoeyer",
+    "stores": [
+      "hoeyer-as",
+      "hoeyer-gruppen-as",
+      "hoeyer-haugesund-as",
+      "hoeyer-markedsraad-as",
+      "hoeyer-online-as",
+      "hoeyer-oslo-as",
+      "hoeyer-outlet-stavanger-as",
+      "hoeyer-stadionparken-as",
+      "hoeyer-stroemmen-as",
+      "hoeyer-sandefjord-as",
+      "hoeyer-outlet-slependen-as",
+      "hoeyer-outlet-vestby-ii-as",
+      "hoeyer-trondheim-as",
+      "hoeyer-sjoelyst-as",
+      "hoeyer-solsiden-as"
+    ],
+    "cities": [
+      "Billingstad",
+      "Haugesund",
+      "Oslo",
+      "Sandefjord",
+      "Stavanger",
+      "Strømmen",
+      "Trondheim"
+    ],
+    "fylker": [
+      "Akershus",
+      "Oslo",
+      "Rogaland",
+      "Trøndelag",
+      "Vestfold"
+    ],
+    "storeCount": 15
+  },
+  {
+    "name": "Companys",
+    "slug": "companys",
+    "stores": [
+      "companys-sirkus-as",
+      "companys-ski-as",
+      "companys-stroemmen-as",
+      "companys-galleriet-as",
+      "companys-jekta-as",
+      "companys-storo-as",
+      "companys-byporten-as",
+      "companys-tr-torg-as",
+      "companys-aloha-as"
+    ],
+    "cities": [
+      "Bergen",
+      "Oslo",
+      "Ski",
+      "Strømmen",
+      "Trondheim"
+    ],
+    "fylker": [
+      "Akershus",
+      "Oslo",
+      "Trøndelag",
+      "Vestland"
+    ],
+    "storeCount": 9
+  },
+  {
+    "name": "Retro",
+    "slug": "retro",
+    "stores": [
+      "retro-as",
+      "retro-kristiansand-as",
+      "retro-bergen-as",
+      "retro-nordre-as",
+      "nostalgi-og-retro-as"
+    ],
+    "cities": [
+      "Gamle Fredrikstad",
+      "Trondheim"
+    ],
+    "fylker": [
+      "Trøndelag",
+      "Østfold"
+    ],
+    "storeCount": 5
+  },
+  {
+    "name": "Kleins",
+    "slug": "kleins",
+    "stores": [
+      "kleins-as",
+      "kleins-city-syd-as",
+      "kleins-sirkus-as",
+      "kleins-byhaven-as"
+    ],
+    "cities": [
+      "Tiller",
+      "Trondheim"
+    ],
+    "fylker": [
+      "Trøndelag"
+    ],
+    "storeCount": 4
+  },
+  {
+    "name": "Best Kids",
+    "slug": "best-kids",
+    "stores": [
+      "best-kids-norway-as",
+      "best-kids-orkanger-as",
+      "best-kids-as"
+    ],
+    "cities": [
+      "Hønefoss",
+      "Orkanger",
+      "Steinkjer"
+    ],
+    "fylker": [
+      "Buskerud",
+      "Trøndelag"
+    ],
+    "storeCount": 3
+  },
+  {
+    "name": "Holzweiler",
+    "slug": "holzweiler",
+    "stores": [
+      "holzweiler-fornebu-as",
+      "holzweiler-items-as"
+    ],
+    "cities": [
+      "Fornebu",
+      "Lysaker"
+    ],
+    "fylker": [
+      "Akershus"
+    ],
+    "storeCount": 2
+  },
+  {
+    "name": "GANT",
+    "slug": "gant",
+    "stores": [
+      "gant-store-bogstadveien-as",
+      "gant-retail-as"
+    ],
+    "cities": [
+      "Oslo",
+      "Slemmestad"
+    ],
+    "fylker": [
+      "Akershus",
+      "Oslo"
+    ],
+    "storeCount": 2
+  },
+  {
+    "name": "Floyd",
+    "slug": "floyd",
+    "stores": [
+      "floyd-butikkdrift-as",
+      "floydno-as"
+    ],
+    "cities": [
+      "Holmestrand"
+    ],
+    "fylker": [
+      "Vestfold"
+    ],
+    "storeCount": 2
+  },
+  {
+    "name": "Camilla Pihl",
+    "slug": "camilla-pihl",
+    "stores": [
+      "camilla-pihl-fashion-group-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Active Brands",
+    "slug": "active-brands",
+    "stores": [
+      "active-brands-butikkdrift-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Filippa K",
+    "slug": "filippa-k",
+    "stores": [
+      "filippa-k-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Ganni",
+    "slug": "ganni",
+    "stores": [
+      "ganni-norway-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Lillelam",
+    "slug": "lillelam",
+    "stores": [
+      "lillelam-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Max Mara",
+    "slug": "max-mara",
+    "stores": [
+      "max-mara-norway-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Northern Playground",
+    "slug": "northern-playground",
+    "stores": [
+      "northern-playground-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Ralph Lauren",
+    "slug": "ralph-lauren",
+    "stores": [
+      "ralph-lauren-norway-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Samsøe Samsøe",
+    "slug": "samsoee-samsoee",
+    "stores": [
+      "samsoee-samsoee-shops-norge-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Triumph",
+    "slug": "triumph",
+    "stores": [
+      "triumph-international-as"
+    ],
+    "cities": [
+      "Østerås"
+    ],
+    "fylker": [
+      "Akershus"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Volt",
+    "slug": "volt",
+    "stores": [
+      "volt-fashion-as"
+    ],
+    "cities": [
+      "Billingstad"
+    ],
+    "fylker": [
+      "Akershus"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Polarn O. Pyret",
+    "slug": "polarn-o-pyret",
+    "stores": [
+      "polarn-o-pyret-norge-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Oleana",
+    "slug": "oleana",
+    "stores": [
+      "oleanabutikken-as"
+    ],
+    "cities": [
+      "Bergen"
+    ],
+    "fylker": [
+      "Vestland"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Brandy Melville",
+    "slug": "brandy-melville",
+    "stores": [
+      "brandy-melville-oslo-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Guess",
+    "slug": "guess",
+    "stores": [
+      "guess-norge-as"
+    ],
+    "cities": [
+      "Vestby"
+    ],
+    "fylker": [
+      "Akershus"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Moncler",
+    "slug": "moncler",
+    "stores": [
+      "moncler-norway-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Nudie Jeans",
+    "slug": "nudie-jeans",
+    "stores": [
+      "nudie-jeans-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Tommy Hilfiger",
+    "slug": "tommy-hilfiger",
+    "stores": [
+      "tommy-hilfiger-stores-norge-as"
+    ],
+    "cities": [
+      "Vestby"
+    ],
+    "fylker": [
+      "Akershus"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Salomon",
+    "slug": "salomon",
+    "stores": [
+      "amer-sports-norge-as"
+    ],
+    "cities": [
+      "Lørenskog"
+    ],
+    "fylker": [
+      "Akershus"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Devold",
+    "slug": "devold",
+    "stores": [
+      "devold-retail-as"
+    ],
+    "cities": [
+      "Langevåg"
+    ],
+    "fylker": [
+      "Møre og Romsdal"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Zara",
+    "slug": "zara",
+    "stores": [
+      "inditex-norge-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Livid Jeans",
+    "slug": "livid-jeans",
+    "stores": [
+      "livid-retail-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Stormberg",
+    "slug": "stormberg",
+    "stores": [
+      "stormberg-as"
+    ],
+    "cities": [
+      "Kristiansand"
+    ],
+    "fylker": [
+      "Agder"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "B.Young",
+    "slug": "byoung",
+    "stores": [
+      "byoung-retail-norway-as"
+    ],
+    "cities": [
+      "Tønsberg"
+    ],
+    "fylker": [
+      "Vestfold"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Bik Bok",
+    "slug": "bik-bok",
+    "stores": [
+      "bik-bok-as"
+    ],
+    "cities": [
+      "Billingstad"
+    ],
+    "fylker": [
+      "Akershus"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Carlings",
+    "slug": "carlings",
+    "stores": [
+      "carlings-as"
+    ],
+    "cities": [
+      "Billingstad"
+    ],
+    "fylker": [
+      "Akershus"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Change Lingerie",
+    "slug": "change-lingerie",
+    "stores": [
+      "change-of-scandinavia-norway-as"
+    ],
+    "cities": [
+      "Drammen"
+    ],
+    "fylker": [
+      "Buskerud"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "H&M",
+    "slug": "handm",
+    "stores": [
+      "h-m-hennes-mauritz-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Mango",
+    "slug": "mango",
+    "stores": [
+      "mango-norge-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Monsoon",
+    "slug": "monsoon",
+    "stores": [
+      "monsoon-accessorize-norway-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "ONLY",
+    "slug": "only",
+    "stores": [
+      "only-stores-norway-as"
+    ],
+    "cities": [
+      "Blomsterdalen"
+    ],
+    "fylker": [
+      "Vestland"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Stadium",
+    "slug": "stadium",
+    "stores": [
+      "stadium-outlet-norge-as"
+    ],
+    "cities": [
+      "Kristiansand"
+    ],
+    "fylker": [
+      "Agder"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Voice",
+    "slug": "voice",
+    "stores": [
+      "voice-norge-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Zizzi",
+    "slug": "zizzi",
+    "stores": [
+      "zizzi-norway-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Woolland",
+    "slug": "woolland",
+    "stores": [
+      "woolland-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Adidas",
+    "slug": "adidas",
+    "stores": [
+      "adidas-norge-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Bestseller",
+    "slug": "bestseller",
+    "stores": [
+      "bestseller-stores-norway-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "BRGN",
+    "slug": "brgn",
+    "stores": [
+      "brgn-as"
+    ],
+    "cities": [
+      "Bergen"
+    ],
+    "fylker": [
+      "Vestland"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Cubus",
+    "slug": "cubus",
+    "stores": [
+      "cubus-as"
+    ],
+    "cities": [
+      "Billingstad"
+    ],
+    "fylker": [
+      "Akershus"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Dressmann",
+    "slug": "dressmann",
+    "stores": [
+      "dressmann-as"
+    ],
+    "cities": [
+      "Billingstad"
+    ],
+    "fylker": [
+      "Akershus"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Follestad",
+    "slug": "follestad",
+    "stores": [
+      "follestad-trend-as"
+    ],
+    "cities": [
+      "Lysaker"
+    ],
+    "fylker": [
+      "Akershus"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Fransa",
+    "slug": "fransa",
+    "stores": [
+      "fransa-retail-norway-as"
+    ],
+    "cities": [
+      "Tønsberg"
+    ],
+    "fylker": [
+      "Vestfold"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Gina Tricot",
+    "slug": "gina-tricot",
+    "stores": [
+      "gina-tricot-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Hunkemöller",
+    "slug": "hunkemoller",
+    "stores": [
+      "hunkemoller-norway-as"
+    ],
+    "cities": [
+      "Sandvika"
+    ],
+    "fylker": [
+      "Akershus"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Junkyard",
+    "slug": "junkyard",
+    "stores": [
+      "junkyard-as"
+    ],
+    "cities": [
+      "Billingstad"
+    ],
+    "fylker": [
+      "Akershus"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "KappAhl",
+    "slug": "kappahl",
+    "stores": [
+      "kappahl-as"
+    ],
+    "cities": [
+      "Fredrikstad"
+    ],
+    "fylker": [
+      "Østfold"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Lager 157",
+    "slug": "lager-157",
+    "stores": [
+      "lager-157-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Lindex",
+    "slug": "lindex",
+    "stores": [
+      "lindex-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "New Yorker",
+    "slug": "new-yorker",
+    "stores": [
+      "new-yorker-norway-as"
+    ],
+    "cities": [
+      "Oslo"
+    ],
+    "fylker": [
+      "Oslo"
+    ],
+    "storeCount": 1
+  },
+  {
+    "name": "Skogstad",
+    "slug": "skogstad",
+    "stores": [
+      "skogstad-sport-as"
+    ],
+    "cities": [
+      "Innvik"
+    ],
+    "fylker": [
+      "Vestland"
+    ],
+    "storeCount": 1
+  }
+]

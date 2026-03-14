@@ -14,6 +14,16 @@ export interface Store {
   epost?: string;
   beskrivelse?: string;
   antallAnsatte?: number;
+  merker?: string[];
+}
+
+export interface BrandData {
+  name: string;
+  slug: string;
+  stores: string[];
+  cities: string[];
+  fylker: string[];
+  storeCount: number;
 }
 
 export interface CityData {

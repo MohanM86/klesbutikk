@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import SearchBar from '@/components/SearchBar';
-import CityCard from '@/components/CityCard';
 import StoreCard from '@/components/StoreCard';
 import FAQAccordion from '@/components/FAQAccordion';
 import CTASection from '@/components/CTASection';
 import AnimatedHero from '@/components/AnimatedHero';
+import CityMarquee from '@/components/CityMarquee';
 import { getTopCities, getFeaturedStores, getStats, getTopBrands } from '@/lib/stores';
 import { faqSchema, itemListSchema } from '@/lib/seo';
 
@@ -32,7 +32,7 @@ const HOME_FAQS = [
 ];
 
 export default function HomePage() {
-  const cities = getTopCities(10);
+  const cities = getTopCities(16);
   const featured = getFeaturedStores(8);
   const stats = getStats();
   const topBrands = getTopBrands(16);
@@ -115,34 +115,33 @@ export default function HomePage() {
       </section>
 
       {/* ─── POPULAR CITIES ───────────────────────────────── */}
-      <section className="max-w-8xl mx-auto section-padding py-16 md:py-22">
-        <div className="flex items-end justify-between mb-10">
-          <div>
-            <p className="font-body text-xs font-semibold tracking-[0.2em] uppercase text-muted mb-2">
-              Utforsk
-            </p>
-            <h2 className="font-display text-display-sm md:text-display font-semibold text-charcoal">
-              Populære byer
-            </h2>
+      <section className="py-16 md:py-22">
+        <div className="max-w-8xl mx-auto section-padding">
+          <div className="flex items-end justify-between mb-10">
+            <div>
+              <p className="font-body text-xs font-semibold tracking-[0.2em] uppercase text-muted mb-2">
+                Utforsk
+              </p>
+              <h2 className="font-display text-display-sm md:text-display font-semibold text-charcoal">
+                Populære byer
+              </h2>
+            </div>
+            <Link
+              href="/by"
+              className="hidden sm:inline-flex items-center gap-1.5 font-body text-sm font-medium text-muted hover:text-charcoal transition-colors"
+            >
+              Se alle byer
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </Link>
           </div>
-          <Link
-            href="/by"
-            className="hidden sm:inline-flex items-center gap-1.5 font-body text-sm font-medium text-muted hover:text-charcoal transition-colors"
-          >
-            Se alle byer
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-          </Link>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-          {cities.map((city) => (
-            <CityCard key={city.slug} city={city} />
-          ))}
-        </div>
+        {/* Full-bleed marquee */}
+        <CityMarquee cities={cities} />
 
-        <div className="mt-6 text-center sm:hidden">
+        <div className="mt-8 text-center sm:hidden">
           <Link href="/by" className="btn-secondary text-sm">
             Se alle byer
           </Link>

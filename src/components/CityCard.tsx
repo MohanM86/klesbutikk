@@ -1,35 +1,41 @@
 import Link from 'next/link';
 import { CityData } from '@/lib/types';
 
-// Curated image indices for visual variety
-const CITY_VISUALS: Record<string, string> = {
-  Oslo: '🏙️',
-  Bergen: '🌧️',
-  Trondheim: '⛪',
-  Stavanger: '⛽',
-  Kristiansand: '☀️',
-  Drammen: '🌊',
-  Tromsø: '❄️',
-  Fredrikstad: '🏰',
-  Sandnes: '🏖️',
-  Haugesund: '⚓',
-};
+function CityIcon({ city }: { city: string }) {
+  // Unique SVG patterns per city for visual distinction
+  const patterns: Record<string, { gradient: string; letter: string }> = {
+    Oslo: { gradient: 'from-stone-800 to-stone-600', letter: 'O' },
+    Bergen: { gradient: 'from-slate-700 to-blue-900', letter: 'B' },
+    Trondheim: { gradient: 'from-zinc-800 to-zinc-600', letter: 'T' },
+    Stavanger: { gradient: 'from-neutral-800 to-neutral-600', letter: 'S' },
+    Kristiansand: { gradient: 'from-stone-700 to-amber-900', letter: 'K' },
+    Drammen: { gradient: 'from-gray-800 to-gray-600', letter: 'D' },
+    Tromsø: { gradient: 'from-slate-800 to-slate-600', letter: 'T' },
+    Fredrikstad: { gradient: 'from-zinc-700 to-stone-800', letter: 'F' },
+    Sandnes: { gradient: 'from-neutral-700 to-stone-600', letter: 'S' },
+    Haugesund: { gradient: 'from-gray-700 to-slate-800', letter: 'H' },
+  };
+
+  const p = patterns[city] || { gradient: 'from-charcoal/80 to-charcoal/60', letter: city.charAt(0) };
+
+  return (
+    <div className={`h-32 bg-gradient-to-br ${p.gradient} flex items-center justify-center relative overflow-hidden`}>
+      <span className="font-display text-6xl font-bold text-white/[0.08] group-hover:text-white/[0.14] group-hover:scale-110 transition-all duration-500 select-none">
+        {p.letter}
+      </span>
+      {/* Decorative line */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-white/10" />
+    </div>
+  );
+}
 
 export default function CityCard({ city }: { city: CityData }) {
-  const emoji = CITY_VISUALS[city.name] || '🏪';
-
   return (
     <Link
       href={`/${city.slug}`}
       className="group block bg-white border border-border rounded-lg overflow-hidden card-hover"
     >
-      {/* Visual header */}
-      <div className="h-32 bg-gradient-to-br from-charcoal/5 to-charcoal/10 flex items-center justify-center relative overflow-hidden">
-        <span className="text-5xl opacity-30 group-hover:opacity-50 group-hover:scale-110 transition-all duration-500">
-          {emoji}
-        </span>
-        <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent" />
-      </div>
+      <CityIcon city={city.name} />
 
       <div className="p-5">
         <div className="flex items-start justify-between mb-1">

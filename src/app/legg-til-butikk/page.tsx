@@ -8,6 +8,37 @@ export const metadata: Metadata = createMetadata({
   path: '/legg-til-butikk',
 });
 
+const BENEFITS = [
+  {
+    title: 'Flere kunder',
+    desc: 'Bli funnet av folk som søker etter klesbutikker i din by',
+    icon: (
+      <svg className="w-6 h-6 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Lokal synlighet',
+    desc: 'Vis at du finnes når noen søker etter mote i ditt område',
+    icon: (
+      <svg className="w-6 h-6 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Bli fremhevet',
+    desc: 'Få ekstra eksponering med en premium plassering',
+    icon: (
+      <svg className="w-6 h-6 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+      </svg>
+    ),
+  },
+];
+
 export default function AddStorePage() {
   return (
     <div className="max-w-3xl mx-auto section-padding pt-8 pb-16 md:pt-12 md:pb-22">
@@ -25,13 +56,9 @@ export default function AddStorePage() {
 
       {/* Benefits */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
-        {[
-          { icon: '👥', title: 'Flere kunder', desc: 'Bli funnet av folk som søker etter klesbutikker i din by' },
-          { icon: '📍', title: 'Lokal synlighet', desc: 'Vis at du finnes når noen søker etter mote i ditt område' },
-          { icon: '⭐', title: 'Bli fremhevet', desc: 'Få ekstra eksponering med en premium plassering' },
-        ].map((b) => (
+        {BENEFITS.map((b) => (
           <div key={b.title} className="bg-white border border-border rounded-lg p-5">
-            <span className="text-2xl mb-3 block">{b.icon}</span>
+            <div className="mb-3">{b.icon}</div>
             <h3 className="font-display text-base font-semibold text-charcoal mb-1">{b.title}</h3>
             <p className="font-body text-sm text-muted">{b.desc}</p>
           </div>

@@ -13,7 +13,7 @@ const BLOG_POSTS = [
   {
     slug: 'beste-klesbutikker-i-norge',
     title: 'De beste klesbutikkene i Norge i 2026',
-    excerpt: 'Vår guide til Norges beste klesbutikker – fra Oslo til Tromsø. Oppdag moteperler, designerbutikker og lokale favoritter.',
+    excerpt: 'Vår guide til Norges beste klesbutikker – fra Lindesnes til Nordkapp. Oppdag moteperler, designerbutikker og lokale favoritter.',
     date: '2026-03-10',
     category: 'Guide',
   },

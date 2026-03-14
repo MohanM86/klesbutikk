@@ -97,7 +97,7 @@ export default function HomePage() {
 
             <p className="editorial-text mx-auto mb-10">
               Oppdag motebutikker, lokale favoritter og norske klesbutikker i hele landet.
-              Fra Oslo til Tromsø &mdash; din guide til norsk mote.
+              Fra Lindesnes til Nordkapp &mdash; din guide til norsk mote.
             </p>
 
             <SearchBar variant="hero" />

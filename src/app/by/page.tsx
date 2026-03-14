@@ -7,7 +7,7 @@ import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
   title: 'Klesbutikker i alle byer i Norge',
-  description: 'Finn klesbutikker i din by. Se komplett oversikt over byer med klesbutikker i hele Norge – fra Oslo til Tromsø.',
+  description: 'Finn klesbutikker i din by. Se komplett oversikt over byer med klesbutikker i hele Norge – fra Lindesnes til Nordkapp.',
   path: '/by',
 });
 

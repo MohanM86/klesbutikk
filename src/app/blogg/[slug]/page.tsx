@@ -20,7 +20,7 @@ const BLOG_POSTS: BlogPost[] = [
     slug: 'beste-klesbutikker-i-norge',
     title: 'De beste klesbutikkene i Norge i 2026',
     metaTitle: 'De beste klesbutikkene i Norge (2026) – Komplett guide',
-    metaDescription: 'Vår guide til Norges beste klesbutikker fra Oslo til Tromsø. Oppdag moteperler, designerbutikker og lokale favoritter over hele landet.',
+    metaDescription: 'Vår guide til Norges beste klesbutikker fra Lindesnes til Nordkapp. Oppdag moteperler, designerbutikker og lokale favoritter over hele landet.',
     date: '2026-03-10',
     category: 'Guide',
     content: [

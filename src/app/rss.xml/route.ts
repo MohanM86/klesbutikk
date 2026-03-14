@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
 const BLOG_POSTS = [
-  { slug: 'beste-klesbutikker-i-norge', title: 'De beste klesbutikkene i Norge i 2026', date: '2026-03-10', description: 'Vår guide til Norges beste klesbutikker fra Oslo til Tromsø.' },
+  { slug: 'beste-klesbutikker-i-norge', title: 'De beste klesbutikkene i Norge i 2026', date: '2026-03-10', description: 'Vår guide til Norges beste klesbutikker fra Lindesnes til Nordkapp.' },
   { slug: 'klesbutikker-oslo-guide', title: 'Komplett guide til klesbutikker i Oslo', date: '2026-03-05', description: 'Alt du trenger å vite om shopping i Oslo.' },
   { slug: 'norske-motemerker', title: 'Norske motemerker du bør kjenne til', date: '2026-02-28', description: 'En oversikt over norske klesmerker som setter Norge på motekartet.' },
   { slug: 'barekraftig-mote-norge', title: 'Bærekraftig mote i Norge', date: '2026-02-20', description: 'De beste stedene for miljøvennlig shopping i Norge.' },

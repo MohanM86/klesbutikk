@@ -5,9 +5,9 @@ import Link from 'next/link';
 const NAV = [
   { label: 'Byer', href: '/by' },
   { label: 'Merker', href: '/merker' },
-  { label: 'Nettbutikker', href: '/nettbutikker' },
   { label: 'Kategorier', href: '/kategorier' },
   { label: 'Butikker', href: '/butikk' },
+  { label: 'Nettbutikker', href: '/nettbutikker' },
 ];
 
 export default function Header() {

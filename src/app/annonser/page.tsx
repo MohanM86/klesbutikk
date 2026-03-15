@@ -275,29 +275,27 @@ export default function AnnonserPage() {
                 desc: 'Vi skriver en artikkel om butikken din som publiseres på Klesbutikk.no. God for SEO og synlighet.',
                 price: '1 490 kr',
                 period: 'engang',
-                icon: 'M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25',
+                img: '/icons/dokument.png',
               },
               {
                 title: 'Ekstra by',
                 desc: 'Bli synlig i en ekstra by utover din egen. Perfekt for butikker som tiltrekker kunder fra nabobyer.',
                 price: '490 kr',
                 period: '/mnd',
-                icon: 'M15 10.5a3 3 0 11-6 0 3 3 0 016 0zM19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z',
+                img: '/icons/lokasjon.png',
               },
               {
                 title: 'Merkeside-sponsing',
                 desc: 'Stå øverst på en merkeside du fører. Kunder som søker etter merket ser din butikk først.',
                 price: '790 kr',
                 period: '/mnd',
-                icon: 'M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z',
+                img: '/icons/prislapp.png',
               },
             ].map((addon) => (
               <div key={addon.title} className="bg-white border-2 border-border rounded-2xl p-6 hover:border-accent hover:shadow-md transition-all">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl bg-accent-light flex items-center justify-center">
-                    <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={addon.icon} />
-                    </svg>
+                  <div className="w-11 h-11 rounded-xl bg-accent-light flex items-center justify-center p-2">
+                    <img src={addon.img} alt={addon.title} className="w-6 h-6 object-contain" />
                   </div>
                   <div>
                     <h3 className="font-body text-base font-bold text-charcoal">{addon.title}</h3>

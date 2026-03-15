@@ -19,12 +19,12 @@ const HOME_FAQS = [
 ];
 
 const CATS = [
-  { name: 'Dameklær', slug: 'dameklar', desc: 'Kjoler, topper, jakker og alt for henne', icon: 'M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z' },
-  { name: 'Herreklær', slug: 'herreklar', desc: 'Dresser, skjorter, bukser og mer', icon: 'M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125V7.5' },
-  { name: 'Barneklær', slug: 'barneklar', desc: 'Klær for barn og baby i alle aldre', icon: 'M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0z' },
-  { name: 'Designer', slug: 'designer', desc: 'Eksklusive merker og luksusklær', icon: 'M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12' },
-  { name: 'Vintage og gjenbruk', slug: 'vintage', desc: 'Secondhand, retro og bærekraftig mote', icon: 'M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182' },
-  { name: 'Sportsklær', slug: 'sport', desc: 'Treningsklær, outdoor og friluftsutstyr', icon: 'M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58' },
+  { name: 'Dameklær', slug: 'dameklar', desc: 'Kjoler, topper, jakker og alt for henne', img: '/icons/kjole.png' },
+  { name: 'Herreklær', slug: 'herreklar', desc: 'Dresser, skjorter, bukser og mer', img: '/icons/dress.png' },
+  { name: 'Barneklær', slug: 'barneklar', desc: 'Klær for barn og baby i alle aldre', img: '/icons/baby-body.png' },
+  { name: 'Designer', slug: 'designer', desc: 'Eksklusive merker og luksusklær', img: '/icons/sparkle.png' },
+  { name: 'Vintage og gjenbruk', slug: 'vintage', desc: 'Secondhand, retro og bærekraftig mote', img: '/icons/strikk.png' },
+  { name: 'Sportsklær', slug: 'sport', desc: 'Treningsklær, outdoor og friluftsutstyr', img: '/icons/sportsklaer.png' },
 ];
 
 export default function HomePage() {
@@ -119,10 +119,8 @@ export default function HomePage() {
             {CATS.map((c) => (
               <Link key={c.slug} href={`/kategorier#${c.slug}`}
                 className="group bg-white border-2 border-border rounded-2xl p-6 hover:border-accent hover:shadow-lg transition-all duration-200">
-                <div className="w-12 h-12 rounded-2xl bg-accent-light flex items-center justify-center mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-200">
-                  <svg className="w-6 h-6 text-accent group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={c.icon} />
-                  </svg>
+                <div className="w-12 h-12 rounded-2xl bg-accent-light flex items-center justify-center mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-200 p-2">
+                  <img src={c.img} alt={c.name} className="w-7 h-7 object-contain group-hover:brightness-0 group-hover:invert transition-all" />
                 </div>
                 <h3 className="font-body text-sm font-bold text-charcoal mb-1 group-hover:text-accent transition-colors">{c.name}</h3>
                 <p className="font-body text-xs text-muted leading-relaxed">{c.desc}</p>

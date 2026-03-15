@@ -27,10 +27,10 @@ export default function BrandShowcase({ brands }: { brands: BrandData[] }) {
       <div className="relative z-10 max-w-8xl mx-auto section-padding pt-16 pb-6 md:pt-22 md:pb-8">
         <div className="flex items-end justify-between mb-10">
           <div>
-            <p className="font-body text-[9px] font-bold tracking-[0.3em] uppercase text-white/15 mb-2">Klesmerker</p>
+            <p className="font-body text-[9px] font-bold tracking-[0.3em] uppercase text-white/70 mb-2">Klesmerker</p>
             <h2 className="font-display text-display-sm md:text-display font-black text-white">Populaere merker</h2>
           </div>
-          <Link href="/merker" className="hidden sm:inline-flex items-center gap-1.5 font-body text-[10px] font-bold text-white/20 hover:text-white transition-colors tracking-[0.12em] uppercase">
+          <Link href="/merker" className="hidden sm:inline-flex items-center gap-1.5 font-body text-[10px] font-bold text-white/55 hover:text-white transition-colors tracking-[0.12em] uppercase">
             Alle {brands.length} merker
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
           </Link>
@@ -49,8 +49,8 @@ export default function BrandShowcase({ brands }: { brands: BrandData[] }) {
                 className={`flex-shrink-0 inline-flex items-center gap-2 px-4 py-2.5 border transition-all duration-200 hover:bg-white/[0.08] ${
                   b.storeCount >= 3 ? 'bg-white/[0.06] border-white/[0.1] brand-glow' : 'bg-white/[0.02] border-white/[0.05]'
                 }`}>
-                <span className={`font-body text-xs font-black ${b.storeCount >= 3 ? 'text-white' : 'text-white/50'}`}>{b.name}</span>
-                {b.storeCount > 0 && <span className="font-body text-[10px] text-white/20">{b.storeCount}</span>}
+                <span className={`font-body text-xs font-black ${b.storeCount >= 3 ? 'text-white' : 'text-white/70'}`}>{b.name}</span>
+                {b.storeCount > 0 && <span className="font-body text-[10px] text-white/55">{b.storeCount}</span>}
               </Link>
             ))}
           </div>
@@ -60,7 +60,7 @@ export default function BrandShowcase({ brands }: { brands: BrandData[] }) {
             {[...ghost.slice(0, 15), ...mid, ...ghost.slice(0, 15), ...mid].map((b, i) => (
               <Link key={`g-${b.slug}-${i}`} href={`/merke/${b.slug}`}
                 className="flex-shrink-0 inline-flex items-center gap-2 px-3 py-2 bg-white/[0.015] border border-white/[0.03] hover:bg-white/[0.05] transition-all duration-200">
-                <span className="font-body text-[11px] text-white/25">{b.name}</span>
+                <span className="font-body text-[11px] text-white/60">{b.name}</span>
               </Link>
             ))}
           </div>

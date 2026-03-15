@@ -9,7 +9,7 @@ function CityPill({ city }: { city: CityData }) {
       <span className="font-body text-xl font-black text-white/60 group-hover:text-white transition-colors">{city.name.charAt(0)}</span>
       <div>
         <span className="block font-body text-sm font-bold text-white/80 group-hover:text-white transition-colors tracking-wide">{city.name}</span>
-        <span className="block font-body text-[10px] text-white/20 tracking-wider">{city.storeCount} butikker</span>
+        <span className="block font-body text-[10px] text-white/55 tracking-wider">{city.storeCount} butikker</span>
       </div>
     </Link>
   );

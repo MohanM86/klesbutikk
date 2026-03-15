@@ -18,11 +18,11 @@ export default function Header() {
         <div className="flex items-center justify-between h-14 md:h-16">
           <Link href="/" className="flex items-baseline gap-1">
             <span className="font-body text-sm md:text-base font-black tracking-tight text-white uppercase">Klesbutikk</span>
-            <span className="text-[9px] font-body font-medium text-white/20 tracking-[0.2em] uppercase">.no</span>
+            <span className="text-[9px] font-body font-medium text-white/55 tracking-[0.2em] uppercase">.no</span>
           </Link>
           <nav className="hidden md:flex items-center gap-6">
             {NAV.map((n) => (
-              <Link key={n.href} href={n.href} className="font-body text-[10px] font-semibold text-white/30 hover:text-white transition-colors tracking-[0.12em] uppercase">
+              <Link key={n.href} href={n.href} className="font-body text-[10px] font-semibold text-white/60 hover:text-white transition-colors tracking-[0.12em] uppercase">
                 {n.label}
               </Link>
             ))}
@@ -44,7 +44,7 @@ export default function Header() {
       <div className={`md:hidden overflow-hidden transition-all duration-300 ${open ? 'max-h-96' : 'max-h-0'}`}>
         <nav className="section-padding py-6 flex flex-col gap-4 bg-black border-t border-white/[0.04]">
           {NAV.map((n) => (
-            <Link key={n.href} href={n.href} onClick={() => setOpen(false)} className="font-body text-sm font-semibold text-white/40 hover:text-white transition-colors tracking-wide uppercase">{n.label}</Link>
+            <Link key={n.href} href={n.href} onClick={() => setOpen(false)} className="font-body text-sm font-semibold text-white/65 hover:text-white transition-colors tracking-wide uppercase">{n.label}</Link>
           ))}
           <Link href="/legg-til-butikk" onClick={() => setOpen(false)} className="btn-primary text-xs mt-2 w-full">Legg til butikk</Link>
         </nav>

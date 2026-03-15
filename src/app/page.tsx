@@ -48,14 +48,14 @@ export default function HomePage() {
         <div className="relative max-w-8xl mx-auto section-padding pt-20 pb-16 md:pt-32 md:pb-24">
           {/* Left-aligned, asymmetric */}
           <div className="max-w-3xl">
-            <p className="stagger-1 font-body text-[9px] font-bold tracking-[0.3em] uppercase text-white/15 mb-6">
+            <p className="stagger-1 font-body text-[9px] font-bold tracking-[0.3em] uppercase text-white/70 mb-6">
               Norges klesbutikkoversikt &mdash; siden 2026
             </p>
 
             <h1 className="stagger-2 font-display text-hero-sm md:text-hero font-black text-white mb-2">
               Finn<br />klesbutikker
             </h1>
-            <p className="stagger-3 font-display text-3xl md:text-5xl font-light italic text-white/20 tracking-tight mb-8">
+            <p className="stagger-3 font-display text-3xl md:text-5xl font-light italic text-white/55 tracking-tight mb-8">
               i hele Norge
             </p>
 
@@ -81,19 +81,27 @@ export default function HomePage() {
         <div className="max-w-8xl mx-auto section-padding py-14 md:py-20">
           <div className="flex items-end justify-between mb-10">
             <div>
-              <p className="font-body text-[9px] font-bold tracking-[0.3em] uppercase text-black/30 mb-2">Kategorier</p>
+              <p className="font-body text-[9px] font-bold tracking-[0.3em] uppercase text-black/55 mb-2">Kategorier</p>
               <h2 className="font-display text-display-sm md:text-display font-black text-black">Hva leter du etter?</h2>
             </div>
-            <Link href="/kategorier" className="hidden sm:inline-flex font-body text-[10px] font-bold text-black/30 hover:text-black transition-colors tracking-[0.12em] uppercase">
+            <Link href="/kategorier" className="hidden sm:inline-flex font-body text-[10px] font-bold text-black/55 hover:text-black transition-colors tracking-[0.12em] uppercase">
               Alle kategorier
             </Link>
           </div>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-px bg-black/[0.06]">
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-px bg-black/10">
             {CATS.map((c, i) => (
               <Link key={c.slug} href={`/kategorier#${c.slug}`}
-                className={`bg-white p-5 md:p-6 transition-all duration-200 hover:bg-black hover:text-white group ${i === 0 ? 'bg-black text-white' : ''}`}>
-                <h3 className={`font-body text-sm font-black tracking-wide ${i === 0 ? 'text-white' : 'text-black group-hover:text-white'} transition-colors`}>{c.name}</h3>
-                <p className={`font-body text-[10px] mt-1 ${i === 0 ? 'text-white/40' : 'text-black/30 group-hover:text-white/40'} transition-colors`}>{c.desc}</p>
+                className={`p-5 md:p-6 transition-all duration-200 group ${
+                  i === 0
+                    ? 'bg-black text-white hover:bg-black/90'
+                    : 'bg-white text-black hover:bg-black hover:text-white'
+                }`}>
+                <h3 className={`font-body text-sm font-black tracking-wide transition-colors ${
+                  i === 0 ? 'text-white' : 'text-black group-hover:text-white'
+                }`}>{c.name}</h3>
+                <p className={`font-body text-[11px] mt-1 transition-colors ${
+                  i === 0 ? 'text-white/70' : 'text-black/50 group-hover:text-white/70'
+                }`}>{c.desc}</p>
               </Link>
             ))}
           </div>
@@ -105,10 +113,10 @@ export default function HomePage() {
         <div className="max-w-8xl mx-auto section-padding">
           <div className="flex items-end justify-between mb-10">
             <div>
-              <p className="font-body text-[9px] font-bold tracking-[0.3em] uppercase text-white/15 mb-2">Utforsk</p>
+              <p className="font-body text-[9px] font-bold tracking-[0.3em] uppercase text-white/70 mb-2">Utforsk</p>
               <h2 className="font-display text-display-sm md:text-display font-black text-white">Populaere byer</h2>
             </div>
-            <Link href="/by" className="hidden sm:inline-flex font-body text-[10px] font-bold text-white/20 hover:text-white transition-colors tracking-[0.12em] uppercase">
+            <Link href="/by" className="hidden sm:inline-flex font-body text-[10px] font-bold text-white/55 hover:text-white transition-colors tracking-[0.12em] uppercase">
               Alle byer
             </Link>
           </div>
@@ -121,7 +129,7 @@ export default function HomePage() {
         <div className="max-w-8xl mx-auto section-padding py-14 md:py-20">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-px bg-black/[0.06]">
             <div className="bg-white p-6 md:p-8 md:col-span-1">
-              <p className="font-body text-[9px] font-bold tracking-[0.3em] uppercase text-black/30 mb-2">Slik fungerer det</p>
+              <p className="font-body text-[9px] font-bold tracking-[0.3em] uppercase text-black/55 mb-2">Slik fungerer det</p>
               <h2 className="font-display text-xl md:text-2xl font-black text-black leading-tight">Sok.<br />Utforsk.<br />Besok.</h2>
             </div>
             {[
@@ -133,7 +141,7 @@ export default function HomePage() {
                 <span className="font-body text-[48px] md:text-[64px] font-black text-black/[0.04] leading-none absolute top-4 right-4">{s.n}</span>
                 <div className="relative">
                   <h3 className="font-body text-base font-black text-black mb-2 tracking-wide">{s.title}</h3>
-                  <p className="font-body text-xs text-black/40 leading-relaxed">{s.desc}</p>
+                  <p className="font-body text-xs text-black/60 leading-relaxed">{s.desc}</p>
                 </div>
               </div>
             ))}
@@ -147,10 +155,10 @@ export default function HomePage() {
           <div className="max-w-8xl mx-auto section-padding py-14 md:py-20">
             <div className="flex items-end justify-between mb-10">
               <div>
-                <p className="font-body text-[9px] font-bold tracking-[0.3em] uppercase text-white/15 mb-2">Anbefalt</p>
+                <p className="font-body text-[9px] font-bold tracking-[0.3em] uppercase text-white/70 mb-2">Anbefalt</p>
                 <h2 className="font-display text-display-sm md:text-display font-black text-white">Fremhevede butikker</h2>
               </div>
-              <Link href="/butikk" className="hidden sm:inline-flex font-body text-[10px] font-bold text-white/20 hover:text-white transition-colors tracking-[0.12em] uppercase">
+              <Link href="/butikk" className="hidden sm:inline-flex font-body text-[10px] font-bold text-white/55 hover:text-white transition-colors tracking-[0.12em] uppercase">
                 Alle butikker
               </Link>
             </div>
@@ -160,11 +168,11 @@ export default function HomePage() {
                   className="bg-black p-5 hover:bg-white/[0.04] transition-all duration-200 group">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="w-8 h-8 bg-white/[0.06] flex items-center justify-center font-body text-xs font-black text-white/60">{store.navn.charAt(0)}</span>
-                    <span className="font-body text-[8px] font-bold tracking-[0.15em] uppercase text-white/20">Fremhevet</span>
+                    <span className="font-body text-[8px] font-bold tracking-[0.15em] uppercase text-white/55">Fremhevet</span>
                   </div>
                   <h3 className="font-body text-sm font-bold text-white group-hover:text-white/80 transition-colors line-clamp-1">{store.navn}</h3>
-                  <p className="font-body text-[11px] text-white/20 mt-1 line-clamp-1">{store.adresse}</p>
-                  <p className="font-body text-[10px] text-white/10 mt-0.5">{store.poststed}</p>
+                  <p className="font-body text-[11px] text-white/55 mt-1 line-clamp-1">{store.adresse}</p>
+                  <p className="font-body text-[10px] text-white/65 mt-0.5">{store.poststed}</p>
                 </Link>
               ))}
             </div>
@@ -178,7 +186,7 @@ export default function HomePage() {
       {/* ─── WHY US (WHITE) ───────────────────────────────── */}
       <section className="bg-white text-black border-b border-black/[0.06]">
         <div className="max-w-8xl mx-auto section-padding py-14 md:py-20">
-          <p className="font-body text-[9px] font-bold tracking-[0.3em] uppercase text-black/30 mb-2">Hvorfor Klesbutikk.no</p>
+          <p className="font-body text-[9px] font-bold tracking-[0.3em] uppercase text-black/55 mb-2">Hvorfor Klesbutikk.no</p>
           <h2 className="font-display text-display-sm md:text-display font-black text-black mb-10">Norges mest komplette oversikt</h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-black/[0.06]">
             {[
@@ -189,7 +197,7 @@ export default function HomePage() {
             ].map((item) => (
               <div key={item.title} className="bg-white p-6 md:p-8">
                 <h3 className="font-body text-sm font-black text-black mb-2 tracking-wide">{item.title}</h3>
-                <p className="font-body text-xs text-black/35 leading-relaxed">{item.desc}</p>
+                <p className="font-body text-xs text-black/60 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -201,9 +209,9 @@ export default function HomePage() {
         <div className="max-w-8xl mx-auto section-padding py-14 md:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="font-body text-[9px] font-bold tracking-[0.3em] uppercase text-white/15 mb-3">For butikkeiere</p>
+              <p className="font-body text-[9px] font-bold tracking-[0.3em] uppercase text-white/70 mb-3">For butikkeiere</p>
               <h2 className="font-display text-display-sm md:text-display font-black text-white mb-6">Bli synlig</h2>
-              <p className="font-body text-sm text-white/25 leading-relaxed mb-8 max-w-md">
+              <p className="font-body text-sm text-white/60 leading-relaxed mb-8 max-w-md">
                 Klesbutikk.no er der folk soker nar de leter etter klesbutikker. Fa en fremhevet oppforing og bli synlig i din by.
               </p>
               <div className="flex gap-3">
@@ -220,7 +228,7 @@ export default function HomePage() {
               ].map((s) => (
                 <div key={s.label} className="bg-black p-6">
                   <span className="font-body text-2xl font-black text-white">{s.value}</span>
-                  <span className="block font-body text-[10px] text-white/15 mt-1 tracking-wider uppercase">{s.label}</span>
+                  <span className="block font-body text-[10px] text-white/70 mt-1 tracking-wider uppercase">{s.label}</span>
                 </div>
               ))}
             </div>
@@ -240,7 +248,7 @@ export default function HomePage() {
         <div className="max-w-8xl mx-auto section-padding py-14 md:py-20">
           <div className="max-w-2xl">
             <h2 className="font-display text-xl font-black text-white mb-6">Klesbutikker i Norge</h2>
-            <div className="font-body text-xs text-white/20 leading-relaxed space-y-3">
+            <div className="font-body text-xs text-white/55 leading-relaxed space-y-3">
               <p>
                 Klesbutikk.no er Norges mest komplette oversikt over klesbutikker. Vi har samlet alle
                 registrerte klesbutikker fra Bronnoysundregistrene med naeringskode 47.710 og gjort dem

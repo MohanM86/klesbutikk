@@ -46,7 +46,7 @@ export default function AnimatedHero({ totalStores, totalFylker }: { totalStores
             <span className="font-body text-3xl md:text-4xl font-black text-white tabular-nums tracking-tight">
               {s.val}
             </span>
-            <span className="block font-body text-[8px] md:text-[9px] tracking-[0.25em] uppercase text-white/15 mt-1">
+            <span className="block font-body text-[8px] md:text-[9px] tracking-[0.25em] uppercase text-white/70 mt-1">
               {s.label}
             </span>
           </div>

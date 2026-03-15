@@ -31,7 +31,7 @@
   .btn-white { @apply btn-primary; }
   .btn-outline-white { @apply btn-secondary; }
   .section-padding { @apply px-6 md:px-10 lg:px-16; }
-  .editorial-text { @apply text-white/35 leading-relaxed text-base md:text-lg max-w-2xl; }
+  .editorial-text { @apply text-white/50 leading-relaxed text-base md:text-lg max-w-2xl; }
   .card-hover { @apply transition-all duration-300 hover:-translate-y-0.5; }
   .section-dark { @apply bg-black text-white; }
   .section-light { @apply bg-white text-black; }

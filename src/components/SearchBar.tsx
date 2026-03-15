@@ -30,15 +30,15 @@ export default function SearchBar({ variant = 'hero' }: { variant?: 'hero' | 'co
     <div ref={ref} className="relative w-full max-w-xl">
       <div className={`relative flex items-center ${isHero ? 'bg-white/[0.04] border border-white/[0.08]' : 'bg-white/[0.04] border border-white/[0.08]'}`}>
         <div className={`flex-shrink-0 ${isHero ? 'pl-5' : 'pl-4'}`}>
-          <svg className={`${isHero ? 'w-4 h-4 text-white/20' : 'w-4 h-4 text-white/20'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className={`${isHero ? 'w-4 h-4 text-white/55' : 'w-4 h-4 text-white/55'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
           </svg>
         </div>
         <input type="text" value={query} onChange={(e) => setQuery(e.target.value)}
           placeholder="Sok etter by, merke eller butikk..."
-          className={`w-full bg-transparent font-body focus:outline-none text-white placeholder:text-white/15 ${isHero ? 'px-4 py-4 text-sm' : 'px-3 py-3 text-sm'}`} />
+          className={`w-full bg-transparent font-body focus:outline-none text-white placeholder:text-white/70 ${isHero ? 'px-4 py-4 text-sm' : 'px-3 py-3 text-sm'}`} />
         {query && (
-          <button onClick={() => { setQuery(''); setResults([]); setIsOpen(false); }} className="flex-shrink-0 pr-4 text-white/30 hover:text-white transition-colors">
+          <button onClick={() => { setQuery(''); setResults([]); setIsOpen(false); }} className="flex-shrink-0 pr-4 text-white/60 hover:text-white transition-colors">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" /></svg>
           </button>
         )}
@@ -49,11 +49,11 @@ export default function SearchBar({ variant = 'hero' }: { variant?: 'hero' | 'co
             <button key={i} onClick={() => { setIsOpen(false); setQuery(''); router.push(r.href); }}
               className="w-full text-left px-5 py-3 hover:bg-white/[0.04] transition-colors border-b border-white/[0.04] last:border-b-0 flex items-center gap-3">
               <span className="flex-shrink-0 w-7 h-7 bg-white/[0.06] flex items-center justify-center">
-                <span className="font-body text-[10px] font-bold text-white/50">{r.type === 'city' ? 'BY' : 'B'}</span>
+                <span className="font-body text-[10px] font-bold text-white/70">{r.type === 'city' ? 'BY' : 'B'}</span>
               </span>
               <div>
                 <p className="font-body text-sm font-semibold text-white">{r.label}</p>
-                <p className="font-body text-xs text-white/30">{r.sublabel}</p>
+                <p className="font-body text-xs text-white/60">{r.sublabel}</p>
               </div>
             </button>
           ))}

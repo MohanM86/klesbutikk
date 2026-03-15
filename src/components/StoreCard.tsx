@@ -25,9 +25,9 @@ export default function StoreCard({ store, showCity = false }: { store: Store; s
 
       <div className="space-y-0.5">
         {store.adresse && (
-          <p className="font-body text-[11px] text-white/25 line-clamp-1">{store.adresse}</p>
+          <p className="font-body text-[11px] text-white/60 line-clamp-1">{store.adresse}</p>
         )}
-        <p className="font-body text-[11px] text-white/15">
+        <p className="font-body text-[11px] text-white/70">
           {store.postnummer} {showCity ? store.poststed : store.kommune || ''}
         </p>
       </div>

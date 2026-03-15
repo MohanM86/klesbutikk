@@ -14,7 +14,7 @@ export const metadata: Metadata = createMetadata({
 const FAQS = [
   { question: 'Hva er inkludert i gratispakken?', answer: 'Alle klesbutikker registrert med næringskode 47.710 i Brønnøysundregistrene er automatisk listet på Klesbutikk.no helt gratis. Oppføringen inkluderer butikknavn, adresse, postnummer og kommune.' },
   { question: 'Hva får jeg med Synlig?', answer: 'Med Synlig kan du legge til logo, kort beskrivelse og åpningstider på butikkprofilen din. I tillegg blir butikken din synlig på relevante merkesider og kategorisider, slik at flere finner deg.' },
-  { question: 'Hva er fordelen med Premium?', answer: 'Premium gir deg alt i Synlig, pluss fremhevet badge, prioritert plassering øverst i din by, lenke til nettbutikkog en egen artikkelside om butikken din.' },
+  { question: 'Hva er fordelen med Premium?', answer: 'Premium gir deg alt i Synlig, pluss fremhevet badge, prioritert plassering øverst i byen, plass på forsiden, synlighet i nærliggende byer, lenke til nettbutikk, en Google-optimalisert butikkside med unik SEO-tekst, manuell kobling til alle merkene du fører, og en egen artikkelside om butikken din.' },
   { question: 'Kan jeg bytte pakke underveis?', answer: 'Ja, du kan oppgradere eller nedgradere når som helst. Endringen trer i kraft ved neste faktureringsperiode.' },
   { question: 'Er det bindingstid?', answer: 'Nei, ingen bindingstid. Du kan si opp når som helst og beholder pakken ut inneværende måned.' },
   { question: 'Hvordan betaler jeg?', answer: 'Vi sender faktura månedlig via epost. Du kan betale med bankoverføring eller kort.' },
@@ -144,8 +144,12 @@ export default function AnnonserPage() {
                 {[
                   'Fremhevet badge på oppføringen',
                   'Prioritert plassering øverst i byen',
+                  'Fremhevet på forsiden i «Populære butikker»',
+                  'Synlig i nærliggende byer',
                   'Lenke til nettbutikk',
                   'Listet på nettbutikksiden',
+                  'Google-optimalisert butikkside med unik SEO-tekst',
+                  'Manuell merkekobling til alle merker du fører',
                   'Egen artikkelside om butikken din',
                 ].map((f) => (
                   <li key={f} className="flex items-start gap-2.5">
@@ -188,8 +192,12 @@ export default function AnnonserPage() {
               { f: 'Åpningstider', g: false, s: true, p: true },
               { f: 'Fremhevet badge', g: false, s: false, p: true },
               { f: 'Prioritert plassering i byen', g: false, s: false, p: true },
+              { f: 'Fremhevet på forsiden', g: false, s: false, p: true },
+              { f: 'Synlig i nærliggende byer', g: false, s: false, p: true },
               { f: 'Lenke til nettbutikk', g: false, s: false, p: true },
               { f: 'Listet på nettbutikksiden', g: false, s: false, p: true },
+              { f: 'Google-optimalisert SEO-tekst', g: false, s: false, p: true },
+              { f: 'Manuell merkekobling', g: false, s: false, p: true },
               { f: 'Egen artikkelside', g: false, s: false, p: true },
             ].map((row, i) => (
               <div key={row.f} className={`grid grid-cols-4 gap-0 ${i % 2 === 0 ? 'bg-white' : 'bg-surface/50'} border-b border-border last:border-b-0`}>

@@ -19,12 +19,12 @@ const HOME_FAQS = [
 ];
 
 const CATS = [
-  { name: 'Dameklær', slug: 'dameklar', desc: 'Kjoler, topper, jakker og alt for henne', img: '/icons/kjole.png' },
-  { name: 'Herreklær', slug: 'herreklar', desc: 'Dresser, skjorter, bukser og mer', img: '/icons/dress.png' },
-  { name: 'Barneklær', slug: 'barneklar', desc: 'Klær for barn og baby i alle aldre', img: '/icons/baby-body.png' },
-  { name: 'Designer', slug: 'designer', desc: 'Eksklusive merker og luksusklær', img: '/icons/sparkle.png' },
-  { name: 'Vintage og gjenbruk', slug: 'vintage', desc: 'Secondhand, retro og bærekraftig mote', img: '/icons/strikk.png' },
-  { name: 'Sportsklær', slug: 'sport', desc: 'Treningsklær, outdoor og friluftsutstyr', img: '/icons/sportsklaer.png' },
+  { name: 'Dameklær', slug: 'dameklar', desc: 'Kjoler, topper, jakker og alt for henne', letter: 'D', count: 342, accent: true },
+  { name: 'Herreklær', slug: 'herreklar', desc: 'Dresser, skjorter, bukser og mer', letter: 'H', count: 289, accent: false },
+  { name: 'Barneklær', slug: 'barneklar', desc: 'Klær for barn og baby i alle aldre', letter: 'B', count: 156, accent: true },
+  { name: 'Designer', slug: 'designer', desc: 'Eksklusive merker og luksusklær', letter: 'D', count: 87, accent: false },
+  { name: 'Vintage', slug: 'vintage', desc: 'Secondhand, retro og bærekraftig mote', letter: 'V', count: 64, accent: true },
+  { name: 'Sportsklær', slug: 'sport', desc: 'Treningsklær, outdoor og friluftsutstyr', letter: 'S', count: 201, accent: false },
 ];
 
 export default function HomePage() {
@@ -118,12 +118,18 @@ export default function HomePage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {CATS.map((c) => (
               <Link key={c.slug} href={`/kategorier#${c.slug}`}
-                className="group bg-white border-2 border-border rounded-2xl p-6 hover:border-accent hover:shadow-lg transition-all duration-200">
-                <div className="w-12 h-12 rounded-2xl bg-accent-light flex items-center justify-center mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-200 p-2">
-                  <img src={c.img} alt={c.name} className="w-7 h-7 object-contain group-hover:brightness-0 group-hover:invert transition-all" />
+                className="group relative bg-white border-2 border-border rounded-2xl p-5 pb-4 hover:border-accent hover:shadow-lg transition-all duration-200 overflow-hidden">
+                <span className={`absolute -right-2 -top-3 font-body text-[56px] font-black leading-none select-none pointer-events-none transition-colors duration-200 ${
+                  c.accent ? 'text-accent/[0.06] group-hover:text-accent/[0.12]' : 'text-charcoal/[0.04] group-hover:text-charcoal/[0.08]'
+                }`}>{c.letter}</span>
+                <div className="relative">
+                  <h3 className="font-body text-sm font-extrabold text-charcoal mb-0.5 group-hover:text-accent transition-colors">{c.name}</h3>
+                  <p className="font-body text-[11px] text-muted leading-relaxed mb-3">{c.desc}</p>
+                  <div className="flex items-center gap-2">
+                    <div className={`w-5 h-[3px] rounded-full ${c.accent ? 'bg-accent' : 'bg-charcoal'}`} />
+                    <span className="font-body text-[10px] font-bold text-muted">{c.count} butikker</span>
+                  </div>
                 </div>
-                <h3 className="font-body text-sm font-bold text-charcoal mb-1 group-hover:text-accent transition-colors">{c.name}</h3>
-                <p className="font-body text-xs text-muted leading-relaxed">{c.desc}</p>
               </Link>
             ))}
           </div>

@@ -11,16 +11,16 @@ export const metadata: Metadata = createMetadata({
 });
 
 const CATEGORIES = [
-  { name: 'Dameklær', slug: 'dameklar', desc: 'Kjoler, topper, jakker, bukser og alt for henne. Finn de beste dameklesbutikkene i din by.', img: '/icons/kjole.png' },
-  { name: 'Herreklær', slug: 'herreklar', desc: 'Dresser, skjorter, bukser, yttertøy og accessoirer for menn.', img: '/icons/dress.png' },
-  { name: 'Barneklær', slug: 'barneklar', desc: 'Klær for barn og baby i alle aldre, fra nyfødt til tenåring.', img: '/icons/baby-body.png' },
-  { name: 'Designer', slug: 'designer', desc: 'Eksklusive designermerker og luksusklær fra norske og internasjonale motehus.', img: '/icons/sparkle.png' },
-  { name: 'Vintage og gjenbruk', slug: 'vintage', desc: 'Secondhand, retro og bærekraftig mote. Unike funn og tidløse klassikere.', img: '/icons/strikk.png' },
-  { name: 'Sportsklær', slug: 'sport', desc: 'Treningsklær, outdoor, friluftsutstyr og sportsmerker for aktive mennesker.', img: '/icons/sportsklaer.png' },
-  { name: 'Arbeidsklær', slug: 'arbeidsklar', desc: 'Profesjonelle arbeidsklær, uniformer og vernetøy.', img: '/icons/arbeidsklaer.png' },
-  { name: 'Brudebutikker', slug: 'brud', desc: 'Brudekjoler, festantrekk og tilbehør for den store dagen.', img: '/icons/brudekjole.png' },
-  { name: 'Undertøy', slug: 'undertoy', desc: 'Undertøy, sokker, nattøy og loungewear for dame og herre.', img: '/icons/bh.png' },
-  { name: 'Bunad', slug: 'bunad', desc: 'Norske bunader, bunadssølv og tradisjonelle festdrakter fra hele landet.', img: '/icons/bunad-cardigan.png' },
+  { name: 'Dameklær', slug: 'dameklar', desc: 'Kjoler, topper, jakker, bukser og alt for henne. Finn de beste dameklesbutikkene i din by.', letter: 'D', count: 342, accent: true },
+  { name: 'Herreklær', slug: 'herreklar', desc: 'Dresser, skjorter, bukser, yttertøy og accessoirer for menn.', letter: 'H', count: 289, accent: false },
+  { name: 'Barneklær', slug: 'barneklar', desc: 'Klær for barn og baby i alle aldre, fra nyfødt til tenåring.', letter: 'B', count: 156, accent: true },
+  { name: 'Designer', slug: 'designer', desc: 'Eksklusive designermerker og luksusklær fra norske og internasjonale motehus.', letter: 'D', count: 87, accent: false },
+  { name: 'Vintage og gjenbruk', slug: 'vintage', desc: 'Secondhand, retro og bærekraftig mote. Unike funn og tidløse klassikere.', letter: 'V', count: 64, accent: true },
+  { name: 'Sportsklær', slug: 'sport', desc: 'Treningsklær, outdoor, friluftsutstyr og sportsmerker for aktive mennesker.', letter: 'S', count: 201, accent: false },
+  { name: 'Arbeidsklær', slug: 'arbeidsklar', desc: 'Profesjonelle arbeidsklær, uniformer og vernetøy.', letter: 'A', count: 45, accent: true },
+  { name: 'Brudebutikker', slug: 'brud', desc: 'Brudekjoler, festantrekk og tilbehør for den store dagen.', letter: 'B', count: 32, accent: false },
+  { name: 'Undertøy', slug: 'undertoy', desc: 'Undertøy, sokker, nattøy og loungewear for dame og herre.', letter: 'U', count: 78, accent: true },
+  { name: 'Bunad', slug: 'bunad', desc: 'Norske bunader, bunadssølv og tradisjonelle festdrakter fra hele landet.', letter: 'B', count: 23, accent: false },
 ];
 
 export default function KategorierPage() {
@@ -46,32 +46,42 @@ export default function KategorierPage() {
         <div className="max-w-8xl mx-auto section-padding py-10 md:py-14">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {CATEGORIES.map((cat, i) => (
-              <div key={cat.slug} id={cat.slug} className={`rounded-2xl p-6 border-2 transition-all ${
+              <div key={cat.slug} id={cat.slug} className={`rounded-2xl p-6 border-2 transition-all relative overflow-hidden ${
                 i === 0 ? 'bg-charcoal text-white border-charcoal md:col-span-2' :
                 i === 1 ? 'bg-accent text-white border-accent' :
                 'bg-white border-border hover:border-accent'
               }`}>
-                <div className="flex items-start gap-4">
-                  <div className={`w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 p-2 ${
-                    i === 0 ? 'bg-white/10' : i === 1 ? 'bg-white/20' : 'bg-accent-light'
-                  }`}>
-                    <img src={cat.img} alt={cat.name} className={`w-7 h-7 object-contain ${i < 2 ? 'brightness-0 invert' : ''}`} />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h2 className={`font-body text-lg font-extrabold mb-1 ${i >= 2 ? 'text-charcoal' : 'text-white'}`}>{cat.name}</h2>
-                    <p className={`font-body text-sm leading-relaxed mb-4 ${
-                      i === 0 ? 'text-white/60' : i === 1 ? 'text-white/70' : 'text-muted'
-                    }`}>{cat.desc}</p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {cities.slice(0, 5).map((city) => (
-                        <Link key={city.slug} href={`/kategori/${cat.slug}/${city.slug}`}
-                          className={`font-body text-[11px] font-medium px-2.5 py-1 rounded-lg transition-colors ${
-                            i === 0 ? 'bg-white/[0.06] text-white/60 hover:bg-white/10' :
-                            i === 1 ? 'bg-white/10 text-white/70 hover:bg-white/20' :
-                            'bg-surface text-muted hover:bg-accent-light hover:text-accent'
-                          }`}>{cat.name} i {city.name}</Link>
-                      ))}
+                {/* Ghost letter */}
+                <span className={`absolute -right-2 -top-4 font-body text-[80px] md:text-[100px] font-black leading-none select-none pointer-events-none ${
+                  i === 0 ? 'text-white/[0.04]' :
+                  i === 1 ? 'text-white/[0.1]' :
+                  cat.accent ? 'text-accent/[0.06]' : 'text-charcoal/[0.04]'
+                }`}>{cat.letter}</span>
+
+                <div className="relative flex-1 min-w-0">
+                  <div className="flex items-center gap-3 mb-2">
+                    <h2 className={`font-body text-lg font-extrabold ${i >= 2 ? 'text-charcoal' : 'text-white'}`}>{cat.name}</h2>
+                    <div className="flex items-center gap-1.5">
+                      <div className={`w-5 h-[3px] rounded-full ${
+                        i === 0 ? 'bg-white/20' : i === 1 ? 'bg-white/30' : cat.accent ? 'bg-accent' : 'bg-charcoal'
+                      }`} />
+                      <span className={`font-body text-[11px] font-bold ${
+                        i === 0 ? 'text-white/30' : i === 1 ? 'text-white/40' : 'text-muted'
+                      }`}>{cat.count} butikker</span>
                     </div>
+                  </div>
+                  <p className={`font-body text-sm leading-relaxed mb-4 ${
+                    i === 0 ? 'text-white/60' : i === 1 ? 'text-white/70' : 'text-muted'
+                  }`}>{cat.desc}</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {cities.slice(0, 5).map((city) => (
+                      <Link key={city.slug} href={`/kategori/${cat.slug}/${city.slug}`}
+                        className={`font-body text-[11px] font-medium px-2.5 py-1 rounded-lg transition-colors ${
+                          i === 0 ? 'bg-white/[0.06] text-white/60 hover:bg-white/10' :
+                          i === 1 ? 'bg-white/10 text-white/70 hover:bg-white/20' :
+                          'bg-surface text-muted hover:bg-accent-light hover:text-accent'
+                        }`}>{cat.name} i {city.name}</Link>
+                    ))}
                   </div>
                 </div>
               </div>

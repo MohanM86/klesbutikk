@@ -170,13 +170,13 @@ export default function BlogPostPage({ params }: PageProps) {
 
         <div className="mb-10">
           <div className="flex items-center gap-3 mb-4">
-            <span className="font-body text-[10px] font-semibold tracking-wider uppercase text-muted bg-cream px-2.5 py-1 rounded-full">
+            <span className="font-body text-[10px] font-semibold tracking-wider uppercase text-muted bg-surface px-2.5 py-1 rounded-lg">
               {post.category}
             </span>
             <time className="font-body text-xs text-muted">{post.date}</time>
           </div>
 
-          <h1 className="font-display text-hero-sm md:text-display font-semibold text-charcoal mb-6">
+          <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-6">
             {post.title}
           </h1>
         </div>
@@ -191,7 +191,7 @@ export default function BlogPostPage({ params }: PageProps) {
 
         {/* Related articles */}
         <section className="border-t border-border pt-12 mb-16">
-          <h2 className="font-display text-xl font-semibold text-charcoal mb-6">
+          <h2 className="font-body text-xl font-extrabold text-charcoal mb-6">
             Les også
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -199,12 +199,12 @@ export default function BlogPostPage({ params }: PageProps) {
               <Link
                 key={p.slug}
                 href={`/artikkel/${p.slug}`}
-                className="group block bg-white border border-border rounded-lg p-5 card-hover"
+                className="group block bg-white border border-border rounded-2xl p-5 card-hover"
               >
                 <span className="font-body text-[10px] font-semibold tracking-wider uppercase text-muted">
                   {p.category}
                 </span>
-                <h3 className="font-display text-sm font-semibold text-charcoal mt-1 group-hover:text-slate transition-colors line-clamp-2">
+                <h3 className="font-body text-sm font-extrabold text-charcoal mt-1 group-hover:text-accent transition-colors line-clamp-2">
                   {p.title}
                 </h3>
               </Link>

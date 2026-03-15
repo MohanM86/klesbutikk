@@ -3,22 +3,16 @@ import Link from 'next/link';
 export default function NotFound() {
   return (
     <div className="max-w-8xl mx-auto section-padding pt-20 pb-32 text-center">
-      <p className="font-body text-xs font-semibold tracking-[0.2em] uppercase text-muted mb-4">
-        404
+      <div className="w-20 h-20 rounded-2xl bg-accent-light flex items-center justify-center mx-auto mb-6">
+        <span className="font-body text-3xl font-extrabold text-accent">404</span>
+      </div>
+      <h1 className="font-body text-2xl font-extrabold text-charcoal mb-3">Siden ble ikke funnet</h1>
+      <p className="font-body text-base text-muted mb-8 max-w-md mx-auto">
+        Beklager, men denne siden finnes ikke. Den kan ha blitt flyttet eller slettet.
       </p>
-      <h1 className="font-display text-hero-sm md:text-display font-semibold text-charcoal mb-4">
-        Siden ble ikke funnet
-      </h1>
-      <p className="editorial-text mx-auto mb-8">
-        Beklager, vi fant ikke siden du leter etter. Kanskje du vil utforske klesbutikker i en av våre byer?
-      </p>
-      <div className="flex items-center justify-center gap-4">
-        <Link href="/" className="btn-primary">
-          Til forsiden
-        </Link>
-        <Link href="/by" className="btn-secondary">
-          Se alle byer
-        </Link>
+      <div className="flex items-center justify-center gap-3">
+        <Link href="/" className="btn-primary">Tilbake til forsiden</Link>
+        <Link href="/by" className="btn-outline">Se alle byer</Link>
       </div>
     </div>
   );

@@ -85,22 +85,22 @@ export default function BrandPage({ params }: PageProps) {
         {/* Hero */}
         <div className="mb-12 md:mb-16">
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-16 h-16 rounded-full bg-charcoal flex items-center justify-center">
-              <span className="font-display text-2xl font-semibold text-white">
+            <div className="w-16 h-16 rounded-lg bg-accent flex items-center justify-center">
+              <span className="font-body text-2xl font-extrabold text-white">
                 {brand.name.charAt(0)}
               </span>
             </div>
             <div>
-              <p className="font-body text-xs font-semibold tracking-[0.2em] uppercase text-muted mb-1">
+              <p className="font-body text-xs font-semibold font-bold text-accent mb-1">
                 Klesmerke{brand.storeCount > 0 ? ` · ${brand.storeCount} butikker · ${brand.cities.length} byer` : ''}
               </p>
-              <h1 className="font-display text-display-sm md:text-display font-semibold text-charcoal">
+              <h1 className="font-body text-display-sm md:text-display font-extrabold text-charcoal">
                 {brand.name} <span className="italic font-normal">i Norge</span>
               </h1>
             </div>
           </div>
 
-          <p className="editorial-text">
+          <p className="font-body text-base text-muted max-w-lg">
             {brand.storeCount > 0 ? (
               <>
                 Finn alle butikker som fører {brand.name} i Norge. Merket er tilgjengelig
@@ -121,7 +121,7 @@ export default function BrandPage({ params }: PageProps) {
 
         {/* Cities with this brand */}
         <section className="mb-10">
-          <h2 className="font-display text-xl font-semibold text-charcoal mb-4">
+          <h2 className="font-body text-xl font-extrabold text-charcoal mb-4">
             Byer med {brand.name}
           </h2>
           <div className="flex flex-wrap gap-2">
@@ -129,7 +129,7 @@ export default function BrandPage({ params }: PageProps) {
               <Link
                 key={city}
                 href={`/${slugify(city)}`}
-                className="font-body text-sm text-muted hover:text-charcoal border border-border rounded-full px-4 py-2 transition-colors hover:border-charcoal"
+                className="font-body text-sm text-muted hover:text-accent border-2 border-border rounded-2xl px-4 py-2 transition-colors hover:border-accent"
               >
                 {city}
               </Link>
@@ -139,7 +139,7 @@ export default function BrandPage({ params }: PageProps) {
 
         {/* All stores with this brand */}
         <section className="mb-16">
-          <h2 className="font-display text-display-sm font-semibold text-charcoal mb-6">
+          <h2 className="font-body text-display-sm font-extrabold text-charcoal mb-6">
             {brand.name}-butikker i Norge
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -151,13 +151,13 @@ export default function BrandPage({ params }: PageProps) {
 
         {/* FAQ */}
         <section className="mb-16 max-w-3xl">
-          <h2 className="font-display text-display-sm font-semibold text-charcoal mb-6">
+          <h2 className="font-body text-display-sm font-extrabold text-charcoal mb-6">
             Ofte stilte spørsmål om {brand.name}
           </h2>
           <div className="divide-y divide-border border-t border-b border-border">
             {brandFaqs.map((faq, i) => (
               <div key={i} className="py-5">
-                <h3 className="font-display text-base font-medium text-charcoal mb-2">
+                <h3 className="font-body text-base font-medium text-charcoal mb-2">
                   {faq.question}
                 </h3>
                 <p className="font-body text-sm text-muted leading-relaxed">
@@ -170,7 +170,7 @@ export default function BrandPage({ params }: PageProps) {
 
         {/* SEO text */}
         <section className="mb-16 max-w-3xl">
-          <h2 className="font-display text-xl font-semibold text-charcoal mb-4">
+          <h2 className="font-body text-xl font-extrabold text-charcoal mb-4">
             Om {brand.name}
           </h2>
           <div className="font-body text-muted leading-relaxed space-y-3">
@@ -189,7 +189,7 @@ export default function BrandPage({ params }: PageProps) {
 
         {/* Other brands */}
         <section className="mb-16 pt-12 border-t border-border">
-          <h2 className="font-display text-xl font-semibold text-charcoal mb-4">
+          <h2 className="font-body text-xl font-extrabold text-charcoal mb-4">
             Utforsk andre merker
           </h2>
           <div className="flex flex-wrap gap-2">
@@ -200,7 +200,7 @@ export default function BrandPage({ params }: PageProps) {
                 <Link
                   key={b.slug}
                   href={`/merke/${b.slug}`}
-                  className="font-body text-sm text-muted hover:text-charcoal border border-border rounded-full px-4 py-1.5 transition-colors hover:border-charcoal"
+                  className="font-body text-sm text-muted hover:text-accent border-2 border-border rounded-2xl px-4 py-1.5 transition-colors hover:border-accent"
                 >
                   {b.name}
                 </Link>

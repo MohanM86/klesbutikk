@@ -60,25 +60,25 @@ export default function StorePage({ params }: PageProps) {
           {/* Main content */}
           <div className="lg:col-span-2">
             <div className="flex items-start gap-4 mb-8">
-              <div className="w-16 h-16 rounded-full bg-charcoal flex items-center justify-center flex-shrink-0">
-                <span className="font-display text-2xl font-semibold text-white">
+              <div className="w-16 h-16 rounded-2xl bg-accent flex items-center justify-center flex-shrink-0">
+                <span className="font-body text-2xl font-extrabold text-white">
                   {store.navn.charAt(0)}
                 </span>
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-1">
-                  <h1 className="font-display text-2xl md:text-3xl font-semibold text-charcoal">
+                  <h1 className="font-body text-2xl md:text-3xl font-extrabold text-charcoal">
                     {store.navn}
                   </h1>
                   {store.featured && (
-                    <span className="inline-flex items-center gap-1 bg-charcoal text-white text-[10px] font-body font-semibold tracking-wider uppercase px-2.5 py-1 rounded-full">
+                    <span className="inline-flex items-center gap-1 bg-accent text-white text-[10px] font-body font-semibold tracking-wider uppercase px-2.5 py-1 rounded-lg">
                       Fremhevet
                     </span>
                   )}
                 </div>
                 <p className="font-body text-muted">
                   Klesbutikk i{' '}
-                  <Link href={`/${citySlug}`} className="underline hover:text-charcoal transition-colors">
+                  <Link href={`/${citySlug}`} className="underline hover:text-accent transition-colors">
                     {store.poststed}
                   </Link>
                   , {store.fylke}
@@ -109,7 +109,7 @@ export default function StorePage({ params }: PageProps) {
             {/* Brands / Merker */}
             {store.merker && store.merker.length > 0 && (
               <div className="mb-8">
-                <h2 className="font-display text-xl font-semibold text-charcoal mb-3">
+                <h2 className="font-body text-xl font-extrabold text-charcoal mb-3">
                   Merker hos {store.navn}
                 </h2>
                 <div className="flex flex-wrap gap-2">
@@ -117,7 +117,7 @@ export default function StorePage({ params }: PageProps) {
                     <Link
                       key={merke}
                       href={`/merke/${merke.toLowerCase().replace(/ /g, '-').replace(/æ/g,'ae').replace(/ø/g,'oe').replace(/å/g,'aa').replace(/ö/g,'o').replace(/&/g,'and').replace(/\./g,'')}`}
-                      className="inline-flex items-center gap-1.5 font-body text-sm border border-border rounded-full px-4 py-2 hover:border-charcoal hover:text-charcoal transition-colors text-muted"
+                      className="inline-flex items-center gap-1.5 font-body text-sm border border-border rounded-xl px-4 py-2 hover:border-accent hover:text-accent transition-colors text-muted"
                     >
                       <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
@@ -132,7 +132,7 @@ export default function StorePage({ params }: PageProps) {
 
             {/* Description / SEO text */}
             <div className="mb-8">
-              <h2 className="font-display text-xl font-semibold text-charcoal mb-3">
+              <h2 className="font-body text-xl font-extrabold text-charcoal mb-3">
                 Om {store.navn}
               </h2>
               <p className="font-body text-muted leading-relaxed">
@@ -150,7 +150,7 @@ export default function StorePage({ params }: PageProps) {
           <div className="lg:col-span-1">
             {/* Actions card */}
             <div className="bg-white border border-border rounded-lg p-6 mb-6 sticky top-24">
-              <h3 className="font-display text-lg font-semibold text-charcoal mb-4">
+              <h3 className="font-body text-lg font-extrabold text-charcoal mb-4">
                 Er dette din butikk?
               </h3>
               <p className="font-body text-sm text-muted mb-5">
@@ -165,7 +165,7 @@ export default function StorePage({ params }: PageProps) {
             </div>
 
             {/* Map placeholder */}
-            <div className="bg-cream border border-border rounded-lg h-48 flex items-center justify-center mb-6">
+            <div className="bg-surface border border-border rounded-lg h-48 flex items-center justify-center mb-6">
               <div className="text-center">
                 <svg className="w-8 h-8 text-muted mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -180,7 +180,7 @@ export default function StorePage({ params }: PageProps) {
         {/* Related stores */}
         {related.length > 0 && (
           <section className="mt-16 pt-12 border-t border-border">
-            <h2 className="font-display text-display-sm font-semibold text-charcoal mb-6">
+            <h2 className="font-body text-display-sm font-extrabold text-charcoal mb-6">
               Andre klesbutikker i {store.poststed}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

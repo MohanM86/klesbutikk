@@ -96,19 +96,19 @@ export default function BrandCityPage({ params }: PageProps) {
 
         <div className="mb-12">
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-14 h-14 rounded-full bg-charcoal flex items-center justify-center">
-              <span className="font-display text-xl font-semibold text-white">{brand.name.charAt(0)}</span>
+            <div className="w-14 h-14 rounded-lg bg-accent flex items-center justify-center">
+              <span className="font-body text-xl font-extrabold text-white">{brand.name.charAt(0)}</span>
             </div>
             <div>
-              <p className="font-body text-xs font-semibold tracking-[0.2em] uppercase text-muted mb-1">
+              <p className="font-body text-xs font-semibold font-bold text-accent mb-1">
                 {brand.name} · {cityName}
               </p>
-              <h1 className="font-display text-display-sm md:text-display font-semibold text-charcoal">
+              <h1 className="font-body text-display-sm md:text-display font-extrabold text-charcoal">
                 {brand.name} <span className="italic font-normal">i {cityName}</span>
               </h1>
             </div>
           </div>
-          <p className="editorial-text">
+          <p className="font-body text-base text-muted max-w-lg">
             {cityStores.length > 0 ? (
               <>
                 Finn {brand.name} i {cityName}. Det er {cityStores.length} registrerte
@@ -127,7 +127,7 @@ export default function BrandCityPage({ params }: PageProps) {
         {/* Matching stores */}
         {cityStores.length > 0 && (
           <section className="mb-16">
-            <h2 className="font-display text-display-sm font-semibold text-charcoal mb-6">
+            <h2 className="font-body text-display-sm font-extrabold text-charcoal mb-6">
               {brand.name}-butikker i {cityName}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -141,7 +141,7 @@ export default function BrandCityPage({ params }: PageProps) {
         {/* Nearby */}
         {nearbyStores.length > 0 && (
           <section className="mb-16">
-            <h2 className="font-display text-display-sm font-semibold text-charcoal mb-6">
+            <h2 className="font-body text-display-sm font-extrabold text-charcoal mb-6">
               {brand.name} i nærheten av {cityName}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -155,7 +155,7 @@ export default function BrandCityPage({ params }: PageProps) {
         {/* Other stores in this city */}
         {otherBrandStores.length > 0 && (
           <section className="mb-16">
-            <h2 className="font-display text-display-sm font-semibold text-charcoal mb-6">
+            <h2 className="font-body text-display-sm font-extrabold text-charcoal mb-6">
               Andre klesbutikker i {cityName}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -176,7 +176,7 @@ export default function BrandCityPage({ params }: PageProps) {
 
         {/* Other cities for this brand */}
         <section className="mt-16">
-          <h2 className="font-display text-display-sm font-semibold text-charcoal mb-6">
+          <h2 className="font-body text-display-sm font-extrabold text-charcoal mb-6">
             {brand.name} i andre byer
           </h2>
           <div className="flex flex-wrap gap-2">
@@ -184,7 +184,7 @@ export default function BrandCityPage({ params }: PageProps) {
               <Link
                 key={c}
                 href={`/merke/${brand.slug}/${slugify(c)}`}
-                className="font-body text-sm text-muted hover:text-charcoal border border-border rounded-full px-4 py-1.5 transition-colors hover:border-charcoal"
+                className="font-body text-sm text-muted hover:text-accent border-2 border-border rounded-2xl px-4 py-1.5 transition-colors hover:border-accent"
               >
                 {brand.name} i {c}
               </Link>

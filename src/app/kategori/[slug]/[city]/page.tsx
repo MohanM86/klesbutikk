@@ -100,13 +100,13 @@ export default function CategoryCityPage({ params }: PageProps) {
         ]} />
 
         <div className="mb-12">
-          <p className="font-body text-xs font-semibold tracking-[0.2em] uppercase text-muted mb-3">
+          <p className="font-body text-xs font-semibold font-bold text-accent mb-3">
             {cat.name} · {cityName}
           </p>
-          <h1 className="font-display text-hero-sm md:text-display font-semibold text-charcoal mb-4">
+          <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-4">
             {cat.name} <span className="italic font-normal">i {cityName}</span>
           </h1>
-          <p className="editorial-text">
+          <p className="font-body text-base text-muted max-w-lg">
             {matchingStores.length > 0 ? (
               <>
                 Finn butikker som spesialiserer seg på {cat.name.toLowerCase()} i {cityName}.
@@ -124,7 +124,7 @@ export default function CategoryCityPage({ params }: PageProps) {
         {/* Matching stores */}
         {matchingStores.length > 0 && (
           <section className="mb-16">
-            <h2 className="font-display text-display-sm font-semibold text-charcoal mb-6">
+            <h2 className="font-body text-display-sm font-extrabold text-charcoal mb-6">
               {cat.name}-butikker i {cityName}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -137,7 +137,7 @@ export default function CategoryCityPage({ params }: PageProps) {
 
         {/* All city stores */}
         <section className="mb-16">
-          <h2 className="font-display text-display-sm font-semibold text-charcoal mb-6">
+          <h2 className="font-body text-display-sm font-extrabold text-charcoal mb-6">
             Alle klesbutikker i {cityName}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -159,7 +159,7 @@ export default function CategoryCityPage({ params }: PageProps) {
 
         {/* Other cities */}
         <section className="mt-16">
-          <h2 className="font-display text-display-sm font-semibold text-charcoal mb-6">
+          <h2 className="font-body text-display-sm font-extrabold text-charcoal mb-6">
             {cat.name} i andre byer
           </h2>
           <div className="flex flex-wrap gap-2">
@@ -167,7 +167,7 @@ export default function CategoryCityPage({ params }: PageProps) {
               <Link
                 key={c}
                 href={`/kategori/${cat.slug}/${slugify(c)}`}
-                className="font-body text-sm text-muted hover:text-charcoal border border-border rounded-full px-4 py-1.5 transition-colors hover:border-charcoal"
+                className="font-body text-sm text-muted hover:text-accent border-2 border-border rounded-2xl px-4 py-1.5 transition-colors hover:border-accent"
               >
                 {cat.name} i {c}
               </Link>

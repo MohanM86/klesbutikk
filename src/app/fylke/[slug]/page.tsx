@@ -47,13 +47,13 @@ export default function FylkePage({ params }: PageProps) {
         <Breadcrumbs items={[{ label: 'Fylker', href: '/fylker' }, { label: fylke.name }]} />
 
         <div className="mb-12">
-          <p className="font-body text-xs font-semibold tracking-[0.2em] uppercase text-muted mb-3">
+          <p className="font-body text-xs font-semibold font-bold text-accent mb-3">
             {fylke.storeCount} butikker · {fylke.cities.length} byer
           </p>
-          <h1 className="font-display text-hero-sm md:text-display font-semibold text-charcoal mb-4">
+          <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-4">
             Klesbutikker i {fylke.name}
           </h1>
-          <p className="editorial-text">
+          <p className="font-body text-base text-muted max-w-lg">
             Utforsk alle {fylke.storeCount} klesbutikker i {fylke.name}. Fylket har klesbutikker
             i {fylke.cities.length} byer, inkludert {fylke.cities.slice(0, 3).join(', ')}.
           </p>
@@ -61,7 +61,7 @@ export default function FylkePage({ params }: PageProps) {
 
         {/* Cities in this fylke */}
         <section className="mb-12">
-          <h2 className="font-display text-xl font-semibold text-charcoal mb-4">
+          <h2 className="font-body text-xl font-extrabold text-charcoal mb-4">
             Byer i {fylke.name}
           </h2>
           <div className="flex flex-wrap gap-2">
@@ -69,7 +69,7 @@ export default function FylkePage({ params }: PageProps) {
               <Link
                 key={city.slug}
                 href={`/${city.slug}`}
-                className="font-body text-sm text-muted hover:text-charcoal border border-border rounded-full px-4 py-2 transition-colors hover:border-charcoal"
+                className="font-body text-sm text-muted hover:text-accent border-2 border-border rounded-2xl px-4 py-2 transition-colors hover:border-accent"
               >
                 {city.name} ({city.storeCount})
               </Link>
@@ -79,7 +79,7 @@ export default function FylkePage({ params }: PageProps) {
 
         {/* All stores */}
         <section className="mb-16">
-          <h2 className="font-display text-display-sm font-semibold text-charcoal mb-6">
+          <h2 className="font-body text-display-sm font-extrabold text-charcoal mb-6">
             Alle klesbutikker i {fylke.name}
           </h2>
           <StoreList stores={stores} showCity />

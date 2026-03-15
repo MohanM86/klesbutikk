@@ -1,18 +1,13 @@
 import Link from 'next/link';
 
-interface BreadcrumbItem {
-  label: string;
-  href?: string;
-}
+interface BreadcrumbItem { label: string; href?: string; }
 
 export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
   return (
-    <nav aria-label="Brødsmulesti" className="mb-6">
+    <nav aria-label="Brødsmulesti" className="mb-4">
       <ol className="flex flex-wrap items-center gap-1.5 font-body text-xs text-muted">
         <li>
-          <Link href="/" className="hover:text-charcoal transition-colors">
-            Hjem
-          </Link>
+          <Link href="/" className="hover:text-accent transition-colors">Hjem</Link>
         </li>
         {items.map((item, i) => (
           <li key={i} className="flex items-center gap-1.5">
@@ -20,11 +15,9 @@ export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
             {item.href ? (
-              <Link href={item.href} className="hover:text-charcoal transition-colors">
-                {item.label}
-              </Link>
+              <Link href={item.href} className="hover:text-accent transition-colors">{item.label}</Link>
             ) : (
-              <span className="text-charcoal font-medium">{item.label}</span>
+              <span className="text-charcoal font-semibold">{item.label}</span>
             )}
           </li>
         ))}

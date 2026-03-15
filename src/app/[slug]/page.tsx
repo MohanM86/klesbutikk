@@ -59,10 +59,6 @@ export default function CityPage({ params }: PageProps) {
   });
 
   // Store stats
-  const withWebsite = stores.filter((s) => s.hjemmeside).length;
-  const withPhone = stores.filter((s) => s.telefon).length;
-  const asCount = stores.filter((s) => s.organisasjonsform === 'AS').length;
-  const enkCount = stores.filter((s) => s.organisasjonsform === 'ENK').length;
   const withEmployees = stores.filter((s) => s.antallAnsatte && s.antallAnsatte > 0).length;
 
   // Nearby cities (same fylke)
@@ -249,22 +245,6 @@ export default function CityPage({ params }: PageProps) {
             </div>
           </div>
 
-          {/* Quick stats bar */}
-          <div className="flex flex-wrap gap-3 mb-6">
-            <span className="font-body text-xs text-muted bg-white border border-border rounded-full px-3 py-1.5">
-              {asCount} aksjeselskap
-            </span>
-            <span className="font-body text-xs text-muted bg-white border border-border rounded-full px-3 py-1.5">
-              {enkCount} enkeltpersonforetak
-            </span>
-            <span className="font-body text-xs text-muted bg-white border border-border rounded-full px-3 py-1.5">
-              {withWebsite} med nettside
-            </span>
-            <span className="font-body text-xs text-muted bg-white border border-border rounded-full px-3 py-1.5">
-              {withPhone} med telefon
-            </span>
-          </div>
-
           <StoreList stores={stores} />
         </section>
 
@@ -274,7 +254,7 @@ export default function CityPage({ params }: PageProps) {
             Klesmarkedet i {city.name}
           </h2>
           <div className="bg-white border border-border rounded-lg p-6 md:p-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
               <div>
                 <span className="font-display text-3xl font-semibold text-charcoal">{stores.length}</span>
                 <span className="block font-body text-xs text-muted mt-1">Registrerte bedrifter</span>
@@ -293,43 +273,7 @@ export default function CityPage({ params }: PageProps) {
               </div>
             </div>
 
-            {/* Company type breakdown */}
-            <div className="border-t border-border pt-6">
-              <h3 className="font-display text-base font-semibold text-charcoal mb-4">Selskapsform</h3>
-              <div className="space-y-3">
-                <div>
-                  <div className="flex justify-between font-body text-sm mb-1">
-                    <span className="text-charcoal">Aksjeselskap (AS)</span>
-                    <span className="text-muted">{asCount}</span>
-                  </div>
-                  <div className="h-2 bg-cream rounded-full overflow-hidden">
-                    <div className="h-full bg-charcoal rounded-full" style={{ width: `${(asCount / stores.length) * 100}%` }} />
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between font-body text-sm mb-1">
-                    <span className="text-charcoal">Enkeltpersonforetak (ENK)</span>
-                    <span className="text-muted">{enkCount}</span>
-                  </div>
-                  <div className="h-2 bg-cream rounded-full overflow-hidden">
-                    <div className="h-full bg-muted/40 rounded-full" style={{ width: `${(enkCount / stores.length) * 100}%` }} />
-                  </div>
-                </div>
-                {stores.length - asCount - enkCount > 0 && (
-                  <div>
-                    <div className="flex justify-between font-body text-sm mb-1">
-                      <span className="text-charcoal">Øvrige</span>
-                      <span className="text-muted">{stores.length - asCount - enkCount}</span>
-                    </div>
-                    <div className="h-2 bg-cream rounded-full overflow-hidden">
-                      <div className="h-full bg-muted/20 rounded-full" style={{ width: `${((stores.length - asCount - enkCount) / stores.length) * 100}%` }} />
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            <p className="font-body text-xs text-muted mt-6">
+            <p className="font-body text-xs text-muted">
               Kilde: Brønnøysundregistrene, enhetsregisteret. Næringskode 47.710 (Butikkhandel med klær).
             </p>
           </div>

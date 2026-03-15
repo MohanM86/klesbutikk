@@ -7,29 +7,21 @@ function CityPill({ city }: { city: CityData }) {
   return (
     <Link
       href={`/${city.slug}`}
-      className="group flex-shrink-0 flex items-center gap-3 bg-white border border-border rounded-xl px-5 py-4 hover:border-charcoal/30 transition-all duration-300 hover:-translate-y-0.5"
+      className="group flex-shrink-0 flex items-center gap-3 bg-white/[0.06] border border-white/[0.08] rounded-none px-5 py-4 hover:bg-white/[0.12] transition-all duration-300"
     >
-      <div className="w-10 h-10 rounded-full bg-charcoal flex items-center justify-center group-hover:bg-slate transition-colors">
-        <span className="font-display text-sm font-semibold text-white">
+      <div className="w-10 h-10 flex items-center justify-center">
+        <span className="font-display text-xl font-bold text-white/80 group-hover:text-white transition-colors">
           {city.name.charAt(0)}
         </span>
       </div>
       <div>
-        <span className="block font-display text-sm font-semibold text-charcoal group-hover:text-slate transition-colors">
+        <span className="block font-body text-sm font-semibold text-white group-hover:text-white transition-colors tracking-wide">
           {city.name}
         </span>
-        <span className="block font-body text-xs text-muted">
+        <span className="block font-body text-xs text-white/30">
           {city.storeCount} {city.storeCount === 1 ? 'butikk' : 'butikker'}
         </span>
       </div>
-      <svg
-        className="w-4 h-4 text-muted/40 group-hover:text-charcoal group-hover:translate-x-0.5 transition-all ml-1"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-      </svg>
     </Link>
   );
 }
@@ -54,8 +46,8 @@ export default function CityMarquee({ cities }: { cities: CityData[] }) {
       }}
     >
       {/* Fade edges */}
-      <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-r from-cream to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-cream to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-r from-charcoal to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-charcoal to-transparent z-10 pointer-events-none" />
 
       {/* Row 1 — scrolls left */}
       <div className="mb-3">

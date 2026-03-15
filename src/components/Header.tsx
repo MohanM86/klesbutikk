@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 const NAV_ITEMS = [
   { label: 'Byer', href: '/by' },
-  { label: 'Fylker', href: '/fylker' },
   { label: 'Merker', href: '/merker' },
+  { label: 'Kategorier', href: '/kategorier' },
   { label: 'Butikker', href: '/butikk' },
   { label: 'Artikler', href: '/artikler' },
 ];
@@ -15,35 +15,32 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-charcoal/95 backdrop-blur-md border-b border-white/[0.06]">
       <div className="max-w-8xl mx-auto section-padding">
-        <div className="flex items-center justify-between h-16 md:h-18">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <span className="font-display text-xl md:text-2xl font-semibold tracking-tight text-charcoal">
+        <div className="flex items-center justify-between h-14 md:h-16">
+          <Link href="/" className="flex items-baseline gap-1.5 group">
+            <span className="font-display text-lg md:text-xl font-bold tracking-tight text-white uppercase">
               Klesbutikk
             </span>
-            <span className="text-xs font-body font-medium text-muted tracking-widest uppercase">.no</span>
+            <span className="text-[10px] font-body font-medium text-white/40 tracking-[0.15em] uppercase">.no</span>
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-7">
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="font-body text-sm font-medium text-slate hover:text-charcoal transition-colors duration-200 tracking-wide"
+                className="font-body text-xs font-medium text-white/50 hover:text-white transition-colors duration-200 tracking-[0.08em] uppercase"
               >
                 {item.label}
               </Link>
             ))}
           </nav>
 
-          {/* CTA + Mobile toggle */}
           <div className="flex items-center gap-4">
             <Link
               href="/legg-til-butikk"
-              className="hidden sm:inline-flex btn-primary text-xs py-2.5 px-6"
+              className="hidden sm:inline-flex items-center justify-center px-5 py-2 bg-white text-charcoal font-body font-semibold text-[10px] tracking-[0.12em] uppercase transition-all duration-300 hover:bg-white/90"
             >
               Legg til butikk
             </Link>
@@ -54,40 +51,23 @@ export default function Header() {
               aria-label="Meny"
             >
               <div className="w-5 flex flex-col gap-1">
-                <span
-                  className={`block h-[1.5px] bg-charcoal transition-all duration-300 ${
-                    isOpen ? 'rotate-45 translate-y-[5.5px]' : ''
-                  }`}
-                />
-                <span
-                  className={`block h-[1.5px] bg-charcoal transition-all duration-300 ${
-                    isOpen ? 'opacity-0' : ''
-                  }`}
-                />
-                <span
-                  className={`block h-[1.5px] bg-charcoal transition-all duration-300 ${
-                    isOpen ? '-rotate-45 -translate-y-[5.5px]' : ''
-                  }`}
-                />
+                <span className={`block h-[1.5px] bg-white transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-[5.5px]' : ''}`} />
+                <span className={`block h-[1.5px] bg-white transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`} />
+                <span className={`block h-[1.5px] bg-white transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-[5.5px]' : ''}`} />
               </div>
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Nav */}
-      <div
-        className={`md:hidden overflow-hidden transition-all duration-300 border-t border-border ${
-          isOpen ? 'max-h-80' : 'max-h-0 border-t-0'
-        }`}
-      >
-        <nav className="section-padding py-6 flex flex-col gap-4 bg-cream">
+      <div className={`md:hidden overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96' : 'max-h-0'}`}>
+        <nav className="section-padding py-6 flex flex-col gap-4 bg-charcoal border-t border-white/[0.06]">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               onClick={() => setIsOpen(false)}
-              className="font-body text-base font-medium text-slate hover:text-charcoal transition-colors"
+              className="font-body text-sm font-medium text-white/60 hover:text-white transition-colors tracking-wide uppercase"
             >
               {item.label}
             </Link>
@@ -95,7 +75,7 @@ export default function Header() {
           <Link
             href="/legg-til-butikk"
             onClick={() => setIsOpen(false)}
-            className="btn-primary text-sm mt-2 w-full"
+            className="btn-white text-xs mt-2 w-full"
           >
             Legg til butikk
           </Link>

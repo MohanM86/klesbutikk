@@ -61,28 +61,28 @@ export default function AnimatedHero({
     <div ref={heroRef}>
       <div className="flex items-center justify-center gap-3 sm:gap-5 mb-6">
         <div className="text-center">
-          <span className="font-display text-2xl sm:text-3xl font-semibold text-charcoal tabular-nums">
+          <span className="font-display text-3xl sm:text-4xl font-bold text-white tabular-nums">
             {storeCount.toLocaleString('nb-NO')}
           </span>
-          <span className="block font-body text-[10px] sm:text-xs tracking-[0.15em] uppercase text-muted mt-0.5">
+          <span className="block font-body text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-white/25 mt-1">
             butikker
           </span>
         </div>
-        <span className="text-muted/30 text-lg font-light">&middot;</span>
+        <span className="text-white/10 text-2xl font-light">&middot;</span>
         <div className="text-center">
-          <span className="font-display text-2xl sm:text-3xl font-semibold text-charcoal tabular-nums">
+          <span className="font-display text-3xl sm:text-4xl font-bold text-white tabular-nums">
             {kommuneCount}
           </span>
-          <span className="block font-body text-[10px] sm:text-xs tracking-[0.15em] uppercase text-muted mt-0.5">
+          <span className="block font-body text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-white/25 mt-1">
             kommuner
           </span>
         </div>
-        <span className="text-muted/30 text-lg font-light">&middot;</span>
+        <span className="text-white/10 text-2xl font-light">&middot;</span>
         <div className="text-center">
-          <span className="font-display text-2xl sm:text-3xl font-semibold text-charcoal tabular-nums">
+          <span className="font-display text-3xl sm:text-4xl font-bold text-white tabular-nums">
             {fylkeCount}
           </span>
-          <span className="block font-body text-[10px] sm:text-xs tracking-[0.15em] uppercase text-muted mt-0.5">
+          <span className="block font-body text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-white/25 mt-1">
             fylker
           </span>
         </div>

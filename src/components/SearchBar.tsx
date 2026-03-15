@@ -61,24 +61,18 @@ export default function SearchBar({ variant = 'hero' }: { variant?: 'hero' | 'co
       <div
         className={`relative flex items-center ${
           isHero
-            ? 'bg-white border border-border-dark shadow-lg rounded-full'
+            ? 'bg-white/[0.08] border border-white/[0.12] rounded-none'
             : 'bg-white border border-border rounded-lg'
         }`}
       >
-        {/* Search icon */}
         <div className={`flex-shrink-0 ${isHero ? 'pl-6' : 'pl-4'}`}>
           <svg
-            className={`text-muted ${isHero ? 'w-5 h-5' : 'w-4 h-4'}`}
+            className={`${isHero ? 'text-white/30 w-5 h-5' : 'text-muted w-4 h-4'}`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.5}
-              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
           </svg>
         </div>
 
@@ -86,9 +80,9 @@ export default function SearchBar({ variant = 'hero' }: { variant?: 'hero' | 'co
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Søk etter by, butikk eller fylke..."
-          className={`w-full bg-transparent font-body text-charcoal placeholder:text-muted/60 focus:outline-none ${
-            isHero ? 'px-4 py-4.5 text-base' : 'px-3 py-3 text-sm'
+          placeholder="Søk etter by, butikk eller merke..."
+          className={`w-full bg-transparent font-body focus:outline-none ${
+            isHero ? 'px-4 py-4.5 text-base text-white placeholder:text-white/25' : 'px-3 py-3 text-sm text-charcoal placeholder:text-muted/60'
           }`}
         />
 

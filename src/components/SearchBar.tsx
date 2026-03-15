@@ -33,7 +33,7 @@ export default function SearchBar({ variant = 'hero' }: { variant?: 'hero' | 'co
           </svg>
         </div>
         <input type="text" value={query} onChange={(e) => setQuery(e.target.value)}
-          placeholder="Sok etter by, merke eller butikk..."
+          placeholder="Søk etter by, merke eller butikk..."
           className={`w-full bg-transparent font-body text-charcoal placeholder:text-muted/60 focus:outline-none ${isHero ? 'px-3 py-4 text-base' : 'px-3 py-3 text-sm'}`} />
         {query && (
           <button onClick={() => { setQuery(''); setResults([]); setIsOpen(false); }} className="flex-shrink-0 pr-4 text-muted hover:text-charcoal transition-colors">

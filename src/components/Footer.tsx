@@ -15,13 +15,13 @@ export default function Footer() {
             </p>
           </div>
           {[
-            { title: 'Populaere byer', links: [
+            { title: 'Populære byer', links: [
               { l: 'Oslo', h: '/oslo' }, { l: 'Bergen', h: '/bergen' }, { l: 'Trondheim', h: '/trondheim' },
               { l: 'Stavanger', h: '/stavanger' }, { l: 'Kristiansand', h: '/kristiansand' }, { l: 'Alle byer', h: '/by' },
             ]},
             { title: 'Kategorier', links: [
-              { l: 'Dameklaer', h: '/kategorier' }, { l: 'Herreklaer', h: '/kategorier' },
-              { l: 'Barneklaer', h: '/kategorier' }, { l: 'Designer', h: '/kategorier' },
+              { l: 'Dameklær', h: '/kategorier' }, { l: 'Herreklær', h: '/kategorier' },
+              { l: 'Barneklær', h: '/kategorier' }, { l: 'Designer', h: '/kategorier' },
               { l: 'Vintage', h: '/kategorier' }, { l: 'Sport', h: '/kategorier' },
             ]},
             { title: 'Utforsk', links: [
@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="font-body text-xs text-white/30">&copy; {new Date().getFullYear()} Klesbutikk.no. Alle rettigheter reservert.</p>
-          <p className="font-body text-xs text-white/20">Data fra Bronnoysundregistrene. Naeringskode 47.710.</p>
+          <p className="font-body text-xs text-white/20">Data fra Brønnøysundregistrene. Næringskode 47.710.</p>
         </div>
       </div>
     </footer>

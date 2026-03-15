@@ -1,56 +1,89 @@
 # Klesbutikk.no
 
-> Norges mest komplette oversikt over klesbutikker. Finn motebutikker, designerbutikker og lokale favoritter i hele Norge.
+> Norges mest komplette oversikt over klesbutikker. Finn motebutikker, designerbutikker og lokale favoritter i alle 357 kommuner.
 
-Klesbutikk.no er en aggregator og directory for klesbutikker i Norge. Nettsiden lister over 1500 registrerte klesbutikker hentet fra Brønnøysundregistrene (næringskode 47.710 – Detaljhandel med klær).
+## Om oss
 
-## Hva vi tilbyr
+Klesbutikk.no er en norsk klesbutikkoversikt som samler alle registrerte klesbutikker fra Brønnøysundregistrene (næringskode 47.710). Vi dekker hele Norge fra Lindesnes til Nordkapp med over 1 566 butikker, 483 klesmerker og 7 900 unike sider.
 
-- Komplett oversikt over klesbutikker i alle norske byer
-- Søk etter butikk, by, fylke eller klesmerke
-- Detaljert informasjon om hver butikk (adresse, kontaktinfo, nettside, merker)
-- Bysider med lokale motebutikker
-- Merkesider med oversikt over forhandlere for hvert klesmerke
-- Fylkesoversikter
-- Fremhevede butikker med økt synlighet
+## Nøkkeltall
 
-## Viktige sider
-
-- Forsiden: https://klesbutikk.no
-- Alle byer: https://klesbutikk.no/by
-- Alle fylker: https://klesbutikk.no/fylker
-- Alle merker: https://klesbutikk.no/merker
-- Alle butikker: https://klesbutikk.no/butikk
-- Oslo: https://klesbutikk.no/oslo
-- Bergen: https://klesbutikk.no/bergen
-- Trondheim: https://klesbutikk.no/trondheim
-- Stavanger: https://klesbutikk.no/stavanger
-- Artikler: https://klesbutikk.no/artikler
-
-## Klesmerker
-
-Nettsiden har dedikerte sider for over 445 klesmerker, inkludert:
-- Norske merker: Holzweiler, Stormberg, Devold, BRGN, Livid Jeans, Woolland, Lillelam
-- Skandinaviske merker: Filippa K, Ganni, Samsøe Samsøe, Nudie Jeans, GANT
-- Internasjonale merker: H&M, Zara, Mango, Adidas, Ralph Lauren, Tommy Hilfiger
-- Norske kjeder: Dressmann, Cubus, Bik Bok, Carlings, Høyer, Voice
-
-Eksempel-URL for merkesider: https://klesbutikk.no/merke/holzweiler
+- 1 566 registrerte klesbutikker
+- 483 kartlagte klesmerker
+- 357 kommuner dekket
+- 15 fylker
+- 368 byer med klesbutikker
+- 7 900+ unike sider
 
 ## Datakilde
 
 Alle butikkdata er hentet fra Brønnøysundregistrene, Norges offisielle foretaksregister.
-Næringskode: 47.710 – Detaljhandel med klær.
+Næringskode: 47.710 – Butikkhandel med klær.
+
+## Innholdstyper
+
+### Bysider
+Komplett oversikt over klesbutikker i hver by med markedsdata, kategorier, merker og bedriftsliste.
+URL-mønster: https://klesbutikk.no/{by-slug}
+Eksempler: /oslo, /bergen, /trondheim, /stavanger
+
+### Butikksider
+Detaljert informasjon om hver enkelt klesbutikk med adresse, kontaktinfo og merker.
+URL-mønster: https://klesbutikk.no/butikk/{butikk-slug}
+
+### Merkesider
+Oversikt over hvor du kan kjøpe spesifikke klesmerker i Norge.
+URL-mønster: https://klesbutikk.no/merke/{merke-slug}
+Eksempler: /merke/holzweiler, /merke/gant, /merke/nike
+
+### Merke i by (kryssider)
+Finn spesifikke merker i spesifikke byer.
+URL-mønster: https://klesbutikk.no/merke/{merke-slug}/{by-slug}
+Eksempler: /merke/holzweiler/oslo, /merke/nike/bergen
+
+### Kategorisider
+Butikker filtrert etter kategori og by.
+URL-mønster: https://klesbutikk.no/kategori/{kategori-slug}/{by-slug}
+Kategorier: dameklar, herreklar, barneklar, designer, vintage, sport, arbeidsklar, brud, undertoy, bunad
+
+### Fylkesider
+Oversikt over klesbutikker i hvert fylke.
+URL-mønster: https://klesbutikk.no/fylke/{fylke-slug}
+
+### Fylke + kategori (kryssider)
+URL-mønster: https://klesbutikk.no/fylke/{fylke-slug}/{kategori-slug}
+
+## Klesmerker
+
+Over 483 klesmerker er kartlagt, inkludert:
+
+### Norske merker
+Holzweiler, Stormberg, Devold, Norrøna, Dale of Norway, Helly Hansen, Kari Traa, Johaug, Swix, Sweet Protection, Aclima, Ulvang, BY TIMO, Camilla Pihl, Dressmann, Cubus, Bik Bok, Carlings, Høyer, Companys, Filippa K, Acne Studios, Tiger of Sweden, J.Lindeberg, Samsøe Samsøe, Ganni, Stine Goya
+
+### Internasjonale merker
+Nike, Adidas, H&M, Zara, Gucci, Prada, Louis Vuitton, Balenciaga, Moncler, The North Face, Ralph Lauren, Tommy Hilfiger, Calvin Klein, Levi's, Converse, Vans, New Balance
 
 ## Strukturert data
 
-Nettsiden bruker JSON-LD schema markup inkludert:
-- Organization
-- LocalBusiness / ClothingStore
-- FAQPage
-- BreadcrumbList
-- ItemList
+Nettsiden bruker omfattende JSON-LD schema markup:
+- Organization (hovedentitet)
+- ClothingStore (hver butikk)
+- FAQPage (spørsmål og svar på alle sider)
+- BreadcrumbList (navigasjon)
+- ItemList (lister)
+- Article (artikler)
+
+## Viktige sider
+
+- Forside: https://klesbutikk.no
+- Alle byer: https://klesbutikk.no/by
+- Alle fylker: https://klesbutikk.no/fylker
+- Alle merker: https://klesbutikk.no/merker
+- Alle butikker: https://klesbutikk.no/butikk
+- Kategorier: https://klesbutikk.no/kategorier
+- Artikler: https://klesbutikk.no/artikler
 
 ## Kontakt
 
 E-post: hei@klesbutikk.no
+Nettsted: https://klesbutikk.no

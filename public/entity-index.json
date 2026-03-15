@@ -1,53 +1,89 @@
 {
   "name": "Klesbutikk.no",
-  "description": "Norges mest komplette oversikt over klesbutikker",
+  "description": "Norges mest komplette oversikt over klesbutikker med data fra Brønnøysundregistrene",
   "url": "https://klesbutikk.no",
   "language": "nb",
   "country": "NO",
   "type": "Directory",
   "category": "Fashion & Clothing Retail",
   "dataSource": "Brønnøysundregistrene",
-  "naeringsKode": "47.710",
-  "entityCount": 1566,
-  "kommuneCount": 357,
-  "brandCount": 445,
+  "næringskode": "47.710",
+  "stats": {
+    "totalStores": 1566,
+    "totalBrands": 483,
+    "totalCities": 368,
+    "totalKommuner": 357,
+    "totalFylker": 15,
+    "totalPages": 7928
+  },
   "entities": [
     {
       "type": "City",
-      "description": "City pages listing clothing stores",
-      "urlPattern": "https://klesbutikk.no/{city-slug}",
+      "description": "Bysider med komplett oversikt over klesbutikker, markedsdata og kategorier",
+      "urlPattern": "https://klesbutikk.no/{by-slug}",
+      "count": 368,
       "examples": [
         "https://klesbutikk.no/oslo",
         "https://klesbutikk.no/bergen",
-        "https://klesbutikk.no/trondheim"
+        "https://klesbutikk.no/trondheim",
+        "https://klesbutikk.no/stavanger",
+        "https://klesbutikk.no/kristiansand"
       ]
     },
     {
       "type": "ClothingStore",
-      "description": "Individual clothing store listings with brand information",
-      "urlPattern": "https://klesbutikk.no/butikk/{store-slug}",
+      "description": "Individuelle butikksider med adresse, kontaktinfo og merkeinformasjon",
+      "urlPattern": "https://klesbutikk.no/butikk/{butikk-slug}",
       "count": 1566
     },
     {
+      "type": "Brand",
+      "description": "Merkesider som viser alle butikker som fører et spesifikt klesmerke",
+      "urlPattern": "https://klesbutikk.no/merke/{merke-slug}",
+      "count": 483,
+      "examples": [
+        "https://klesbutikk.no/merke/holzweiler",
+        "https://klesbutikk.no/merke/gant",
+        "https://klesbutikk.no/merke/nike",
+        "https://klesbutikk.no/merke/filippa-k"
+      ]
+    },
+    {
+      "type": "BrandCity",
+      "description": "Kryssider som viser et spesifikt merke i en spesifikk by",
+      "urlPattern": "https://klesbutikk.no/merke/{merke-slug}/{by-slug}",
+      "count": 4830,
+      "examples": [
+        "https://klesbutikk.no/merke/holzweiler/oslo",
+        "https://klesbutikk.no/merke/nike/bergen"
+      ]
+    },
+    {
+      "type": "CategoryCity",
+      "description": "Kategorisider filtrert etter by",
+      "urlPattern": "https://klesbutikk.no/kategori/{kategori-slug}/{by-slug}",
+      "count": 500,
+      "categories": ["dameklar", "herreklar", "barneklar", "designer", "vintage", "sport", "arbeidsklar", "brud", "undertoy", "bunad"]
+    },
+    {
       "type": "Region",
-      "description": "Norwegian county (fylke) pages",
+      "description": "Fylkesider med oversikt over klesbutikker i hvert fylke",
       "urlPattern": "https://klesbutikk.no/fylke/{fylke-slug}",
       "count": 15
     },
     {
-      "type": "Brand",
-      "description": "Clothing brand pages showing all stores carrying that brand in Norway",
-      "urlPattern": "https://klesbutikk.no/merke/{brand-slug}",
-      "count": 445,
-      "examples": [
-        "https://klesbutikk.no/merke/holzweiler",
-        "https://klesbutikk.no/merke/gant",
-        "https://klesbutikk.no/merke/filippa-k",
-        "https://klesbutikk.no/merke/hm",
-        "https://klesbutikk.no/merke/dressmann"
-      ]
+      "type": "RegionCategory",
+      "description": "Fylke + kategori kryssider",
+      "urlPattern": "https://klesbutikk.no/fylke/{fylke-slug}/{kategori-slug}",
+      "count": 150
     }
   ],
-  "structuredData": ["Organization", "ClothingStore", "FAQPage", "BreadcrumbList", "ItemList"],
+  "structuredData": ["Organization", "ClothingStore", "FAQPage", "BreadcrumbList", "ItemList", "Article"],
+  "aiDiscoverability": {
+    "llmsTxt": "https://klesbutikk.no/llms.txt",
+    "entityIndex": "https://klesbutikk.no/entity-index.json",
+    "sitemap": "https://klesbutikk.no/sitemap.xml",
+    "rss": "https://klesbutikk.no/rss.xml"
+  },
   "contact": "hei@klesbutikk.no"
 }

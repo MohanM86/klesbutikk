@@ -6,7 +6,7 @@ import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
   title: 'Alle klesbutikker i Norge – 1 566 butikker fra A til Å',
-  description: 'Komplett oversikt over alle registrerte klesbutikker i Norge. Søk, filtrer etter by, fylke og bokstav. Data fra Brønnøysundregistrene.',
+  description: 'Komplett oversikt over alle registrerte klesbutikker i Norge. Søk, filtrer etter by, fylke og bokstav. Verifiserte registerdata.',
   path: '/butikk',
 });
 

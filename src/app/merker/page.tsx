@@ -152,7 +152,7 @@ export default function BrandsPage() {
               <p>
                 {norwegian.length} av merkene er norske eller skandinaviske, mens {international.length} er
                 internasjonale merker. Merkene er identifisert gjennom mønstergjenkjenning i butikknavn
-                registrert i Brønnøysundregistrene.
+                registrert i offisielle registre.
               </p>
             </div>
           </div>

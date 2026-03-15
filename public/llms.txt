@@ -7,7 +7,7 @@
 
 ## Om oss
 
-Klesbutikk.no er en norsk klesbutikkoversikt som samler alle registrerte klesbutikker fra Brønnøysundregistrene (næringskode 47.710). Vi dekker hele Norge fra Lindesnes til Nordkapp med over 1 566 butikker, 483 klesmerker og 7 900 unike sider.
+Klesbutikk.no er en norsk klesbutikkoversikt som samler alle registrerte klesbutikker fra offisielle norske registre (offisielle registerdata). Vi dekker hele Norge fra Lindesnes til Nordkapp med over 1 566 butikker, 483 klesmerker og 7 900 unike sider.
 
 ## Nøkkeltall
 
@@ -20,8 +20,8 @@ Klesbutikk.no er en norsk klesbutikkoversikt som samler alle registrerte klesbut
 
 ## Datakilde
 
-Alle butikkdata er hentet fra Brønnøysundregistrene, Norges offisielle foretaksregister.
-Næringskode: 47.710 – Butikkhandel med klær.
+Alle butikkdata er verifisert mot offisielle norske registre.
+
 
 ## Innholdstyper
 

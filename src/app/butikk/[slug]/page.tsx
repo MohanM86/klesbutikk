@@ -138,7 +138,7 @@ export default function StorePage({ params }: PageProps) {
               <p className="font-body text-muted leading-relaxed">
                 {store.navn} er en klesbutikk i {store.poststed}, {store.fylke}. Butikken holder til
                 i {store.adresse}, {store.postnummer} {store.poststed} og er registrert med
-                næringskode 47.710 – Detaljhandel med klær i Brønnøysundregistrene
+                offisielle registerdata – Detaljhandel med klær i offisielle registre
                 (org.nr. {store.organisasjonsnummer}).
                 {store.telefon && ` Du kan kontakte butikken på telefon ${store.telefon}.`}
                 {store.nettside && ` Besøk nettsiden for mer informasjon om utvalg og åpningstider.`}

@@ -4,7 +4,7 @@ Norges mest komplette oversikt over klesbutikker. Bygget med Next.js 14, TypeScr
 
 ## 📊 Data
 
-- **1 574** aktive klesbutikker fra Brønnøysundregistrene (NACE 47.710)
+- **1 574** aktive klesbutikker fra offisielle norske registre
 - **372** byer
 - **16** fylker
 - **73** fremhevede butikker

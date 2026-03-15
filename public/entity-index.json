@@ -1,13 +1,12 @@
 {
   "name": "Klesbutikk.no",
-  "description": "Norges mest komplette oversikt over klesbutikker med data fra Brønnøysundregistrene",
+  "description": "Norges mest komplette oversikt over klesbutikker med verifiserte registerdata",
   "url": "https://klesbutikk.no",
   "language": "nb",
   "country": "NO",
   "type": "Directory",
   "category": "Fashion & Clothing Retail",
-  "dataSource": "Brønnøysundregistrene",
-  "næringskode": "47.710",
+  "dataSource": "offisielle registre",
   "dateModified": "2026-03-15",
   "contact": "hei@klesbutikk.no",
   "statistics": {
@@ -255,7 +254,7 @@
     "Premium listings available for store owners"
   ],
   "pricing": {
-    "free": "Basic listing (automatic from Brønnøysundregistrene)",
+    "free": "Basic listing (automatic from offisielle registre)",
     "synlig": "990 NOK/month - Logo, description, opening hours, category/brand pages",
     "premium": "2490 NOK/month - All Synlig features + badge, priority placement, SEO text, article page"
   }

@@ -12,7 +12,7 @@ export const metadata: Metadata = createMetadata({
 });
 
 const FAQS = [
-  { question: 'Hva er inkludert i gratispakken?', answer: 'Alle klesbutikker registrert med næringskode 47.710 i Brønnøysundregistrene er automatisk listet på Klesbutikk.no helt gratis. Oppføringen inkluderer butikknavn, adresse, postnummer og kommune.' },
+  { question: 'Hva er inkludert i gratispakken?', answer: 'Alle klesbutikker registrert med offisielle registerdata i offisielle registre er automatisk listet på Klesbutikk.no helt gratis. Oppføringen inkluderer butikknavn, adresse, postnummer og kommune.' },
   { question: 'Hva får jeg med Synlig?', answer: 'Med Synlig kan du legge til logo, kort beskrivelse og åpningstider på butikkprofilen din. I tillegg blir butikken din synlig på relevante merkesider og kategorisider, slik at flere finner deg.' },
   { question: 'Hva er fordelen med Premium?', answer: 'Premium gir deg alt i Synlig, pluss fremhevet badge, prioritert plassering øverst i byen, plass på forsiden, synlighet i nærliggende byer, lenke til nettbutikk, en Google-optimalisert butikkside med unik SEO-tekst, manuell kobling til alle merkene du fører, og en egen artikkelside om butikken din.' },
   { question: 'Kan jeg bytte pakke underveis?', answer: 'Ja, du kan oppgradere eller nedgradere når som helst. Endringen trer i kraft ved neste faktureringsperiode.' },
@@ -74,7 +74,7 @@ export default function AnnonserPage() {
                 <p className="font-body text-sm text-muted mt-1">For alltid, automatisk</p>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
-                {['Grunnleggende oppføring', 'Synlig i byoversikten', 'Adresse og kontaktinfo', 'Organisasjonsnummer', 'Automatisk fra Brønnøysund'].map((f) => (
+                {['Grunnleggende oppføring', 'Synlig i byoversikten', 'Adresse og kontaktinfo', 'Organisasjonsnummer', 'Automatisk registrert'].map((f) => (
                   <li key={f} className="flex items-start gap-2.5">{CHECK}<span className="font-body text-sm text-muted">{f}</span></li>
                 ))}
               </ul>

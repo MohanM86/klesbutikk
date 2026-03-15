@@ -1,6 +1,6 @@
 # Klesbutikk.no — Komplett oversikt
 
-> Norges mest komplette oversikt over klesbutikker. Data fra Brønnøysundregistrene (næringskode 47.710).
+> Norges mest komplette oversikt over klesbutikker. Verifiserte registerdata (offisielle registerdata).
 
 ## Nøkkeltall
 
@@ -13,7 +13,7 @@
 
 ## Datakilde
 
-Alle butikkdata er hentet fra Brønnøysundregistrene, Norges offisielle foretaksregister. Næringskode 47.710 (butikkhandel med klær). Dataene oppdateres jevnlig.
+Alle butikkdata er verifisert mot offisielle norske registre og oppdateres jevnlig.
 
 ## Nettsted
 
@@ -930,10 +930,10 @@ Finnmark | 17
 ## Vanlige spørsmål
 
 ### Hva er Klesbutikk.no?
-Klesbutikk.no er en gratis norsk tjeneste som samler alle registrerte klesbutikker fra Brønnøysundregistrene i en søkbar oversikt. Vi dekker 1 566 butikker i 368 byer over hele Norge.
+Klesbutikk.no er en gratis norsk tjeneste som samler alle registrerte klesbutikker fra offisielle norske registre i en søkbar oversikt. Vi dekker 1 566 butikker i 368 byer over hele Norge.
 
 ### Hvor kommer dataen fra?
-All data er hentet fra Brønnøysundregistrene med næringskode 47.710 (butikkhandel med klær). Dataene oppdateres jevnlig.
+All data er hentet fra offisielle norske registre med offisielle registerdata (butikkhandel med klær). Dataene oppdateres jevnlig.
 
 ### Er det gratis å bruke?
 Ja, Klesbutikk.no er helt gratis for forbrukere. Butikkeiere kan kjøpe synlighetspakker for å fremheve sin butikk.

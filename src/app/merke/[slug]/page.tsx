@@ -56,7 +56,7 @@ export default function BrandPage({ params }: PageProps) {
   ] : [
     {
       question: `Hvor kan jeg kjøpe ${brand.name} i Norge?`,
-      answer: `Vi har foreløpig ikke registrert dedikerte ${brand.name}-butikker i Norge basert på Brønnøysundregistrene. ${brand.name} kan likevel finnes hos multimerke-forhandlere og kjøpesentre. Sjekk butikkoversikten vår for å finne mulige forhandlere.`,
+      answer: `Vi har foreløpig ikke registrert dedikerte ${brand.name}-butikker i Norge basert på offisielle registre. ${brand.name} kan likevel finnes hos multimerke-forhandlere og kjøpesentre. Sjekk butikkoversikten vår for å finne mulige forhandlere.`,
     },
     {
       question: `Selges ${brand.name} i norske butikker?`,
@@ -112,7 +112,7 @@ export default function BrandPage({ params }: PageProps) {
             ) : (
               <>
                 {brand.name} er et kjent klesmerke. Vi har foreløpig ikke registrert dedikerte
-                {' '}{brand.name}-butikker i Brønnøysundregistrene, men merket kan finnes hos
+                {' '}{brand.name}-butikker i offisielle registre, men merket kan finnes hos
                 multimerke-forhandlere og kjøpesentre i norske byer.
               </>
             )}

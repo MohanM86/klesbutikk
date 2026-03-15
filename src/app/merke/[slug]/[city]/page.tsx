@@ -70,7 +70,7 @@ export default function BrandCityPage({ params }: PageProps) {
       question: `Hvor kan jeg kjøpe ${brand.name} i ${cityName}?`,
       answer: cityStores.length > 0
         ? `Det er ${cityStores.length} butikker som fører ${brand.name} i ${cityName}. Se listen nedenfor for adresser og kontaktinfo.`
-        : `Vi har foreløpig ikke registrert dedikerte ${brand.name}-butikker i ${cityName} via Brønnøysundregistrene. Merket kan likevel finnes hos multimerke-forhandlere og kjøpesentre i ${cityName}.`,
+        : `Vi har foreløpig ikke registrert dedikerte ${brand.name}-butikker i ${cityName} via offisielle registre. Merket kan likevel finnes hos multimerke-forhandlere og kjøpesentre i ${cityName}.`,
     },
     {
       question: `Finnes det ${brand.name} outlet i ${cityName}?`,

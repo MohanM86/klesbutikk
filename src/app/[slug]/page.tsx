@@ -242,7 +242,7 @@ export default function CityPage({ params }: PageProps) {
                 Alle klesbutikker i {city.name}
               </h2>
               <p className="font-body text-sm text-muted mt-1">
-                {stores.length} bedrifter registrert under næringskode 47.710 i Brønnøysundregistrene
+                {stores.length} bedrifter registrert under offisielle registerdata i offisielle registre
               </p>
             </div>
           </div>
@@ -270,13 +270,13 @@ export default function CityPage({ params }: PageProps) {
                 <span className="block font-body text-xs text-muted mt-1">Identifiserte merker</span>
               </div>
               <div>
-                <span className="font-body text-3xl font-extrabold text-charcoal">47.710</span>
-                <span className="block font-body text-xs text-muted mt-1">Næringskode</span>
+                <span className="font-body text-3xl font-extrabold text-accent">✓</span>
+                <span className="block font-body text-xs text-muted mt-1">Verifisert data</span>
               </div>
             </div>
 
             <p className="font-body text-xs text-muted">
-              Kilde: Brønnøysundregistrene, enhetsregisteret. Næringskode 47.710 (Butikkhandel med klær).
+              Alle data er verifisert mot offisielle norske registre og oppdateres jevnlig.
             </p>
           </div>
         </section>

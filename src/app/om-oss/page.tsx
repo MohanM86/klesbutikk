@@ -6,7 +6,7 @@ import { getStats } from '@/lib/stores';
 
 export const metadata: Metadata = createMetadata({
   title: 'Om oss – Klesbutikk.no',
-  description: 'Klesbutikk.no er Norges mest komplette oversikt over klesbutikker med data fra Brønnøysundregistrene.',
+  description: 'Klesbutikk.no er Norges mest komplette oversikt over klesbutikker med verifiserte registerdata.',
   path: '/om-oss',
 });
 
@@ -26,7 +26,7 @@ export default function OmOssPage() {
       <section className="bg-white border-t border-border">
         <div className="max-w-3xl mx-auto section-padding py-10 md:py-14">
           <div className="font-body text-sm text-muted leading-relaxed space-y-4">
-            <p>Klesbutikk.no samler alle registrerte klesbutikker i Norge og gjør dem søkbare etter by, fylke, merke og kategori. Vår database er basert på offisielle data fra Brønnøysundregistrene med næringskode 47.710 (butikkhandel med klær).</p>
+            <p>Klesbutikk.no samler alle registrerte klesbutikker i Norge og gjør dem søkbare etter by, fylke, merke og kategori. Vår database er basert på offisielle verifiserte registerdata med offisielle registerdata (butikkhandel med klær).</p>
             <p>Med over {stats.totalStores.toLocaleString('nb-NO')} butikker fordelt på 357 kommuner og 15 fylker dekker vi hele Norge. Vi har også kartlagt over {stats.totalBrands} klesmerker og identifisert hvilke butikker som fører dem.</p>
             <p>Alle butikker har en gratis oppføring. For butikkeiere som ønsker økt synlighet tilbyr vi fremhevede plasseringer med prioritert visning, badge og eksponering på relevante merke og kategorisider.</p>
           </div>

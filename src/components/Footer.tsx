@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="font-body text-xs text-white/30">&copy; {new Date().getFullYear()} Klesbutikk.no. Alle rettigheter reservert.</p>
-          <p className="font-body text-xs text-white/20">Data fra Brønnøysundregistrene. Næringskode 47.710.</p>
+          <p className="font-body text-xs text-white/20">Oppdateres jevnlig med offisielle registerdata.</p>
         </div>
       </div>
     </footer>

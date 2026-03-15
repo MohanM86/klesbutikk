@@ -76,10 +76,10 @@ export function datasetSchema() {
     '@context': 'https://schema.org',
     '@type': 'Dataset',
     name: 'Klesbutikker i Norge',
-    description: 'Komplett oversikt over 1 566 klesbutikker i Norge med data fra Brønnøysundregistrene (næringskode 47.710).',
+    description: 'Komplett oversikt over 1 566 klesbutikker i Norge med verifiserte data.',
     url: SITE_URL,
     license: 'https://data.norge.no/nlod/no/2.0',
-    creator: { '@type': 'Organization', name: 'Brønnøysundregistrene' },
+    creator: { '@type': 'Organization', name: 'Klesbutikk.no' },
     distribution: {
       '@type': 'DataDownload',
       contentUrl: `${SITE_URL}/entity-index.json`,

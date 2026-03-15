@@ -85,9 +85,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="font-body text-xs text-white/30">&copy; {new Date().getFullYear()} Klesbutikk.no. Alle rettigheter reservert.</p>
-          <p className="font-body text-xs text-white/20">Oppdateres jevnlig med offisielle registerdata.</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <Link href="/personvern" className="font-body text-[11px] text-white/20 hover:text-accent transition-colors">Personvernerklæring</Link>
+            <Link href="/vilkar" className="font-body text-[11px] text-white/20 hover:text-accent transition-colors">Vilkår</Link>
+            <Link href="/cookies" className="font-body text-[11px] text-white/20 hover:text-accent transition-colors">Cookie-policy</Link>
+            <button onClick={() => { if (typeof window !== 'undefined') { document.cookie = 'cookie_consent=; Max-Age=0; path=/'; window.location.reload(); } }} className="font-body text-[11px] text-white/20 hover:text-accent transition-colors cursor-pointer">
+              Cookie-innstillinger
+            </button>
+          </div>
         </div>
       </div>
     </footer>

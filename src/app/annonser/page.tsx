@@ -21,6 +21,12 @@ const FAQS = [
   { question: 'Hvordan kommer jeg i gang?', answer: 'Send oss en epost på hei@klesbutikk.no med butikknavnet ditt og hvilken pakke du ønsker. Vi ordner alt innen 24 timer.' },
 ];
 
+const CHECK = (
+  <svg className="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.5 12.75l6 6 9-13.5" />
+  </svg>
+);
+
 export default function AnnonserPage() {
   const stats = getStats();
 
@@ -44,9 +50,7 @@ export default function AnnonserPage() {
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
               {['Ingen bindingstid', 'Enkel månedlig fakturering', 'Opp og kjøre innen 24 timer'].map((t) => (
                 <div key={t} className="flex items-center gap-1.5">
-                  <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.5 12.75l6 6 9-13.5" />
-                  </svg>
+                  {CHECK}
                   <span className="font-body text-xs font-medium text-slate">{t}</span>
                 </div>
               ))}
@@ -70,17 +74,8 @@ export default function AnnonserPage() {
                 <p className="font-body text-sm text-muted mt-1">For alltid, automatisk</p>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
-                {[
-                  'Grunnleggende oppføring',
-                  'Synlig i byoversikten',
-                  'Adresse og kontaktinfo',
-                  'Organisasjonsnummer',
-                  'Automatisk fra Brønnøysund',
-                ].map((f) => (
-                  <li key={f} className="flex items-start gap-2.5">
-                    <svg className="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.5 12.75l6 6 9-13.5" /></svg>
-                    <span className="font-body text-sm text-muted">{f}</span>
-                  </li>
+                {['Grunnleggende oppføring', 'Synlig i byoversikten', 'Adresse og kontaktinfo', 'Organisasjonsnummer', 'Automatisk fra Brønnøysund'].map((f) => (
+                  <li key={f} className="flex items-start gap-2.5">{CHECK}<span className="font-body text-sm text-muted">{f}</span></li>
                 ))}
               </ul>
               <div className="font-body text-xs font-bold text-center text-muted bg-white border-2 border-border rounded-xl py-3.5">
@@ -102,27 +97,13 @@ export default function AnnonserPage() {
                 <p className="font-body text-sm text-muted mt-1">Ingen bindingstid</p>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
-                <li className="flex items-start gap-2.5">
-                  <svg className="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.5 12.75l6 6 9-13.5" /></svg>
-                  <span className="font-body text-sm font-bold text-charcoal">Alt i Gratis, pluss:</span>
-                </li>
-                {[
-                  'Logo på butikkprofilen',
-                  'Kort beskrivelse av butikken',
-                  'Synlig på relevante merkesider',
-                  'Synlig på kategorisider',
-                  'Åpningstider på butikksiden',
-                ].map((f) => (
-                  <li key={f} className="flex items-start gap-2.5">
-                    <svg className="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.5 12.75l6 6 9-13.5" /></svg>
-                    <span className="font-body text-sm text-charcoal">{f}</span>
-                  </li>
+                <li className="flex items-start gap-2.5">{CHECK}<span className="font-body text-sm font-bold text-charcoal">Alt i Gratis, pluss:</span></li>
+                {['Logo på butikkprofilen', 'Kort beskrivelse av butikken', 'Åpningstider på butikksiden', 'Synlig på relevante merkesider', 'Synlig på kategorisider'].map((f) => (
+                  <li key={f} className="flex items-start gap-2.5">{CHECK}<span className="font-body text-sm text-charcoal">{f}</span></li>
                 ))}
               </ul>
               <a href="mailto:hei@klesbutikk.no?subject=Bestill%20Synlig-pakken%20-%20Klesbutikk.no&body=Hei!%0A%0AJeg%20ønsker%20Synlig-pakken%20for%20min%20butikk.%0A%0AButikknavn:%0ABy:%0A%0AMvh"
-                className="btn-primary w-full justify-center text-base py-4">
-                Kom i gang
-              </a>
+                className="btn-primary w-full justify-center text-base py-4">Kom i gang</a>
             </div>
 
             {/* PREMIUM */}
@@ -137,10 +118,7 @@ export default function AnnonserPage() {
                 <p className="font-body text-sm text-white/50 mt-1">For butikker som vil ha alt</p>
               </div>
               <ul className="space-y-3 mb-8 flex-1 relative">
-                <li className="flex items-start gap-2.5">
-                  <svg className="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.5 12.75l6 6 9-13.5" /></svg>
-                  <span className="font-body text-sm font-bold text-white">Alt i Synlig, pluss:</span>
-                </li>
+                <li className="flex items-start gap-2.5">{CHECK}<span className="font-body text-sm font-bold text-white">Alt i Synlig, pluss:</span></li>
                 {[
                   'Fremhevet badge på oppføringen',
                   'Prioritert plassering øverst i byen',
@@ -152,10 +130,7 @@ export default function AnnonserPage() {
                   'Manuell merkekobling til alle merker du fører',
                   'Egen artikkelside om butikken din',
                 ].map((f) => (
-                  <li key={f} className="flex items-start gap-2.5">
-                    <svg className="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.5 12.75l6 6 9-13.5" /></svg>
-                    <span className="font-body text-sm text-white/80">{f}</span>
-                  </li>
+                  <li key={f} className="flex items-start gap-2.5">{CHECK}<span className="font-body text-sm text-white/80">{f}</span></li>
                 ))}
               </ul>
               <a href="mailto:hei@klesbutikk.no?subject=Bestill%20Premium-pakken%20-%20Klesbutikk.no&body=Hei!%0A%0AJeg%20ønsker%20Premium-pakken%20for%20min%20butikk.%0A%0AButikknavn:%0ABy:%0A%0AMvh"
@@ -167,8 +142,80 @@ export default function AnnonserPage() {
         </div>
       </section>
 
-      {/* ─── FEATURE COMPARISON ───────────────────────────── */}
+      {/* ─── BEFORE / AFTER ───────────────────────────────── */}
       <section className="bg-surface border-t border-border">
+        <div className="max-w-4xl mx-auto section-padding py-14 md:py-20">
+          <div className="text-center mb-10">
+            <p className="font-body text-sm font-bold text-accent mb-1">Se forskjellen</p>
+            <h2 className="font-body text-display-sm font-extrabold text-charcoal">Gratis vs Premium oppføring</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* BEFORE — gratis */}
+            <div>
+              <p className="font-body text-[10px] font-bold text-muted tracking-wider uppercase mb-3">Gratis oppføring</p>
+              <div className="bg-surface border-2 border-border rounded-2xl p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-11 h-11 rounded-xl bg-accent-light flex items-center justify-center">
+                    <span className="font-body text-base font-extrabold text-accent">M</span>
+                  </div>
+                  <div>
+                    <h3 className="font-body text-base font-bold text-charcoal">Motehuset.no AS</h3>
+                    <p className="font-body text-xs text-muted">Storgata 12, 0184 Oslo</p>
+                  </div>
+                </div>
+                <div className="space-y-1.5 mb-4">
+                  <p className="font-body text-xs text-muted">Oslo</p>
+                  <p className="font-body text-xs text-muted">Org.nr: 123 456 789</p>
+                </div>
+                <div className="border-t border-border pt-4">
+                  <p className="font-body text-[11px] text-muted/50 italic">Ingen logo, beskrivelse, merker eller åpningstider</p>
+                </div>
+              </div>
+            </div>
+
+            {/* AFTER — premium */}
+            <div>
+              <p className="font-body text-[10px] font-bold text-accent tracking-wider uppercase mb-3">Premium oppføring</p>
+              <div className="bg-white border-2 border-accent rounded-2xl p-6 shadow-lg shadow-accent/10">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-11 h-11 rounded-xl bg-charcoal flex items-center justify-center">
+                    <span className="font-body text-base font-extrabold text-white">M</span>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2">
+                      <h3 className="font-body text-base font-bold text-charcoal">Motehuset.no AS</h3>
+                      <span className="font-body text-[9px] font-bold bg-accent text-white px-2 py-0.5 rounded-md">Anbefalt</span>
+                    </div>
+                    <p className="font-body text-xs text-muted">Storgata 12, Oslo</p>
+                  </div>
+                </div>
+                <p className="font-body text-xs text-slate leading-relaxed mb-3">
+                  Oslos mest spennende motebutikk med et håndplukket utvalg av norske og internasjonale designermerker. Vi har klær for deg som setter pris på kvalitet og unik stil.
+                </p>
+                <div className="flex flex-wrap gap-1.5 mb-3">
+                  {['Holzweiler', 'Filippa K', 'Ganni', 'Stine Goya', 'BY TIMO'].map((m) => (
+                    <span key={m} className="font-body text-[10px] font-medium bg-surface text-muted px-2 py-0.5 rounded-md">{m}</span>
+                  ))}
+                </div>
+                <div className="flex gap-4 text-xs text-muted mb-4">
+                  <span>Man-fre 10-19</span>
+                  <span>Lør 10-17</span>
+                </div>
+                <div className="flex gap-2">
+                  <span className="flex-1 inline-flex items-center justify-center gap-1.5 bg-accent text-white font-body text-xs font-bold py-2.5 rounded-xl">
+                    Besøk nettbutikk
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
+                  </span>
+                  <span className="inline-flex items-center justify-center px-4 py-2.5 border-2 border-border text-muted font-body text-xs font-bold rounded-xl">Detaljer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── FEATURE COMPARISON ───────────────────────────── */}
+      <section className="bg-white border-t border-border">
         <div className="max-w-5xl mx-auto section-padding py-14 md:py-20">
           <div className="text-center mb-10">
             <p className="font-body text-sm font-bold text-accent mb-1">Sammenlign pakker</p>
@@ -187,9 +234,9 @@ export default function AnnonserPage() {
               { f: 'Egen butikkside', g: true, s: true, p: true },
               { f: 'Logo på profilen', g: false, s: true, p: true },
               { f: 'Beskrivelse av butikken', g: false, s: true, p: true },
+              { f: 'Åpningstider', g: false, s: true, p: true },
               { f: 'Synlig på merkesider', g: false, s: true, p: true },
               { f: 'Synlig på kategorisider', g: false, s: true, p: true },
-              { f: 'Åpningstider', g: false, s: true, p: true },
               { f: 'Fremhevet badge', g: false, s: false, p: true },
               { f: 'Prioritert plassering i byen', g: false, s: false, p: true },
               { f: 'Fremhevet på forsiden', g: false, s: false, p: true },
@@ -204,13 +251,63 @@ export default function AnnonserPage() {
                 <div className="p-4 font-body text-sm text-charcoal">{row.f}</div>
                 {[row.g, row.s, row.p].map((val, j) => (
                   <div key={j} className="p-4 flex justify-center">
-                    {val ? (
-                      <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.5 12.75l6 6 9-13.5" /></svg>
-                    ) : (
-                      <span className="w-5 h-5 flex items-center justify-center text-border-dark">—</span>
-                    )}
+                    {val ? CHECK : <span className="w-5 h-5 flex items-center justify-center text-border-dark">—</span>}
                   </div>
                 ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── TILLEGG A LA CARTE ───────────────────────────── */}
+      <section className="bg-surface border-t border-border">
+        <div className="max-w-5xl mx-auto section-padding py-14 md:py-20">
+          <div className="text-center mb-10">
+            <p className="font-body text-sm font-bold text-accent mb-1">Tillegg</p>
+            <h2 className="font-body text-display-sm font-extrabold text-charcoal">Ekstra synlighet du kan legge til</h2>
+            <p className="font-body text-sm text-muted mt-2">Kan kombineres med alle pakker</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {[
+              {
+                title: 'Ekstra artikkel',
+                desc: 'Vi skriver en artikkel om butikken din som publiseres på Klesbutikk.no. God for SEO og synlighet.',
+                price: '1 490 kr',
+                period: 'engang',
+                icon: 'M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25',
+              },
+              {
+                title: 'Ekstra by',
+                desc: 'Bli synlig i en ekstra by utover din egen. Perfekt for butikker som tiltrekker kunder fra nabobyer.',
+                price: '490 kr',
+                period: '/mnd',
+                icon: 'M15 10.5a3 3 0 11-6 0 3 3 0 016 0zM19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z',
+              },
+              {
+                title: 'Merkeside-sponsing',
+                desc: 'Stå øverst på en merkeside du fører. Kunder som søker etter merket ser din butikk først.',
+                price: '790 kr',
+                period: '/mnd',
+                icon: 'M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z',
+              },
+            ].map((addon) => (
+              <div key={addon.title} className="bg-white border-2 border-border rounded-2xl p-6 hover:border-accent hover:shadow-md transition-all">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-11 h-11 rounded-xl bg-accent-light flex items-center justify-center">
+                    <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={addon.icon} />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-body text-base font-bold text-charcoal">{addon.title}</h3>
+                  </div>
+                </div>
+                <p className="font-body text-sm text-muted leading-relaxed mb-4">{addon.desc}</p>
+                <div className="flex items-baseline gap-1">
+                  <span className="font-body text-2xl font-extrabold text-charcoal">{addon.price}</span>
+                  <span className="font-body text-sm text-muted">{addon.period}</span>
+                </div>
               </div>
             ))}
           </div>
@@ -221,8 +318,8 @@ export default function AnnonserPage() {
       <section className="bg-white border-t border-border">
         <div className="max-w-5xl mx-auto section-padding py-14 md:py-20">
           <div className="text-center mb-10">
-            <p className="font-body text-sm font-bold text-accent mb-1">Hvorfor Klesbutikk.no</p>
-            <h2 className="font-body text-display-sm font-extrabold text-charcoal">Tall som teller</h2>
+            <p className="font-body text-sm font-bold text-accent mb-1">Tall som teller</p>
+            <h2 className="font-body text-display-sm font-extrabold text-charcoal">Derfor velger butikker oss</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[

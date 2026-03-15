@@ -5,6 +5,7 @@ import FAQAccordion from '@/components/FAQAccordion';
 import AnimatedHero from '@/components/AnimatedHero';
 import CityMarquee from '@/components/CityMarquee';
 import BrandShowcase from '@/components/BrandShowcase';
+import HowItWorks from '@/components/HowItWorks';
 import { getTopCities, getFeaturedStores, getStats, getAllBrands } from '@/lib/stores';
 import { faqSchema, itemListSchema } from '@/lib/seo';
 
@@ -150,25 +151,11 @@ export default function HomePage() {
       {/* ─── HOW IT WORKS ─────────────────────────────────── */}
       <section className="bg-white border-y border-border">
         <div className="max-w-8xl mx-auto section-padding py-16 md:py-22">
-          <div className="text-center mb-12">
+          <div className="text-center mb-14">
             <p className="font-body text-sm font-bold text-accent mb-1">Slik fungerer det</p>
             <h2 className="font-body text-display-sm md:text-display font-extrabold text-charcoal">Tre enkle steg</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {[
-              { n: '1', title: 'Søk', desc: 'Bruk søkefeltet eller bla gjennom byer, merker og kategorier for å finne akkurat det du leter etter.' },
-              { n: '2', title: 'Utforsk', desc: 'Hver butikk har sin egen side med adresse, kontaktinfo, nettside og hvilke merker de fører.' },
-              { n: '3', title: 'Besøk', desc: 'Finn veien med adressen, ring for åpningstider, eller besøk butikkens nettside for netthandel.' },
-            ].map((s) => (
-              <div key={s.n} className="text-center">
-                <div className="w-14 h-14 rounded-2xl bg-accent text-white flex items-center justify-center mx-auto mb-5 shadow-lg shadow-accent/20">
-                  <span className="font-body text-2xl font-extrabold">{s.n}</span>
-                </div>
-                <h3 className="font-body text-lg font-bold text-charcoal mb-2">{s.title}</h3>
-                <p className="font-body text-sm text-muted leading-relaxed max-w-xs mx-auto">{s.desc}</p>
-              </div>
-            ))}
-          </div>
+          <HowItWorks />
         </div>
       </section>
 

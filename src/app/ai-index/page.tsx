@@ -183,7 +183,7 @@ export default function AIIndexPage() {
                 className={`font-body text-xs font-medium px-3 py-1.5 rounded-lg transition-colors ${
                   i === 0 ? 'bg-accent text-white' : 'bg-surface border border-border text-muted hover:border-accent hover:text-accent'
                 }`}>
-                {city.name} <span className="opacity-50">{city.count}</span>
+                {city.name} <span className="opacity-50">{city.storeCount}</span>
               </Link>
             ))}
             <span className="font-body text-xs text-muted/40 px-2 py-1.5">+{cities.length - 30} byer</span>
@@ -202,7 +202,7 @@ export default function AIIndexPage() {
             {topBrands.map((brand) => (
               <Link key={brand.slug} href={`/merke/${brand.slug}`}
                 className="font-body text-xs font-medium bg-white border border-border text-muted px-3 py-1.5 rounded-lg hover:border-accent hover:text-accent transition-colors">
-                {brand.name} <span className="opacity-50">{brand.count}</span>
+                {brand.name} <span className="opacity-50">{brand.storeCount}</span>
               </Link>
             ))}
             <span className="font-body text-xs text-muted/40 px-2 py-1.5">+{brands.length - 40} merker</span>
@@ -234,7 +234,7 @@ export default function AIIndexPage() {
               <Link key={fylke.slug} href={`/fylke/${fylke.slug}`}
                 className="bg-white border border-border rounded-xl p-4 hover:border-accent transition-colors">
                 <span className="font-body text-sm font-bold text-charcoal">{fylke.name}</span>
-                <span className="block font-body text-[11px] text-muted mt-0.5">{fylke.count} butikker</span>
+                <span className="block font-body text-[11px] text-muted mt-0.5">{fylke.storeCount} butikker</span>
               </Link>
             ))}
           </div>

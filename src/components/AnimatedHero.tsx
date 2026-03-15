@@ -31,12 +31,12 @@ export default function AnimatedHero({ totalStores, totalFylker }: { totalStores
   const merker = useCountUp(483, 1400, started);
 
   return (
-    <div ref={ref} className="flex gap-6 sm:gap-10">
+    <div ref={ref} className="flex justify-center gap-6 sm:gap-10">
       {[
         { val: stores.toLocaleString('nb-NO'), label: 'Butikker' },
-        { val: kommuner.toString(), label: 'Kommuner' },
         { val: merker.toString(), label: 'Merker' },
         { val: totalFylker.toString(), label: 'Fylker' },
+        { val: kommuner.toString(), label: 'Kommuner' },
       ].map((s) => (
         <div key={s.label} className="text-center">
           <span className="font-body text-2xl sm:text-3xl font-extrabold text-charcoal tabular-nums">{s.val}</span>

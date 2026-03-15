@@ -61,7 +61,7 @@ export default function HomePage() {
               <SearchBar variant="hero" />
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-3 text-sm mb-12">
+            <div className="flex flex-wrap items-center justify-center gap-3 text-sm mb-8">
               {['Oslo', 'Bergen', 'Trondheim', 'Stavanger', 'Kristiansand'].map((c) => (
                 <Link key={c} href={`/${c.toLowerCase()}`} className="font-body text-xs font-medium text-muted hover:text-accent bg-white border border-border px-3 py-1.5 rounded-full transition-colors">
                   {c}

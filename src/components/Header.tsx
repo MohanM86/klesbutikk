@@ -16,9 +16,12 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border">
       <div className="max-w-8xl mx-auto section-padding">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-baseline gap-0.5">
-            <span className="font-body text-lg font-extrabold tracking-tight text-charcoal">klesbutikk</span>
-            <span className="text-lg font-extrabold text-accent">.no</span>
+          <Link href="/" className="flex items-center gap-2">
+            <svg className="w-7 h-5 text-accent" viewBox="0 0 28 20" fill="none">
+              <path d="M6 13L14 7L22 13" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              <circle cx="14" cy="7" r="2.5" fill="currentColor" />
+            </svg>
+            <span className="font-body text-lg font-extrabold tracking-tight text-charcoal">klesbutikk<span className="text-accent">.no</span></span>
           </Link>
           <nav className="hidden md:flex items-center gap-1">
             {NAV.map((n) => (

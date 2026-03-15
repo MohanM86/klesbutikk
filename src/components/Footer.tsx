@@ -6,9 +6,12 @@ export default function Footer() {
       <div className="max-w-8xl mx-auto section-padding py-14 md:py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
-            <Link href="/" className="inline-flex items-baseline mb-4">
-              <span className="font-body text-lg font-extrabold text-white">klesbutikk</span>
-              <span className="text-lg font-extrabold text-accent">.no</span>
+            <Link href="/" className="inline-flex items-center gap-2 mb-4">
+              <svg className="w-7 h-5 text-accent" viewBox="0 0 28 20" fill="none">
+                <path d="M6 13L14 7L22 13" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                <circle cx="14" cy="7" r="2.5" fill="currentColor" />
+              </svg>
+              <span className="font-body text-lg font-extrabold text-white">klesbutikk<span className="text-accent">.no</span></span>
             </Link>
             <p className="font-body text-sm text-white/50 leading-relaxed max-w-xs">
               Norges mest komplette oversikt over klesbutikker. Over 1 500 butikker, 480+ merker.

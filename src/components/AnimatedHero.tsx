@@ -1,91 +1,56 @@
 'use client';
-
 import { useEffect, useRef, useState } from 'react';
 
 function useCountUp(target: number, duration: number, start: boolean) {
   const [value, setValue] = useState(0);
   const ref = useRef<number | null>(null);
-
   useEffect(() => {
     if (!start) return;
-    const startTime = performance.now();
-    const animate = (now: number) => {
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setValue(Math.floor(eased * target));
-      if (progress < 1) {
-        ref.current = requestAnimationFrame(animate);
-      } else {
-        setValue(target);
-      }
+    const t0 = performance.now();
+    const step = (now: number) => {
+      const p = Math.min((now - t0) / duration, 1);
+      const e = 1 - Math.pow(1 - p, 3);
+      setValue(Math.floor(e * target));
+      if (p < 1) ref.current = requestAnimationFrame(step);
+      else setValue(target);
     };
-    ref.current = requestAnimationFrame(animate);
-    return () => {
-      if (ref.current) cancelAnimationFrame(ref.current);
-    };
+    ref.current = requestAnimationFrame(step);
+    return () => { if (ref.current) cancelAnimationFrame(ref.current); };
   }, [target, duration, start]);
-
   return value;
 }
 
-export default function AnimatedHero({
-  totalStores,
-  totalFylker,
-}: {
-  totalStores: number;
-  totalFylker: number;
-}) {
+export default function AnimatedHero({ totalStores, totalFylker }: { totalStores: number; totalFylker: number }) {
   const [started, setStarted] = useState(false);
-  const heroRef = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setStarted(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.2 }
-    );
-    if (heroRef.current) observer.observe(heroRef.current);
-    return () => observer.disconnect();
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setStarted(true); obs.disconnect(); } }, { threshold: 0.2 });
+    if (ref.current) obs.observe(ref.current);
+    return () => obs.disconnect();
   }, []);
 
-  const storeCount = useCountUp(totalStores, 2200, started);
-  const kommuneCount = useCountUp(357, 1800, started);
-  const fylkeCount = useCountUp(totalFylker, 1400, started);
+  const stores = useCountUp(totalStores, 2200, started);
+  const kommuner = useCountUp(357, 1800, started);
+  const merker = useCountUp(483, 1600, started);
 
   return (
-    <div ref={heroRef}>
-      <div className="flex items-center justify-center gap-3 sm:gap-5 mb-6">
-        <div className="text-center">
-          <span className="font-display text-3xl sm:text-4xl font-bold text-white tabular-nums">
-            {storeCount.toLocaleString('nb-NO')}
-          </span>
-          <span className="block font-body text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-white/25 mt-1">
-            butikker
-          </span>
-        </div>
-        <span className="text-white/10 text-2xl font-light">&middot;</span>
-        <div className="text-center">
-          <span className="font-display text-3xl sm:text-4xl font-bold text-white tabular-nums">
-            {kommuneCount}
-          </span>
-          <span className="block font-body text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-white/25 mt-1">
-            kommuner
-          </span>
-        </div>
-        <span className="text-white/10 text-2xl font-light">&middot;</span>
-        <div className="text-center">
-          <span className="font-display text-3xl sm:text-4xl font-bold text-white tabular-nums">
-            {fylkeCount}
-          </span>
-          <span className="block font-body text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-white/25 mt-1">
-            fylker
-          </span>
-        </div>
+    <div ref={ref} className="stagger-5">
+      <div className="flex gap-8 md:gap-12">
+        {[
+          { val: stores.toLocaleString('nb-NO'), label: 'Butikker' },
+          { val: kommuner.toString(), label: 'Kommuner' },
+          { val: merker.toString(), label: 'Merker' },
+        ].map((s) => (
+          <div key={s.label}>
+            <span className="font-body text-3xl md:text-4xl font-black text-white tabular-nums tracking-tight">
+              {s.val}
+            </span>
+            <span className="block font-body text-[8px] md:text-[9px] tracking-[0.25em] uppercase text-white/15 mt-1">
+              {s.label}
+            </span>
+          </div>
+        ))}
       </div>
     </div>
   );

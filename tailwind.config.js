@@ -4,24 +4,24 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Playfair Display', 'Georgia', 'serif'],
+        display: ['"Playfair Display"', 'Georgia', 'serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
-        cream: '#ffffff',
+        cream: '#000000',
         charcoal: '#000000',
         slate: '#333333',
-        muted: '#888888',
-        border: '#e5e5e5',
-        'border-dark': '#222222',
-        accent: '#000000',
-        surface: '#f7f7f7',
+        muted: '#666666',
+        border: 'rgba(255,255,255,0.06)',
+        'border-dark': 'rgba(255,255,255,0.1)',
+        accent: '#ffffff',
+        surface: '#0a0a0a',
       },
       fontSize: {
-        'hero': ['5rem', { lineHeight: '1.0', letterSpacing: '-0.03em' }],
-        'hero-sm': ['3rem', { lineHeight: '1.05', letterSpacing: '-0.03em' }],
-        'display': ['3rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'display-sm': ['2rem', { lineHeight: '1.15', letterSpacing: '-0.015em' }],
+        'hero': ['5.5rem', { lineHeight: '0.92', letterSpacing: '-0.04em' }],
+        'hero-sm': ['3.2rem', { lineHeight: '0.95', letterSpacing: '-0.04em' }],
+        'display': ['2.8rem', { lineHeight: '1.0', letterSpacing: '-0.03em' }],
+        'display-sm': ['1.8rem', { lineHeight: '1.05', letterSpacing: '-0.02em' }],
       },
       spacing: {
         '18': '4.5rem',
@@ -30,24 +30,14 @@ module.exports = {
       maxWidth: {
         '8xl': '88rem',
       },
-      animation: {
-        'fade-in': 'fadeIn 0.6s ease-out forwards',
-        'fade-up': 'fadeUp 0.6s ease-out forwards',
-        'slide-in': 'slideIn 0.5s ease-out forwards',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        fadeUp: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        slideIn: {
-          '0%': { opacity: '0', transform: 'translateX(-10px)' },
-          '100%': { opacity: '1', transform: 'translateX(0)' },
-        },
+      borderRadius: {
+        DEFAULT: '0',
+        'none': '0',
+        'sm': '0',
+        'md': '0',
+        'lg': '0',
+        'xl': '0',
+        'full': '0',
       },
     },
   },

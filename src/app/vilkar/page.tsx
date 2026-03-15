@@ -1,190 +1,75 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
+import { Metadata } from 'next';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { createMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Vilkår og betingelser | Klesbutikk.no',
-  description:
-    'Vilkår og betingelser for bruk av Klesbutikk.no.',
-  robots: { index: false, follow: false },
-};
-
-/* ------------------------------------------------------------------ */
-/*  Juridisk side · /vilkar                                           */
-/* ------------------------------------------------------------------ */
+export const metadata: Metadata = createMetadata({
+  title: 'Vilkår og betingelser',
+  description: 'Vilkår og betingelser for bruk av Klesbutikk.no.',
+  path: '/vilkar',
+  noIndex: true,
+});
 
 export default function VilkarPage() {
   return (
-    <main className="min-h-screen bg-white">
-      {/* Hero */}
-      <div className="bg-surface border-b border-border">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-          <nav className="text-sm text-muted mb-6" aria-label="Breadcrumb">
-            <ol className="flex items-center gap-1.5">
-              <li>
-                <Link href="/" className="hover:text-charcoal transition-colors">
-                  Hjem
-                </Link>
-              </li>
-              <li className="text-border-dark">/</li>
-              <li className="text-charcoal font-medium">Vilkår og betingelser</li>
-            </ol>
-          </nav>
-          <h1 className="text-display font-bold text-charcoal">
-            Vilkår og betingelser
-          </h1>
-          <p className="mt-3 text-muted text-sm">
-            Sist oppdatert: 15.&nbsp;mars&nbsp;2026
-          </p>
+    <section className="bg-white">
+      <div className="max-w-3xl mx-auto section-padding pt-6 pb-16 md:pt-10">
+        <Breadcrumbs items={[{ label: 'Vilkår og betingelser' }]} />
+        <h1 className="font-body text-display-sm md:text-display font-extrabold text-charcoal mt-4 mb-8">Vilkår og betingelser</h1>
+        <div className="font-body text-sm text-muted leading-relaxed space-y-6">
+          <p className="text-base text-charcoal font-medium">Sist oppdatert: mars 2026</p>
+
+          <div>
+            <h2 className="font-body text-lg font-extrabold text-charcoal mb-2">1. Om tjenesten</h2>
+            <p>Klesbutikk.no er en gratis oversikt over klesbutikker i Norge. Tjenesten gir brukere mulighet til å søke etter klesbutikker basert på by, merke, kategori og fylke. Vi tilbyr også betalte synlighetspakker for butikkeiere.</p>
+          </div>
+
+          <div>
+            <h2 className="font-body text-lg font-extrabold text-charcoal mb-2">2. Bruk av tjenesten</h2>
+            <p>Tjenesten er gratis å bruke for forbrukere. Ved å bruke Klesbutikk.no aksepterer du disse vilkårene. Du kan bruke innholdet til personlige formål, men du kan ikke kopiere, gjenskape eller redistribuere vesentlige deler av databasen uten skriftlig samtykke.</p>
+          </div>
+
+          <div>
+            <h2 className="font-body text-lg font-extrabold text-charcoal mb-2">3. Innholdets nøyaktighet</h2>
+            <p>Vi bestreber oss på å holde informasjonen oppdatert og korrekt, men kan ikke garantere at all informasjon til enhver tid er nøyaktig. Butikker kan ha endret adresse, åpningstider eller lagt ned virksomheten etter at dataene ble hentet. Vi anbefaler å kontakte butikken direkte for å bekrefte informasjon.</p>
+          </div>
+
+          <div>
+            <h2 className="font-body text-lg font-extrabold text-charcoal mb-2">4. Annonsering og betalte tjenester</h2>
+            <p>Butikkeiere kan kjøpe synlighetspakker (Synlig og Premium) for å fremheve butikken sin. Priser og pakkeinnhold er beskrevet på annonseringssiden. Alle priser er oppgitt eksklusiv merverdiavgift med mindre annet er spesifisert.</p>
+            <p className="mt-2">Det er ingen bindingstid. Oppsigelse skjer ved å sende epost til hei@klesbutikk.no, og pakken beholdes ut inneværende faktureringsperiode.</p>
+          </div>
+
+          <div>
+            <h2 className="font-body text-lg font-extrabold text-charcoal mb-2">5. Immaterielle rettigheter</h2>
+            <p>Design, kode, tekster og den samlede databasen på Klesbutikk.no er beskyttet av opphavsrett og databasevern. Enkeltstående butikkdata (navn, adresse) er offentlig informasjon, men den kuraterte samlingen, kategoriseringen og presentasjonen er vår eiendom.</p>
+          </div>
+
+          <div>
+            <h2 className="font-body text-lg font-extrabold text-charcoal mb-2">6. Ansvarsbegrensning</h2>
+            <p>Klesbutikk.no tilbys «som den er» uten garantier av noe slag. Vi er ikke ansvarlige for tap eller skade som følge av bruk av tjenesten, inkludert men ikke begrenset til feil i butikkinformasjon, utilgjengelighet av tjenesten, eller handlinger basert på informasjon funnet på nettstedet.</p>
+          </div>
+
+          <div>
+            <h2 className="font-body text-lg font-extrabold text-charcoal mb-2">7. Lenker til tredjeparter</h2>
+            <p>Nettstedet kan inneholde lenker til butikkers nettsider og nettbutikker. Vi er ikke ansvarlige for innholdet eller personvernet på eksterne nettsteder.</p>
+          </div>
+
+          <div>
+            <h2 className="font-body text-lg font-extrabold text-charcoal mb-2">8. Endringer i vilkårene</h2>
+            <p>Vi forbeholder oss retten til å oppdatere disse vilkårene. Fortsatt bruk av tjenesten etter endringer utgjør aksept av de oppdaterte vilkårene.</p>
+          </div>
+
+          <div>
+            <h2 className="font-body text-lg font-extrabold text-charcoal mb-2">9. Gjeldende lov</h2>
+            <p>Disse vilkårene er underlagt norsk lov. Eventuelle tvister skal forsøkes løst i minnelighet, og dersom dette ikke fører frem, avgjøres tvisten ved norske domstoler.</p>
+          </div>
+
+          <div>
+            <h2 className="font-body text-lg font-extrabold text-charcoal mb-2">10. Kontakt</h2>
+            <p>For spørsmål om vilkårene, kontakt oss på hei@klesbutikk.no.</p>
+          </div>
         </div>
       </div>
-
-      {/* Innhold */}
-      <article className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
-        <div className="space-y-10 text-[15px] leading-[1.75] text-slate">
-          {/* 1 */}
-          <Section n={1} title="Om tjenesten">
-            <p>
-              Klesbutikk.no er en gratis oversiktstjeneste som samler
-              informasjon om registrerte klesbutikker i Norge. Tjenesten er
-              levert av IT-FIRMA og baserer seg på data fra offisielle norske
-              registre.
-            </p>
-          </Section>
-
-          {/* 2 */}
-          <Section n={2} title="Bruk av tjenesten">
-            <p>
-              Tjenesten er gratis for forbrukere. Ved å bruke Klesbutikk.no
-              aksepterer du disse vilkårene. Du kan bruke innholdet til
-              personlige, ikke-kommersielle formål. Systematisk kopiering,
-              scraping eller reproduksjon av data fra nettstedet er ikke
-              tillatt uten skriftlig samtykke.
-            </p>
-          </Section>
-
-          {/* 3 */}
-          <Section n={3} title="Nøyaktighet og oppdatering">
-            <p>
-              Vi tilstreber at all informasjon på Klesbutikk.no er korrekt og
-              oppdatert. Data hentes fra offisielle norske registre og
-              oppdateres jevnlig. Vi kan likevel ikke garantere at all
-              informasjon til enhver tid er fullstendig eller feilfri.
-              Butikker kan ha endret adresse, åpningstider eller lagt ned
-              uten at dette umiddelbart reflekteres i våre data.
-            </p>
-          </Section>
-
-          {/* 4 */}
-          <Section n={4} title="Annonsering og betalte tjenester">
-            <p>
-              Butikkeiere kan kjøpe synlighetspakker for å fremheve sin
-              butikk på Klesbutikk.no. Tilgjengelige pakker:
-            </p>
-            <ul className="mt-2 space-y-2 list-disc pl-5 marker:text-border-dark">
-              <li>
-                <strong className="text-charcoal">Synlig</strong> —
-                990&nbsp;kr/mnd: logo, beskrivelse, åpningstider, kategori-
-                og merkesider
-              </li>
-              <li>
-                <strong className="text-charcoal">Premium</strong> —
-                2&nbsp;490&nbsp;kr/mnd: alle Synlig-funksjoner pluss merke,
-                prioritert plassering, SEO-tekst og artikkelside
-              </li>
-            </ul>
-            <p className="mt-3">
-              Betalte tjenester faktureres månedlig. Det er ingen bindingstid,
-              og abonnementet kan sies opp når som helst med virkning fra
-              neste faktureringsperiode.
-            </p>
-          </Section>
-
-          {/* 5 */}
-          <Section n={5} title="Immaterielle rettigheter">
-            <p>
-              Alt innhold på Klesbutikk.no, inkludert design, tekst, grafikk,
-              logoer og den sammenstilte databasen, er beskyttet av
-              opphavsrett og databasevern. Butikkdata som stammer fra
-              offisielle registre er offentlig tilgjengelig, men vår
-              sammenstilling, kategorisering og presentasjon er vernet.
-            </p>
-          </Section>
-
-          {/* 6 */}
-          <Section n={6} title="Ansvarsbegrensning">
-            <p>
-              Klesbutikk.no tilbys «som den er» uten garantier av noe slag.
-              Vi er ikke ansvarlige for tap, skade eller ulempe som måtte
-              oppstå som følge av bruk av informasjon fra nettstedet. Dette
-              inkluderer, men er ikke begrenset til, feil i
-              butikkinformasjon, nedetid eller utilgjengelighet av tjenesten.
-            </p>
-          </Section>
-
-          {/* 7 */}
-          <Section n={7} title="Tredjepartslenker">
-            <p>
-              Klesbutikk.no kan inneholde lenker til eksterne nettsteder. Vi
-              er ikke ansvarlige for innholdet på eller personvernpraksisen
-              til tredjepartsnettsteder.
-            </p>
-          </Section>
-
-          {/* 8 */}
-          <Section n={8} title="Endringer i vilkårene">
-            <p>
-              Vi forbeholder oss retten til å endre disse vilkårene når som
-              helst. Endringer trer i kraft ved publisering på denne siden.
-              Fortsatt bruk av tjenesten etter endring innebærer aksept av
-              de oppdaterte vilkårene.
-            </p>
-          </Section>
-
-          {/* 9 */}
-          <Section n={9} title="Gjeldende lov">
-            <p>
-              Disse vilkårene er underlagt norsk lov. Eventuelle tvister
-              skal søkes løst i minnelighet. Dersom dette ikke er mulig,
-              skal tvisten avgjøres av norske domstoler.
-            </p>
-          </Section>
-
-          {/* 10 */}
-          <Section n={10} title="Kontakt">
-            <p>
-              Spørsmål om disse vilkårene kan rettes til{' '}
-              <a
-                href="mailto:hei@klesbutikk.no"
-                className="text-accent hover:text-accent-hover underline underline-offset-2 transition-colors"
-              >
-                hei@klesbutikk.no
-              </a>
-              .
-            </p>
-          </Section>
-        </div>
-      </article>
-    </main>
-  );
-}
-
-/* ---------- Helper ---------- */
-
-function Section({
-  n,
-  title,
-  children,
-}: {
-  n: number;
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section>
-      <h2 className="text-lg font-semibold text-charcoal mb-3">
-        {n}. {title}
-      </h2>
-      {children}
     </section>
   );
 }

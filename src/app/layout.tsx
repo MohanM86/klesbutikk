@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import GeolocateBar from '@/components/GeolocateBar';
 import { organizationSchema, SITE_NAME, SITE_URL, SITE_DESC } from '@/lib/seo';
 import './globals.css';
 
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main className="flex-1 pt-16">{children}</main>
         <Footer />
+        <GeolocateBar />
       </body>
     </html>
   );

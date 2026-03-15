@@ -7,7 +7,7 @@ import CityMarquee from '@/components/CityMarquee';
 import BrandShowcase from '@/components/BrandShowcase';
 import HowItWorks from '@/components/HowItWorks';
 import { getTopCities, getFeaturedStores, getStats, getAllBrands } from '@/lib/stores';
-import { faqSchema, itemListSchema } from '@/lib/seo';
+import { faqSchema, itemListSchema, webSiteSchema, datasetSchema } from '@/lib/seo';
 
 const HOME_FAQS = [
   { question: 'Hva er de beste klesbutikkene i Norge?', answer: 'Norge har over 1 500 registrerte klesbutikker fra Lindesnes til Nordkapp. De mest populære finner du i Oslo, Bergen, Trondheim og Stavanger. På Klesbutikk.no kan du utforske alle registrerte klesbutikker i landet og finne favorittene i din by.' },
@@ -35,6 +35,8 @@ export default function HomePage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema()) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetSchema()) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(HOME_FAQS)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema(cities.map((c) => ({ name: `Klesbutikker i ${c.name}`, url: `/${c.slug}` })))) }} />
 

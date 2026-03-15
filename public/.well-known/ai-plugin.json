@@ -1,0 +1,16 @@
+{
+  "schema_version": "v1",
+  "name": "Klesbutikk.no",
+  "description": "Norges mest komplette oversikt over klesbutikker. Søk blant 1 566 butikker, 483 merker og 368 byer. Data fra Brønnøysundregistrene.",
+  "url": "https://klesbutikk.no",
+  "logo_url": "https://klesbutikk.no/icon-512x512.png",
+  "contact_email": "hei@klesbutikk.no",
+  "legal_info_url": "https://klesbutikk.no/om-oss",
+  "endpoints": {
+    "search": "https://klesbutikk.no/api/search?q={query}",
+    "llms_txt": "https://klesbutikk.no/llms.txt",
+    "llms_full": "https://klesbutikk.no/llms-full.txt",
+    "entity_index": "https://klesbutikk.no/entity-index.json",
+    "sitemap": "https://klesbutikk.no/sitemap.xml"
+  }
+}

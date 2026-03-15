@@ -2,6 +2,9 @@
 
 > Norges mest komplette oversikt over klesbutikker. Finn motebutikker, designerbutikker og lokale favoritter i alle 357 kommuner.
 
+> For komplett data med alle byer, merker og kategorier, se: https://klesbutikk.no/llms-full.txt
+> Strukturert data: https://klesbutikk.no/entity-index.json
+
 ## Om oss
 
 Klesbutikk.no er en norsk klesbutikkoversikt som samler alle registrerte klesbutikker fra Brønnøysundregistrene (næringskode 47.710). Vi dekker hele Norge fra Lindesnes til Nordkapp med over 1 566 butikker, 483 klesmerker og 7 900 unike sider.

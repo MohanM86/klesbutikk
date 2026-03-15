@@ -39,13 +39,55 @@ export function organizationSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     description: SITE_DESC,
-    logo: `${SITE_URL}/logo.svg`,
+    logo: `${SITE_URL}/icon-512x512.png`,
+    foundingDate: '2026',
     sameAs: [],
     contactPoint: {
       '@type': 'ContactPoint',
+      email: 'hei@klesbutikk.no',
       contactType: 'customer service',
       availableLanguage: 'Norwegian',
     },
+  };
+}
+
+export function webSiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE_NAME,
+    url: SITE_URL,
+    description: SITE_DESC,
+    inLanguage: 'nb',
+    dateModified: new Date().toISOString().split('T')[0],
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${SITE_URL}/api/search?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  };
+}
+
+export function datasetSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: 'Klesbutikker i Norge',
+    description: 'Komplett oversikt over 1 566 klesbutikker i Norge med data fra Brønnøysundregistrene (næringskode 47.710).',
+    url: SITE_URL,
+    license: 'https://data.norge.no/nlod/no/2.0',
+    creator: { '@type': 'Organization', name: 'Brønnøysundregistrene' },
+    distribution: {
+      '@type': 'DataDownload',
+      contentUrl: `${SITE_URL}/entity-index.json`,
+      encodingFormat: 'application/json',
+    },
+    spatialCoverage: { '@type': 'Place', name: 'Norge' },
+    temporalCoverage: '2026',
+    variableMeasured: ['Store count', 'Brand count', 'City count'],
   };
 }
 

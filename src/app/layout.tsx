@@ -20,6 +20,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="nb">
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#FF6900" />
+        <link rel="author" href="https://klesbutikk.no/om-oss" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }} />
       </head>
       <body className="min-h-screen flex flex-col bg-white">

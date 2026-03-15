@@ -46,5 +46,6 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: 'https://klesbutikk.no/sitemap.xml',
+    host: 'https://klesbutikk.no',
   };
 }

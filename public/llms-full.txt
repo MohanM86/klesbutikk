@@ -1,0 +1,949 @@
+# Klesbutikk.no — Komplett oversikt
+
+> Norges mest komplette oversikt over klesbutikker. Data fra Brønnøysundregistrene (næringskode 47.710).
+
+## Nøkkeltall
+
+- 1 566 registrerte klesbutikker
+- 483 kartlagte klesmerker
+- 368 byer med klesbutikker
+- 357 kommuner dekket
+- 15 fylker
+- 7 900+ unike sider
+
+## Datakilde
+
+Alle butikkdata er hentet fra Brønnøysundregistrene, Norges offisielle foretaksregister. Næringskode 47.710 (butikkhandel med klær). Dataene oppdateres jevnlig.
+
+## Nettsted
+
+- URL: https://klesbutikk.no
+- Språk: Norsk (bokmål)
+- Kontakt: hei@klesbutikk.no
+- Gratis å bruke for forbrukere
+
+## Innholdstyper
+
+### Bysider
+Hver by har en egen side med alle klesbutikker i byen, sortert og filtrerbar.
+URL-mønster: https://klesbutikk.no/{bynavn}
+
+### Butikksider
+Hver butikk har en egen side med navn, adresse, postnummer, poststed, organisasjonsnummer og eventuelle merker.
+URL-mønster: https://klesbutikk.no/butikk/{butikknavn-slug}
+
+### Merkesider
+Hver merkevare har en egen side med alle butikker som fører merket.
+URL-mønster: https://klesbutikk.no/merke/{merkenavn-slug}
+
+### Fylkesider
+Hvert fylke har en oversikt over alle klesbutikker i fylket.
+URL-mønster: https://klesbutikk.no/fylke/{fylkenavn-slug}
+
+### Kategorisider
+Kategorier: Dameklær, Herreklær, Barneklær, Designer, Vintage og gjenbruk, Sportsklær, Arbeidsklær, Brudebutikker, Undertøy, Bunad.
+URL: https://klesbutikk.no/kategorier
+
+### Nettbutikker
+Oversikt over klesbutikker med nettside/nettbutikk.
+URL: https://klesbutikk.no/nettbutikker
+
+## Alle byer med klesbutikker
+
+By | Antall butikker
+--- | ---
+Oslo | 253
+Stavanger | 39
+Bergen | 39
+Trondheim | 39
+Kristiansand | 30
+Sandnes | 30
+Drammen | 30
+Haugesund | 28
+Tønsberg | 27
+Holmestrand | 25
+Sandefjord | 20
+Tromsø | 17
+Ålesund | 16
+Sandvika | 16
+Ski | 15
+Larvik | 15
+Lillehammer | 14
+Bodø | 14
+Skien | 13
+Moss | 13
+Arendal | 13
+Sarpsborg | 12
+Harstad | 11
+Hønefoss | 11
+Asker | 10
+Fredrikstad | 10
+Billingstad | 10
+Mandal | 9
+Drøbak | 9
+Porsgrunn | 9
+Hamar | 9
+Kragerø | 8
+Stjørdal | 8
+Førde | 8
+Gjøvik | 8
+Bryne | 7
+Hokksund | 7
+Egersund | 7
+Gamle Fredrikstad | 7
+Lillestrøm | 6
+Horten | 6
+Gran | 6
+Halden | 6
+Rådal | 6
+Sortland | 6
+Mo I Rana | 6
+Mosjøen | 6
+Søgne | 6
+Voss | 6
+Røros | 6
+Grimstad | 6
+Snarøya | 6
+Fosnavåg | 5
+Storslett | 5
+Brumunddal | 5
+Lørenskog | 5
+Strømmen | 5
+Florø | 5
+Namsos | 5
+Kristiansund N | 5
+Kongsvinger | 5
+Kongsberg | 5
+Kokstad | 5
+Molde | 5
+Nesttun | 5
+Fornebu | 5
+Flekkefjord | 5
+Jessheim | 4
+Lillesand | 4
+Kleppestø | 4
+Mysen | 4
+Randaberg | 4
+Langevåg | 4
+Norheimsund | 4
+Finnsnes | 4
+Gressvik | 4
+Lyngdal | 4
+Ørsta | 4
+Svolvær | 4
+Vestby | 4
+Årnes | 4
+Risør | 4
+Kolbotn | 4
+Bø I Telemark | 4
+Øvre Årdal | 4
+Revetal | 4
+Tvedestrand | 4
+Alta | 4
+Nøtterøy | 4
+Steinkjer | 3
+Sauda | 3
+Elnesvågen | 3
+Hvalstad | 3
+Godvik | 3
+Andenes | 3
+Karmsund | 3
+Geilo | 3
+Dokka | 3
+Orkanger | 3
+Ulsteinvik | 3
+Nesbru | 3
+Sande I Vestfold | 3
+Lena | 3
+Nesbyen | 3
+Fyllingsdalen | 3
+Lysaker | 3
+Myre | 3
+Kleppe | 3
+Åndalsnes | 3
+Bekkestua | 3
+Kopervik | 3
+Straume | 3
+Åfjord | 3
+Verdal | 3
+Fagernes | 3
+Eidsvoll | 3
+Hommersåk | 3
+Jørpeland | 3
+Lierskogen | 3
+Farsund | 3
+Heimdal | 3
+Ål | 3
+Bjørkelangen | 3
+Sogndal | 3
+Isdalstø | 3
+Måløy | 3
+Nesoddtangen | 3
+Melhus | 3
+Kråkerøy | 3
+Stange | 3
+Bremnes | 3
+Storsteinnes | 3
+Åkrehamn | 3
+Sykkylven | 3
+Laksevåg | 3
+Seljord | 3
+Odda | 3
+Stavern | 3
+Vennesla | 3
+Narvik | 3
+Nordfjordeid | 3
+Leknes | 3
+Stokke | 3
+Solbergmoen | 2
+Lier | 2
+Tysnes | 2
+Kyrksæterøra | 2
+Skreia | 2
+Spydeberg | 2
+Rognan | 2
+Hosle | 2
+Rissa | 2
+Hammerfest | 2
+Flisa | 2
+Tynset | 2
+Loddefjord | 2
+Rødberg | 2
+Fauske | 2
+Vadsø | 2
+Moelv | 2
+Brekstad | 2
+Levanger | 2
+Husnes | 2
+Heggedal | 2
+Skjærhalden | 2
+Svelvik | 2
+Henningsvær | 2
+Åmot | 2
+Vegårshei | 2
+Notodden | 2
+Olden | 2
+Åsgårdstrand | 2
+Stranda | 2
+Stord | 2
+Askim | 2
+Bærums Verk | 2
+Sistranda | 2
+Frekhaug | 2
+Vollen | 2
+Sellebakk | 2
+Hagan | 2
+Tofte | 2
+Innvik | 2
+Sem | 2
+Rolvsøy | 2
+Tolvsrød | 2
+Sandane | 2
+Kviteseid | 2
+Dilling | 2
+Stryn | 2
+Rjukan | 2
+Evje | 2
+Tjøme | 2
+Fetsund | 2
+Ørnes | 2
+Tau | 2
+Trysil | 2
+Kirkenær | 2
+Krokstadelva | 2
+Inderøy | 2
+Os | 2
+Lakselv | 2
+Gjettum | 2
+Vikersund | 2
+Ølen | 2
+Hafrsfjord | 2
+Sola | 2
+Skjervøy | 2
+Honningsvåg | 2
+Kvinesdal | 2
+Aurskog | 2
+Rena | 2
+Stathelle | 2
+Kirkenes | 2
+Slemmestad | 2
+Karasjok | 1
+Tomasjord | 1
+Sørum | 1
+Skånevik | 1
+Follebu | 1
+Bjorli | 1
+Brandbu | 1
+Grålum | 1
+Reinsvoll | 1
+Hauge I Dalane | 1
+Bjerkvik | 1
+Sunndalsøra | 1
+Bømlo | 1
+Rong | 1
+Brønnøysund | 1
+Sand | 1
+Skotterud | 1
+Matrand | 1
+Gjerdrum | 1
+Ulefoss | 1
+Paradis | 1
+Hordvik | 1
+Nesodden | 1
+Holmsbu | 1
+Knarrevik | 1
+Hagavik | 1
+Blystadlia | 1
+Bø I Vesterålen | 1
+Støren | 1
+Skudeneshavn | 1
+Jevnaker | 1
+Slitu | 1
+Sagstua | 1
+Sætre | 1
+Vøyenenga | 1
+Tertnes | 1
+Vanse | 1
+Kvernaland | 1
+Mosterhamn | 1
+Froland | 1
+Tiller | 1
+Hemnes | 1
+Hvittingfoss | 1
+Bønes | 1
+Færvik | 1
+Leinstrand | 1
+Fevik | 1
+Hornindal | 1
+Storjorda I Tysfjorden | 1
+Vesterøy | 1
+Sundebru | 1
+Sandnessjøen | 1
+Hareid | 1
+Tananger | 1
+Råde | 1
+Østerås | 1
+Deknepollen | 1
+Gaupne | 1
+Drangedal | 1
+Solbergelva | 1
+Austrheim | 1
+Bremanger | 1
+Kolvereid | 1
+Hemsedal | 1
+Søreidgrend | 1
+Utvik | 1
+Duken | 1
+Vinstra | 1
+Trøgstad | 1
+Nyborg | 1
+Bjugn | 1
+Fjell | 1
+Leinesfjord | 1
+Averøy | 1
+Nærbø | 1
+Løken | 1
+Løten | 1
+Sannidal | 1
+Flå | 1
+Elverum | 1
+Lonevåg | 1
+Moi | 1
+Sørli | 1
+Brattvåg | 1
+Valderøya | 1
+Son | 1
+Askvoll | 1
+Aremark | 1
+Vestnes | 1
+Eikangervåg | 1
+Balestrand | 1
+Hernes | 1
+Våler I Østfold | 1
+Mosby | 1
+Disenå | 1
+Kjøllefjord | 1
+Lindesnes | 1
+Spillum | 1
+Otta | 1
+Hov | 1
+Rosendal | 1
+Skjeberg | 1
+Finstadjordet | 1
+Skjetten | 1
+Vestfossen | 1
+Lommedalen | 1
+Valldal | 1
+Høvik | 1
+Havøysund | 1
+Bardufoss | 1
+Aure | 1
+Vinterbro | 1
+Espevær | 1
+Nannestad | 1
+Krokkleiva | 1
+Lærdal | 1
+Saksvik | 1
+Skiptvet | 1
+Slependen | 1
+Lunde | 1
+Vettre | 1
+Bekkjarvik | 1
+Vågå | 1
+Ulset | 1
+Florvåg | 1
+Tistedal | 1
+Ålgård | 1
+Sørumsand | 1
+Ranheim | 1
+Aksdal | 1
+Vinje | 1
+Raufoss | 1
+Ytre Enebakk | 1
+Kolsås | 1
+Trollåsen | 1
+Strandvik | 1
+Blommenholm | 1
+Bardu | 1
+Smøla | 1
+Borgen | 1
+Helle | 1
+Hvam | 1
+Etne | 1
+Bagn | 1
+Jar | 1
+Rakkestad | 1
+Skarnes | 1
+Fjerdingby | 1
+Surnadal | 1
+Gullaug | 1
+Blomsterdalen | 1
+Volda | 1
+Gol | 1
+
+## Alle fylker
+
+Fylke | Antall butikker
+--- | ---
+Oslo | 253
+Akershus | 172
+Vestland | 167
+Rogaland | 153
+Vestfold | 119
+Agder | 104
+Trøndelag | 97
+Innlandet | 91
+Buskerud | 87
+Østfold | 83
+Møre og Romsdal | 65
+Nordland | 62
+Telemark | 51
+Troms | 45
+Finnmark | 17
+
+## Alle klesmerker (483 stk)
+
+- Høyer
+- Companys
+- Retro
+- Kleins
+- Best Kids
+- Floyd
+- GANT
+- Holzweiler
+- Reima
+- Valentino
+- Active Brands
+- Adidas
+- Bik Bok
+- Camilla Pihl
+- Carlings
+- Cubus
+- Devold
+- Dressmann
+- Filippa K
+- Fransa
+- Ganni
+- Gina Tricot
+- Guess
+- Hestra
+- ICHI
+- Kaffe
+- KappAhl
+- Lillelam
+- Lindex
+- Mango
+- Match
+- Max Mara
+- Moncler
+- Northern Playground
+- Nudie Jeans
+- Only
+- Ralph Lauren
+- Stormberg
+- Tommy Hilfiger
+- Triumph
+- Volt
+- We Norwegians
+- & Other Stories
+- 2XU
+- A BATHING APE
+- A-COLD-WALL
+- A-View
+- A.P.C.
+- ALDO
+- ASOS
+- ATP Atelier
+- Abercrombie & Fitch
+- Aclima
+- Acne Studios
+- Acne Studios Pre-owned
+- Adax
+- Adidas Originals
+- Adidas by Stella McCartney
+- Adoore
+- Aeron
+- Ahlvar Gallery
+- Aiayu
+- Aje
+- Alaïa
+- Alberta Ferretti
+- Alexander McQueen
+- Alexander Wang
+- AllSaints
+- Alpha Industries
+- Ami Paris
+- Amina Muaddi
+- Amiri
+- Amundsen
+- Andiata
+- Angulus
+- Anine Bing
+- Ann Demeulemeester
+- Arc'teryx
+- Arket
+- Armani
+- Armani Exchange
+- Asics
+- Aspesi
+- Auralee
+- Axel Arigato
+- BRAX
+- BRGN by Lunde & Gaundal
+- BY TIMO
+- Ba&Sh
+- Balenciaga
+- Bally
+- Balmain
+- Baracuta
+- Barbour
+- Baum und Pferdgarten
+- Becksöndergaard
+- Belstaff
+- Ben Sherman
+- Benetton
+- Bergans
+- Bershka
+- Bianco
+- Billabong
+- Billi Bi
+- Birgitte Herskind
+- Birkenstock
+- Bite Studios
+- Black Diamond
+- Blauer
+- Blundstone
+- Blåkläder
+- Bobo Choses
+- Bode
+- Boggi Milano
+- Bogner
+- Boohoo
+- Boss
+- Bottega Veneta
+- Boys of Europe
+- Bread & Boxers
+- Brothers
+- Brunello Cucinelli
+- Bruuns Bazaar
+- Burberry
+- Burlington
+- Bvlgari
+- By Malene Birger
+- COS
+- Calida
+- Calvin Klein
+- Calvin Klein Jeans
+- Camper
+- Canada Goose
+- Canada Snow
+- Carhartt Wip
+- Cartier
+- Casall
+- Casual Friday
+- Cathrine Hammel
+- Celine
+- Champion
+- Chanel
+- Chantelle
+- Chloé
+- Christian Louboutin
+- Church's
+- Clarks
+- Clean Cut
+- Closed
+- Coach
+- Coccinelle
+- Columbia
+- Comme des Garçons
+- Comme des Garçons Play
+- Common Projects
+- Converse
+- Copenhagen Shoes
+- Copenhagen Studios
+- Coperni
+- Coster Copenhagen
+- Craft
+- Cream
+- Crockett & Jones
+- Cult Gaia
+- Custommade
+- D.A.T.E.
+- DAY Birger et Mikkelsen
+- DAY et
+- DKNY
+- Dale of Norway
+- Daniel Wellington
+- Dante 6
+- Darn Tough
+- Dea Kudibal
+- Designers Remix
+- Desigual
+- Diadora
+- Dickies
+- Didriksons
+- Diesel
+- Dior
+- Dolce & Gabbana
+- Dr. Martens
+- Dries Van Noten
+- Drykorn
+- Dsquared2
+- Dæhlie
+- Ecco
+- Edwin
+- Ellesse
+- Elvine
+- Elvio Zanon
+- Emporio Armani
+- Envelope 1976
+- Erdem
+- Esprit
+- Essentiel Antwerp
+- Eton
+- Etro
+- Etudes
+- FABIENNE CHAPOT
+- Falke
+- Fear Of God
+- Fendi
+- Fila
+- Filling Pieces
+- Fjällräven
+- Forte Forte
+- Fossil
+- Frame
+- Fred Perry
+- Freequent
+- Furla
+- Fynch-Hatton
+- G-star
+- Gabor
+- Gabriela Hearst
+- Gai+Lisva
+- Gallery Dept.
+- Geox
+- Gerry Weber
+- Gestuz
+- Giorgio Armani
+- Givenchy
+- Golden Goose
+- Gramicci
+- Grenson
+- Gucci
+- Guidi
+- Gustav
+- H&M
+- H2O Fagerholt
+- HAY
+- HUF
+- Haglöfs
+- Han Kjøbenhavn
+- Hanro
+- Happy Socks
+- Haust Collection
+- Helly Hansen
+- Helmut Lang
+- Hermès
+- Herno
+- Herschel
+- Hofmann Copenhagen
+- Hogan
+- Hoka One One
+- Hope
+- Hosbjerg
+- Houdini
+- Hugo
+- Hunter
+- Hunza G
+- IVY Copenhagen
+- Icebreaker
+- Ilse Jacobsen Hornbæk
+- InWear
+- Isabel Marant
+- Issey Miyake
+- J.Lindeberg
+- JW Anderson
+- Jack & Jones
+- Jack Wolfskin
+- Jacob Cohën
+- Jacquemus
+- Jane Kønig
+- Jean Paul Gaultier
+- Jil Sander
+- Jimmy Choo
+- Johaug
+- Joseph Ribkoff
+- Jotunheim
+- Juicy Couture
+- Junya Watanabe
+- Just Female
+- Karen by Simonsen
+- Karhu
+- Kari Traa
+- Karl Lagerfeld
+- Kassl Editions
+- Kate Spade
+- Keen
+- Kenzo
+- Khaite
+- Klättermusen
+- Knowledge Cotton Apparel
+- Konges Sløjd
+- LLOYD
+- Lacoste
+- Lala Berlin
+- Lee
+- Lemaire
+- Les Deux
+- Levete Room
+- Levi's
+- Lexington
+- Lexington Home
+- Lindbergh
+- Line of Oslo
+- Lisa Yang
+- Liu Jo
+- Loake
+- Loewe
+- Lollys Laundry
+- Longchamp
+- Loro Piana
+- Louis Vuitton
+- Lovechild 1979
+- Lululemon
+- Lundhags
+- Lyle & Scott
+- MM6 Maison Margiela
+- MOS MOSH
+- MSGM
+- Mads Nørgaard
+- Maison Kitsuné
+- Maison Margiela
+- Maje
+- Malene Birger
+- Mammut
+- MarMar Copenhagen
+- Marc Jacobs
+- Marc O'Polo
+- Marimekko
+- Marni
+- Massimo Dutti
+- Matinique
+- Michael Kors
+- Mini Rodini
+- Minimum
+- Miu Miu
+- Mizuno
+- Molo
+- Monki
+- Moschino
+- Moss Copenhagen
+- Moves
+- Mulberry
+- Munthe
+- My Essential Wardrobe
+- NN07
+- Name It
+- Nanushka
+- Napapijri
+- Neo Noir
+- New Balance
+- New Era
+- Nike
+- Noella
+- Norr
+- Norrøna
+- Norse Projects
+- Nude of Scandinavia
+- Obey
+- Object
+- Odlo
+- Off White
+- Omega
+- On Running
+- Oscar Jacobson
+- Our Legacy
+- PULZ Jeans
+- Palm Angels
+- Parajumpers
+- Part Two
+- Patagonia
+- Paul Smith
+- Pavement
+- Peak Performance
+- Peppercorn
+- Peuterey
+- Philipp Plein
+- Philippe Model
+- Phoebe Philo
+- Pieces
+- Polo Ralph Lauren
+- Prada
+- Primark
+- Proenza Schouler
+- Pull & Bear
+- Puma
+- REPRESENT
+- ROTATE Birger Christensen
+- Rabanne
+- Rabens Saloner
+- Rag & Bone
+- Rains
+- Ray-Ban
+- Reebok
+- Replay
+- Reserved
+- Rick Owens
+- Rieker
+- Roberto Cavalli
+- Rodebjer
+- Rosemunde
+- Russell Athletic
+- Röhnisch
+- Sacai
+- Sail Racing
+- Saint Laurent
+- Saint Tropez
+- Salewa
+- Salomon
+- Samsøe Samsøe
+- Sand
+- Sandro
+- Saucony
+- Save The Duck
+- Schiesser
+- Scotch & Soda
+- Scott
+- Second Female
+- Selected Femme
+- Selected Homme
+- Shein
+- Shoe Biz Copenhagen
+- Simone Rocha
+- Sisters Point
+- Skall Studio
+- Skechers
+- Smartwool
+- Sofie Schnoor
+- Stance
+- Stella Nova
+- Stenströms
+- Stine Goya
+- Stone Island
+- Stutterheim
+- Stylein
+- Stüssy
+- Summum Woman
+- Superdry
+- Superga
+- Supreme
+- Svea
+- Swarovski
+- Sweet Protection
+- Swix
+- Tamaris
+- Tecnica
+- Ted Baker
+- Temu
+- The North Face
+- The Row
+- Theory
+- Thom Browne
+- Tiger of Sweden
+- Timberland
+- Tod's
+- Tom Ford
+- Tommy Jeans
+- Tory Burch
+- TotêMe
+- Twist & Tango
+- UGG
+- Ulvang
+- Under Armour
+- Uniqlo
+- Vagabond Shoemakers
+- Valentino Garavani
+- Vans
+- Veja
+- Vero Moda
+- Versace
+- Vetements
+- Victoria Beckham
+- Viking
+- Vila
+- Vivienne Westwood
+- Weekday
+- Wood Wood
+- Woolrich
+- Wrangler
+- Y-3
+- Y.A.S
+- YAS
+- Yohji Yamamoto
+- Zadig & Voltaire
+- Zalando
+- Zara
+- Zegna
+- Zimmermann
+
+## Vanlige spørsmål
+
+### Hva er Klesbutikk.no?
+Klesbutikk.no er en gratis norsk tjeneste som samler alle registrerte klesbutikker fra Brønnøysundregistrene i en søkbar oversikt. Vi dekker 1 566 butikker i 368 byer over hele Norge.
+
+### Hvor kommer dataen fra?
+All data er hentet fra Brønnøysundregistrene med næringskode 47.710 (butikkhandel med klær). Dataene oppdateres jevnlig.
+
+### Er det gratis å bruke?
+Ja, Klesbutikk.no er helt gratis for forbrukere. Butikkeiere kan kjøpe synlighetspakker for å fremheve sin butikk.
+
+### Hvordan finner jeg klesbutikker i min by?
+Gå til klesbutikk.no og søk etter din by, eller bruk byoversikten. Hver by har en egen side med alle klesbutikker.
+
+### Hva koster det for butikkeiere?
+Grunnleggende oppføring er gratis. Synlig-pakken koster 990 kr/mnd og Premium-pakken 2 490 kr/mnd.
+
+### Hvilke byer har flest klesbutikker?
+Oslo har flest med 253 butikker, fulgt av Bergen (39), Trondheim (39) og Stavanger (39).
+

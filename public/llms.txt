@@ -22,6 +22,11 @@ Næringskode: 47.710 – Butikkhandel med klær.
 
 ## Innholdstyper
 
+### Nettbutikker
+Oversikt over norske klesbutikker som tilbyr netthandel med direkte lenker.
+URL: https://klesbutikk.no/nettbutikker
+Over 150 butikker med nettbutikk. Filtrerbar etter by, fylke og merke.
+
 ### Bysider
 Komplett oversikt over klesbutikker i hver by med markedsdata, kategorier, merker og bedriftsliste.
 URL-mønster: https://klesbutikk.no/{by-slug}

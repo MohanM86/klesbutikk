@@ -162,3 +162,8 @@ export function getStats() {
     featuredStores: stores.filter((s) => s.featured).length,
   };
 }
+
+// ─── WEBSHOPS ─────────────────────────────────────────────
+export function getStoresWithWebsite(): Store[] {
+  return stores.filter((s) => s.nettside && s.nettside.length > 3);
+}

@@ -21,10 +21,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }} />
       </head>
-      <body className="min-h-screen flex flex-col bg-black">
-        <div className="grain" aria-hidden="true" />
+      <body className="min-h-screen flex flex-col bg-white">
         <Header />
-        <main className="flex-1 pt-14 md:pt-16">{children}</main>
+        <main className="flex-1 pt-16">{children}</main>
         <Footer />
       </body>
     </html>

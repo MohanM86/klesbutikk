@@ -9,10 +9,8 @@ function useCountUp(target: number, duration: number, start: boolean) {
     const t0 = performance.now();
     const step = (now: number) => {
       const p = Math.min((now - t0) / duration, 1);
-      const e = 1 - Math.pow(1 - p, 3);
-      setValue(Math.floor(e * target));
-      if (p < 1) ref.current = requestAnimationFrame(step);
-      else setValue(target);
+      setValue(Math.floor((1 - Math.pow(1 - p, 3)) * target));
+      if (p < 1) ref.current = requestAnimationFrame(step); else setValue(target);
     };
     ref.current = requestAnimationFrame(step);
     return () => { if (ref.current) cancelAnimationFrame(ref.current); };
@@ -23,35 +21,28 @@ function useCountUp(target: number, duration: number, start: boolean) {
 export default function AnimatedHero({ totalStores, totalFylker }: { totalStores: number; totalFylker: number }) {
   const [started, setStarted] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setStarted(true); obs.disconnect(); } }, { threshold: 0.2 });
     if (ref.current) obs.observe(ref.current);
     return () => obs.disconnect();
   }, []);
-
-  const stores = useCountUp(totalStores, 2200, started);
-  const kommuner = useCountUp(357, 1800, started);
-  const merker = useCountUp(483, 1600, started);
+  const stores = useCountUp(totalStores, 2000, started);
+  const kommuner = useCountUp(357, 1600, started);
+  const merker = useCountUp(483, 1400, started);
 
   return (
-    <div ref={ref} className="stagger-5">
-      <div className="flex gap-8 md:gap-12">
-        {[
-          { val: stores.toLocaleString('nb-NO'), label: 'Butikker' },
-          { val: kommuner.toString(), label: 'Kommuner' },
-          { val: merker.toString(), label: 'Merker' },
-        ].map((s) => (
-          <div key={s.label}>
-            <span className="font-body text-3xl md:text-4xl font-black text-white tabular-nums tracking-tight">
-              {s.val}
-            </span>
-            <span className="block font-body text-[8px] md:text-[9px] tracking-[0.25em] uppercase text-white/70 mt-1">
-              {s.label}
-            </span>
-          </div>
-        ))}
-      </div>
+    <div ref={ref} className="flex gap-6 sm:gap-10">
+      {[
+        { val: stores.toLocaleString('nb-NO'), label: 'Butikker' },
+        { val: kommuner.toString(), label: 'Kommuner' },
+        { val: merker.toString(), label: 'Merker' },
+        { val: totalFylker.toString(), label: 'Fylker' },
+      ].map((s) => (
+        <div key={s.label} className="text-center">
+          <span className="font-body text-2xl sm:text-3xl font-extrabold text-charcoal tabular-nums">{s.val}</span>
+          <span className="block font-body text-[11px] font-medium text-muted mt-0.5">{s.label}</span>
+        </div>
+      ))}
     </div>
   );
 }

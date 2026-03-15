@@ -13,10 +13,8 @@ export default function SearchBar({ variant = 'hero' }: { variant?: 'hero' | 'co
 
   useEffect(() => {
     const h = (e: MouseEvent) => { if (ref.current && !ref.current.contains(e.target as Node)) setIsOpen(false); };
-    document.addEventListener('mousedown', h);
-    return () => document.removeEventListener('mousedown', h);
+    document.addEventListener('mousedown', h); return () => document.removeEventListener('mousedown', h);
   }, []);
-
   useEffect(() => {
     if (query.length < 2) { setResults([]); setIsOpen(false); return; }
     const t = setTimeout(async () => {
@@ -28,32 +26,32 @@ export default function SearchBar({ variant = 'hero' }: { variant?: 'hero' | 'co
   const isHero = variant === 'hero';
   return (
     <div ref={ref} className="relative w-full max-w-xl">
-      <div className={`relative flex items-center ${isHero ? 'bg-white/[0.04] border border-white/[0.08]' : 'bg-white/[0.04] border border-white/[0.08]'}`}>
+      <div className={`relative flex items-center bg-surface border-2 transition-colors duration-150 ${isHero ? 'border-border focus-within:border-accent rounded-xl' : 'border-border focus-within:border-accent rounded-lg'}`}>
         <div className={`flex-shrink-0 ${isHero ? 'pl-5' : 'pl-4'}`}>
-          <svg className={`${isHero ? 'w-4 h-4 text-white/55' : 'w-4 h-4 text-white/55'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+          <svg className="w-5 h-5 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
           </svg>
         </div>
         <input type="text" value={query} onChange={(e) => setQuery(e.target.value)}
           placeholder="Sok etter by, merke eller butikk..."
-          className={`w-full bg-transparent font-body focus:outline-none text-white placeholder:text-white/70 ${isHero ? 'px-4 py-4 text-sm' : 'px-3 py-3 text-sm'}`} />
+          className={`w-full bg-transparent font-body text-charcoal placeholder:text-muted/60 focus:outline-none ${isHero ? 'px-3 py-4 text-base' : 'px-3 py-3 text-sm'}`} />
         {query && (
-          <button onClick={() => { setQuery(''); setResults([]); setIsOpen(false); }} className="flex-shrink-0 pr-4 text-white/60 hover:text-white transition-colors">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" /></svg>
+          <button onClick={() => { setQuery(''); setResults([]); setIsOpen(false); }} className="flex-shrink-0 pr-4 text-muted hover:text-charcoal transition-colors">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
           </button>
         )}
       </div>
       {isOpen && results.length > 0 && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-black border border-white/[0.08] overflow-hidden z-50">
+        <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-border rounded-xl shadow-xl overflow-hidden z-50">
           {results.map((r, i) => (
             <button key={i} onClick={() => { setIsOpen(false); setQuery(''); router.push(r.href); }}
-              className="w-full text-left px-5 py-3 hover:bg-white/[0.04] transition-colors border-b border-white/[0.04] last:border-b-0 flex items-center gap-3">
-              <span className="flex-shrink-0 w-7 h-7 bg-white/[0.06] flex items-center justify-center">
-                <span className="font-body text-[10px] font-bold text-white/70">{r.type === 'city' ? 'BY' : 'B'}</span>
+              className="w-full text-left px-4 py-3 hover:bg-accent-light transition-colors border-b border-border last:border-b-0 flex items-center gap-3">
+              <span className="flex-shrink-0 w-8 h-8 bg-surface rounded-lg flex items-center justify-center">
+                <span className="font-body text-[10px] font-bold text-muted">{r.type === 'city' ? 'BY' : 'B'}</span>
               </span>
               <div>
-                <p className="font-body text-sm font-semibold text-white">{r.label}</p>
-                <p className="font-body text-xs text-white/60">{r.sublabel}</p>
+                <p className="font-body text-sm font-semibold text-charcoal">{r.label}</p>
+                <p className="font-body text-xs text-muted">{r.sublabel}</p>
               </div>
             </button>
           ))}

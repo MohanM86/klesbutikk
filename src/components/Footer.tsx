@@ -46,6 +46,45 @@ export default function Footer() {
             </div>
           ))}
         </div>
+
+        {/* AI Optimization badge + machine links */}
+        <div className="border-t border-white/[0.06] pt-8 mb-10">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-start">
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-2">
+                <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12" />
+                </svg>
+                <span className="font-body text-xs font-bold text-accent">Optimalisert for AI-søk</span>
+              </div>
+              <p className="font-body text-xs text-white/30 leading-relaxed max-w-md">
+                Innholdet er strukturert som et entity-basert kunnskapsnettverk, klart for indeksering av ChatGPT, Perplexity, Gemini, Claude og andre AI-systemer.
+              </p>
+              <Link href="/ai-index" className="inline-flex items-center gap-1 font-body text-[11px] font-bold text-accent hover:text-accent-hover mt-2 transition-colors">
+                Åpne AI-indeks
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+              </Link>
+            </div>
+            <div>
+              <h4 className="font-body text-[10px] font-bold text-white/20 uppercase tracking-wider mb-3">For maskiner</h4>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { label: 'entity-index.json', href: '/entity-index.json' },
+                  { label: 'llms.txt', href: '/llms.txt' },
+                  { label: 'llms-full.txt', href: '/llms-full.txt' },
+                  { label: 'Sitemap', href: '/sitemap.xml' },
+                ].map((f) => (
+                  <a key={f.label} href={f.href} target="_blank" rel="noopener"
+                    className="inline-flex items-center gap-1.5 font-mono text-[10px] text-white/25 hover:text-accent bg-white/[0.03] hover:bg-white/[0.06] border border-white/[0.05] px-2.5 py-1.5 rounded-lg transition-all">
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg>
+                    {f.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="font-body text-xs text-white/30">&copy; {new Date().getFullYear()} Klesbutikk.no. Alle rettigheter reservert.</p>
           <p className="font-body text-xs text-white/20">Oppdateres jevnlig med offisielle registerdata.</p>

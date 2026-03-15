@@ -272,7 +272,7 @@ export default function HomePage() {
             <div className="font-body text-sm text-muted leading-relaxed space-y-3">
               <p>
                 Klesbutikk.no er Norges mest komplette oversikt over klesbutikker. Vi har samlet alle
-                registrerte klesbutikker fra offisielle norske registre med offisielle registerdata og gjort dem
+                registrerte klesbutikker fra verifiserte registerdata og gjort dem
                 søkbare etter by, fylke, merke og kategori.
               </p>
               <p>
@@ -280,6 +280,46 @@ export default function HomePage() {
                 dekker vi hele Norge fra Lindesnes til Nordkapp. Vi har kartlagt over {stats.totalBrands} klesmerker
                 og identifisert hvilke norske butikker som fører dem.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── AI OPTIMIZED ─────────────────────────────────── */}
+      <section className="bg-charcoal">
+        <div className="max-w-8xl mx-auto section-padding py-12 md:py-16">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-3">
+                <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12" />
+                </svg>
+                <h2 className="font-body text-lg font-extrabold text-white">Optimalisert for AI-søk</h2>
+              </div>
+              <p className="font-body text-sm text-white/40 leading-relaxed max-w-md mb-4">
+                Innholdet er strukturert som et entity-basert kunnskapsnettverk, klart for indeksering av ChatGPT, Perplexity, Gemini, Claude og andre AI-systemer.
+              </p>
+              <Link href="/ai-index" className="inline-flex items-center gap-1.5 font-body text-sm font-bold text-accent hover:text-accent-hover transition-colors">
+                Åpne AI-indeks
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                { file: 'entity-index.json', desc: 'Strukturert entitetsdata' },
+                { file: 'llms.txt', desc: 'For språkmodeller' },
+                { file: 'sitemap.xml', desc: 'Alle 7 928 URLer' },
+                { file: 'llms-full.txt', desc: 'Komplett kunnskapsbase' },
+              ].map((f) => (
+                <a key={f.file} href={`/${f.file}`} target="_blank" rel="noopener"
+                  className="group flex items-center gap-3 bg-white/[0.03] hover:bg-white/[0.06] border border-white/[0.06] rounded-xl px-4 py-3 transition-all">
+                  <svg className="w-4 h-4 text-white/15 group-hover:text-accent transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg>
+                  <div>
+                    <code className="font-mono text-[11px] text-accent/80 group-hover:text-accent transition-colors">{f.file}</code>
+                    <span className="block font-body text-[10px] text-white/20">{f.desc}</span>
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
         </div>

@@ -27,19 +27,17 @@ export default function Footer() {
               { l: 'Dameklær', h: '/kategorier' }, { l: 'Herreklær', h: '/kategorier' },
               { l: 'Treningsklær', h: '/kategorier' }, { l: 'Barneklær', h: '/kategorier' },
               { l: 'Designerklær', h: '/kategorier' }, { l: 'Vintage og gjenbruk', h: '/kategorier' },
-              { l: 'Klær på salg', h: '/kategorier' },
             ]},
             { title: 'Utforsk', links: [
               { l: 'Alle merker', h: '/merker' }, { l: 'Alle fylker', h: '/fylker' },
               { l: 'Alle butikker', h: '/butikk' }, { l: 'Nettbutikker', h: '/nettbutikker' },
               { l: 'Artikler', h: '/artikler' },
             ]},
-            { title: 'For butikkeiere', links: [
-              { l: 'Fremhevet oppføring', h: '/annonser' },
-              { l: 'Nettside for butikken', h: '/annonser' },
-              { l: 'Nettbutikk', h: '/annonser' },
-              { l: 'SEO og synlighet', h: '/annonser' },
-              { l: 'Legg til butikk', h: '/legg-til-butikk' },
+            { title: 'Om Klesbutikk.no', links: [
+              { l: 'Om oss', h: '/om-oss' },
+              { l: 'Personvern', h: '/personvern' },
+              { l: 'Vilkår', h: '/vilkar' },
+              { l: 'Kontakt', h: '/om-oss' },
             ]},
           ].map((col) => (
             <div key={col.title}>
@@ -91,7 +89,7 @@ export default function Footer() {
             <Link href="/om-oss" className="font-body text-[10px] text-white/20 hover:text-accent transition-colors">Om oss</Link>
             <Link href="/personvern" className="font-body text-[10px] text-white/20 hover:text-accent transition-colors">Personvern</Link>
             <Link href="/vilkar" className="font-body text-[10px] text-white/20 hover:text-accent transition-colors">Vilkår</Link>
-            <Link href="/legg-til-butikk" className="font-body text-[10px] text-white/20 hover:text-accent transition-colors">Kontakt</Link>
+            <Link href="/om-oss" className="font-body text-[10px] text-white/20 hover:text-accent transition-colors">Kontakt</Link>
           </div>
           <p className="font-body text-[10px] text-white/10">Verifiserte data. Oppdateres jevnlig.</p>
         </div>

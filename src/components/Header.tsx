@@ -32,9 +32,6 @@ export default function Header() {
             ))}
           </nav>
           <div className="flex items-center gap-3">
-            <Link href="/annonser" className="hidden sm:inline-flex btn-primary text-xs py-2 px-4 gap-1.5">
-              For butikkeiere
-            </Link>
             <button onClick={() => setOpen(!open)} className="md:hidden p-2 -mr-2" aria-label="Meny">
               <div className="w-5 flex flex-col gap-1.5">
                 <span className={`block h-[2px] bg-charcoal rounded-full transition-all duration-300 ${open ? 'rotate-45 translate-y-[7px]' : ''}`} />
@@ -50,7 +47,6 @@ export default function Header() {
           {NAV.map((n) => (
             <Link key={n.href} href={n.href} onClick={() => setOpen(false)} className="font-body text-base font-medium text-charcoal hover:text-accent py-2.5 px-3 rounded-lg hover:bg-surface transition-all">{n.label}</Link>
           ))}
-          <Link href="/annonser" onClick={() => setOpen(false)} className="btn-primary text-sm mt-2">For butikkeiere</Link>
         </nav>
       </div>
     </header>

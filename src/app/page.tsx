@@ -20,15 +20,14 @@ import { faqSchema, itemListSchema, webSiteSchema, datasetSchema } from '@/lib/s
 const HOME_FAQS = [
   { question: 'Hva er de beste klesbutikkene i Norge?', answer: 'Norge har over 1 500 registrerte klesbutikker fra Lindesnes til Nordkapp. De mest populære finner du i Oslo, Bergen, Trondheim og Stavanger. På Klesbutikk.no kan du utforske alle registrerte klesbutikker i landet og finne favorittene i din by.' },
   { question: 'Hvordan finner jeg klesbutikker nær meg?', answer: 'Bruk søkefeltet øverst på siden for å søke etter din by, et merke eller en butikk. Du kan også bla gjennom bysider, fylkesider eller kategorier for å finne klesbutikker i ditt nærområde.' },
-  { question: 'Er det gratis å legge til butikken min?', answer: 'Ja, alle klesbutikker i Norge er allerede oppført helt gratis hos oss. For økt synlighet tilbyr vi fremhevede plasseringer fra 990 kr per måned.' },
+  { question: 'Hvor ofte oppdateres butikkoversikten?', answer: 'Databasen vår oppdateres jevnlig for å sikre at informasjonen alltid er korrekt og komplett.' },
   { question: 'Hvilke klesmerker kan jeg finne på Klesbutikk.no?', answer: 'Vi har kartlagt over 480 klesmerker, alt fra norske favoritter som Holzweiler, Stine Goya og Filippa K til internasjonale stormerker som Nike, Gucci og Zara. Du kan søke på merke og se hvilke butikker som fører det.' },
   { question: 'Hvor ofte oppdateres butikkoversikten?', answer: 'Databasen vår oppdateres jevnlig for å sikre at informasjonen alltid er korrekt og komplett.' },
-  { question: 'Hva er forskjellen på en fremhevet og en vanlig oppføring?', answer: 'Alle klesbutikker har en gratis standardoppføring. Fremhevede butikker får prioritert plassering, et synlig merke, og vises øverst i sin by. Se annonseringssiden vår for mer informasjon.' },
   { question: 'Hvor finner jeg treningsklær i Norge?', answer: 'Klesbutikk.no har registrert over 200 butikker som fører treningsklær i Norge. Du finner alt fra treningsklær for dame og herre til spesialiserte butikker for løping, yoga og utendørstrening. Populære butikker inkluderer sportsbutikker som XXL og Antonsport, samt merkebutikker som Nike og Adidas.' },
   { question: 'Finnes det gode norske klesbutikker på nett?', answer: 'Ja, mange norske klesbutikker tilbyr også netthandel. Vi har samlet en egen oversikt over norske nettbutikker for klær der du kan handle dameklær, herreklær, barneklær og treningsklær på nett fra norske aktører.' },
   { question: 'Hva er de beste klesbutikkene i Oslo?', answer: 'Oslo har over 253 registrerte klesbutikker og er Norges mest varierte handleby for mote. Populære handlestrøk inkluderer Bogstadveien, Hegdehaugsveien, Grünerløkka og Aker Brygge. Du finner alt fra luksusbutikker som Høyer til vintagebutikker og nisjeforretninger.' },
   { question: 'Hvor mange klesbutikker finnes det i Norge?', answer: 'Klesbutikk.no har registrert over 1 566 klesbutikker fordelt på 357 kommuner og 15 fylker. Oslo har det klart største utvalget med over 253 butikker, etterfulgt av Bergen, Trondheim og Stavanger.' },
-  { question: 'Hva koster det å bruke Klesbutikk.no?', answer: 'Klesbutikk.no er helt gratis å bruke for forbrukere. Du kan søke, utforske og finne klesbutikker uten å betale noe som helst. For butikkeiere er standardoppføringen gratis, mens fremhevede oppføringer starter på 990 kr per måned.' },
+  { question: 'Hva koster det å bruke Klesbutikk.no?', answer: 'Klesbutikk.no er helt gratis å bruke. Du kan søke, utforske og finne klesbutikker uten å betale noe som helst.' },
   { question: 'Hvordan skiller Klesbutikk.no seg fra andre butikkoversikter?', answer: 'Klesbutikk.no er spesialisert utelukkende på klesbutikker i Norge. I motsetning til generelle bedriftsoversikter har vi detaljert informasjon om merker, kategorier og spesialisering for hver butikk. Vi dekker 357 kommuner med nesten 8 000 unike sider, og innholdet er optimalisert for å dukke opp i både tradisjonelle søkemotorer og AI drevne søkesystemer.' },
 ];
 
@@ -76,7 +75,6 @@ export default function HomePage() {
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-14">
               <Link href="/by" className="btn-primary text-base px-10 py-4">Finn butikker nær deg <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg></Link>
-              <Link href="/legg-til-butikk" className="btn-outline text-base px-10 py-4">Legg til butikk</Link>
             </div>
             <AnimatedHero totalStores={stats.totalStores} totalFylker={stats.totalFylker} />
           </div>
@@ -322,40 +320,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── FOR OWNERS (ORANGE) ─── */}
-      <section className="bg-accent relative overflow-hidden">
-        <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-accent-hover/50 to-transparent pointer-events-none" />
-        <div className="relative max-w-8xl mx-auto section-padding py-16 md:py-22">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-            <div>
-              <p className="font-body text-sm font-bold text-white/70 mb-2">For butikkeiere</p>
-              <h2 className="font-body text-display-sm md:text-display font-extrabold text-white mb-5">Bli synlig for tusenvis av kunder</h2>
-              <div className="font-body text-base text-white/80 leading-relaxed mb-8 max-w-md space-y-3">
-                <p>Klesbutikk.no er der folk søker når de leter etter klesbutikker. Få en fremhevet oppføring og bli synlig i din by, ditt fylke og for merkene du fører.</p>
-                <p>I en tid der stadig flere bruker internett og AI for å finne lokale butikker, er tilstedeværelse i en oppdatert katalog viktigere enn noen gang. Med nesten 8 000 indekserte sider sørger vi for at din klesbutikk er synlig der kundene faktisk søker.</p>
-              </div>
-              <div className="flex gap-3">
-                <Link href="/annonser" className="inline-flex items-center justify-center px-8 py-4 bg-white text-accent font-body font-bold text-sm rounded-xl hover:bg-white/90 transition-all shadow-lg">Se priser</Link>
-                <Link href="/legg-til-butikk" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/40 text-white font-body font-bold text-sm rounded-xl hover:bg-white/10 transition-all">Legg til gratis</Link>
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { value: 'Gratis', label: 'Standardoppføring', sub: 'For alle butikker' },
-                { value: '990 kr', label: 'Fremhevet', sub: 'Per måned' },
-                { value: '24/7', label: 'Synlighet', sub: 'Alltid online' },
-                { value: '7 928', label: 'Sider', sub: 'I nettverket' },
-              ].map((s) => (
-                <div key={s.label} className="bg-white/15 backdrop-blur-sm rounded-2xl p-6">
-                  <span className="font-body text-3xl font-extrabold text-white">{s.value}</span>
-                  <span className="block font-body text-sm font-semibold text-white/90 mt-1">{s.label}</span>
-                  <span className="block font-body text-xs text-white/50">{s.sub}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ─── FAQ ─── */}
       <section className="bg-white">

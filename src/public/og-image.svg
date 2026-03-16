@@ -1,9 +1,0 @@
-<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="630" fill="#FAFAF8"/>
-  <rect x="0" y="0" width="1200" height="6" fill="#1A1A1A"/>
-  <text x="100" y="260" font-family="Georgia, serif" font-size="72" font-weight="bold" fill="#1A1A1A">Klesbutikk.no</text>
-  <text x="100" y="340" font-family="Arial, sans-serif" font-size="32" fill="#717171">Finn klesbutikker i hele Norge</text>
-  <text x="100" y="420" font-family="Arial, sans-serif" font-size="22" fill="#717171">1 574 butikker · 372 byer · 58 merker · 16 fylker</text>
-  <rect x="100" y="480" width="280" height="50" rx="0" fill="#1A1A1A"/>
-  <text x="150" y="512" font-family="Arial, sans-serif" font-size="18" fill="white">Finn butikker nær deg</text>
-</svg>

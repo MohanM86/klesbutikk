@@ -12,6 +12,7 @@ import NorwayHeatmap from '@/components/NorwayHeatmap';
 import BrandDonut from '@/components/BrandDonut';
 import SustainabilityTrend from '@/components/SustainabilityTrend';
 import KeywordVolumeChart from '@/components/KeywordVolumeChart';
+import StatsDashboard from '@/components/StatsDashboard';
 import FadeInSection from '@/components/FadeInSection';
 import { getTopCities, getFeaturedStores, getStats, getAllBrands } from '@/lib/stores';
 import { faqSchema, itemListSchema, webSiteSchema, datasetSchema } from '@/lib/seo';
@@ -101,19 +102,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── SEO INTRO ─── */}
+      {/* ─── SEO INTRO + STATS DASHBOARD ─── */}
       <section className="bg-surface">
         <div className="max-w-8xl mx-auto section-padding py-14 md:py-20">
-          <FadeInSection>
-            <div className="max-w-3xl">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
+            <FadeInSection className="lg:col-span-3">
               <h2 className="font-body text-display-sm md:text-display font-extrabold text-charcoal mb-6">Klesbutikker i Norge – Den komplette oversikten</h2>
               <div className="font-body text-[15px] text-slate leading-relaxed space-y-4">
                 <p>Norge har et rikt og variert utvalg av klesbutikker fra de største byene til de minste tettstedene. Enten du leter etter en klesbutikk i nærheten med eksklusive designermerker eller en rimelig nettbutikk med bredt utvalg, finnes det norske klesbutikker for enhver smak, stil og lommebok. Klesbutikk.no har samlet alle disse på ett sted og gjort dem søkbare etter by, fylke, merke og kategori.</p>
                 <p>Med over {stats.totalStores.toLocaleString('nb-NO')} registrerte klesbutikker fordelt på 357 kommuner og alle 15 fylker er Klesbutikk.no den mest komplette oversikten over klesbutikker i Norge. Vi har kartlagt over {stats.totalBrands} klesmerker og koblet dem til butikkene som fører dem.</p>
                 <p>Enten du er på jakt etter treningsklær til hverdagen, dameklær til en spesiell anledning, eller bare vil utforske hva som finnes av klesbutikker i nærheten, er Klesbutikk.no stedet å starte.</p>
               </div>
-            </div>
-          </FadeInSection>
+            </FadeInSection>
+            <FadeInSection delay={0.2} className="lg:col-span-2 lg:sticky lg:top-24">
+              <StatsDashboard />
+            </FadeInSection>
+          </div>
         </div>
       </section>
 

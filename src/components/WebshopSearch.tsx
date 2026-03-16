@@ -106,7 +106,7 @@ export default function WebshopSearch({ stores, cities, fylker }: { stores: Stor
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filtered.map((store) => (
             <div key={store.organisasjonsnummer}
-              className="bg-white border-2 border-border rounded-2xl p-5 hover:border-accent hover:shadow-lg transition-all duration-200 group">
+              className="bg-cream border-2 border-border rounded-2xl p-5 hover:border-accent hover:shadow-lg transition-all duration-200 group">
               {/* Header */}
               <div className="flex items-start gap-3 mb-4">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${

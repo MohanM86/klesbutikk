@@ -72,7 +72,7 @@ export default function AllStoresSearch({ stores, featured, cities, fylker }: {
           <div className="flex gap-3 overflow-x-auto scrollbar-hide pb-2 -mx-1 px-1">
             {featured.map((store) => (
               <Link key={store.organisasjonsnummer} href={`/butikk/${store.slug}`}
-                className="flex-shrink-0 w-[200px] bg-white border-2 border-accent/20 rounded-2xl p-4 hover:border-accent hover:shadow-lg transition-all duration-200 group">
+                className="flex-shrink-0 w-[200px] bg-cream border-2 border-accent/20 rounded-2xl p-4 hover:border-accent hover:shadow-lg transition-all duration-200 group">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
                     <span className="font-body text-xs font-extrabold text-white">{store.navn.charAt(0)}</span>
@@ -207,7 +207,7 @@ export default function AllStoresSearch({ stores, featured, cities, fylker }: {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
                 {grouped[letter].map((store) => (
                   <Link key={store.organisasjonsnummer} href={`/butikk/${store.slug}`}
-                    className="group flex items-center gap-3 bg-white border border-border rounded-xl p-3 hover:border-accent hover:shadow-md transition-all duration-200">
+                    className="group flex items-center gap-3 bg-cream border border-border rounded-xl p-3 hover:border-accent hover:shadow-md transition-all duration-200">
                     <div className={`w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 ${
                       store.featured ? 'bg-accent' : 'bg-accent-light'
                     }`}>

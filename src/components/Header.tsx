@@ -14,7 +14,7 @@ const NAV = [
 export default function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-xl border-b border-border">
       <div className="max-w-8xl mx-auto section-padding">
         <div className="flex items-center justify-between h-[58px]">
           <Link href="/" className="flex items-center gap-2">
@@ -43,7 +43,7 @@ export default function Header() {
         </div>
       </div>
       <div className={`md:hidden overflow-hidden transition-all duration-300 ${open ? 'max-h-96' : 'max-h-0'}`}>
-        <nav className="section-padding py-4 flex flex-col gap-1 bg-white border-t border-border">
+        <nav className="section-padding py-4 flex flex-col gap-1 bg-cream border-t border-border">
           {NAV.map((n) => (
             <Link key={n.href} href={n.href} onClick={() => setOpen(false)} className="font-body text-base font-medium text-charcoal hover:text-accent py-2.5 px-3 rounded-lg hover:bg-surface transition-all">{n.label}</Link>
           ))}

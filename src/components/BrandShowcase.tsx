@@ -10,7 +10,7 @@ export default function BrandShowcase({ brands }: { brands: BrandData[] }) {
   const row2 = [...mid.slice(8), ...rest.slice(0, 12)];
 
   return (
-    <section className="bg-charcoal overflow-hidden">
+    <section className="bg-[#0d0d0d] overflow-hidden">
       <div className="max-w-8xl mx-auto section-padding pt-14 pb-6 md:pt-20 md:pb-8">
         <div className="flex items-end justify-between mb-10">
           <div>
@@ -26,8 +26,8 @@ export default function BrandShowcase({ brands }: { brands: BrandData[] }) {
       <div className="relative pb-14 md:pb-20"
         onMouseEnter={(e) => e.currentTarget.querySelectorAll<HTMLElement>('.btrack').forEach((el) => (el.style.animationPlayState = 'paused'))}
         onMouseLeave={(e) => e.currentTarget.querySelectorAll<HTMLElement>('.btrack').forEach((el) => (el.style.animationPlayState = 'running'))}>
-        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-28 bg-gradient-to-r from-charcoal to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-28 bg-gradient-to-l from-charcoal to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-28 bg-gradient-to-r from-[#0d0d0d] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-28 bg-gradient-to-l from-[#0d0d0d] to-transparent z-10 pointer-events-none" />
         <div className="mb-3">
           <div className="btrack flex gap-3" style={{ animation: 'marqueeLeft 50s linear infinite', width: 'max-content' }}>
             {[...row1, ...row1].map((b, i) => (

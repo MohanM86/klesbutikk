@@ -124,7 +124,7 @@ export default function SearchBar({ variant = 'hero' }: { variant?: 'hero' | 'co
           )}
         </div>
         {isOpen && results.length > 0 && (
-          <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-border rounded-xl shadow-xl overflow-hidden z-50">
+          <div className="absolute top-full left-0 right-0 mt-2 bg-cream border border-border rounded-xl shadow-xl overflow-hidden z-50">
             {results.map((r, i) => (
               <button key={i} onClick={() => handleSelect(r.href)}
                 className="w-full text-left px-4 py-3 hover:bg-accent-light transition-colors border-b border-border last:border-b-0 flex items-center gap-3">
@@ -153,7 +153,7 @@ export default function SearchBar({ variant = 'hero' }: { variant?: 'hero' | 'co
   return (
     <div ref={ref} className="relative w-full max-w-2xl mx-auto">
       {/* Main search box */}
-      <div className={`relative flex items-center bg-white border-[3px] rounded-2xl p-1.5 transition-all duration-300 ${
+      <div className={`relative flex items-center bg-cream border-[3px] rounded-2xl p-1.5 transition-all duration-300 ${
         isFocused || query ? 'border-accent shadow-xl shadow-accent/15' : 'border-accent/30 shadow-lg shadow-accent/10'
       }`}>
         <div className="flex-shrink-0 pl-4">
@@ -190,7 +190,7 @@ export default function SearchBar({ variant = 'hero' }: { variant?: 'hero' | 'co
       <div className="flex justify-center gap-2 mt-4">
         {CATEGORIES.map((cat) => (
           <Link key={cat.label} href={cat.href}
-            className="group flex items-center gap-1.5 bg-white border border-border px-3 py-1.5 rounded-full hover:border-accent hover:bg-accent-light transition-all duration-200">
+            className="group flex items-center gap-1.5 bg-cream border border-border px-3 py-1.5 rounded-full hover:border-accent hover:bg-accent-light transition-all duration-200">
             <svg className="w-3.5 h-3.5 text-accent/60 group-hover:text-accent transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={cat.icon} />
             </svg>
@@ -214,7 +214,7 @@ export default function SearchBar({ variant = 'hero' }: { variant?: 'hero' | 'co
 
       {/* Results dropdown */}
       {isOpen && results.length > 0 && (
-        <div className="absolute top-[72px] left-0 right-0 bg-white border-2 border-border rounded-2xl shadow-2xl overflow-hidden z-50">
+        <div className="absolute top-[72px] left-0 right-0 bg-cream border-2 border-border rounded-2xl shadow-2xl overflow-hidden z-50">
           <div className="px-4 pt-3 pb-1">
             <p className="font-body text-[10px] font-bold text-muted/50 tracking-wider uppercase">Resultater</p>
           </div>

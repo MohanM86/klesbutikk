@@ -6,7 +6,7 @@
 
 @layer base {
   html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-  body { @apply font-body text-charcoal bg-white; }
+  body { @apply font-body text-charcoal bg-cream; }
   ::selection { background: #FF6900; color: #fff; }
 }
 
@@ -16,31 +16,30 @@
            transition-all duration-200 hover:bg-accent-hover active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-accent/30 focus:ring-offset-2;
   }
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-7 py-3.5 bg-charcoal text-white font-body font-semibold text-sm rounded-xl
-           transition-all duration-200 hover:bg-slate active:scale-[0.98] focus:outline-none;
+    @apply inline-flex items-center justify-center px-7 py-3.5 bg-white/10 text-white font-body font-semibold text-sm rounded-xl
+           transition-all duration-200 hover:bg-white/15 active:scale-[0.98] focus:outline-none;
   }
   .btn-outline {
-    @apply inline-flex items-center justify-center px-7 py-3.5 border-2 border-charcoal text-charcoal font-body font-semibold text-sm rounded-xl
-           transition-all duration-200 hover:bg-charcoal hover:text-white active:scale-[0.98] focus:outline-none;
+    @apply inline-flex items-center justify-center px-7 py-3.5 border-2 border-white/20 text-charcoal font-body font-semibold text-sm rounded-xl
+           transition-all duration-200 hover:bg-white/10 hover:border-white/30 active:scale-[0.98] focus:outline-none;
   }
-  .btn-white { @apply btn-primary bg-white text-charcoal hover:bg-white/90; }
+  .btn-white { @apply btn-primary bg-white text-black hover:bg-white/90; }
   .btn-outline-white { @apply btn-outline border-white/30 text-white hover:bg-white/10 hover:text-white; }
   .section-padding { @apply px-5 md:px-8 lg:px-12; }
   .editorial-text { @apply text-muted leading-relaxed text-base max-w-2xl; }
   .card-hover { @apply transition-all duration-200 hover:-translate-y-1 hover:shadow-lg; }
-  .section-dark { @apply bg-charcoal text-white; }
-  .section-light { @apply bg-white text-charcoal; }
+  .section-dark { @apply bg-black text-white; }
+  .section-light { @apply bg-cream text-charcoal; }
   .section-surface { @apply bg-surface text-charcoal; }
-  /* New editorial heading style */
   .heading-serif { @apply font-display text-display text-charcoal; }
   .heading-serif-lg { @apply font-display text-hero text-charcoal; }
   .overline { @apply text-[11px] font-semibold text-accent uppercase tracking-[0.12em]; }
 }
 
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #fff; }
-::-webkit-scrollbar-thumb { background: #ddd; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #bbb; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
 
 @keyframes marqueeLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 @keyframes marqueeRight { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }

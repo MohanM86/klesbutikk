@@ -88,7 +88,7 @@ export default function CityPage({ params }: PageProps) {
         <Breadcrumbs items={[{ label: 'Byer', href: '/by' }, { label: city.name }]} />
 
         <div className="mt-4 mb-6 md:mb-10">
-          <div className="inline-flex items-center gap-2 bg-white text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/10 mb-3">
+          <div className="inline-flex items-center gap-2 bg-surface text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/10 mb-3">
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
             {city.fylke}
           </div>
@@ -103,15 +103,15 @@ export default function CityPage({ params }: PageProps) {
               <span className="font-body text-2xl md:text-3xl font-extrabold text-white">{city.storeCount}</span>
               <span className="block font-body text-xs text-white/70 mt-1">Klesbutikker</span>
             </div>
-            <div className="bg-white border-2 border-border rounded-2xl p-4 text-center">
+            <div className="bg-cream border-2 border-border rounded-2xl p-4 text-center">
               <span className="font-body text-2xl md:text-3xl font-extrabold text-charcoal">{featured.length}</span>
               <span className="block font-body text-xs text-muted mt-1">Fremhevede</span>
             </div>
-            <div className="bg-white border-2 border-border rounded-2xl p-4 text-center">
+            <div className="bg-cream border-2 border-border rounded-2xl p-4 text-center">
               <span className="font-body text-2xl md:text-3xl font-extrabold text-charcoal">{cityBrands.length}</span>
               <span className="block font-body text-xs text-muted mt-1">Merker</span>
             </div>
-            <div className="bg-white border-2 border-border rounded-2xl p-4 text-center">
+            <div className="bg-cream border-2 border-border rounded-2xl p-4 text-center">
               <span className="font-body text-2xl md:text-3xl font-extrabold text-charcoal">{withEmployees}</span>
               <span className="block font-body text-xs text-muted mt-1">Med ansatte</span>
             </div>
@@ -197,7 +197,7 @@ export default function CityPage({ params }: PageProps) {
               <Link
                 key={cat.slug}
                 href={`/kategori/${cat.slug}/${city.slug}`}
-                className="group bg-white border border-border rounded-lg p-4 text-center card-hover"
+                className="group bg-cream border border-border rounded-lg p-4 text-center card-hover"
               >
                 <span className="font-body text-2xl font-extrabold text-charcoal group-hover:text-accent transition-colors">
                   {cat.count}
@@ -219,7 +219,7 @@ export default function CityPage({ params }: PageProps) {
                 <Link
                   key={brand.slug}
                   href={`/merke/${brand.slug}/${city.slug}`}
-                  className="inline-flex items-center gap-2 bg-white border border-border rounded-lg px-4 py-2 font-body text-sm text-charcoal hover:border-accent transition-colors"
+                  className="inline-flex items-center gap-2 bg-cream border border-border rounded-lg px-4 py-2 font-body text-sm text-charcoal hover:border-accent transition-colors"
                 >
                   <span className="w-6 h-6 rounded-lg bg-charcoal flex items-center justify-center">
                     <span className="font-body text-[10px] font-extrabold text-white">{brand.name.charAt(0)}</span>
@@ -255,7 +255,7 @@ export default function CityPage({ params }: PageProps) {
           <h2 className="font-body text-display-sm font-extrabold text-charcoal mb-6">
             Klesmarkedet i {city.name}
           </h2>
-          <div className="bg-white border border-border rounded-lg p-6 md:p-8">
+          <div className="bg-cream border border-border rounded-lg p-6 md:p-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
               <div>
                 <span className="font-body text-3xl font-extrabold text-charcoal">{stores.length}</span>
@@ -307,7 +307,7 @@ export default function CityPage({ params }: PageProps) {
                 <Link
                   key={c.slug}
                   href={`/${c.slug}`}
-                  className="group bg-white border border-border rounded-lg p-4 card-hover"
+                  className="group bg-cream border border-border rounded-lg p-4 card-hover"
                 >
                   <span className="font-body text-base font-extrabold text-charcoal group-hover:text-accent transition-colors">
                     {c.name}

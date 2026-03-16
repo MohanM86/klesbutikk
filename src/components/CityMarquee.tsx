@@ -5,7 +5,7 @@ import { CityData } from '@/lib/types';
 function CityPill({ city }: { city: CityData }) {
   return (
     <Link href={`/${city.slug}`}
-      className="group flex-shrink-0 flex items-center gap-3 bg-white border border-border rounded-xl px-5 py-4 hover:border-accent hover:shadow-md transition-all duration-200">
+      className="group flex-shrink-0 flex items-center gap-3 bg-cream border border-border rounded-xl px-5 py-4 hover:border-accent hover:shadow-md transition-all duration-200">
       <div className="w-10 h-10 rounded-xl bg-accent-light flex items-center justify-center group-hover:bg-accent transition-colors duration-200">
         <span className="font-body text-base font-extrabold text-accent group-hover:text-white transition-colors">{city.name.charAt(0)}</span>
       </div>

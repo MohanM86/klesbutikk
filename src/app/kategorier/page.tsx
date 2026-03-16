@@ -33,7 +33,7 @@ export default function KategorierPage() {
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Kategorier' }]} />
           <div className="mt-4">
-            <div className="inline-flex items-center gap-2 bg-white text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/10 mb-3">
+            <div className="inline-flex items-center gap-2 bg-surface text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/10 mb-3">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6z" /></svg>
               {CATEGORIES.length} kategorier
             </div>
@@ -42,14 +42,14 @@ export default function KategorierPage() {
           </div>
         </div>
       </section>
-      <section className="bg-white border-t border-border">
+      <section className="bg-cream border-t border-border">
         <div className="max-w-8xl mx-auto section-padding py-10 md:py-14">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {CATEGORIES.map((cat, i) => (
               <div key={cat.slug} id={cat.slug} className={`rounded-2xl p-6 border-2 transition-all relative overflow-hidden ${
                 i === 0 ? 'bg-charcoal text-white border-charcoal md:col-span-2' :
                 i === 1 ? 'bg-accent text-white border-accent' :
-                'bg-white border-border hover:border-accent'
+                'bg-cream border-border hover:border-accent'
               }`}>
                 {/* Ghost letter */}
                 <span className={`absolute -right-2 -top-4 font-body text-[80px] md:text-[100px] font-black leading-none select-none pointer-events-none ${

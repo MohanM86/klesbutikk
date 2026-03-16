@@ -25,7 +25,7 @@ export default function ArtiklerPage() {
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Artikler' }]} />
           <div className="mt-4">
-            <div className="inline-flex items-center gap-2 bg-white text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/10 mb-3">
+            <div className="inline-flex items-center gap-2 bg-surface text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/10 mb-3">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
               {ARTICLES.length} artikler
             </div>
@@ -34,13 +34,13 @@ export default function ArtiklerPage() {
           </div>
         </div>
       </section>
-      <section className="bg-white border-t border-border">
+      <section className="bg-cream border-t border-border">
         <div className="max-w-8xl mx-auto section-padding py-10 md:py-14">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {ARTICLES.map((a, i) => (
               <Link key={a.slug} href={`/artikkel/${a.slug}`}
                 className={`group rounded-2xl p-6 transition-all duration-200 hover:shadow-xl hover:-translate-y-1 ${
-                  i === 0 ? 'bg-charcoal text-white md:col-span-2 lg:col-span-1' : 'bg-white border-2 border-border hover:border-accent'
+                  i === 0 ? 'bg-charcoal text-white md:col-span-2 lg:col-span-1' : 'bg-cream border-2 border-border hover:border-accent'
                 }`}>
                 <div className={`inline-flex font-body text-[11px] font-bold px-2.5 py-1 rounded-lg mb-4 ${
                   i === 0 ? 'bg-accent text-white' : 'bg-accent-light text-accent'

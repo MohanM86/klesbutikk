@@ -54,7 +54,7 @@ export default function AnnonserPage() {
         </div>
       </section>
 
-      <section className="bg-white border-b border-border">
+      <section className="bg-cream border-b border-border">
         <div className="max-w-4xl mx-auto section-padding py-12 md:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-surface rounded-2xl p-8">
@@ -87,7 +87,7 @@ export default function AnnonserPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {SERVICES.map((svc) => (
-              <div key={svc.title} className={`rounded-2xl p-6 ${svc.highlighted ? 'bg-accent text-white ring-2 ring-accent ring-offset-2' : 'bg-white border border-border'}`}>
+              <div key={svc.title} className={`rounded-2xl p-6 ${svc.highlighted ? 'bg-accent text-white ring-2 ring-accent ring-offset-2' : 'bg-cream border border-border'}`}>
                 <h3 className={`font-body text-base font-semibold mb-1 ${svc.highlighted ? 'text-white' : 'text-charcoal'}`}>{svc.title}</h3>
                 <p className={`font-display text-2xl mb-3 ${svc.highlighted ? 'text-white' : 'text-accent'}`}>{svc.price}</p>
                 <p className={`font-body text-sm leading-relaxed mb-4 ${svc.highlighted ? 'text-white/70' : 'text-muted'}`}>{svc.desc}</p>
@@ -116,7 +116,7 @@ export default function AnnonserPage() {
         </div>
       </section>
 
-      <section className="bg-white">
+      <section className="bg-cream">
         <div className="max-w-3xl mx-auto section-padding py-12 md:py-16">
           <FAQAccordion faqs={FAQS} title="Vanlige spørsmål for butikkeiere" />
         </div>

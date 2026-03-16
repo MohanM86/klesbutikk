@@ -45,7 +45,7 @@ export default function NettbutikkerPage() {
 
           <div className="flex items-end justify-between mt-4 mb-8">
             <div>
-              <div className="inline-flex items-center gap-2 bg-white text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/10 mb-3">
+              <div className="inline-flex items-center gap-2 bg-surface text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/10 mb-3">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582" />
                 </svg>
@@ -96,7 +96,7 @@ export default function NettbutikkerPage() {
       </section>
 
       {/* ─── SEARCH + GRID ───────────────────────────────── */}
-      <section className="bg-white border-t border-border">
+      <section className="bg-cream border-t border-border">
         <div className="max-w-8xl mx-auto section-padding py-10 md:py-14">
           <WebshopSearch stores={webshops} cities={cities} fylker={fylker} />
         </div>
@@ -119,7 +119,7 @@ export default function NettbutikkerPage() {
       </section>
 
       {/* ─── FAQ ──────────────────────────────────────────── */}
-      <section className="bg-white border-t border-border">
+      <section className="bg-cream border-t border-border">
         <div className="max-w-3xl mx-auto section-padding py-14 md:py-20">
           <div className="mb-8">
             <p className="font-body text-sm font-bold text-accent mb-1">Vanlige spørsmål</p>

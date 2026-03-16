@@ -19,7 +19,7 @@ export default function FylkerPage() {
           <Breadcrumbs items={[{ label: 'Fylker' }]} />
           <div className="flex items-end justify-between mt-4">
             <div>
-              <div className="inline-flex items-center gap-2 bg-white text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/10 mb-3">
+              <div className="inline-flex items-center gap-2 bg-surface text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/10 mb-3">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" /></svg>
                 {fylker.length} fylker
               </div>
@@ -29,13 +29,13 @@ export default function FylkerPage() {
           </div>
         </div>
       </section>
-      <section className="bg-white border-t border-border">
+      <section className="bg-cream border-t border-border">
         <div className="max-w-8xl mx-auto section-padding py-10 md:py-14">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {fylker.map((fylke, i) => (
               <Link key={fylke.slug} href={`/fylke/${fylke.slug}`}
                 className={`group relative rounded-2xl p-6 overflow-hidden transition-all duration-200 hover:shadow-xl hover:-translate-y-1 ${
-                  i === 0 ? 'bg-charcoal text-white' : i === 1 ? 'bg-accent text-white' : 'bg-white border-2 border-border hover:border-accent'
+                  i === 0 ? 'bg-charcoal text-white' : i === 1 ? 'bg-accent text-white' : 'bg-cream border-2 border-border hover:border-accent'
                 }`}>
                 <span className={`absolute right-2 -top-1 font-body text-[70px] font-black leading-none select-none pointer-events-none ${
                   i === 0 ? 'text-white/[0.04]' : i === 1 ? 'text-white/10' : 'text-charcoal/[0.03]'

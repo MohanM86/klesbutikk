@@ -43,11 +43,11 @@ export default function SalgPage() {
         </div>
       </section>
 
-      <section className="bg-white border-t border-border">
+      <section className="bg-cream border-t border-border">
         <div className="max-w-8xl mx-auto section-padding py-12 md:py-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {SALG_CATEGORIES.map((cat) => (
-              <div key={cat.slug} className="bg-white border border-border rounded-2xl p-6 hover:border-accent hover:shadow-lg transition-all duration-200 cursor-pointer">
+              <div key={cat.slug} className="bg-cream border border-border rounded-2xl p-6 hover:border-accent hover:shadow-lg transition-all duration-200 cursor-pointer">
                 <h2 className="font-body text-base font-semibold text-charcoal mb-2">{cat.name}</h2>
                 <p className="font-body text-sm text-muted leading-relaxed mb-3">{cat.desc}</p>
                 <span className="inline-block font-body text-[10px] font-semibold text-accent bg-accent-light px-2.5 py-1 rounded-full">{cat.volume}</span>

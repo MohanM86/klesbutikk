@@ -44,7 +44,7 @@ export default function SustainabilityTrend() {
   const vintageArea = vintagePath + ` L${toX(DATA.length - 1)},${h - padB} L${padL},${h - padB} Z`;
 
   return (
-    <div ref={ref} className="bg-white border border-border rounded-2xl p-6 md:p-8">
+    <div ref={ref} className="bg-surface border border-border rounded-2xl p-6 md:p-8">
       <div className="flex items-center justify-between mb-6">
         <div>
           <p className="font-body text-xs font-bold text-accent mb-0.5">Trend</p>
@@ -56,7 +56,7 @@ export default function SustainabilityTrend() {
             <span className="font-body text-[10px] text-muted">Vintage</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <div className="w-5 h-[3px] rounded-full bg-charcoal/20" />
+            <div className="w-5 h-[3px] rounded-full bg-white/20" />
             <span className="font-body text-[10px] text-muted">Bærekraft</span>
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function SustainabilityTrend() {
           {/* Grid lines */}
           {[0, 20, 40, 60].map((v) => (
             <g key={v}>
-              <line x1={padL} y1={toY(v)} x2={w - padR} y2={toY(v)} stroke="#e8e8e8" strokeWidth="0.5" />
+              <line x1={padL} y1={toY(v)} x2={w - padR} y2={toY(v)} stroke="rgba(255,255,255,0.06)" strokeWidth="0.5" />
               <text x={padL - 6} y={toY(v) + 3} textAnchor="end" className="font-body" fill="#aaa" fontSize="8">{v}</text>
             </g>
           ))}
@@ -106,7 +106,7 @@ export default function SustainabilityTrend() {
           <path
             d={barekraftPath}
             fill="none"
-            stroke="#111111"
+            stroke="rgba(255,255,255,0.15)"
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -135,7 +135,7 @@ export default function SustainabilityTrend() {
                 cx={toX(i)}
                 cy={toY(d.barekraft)}
                 r={hovered === i ? 4 : 2.5}
-                fill="#111111"
+                fill="rgba(255,255,255,0.2)"
                 opacity="0.2"
                 style={{
                   opacity: visible ? 0.2 : 0,
@@ -183,7 +183,7 @@ export default function SustainabilityTrend() {
         {/* Hover tooltip */}
         {hovered !== null && (
           <div
-            className="absolute bg-charcoal text-white rounded-xl px-3 py-2 pointer-events-none shadow-lg z-10"
+            className="absolute bg-white text-black rounded-xl px-3 py-2 pointer-events-none shadow-lg z-10"
             style={{
               left: `${(toX(hovered) / w) * 100}%`,
               top: `${(toY(DATA[hovered].vintage) / h) * 100 - 14}%`,

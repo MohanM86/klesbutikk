@@ -21,7 +21,7 @@ export default function LeggTilButikkPage() {
           </div>
         </div>
       </section>
-      <section className="bg-white border-t border-border">
+      <section className="bg-cream border-t border-border">
         <div className="max-w-3xl mx-auto section-padding py-10 md:py-14">
           <div className="space-y-6">
             {[

@@ -87,7 +87,7 @@ export default function StorePage({ params }: PageProps) {
             </div>
 
             {/* Details */}
-            <div className="bg-white border border-border rounded-lg divide-y divide-border mb-8">
+            <div className="bg-cream border border-border rounded-lg divide-y divide-border mb-8">
               <DetailRow label="Adresse" value={`${store.adresse}, ${store.postnummer} ${store.poststed}`} />
               <DetailRow label="Kommune" value={store.kommune} />
               <DetailRow label="Fylke" value={store.fylke} />
@@ -149,7 +149,7 @@ export default function StorePage({ params }: PageProps) {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             {/* Actions card */}
-            <div className="bg-white border border-border rounded-lg p-6 mb-6 sticky top-24">
+            <div className="bg-cream border border-border rounded-lg p-6 mb-6 sticky top-24">
               <h3 className="font-body text-lg font-extrabold text-charcoal mb-4">
                 Er dette din butikk?
               </h3>

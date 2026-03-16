@@ -104,7 +104,7 @@ export default function StatsDashboard() {
   }, []);
 
   return (
-    <div ref={ref} className="bg-white border border-border rounded-2xl p-6 md:p-8">
+    <div ref={ref} className="bg-surface border border-border rounded-2xl p-6 md:p-8">
       <div className="flex items-center justify-between mb-6">
         <div>
           <p className="font-body text-[10px] font-bold text-accent uppercase tracking-wider mb-0.5">Statistikk</p>

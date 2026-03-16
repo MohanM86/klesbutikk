@@ -9,11 +9,11 @@ interface CategoryData {
 
 const CATEGORIES: CategoryData[] = [
   { name: 'Dameklær', count: 342, color: '#FF6900' },
-  { name: 'Herreklær', count: 289, color: '#111111' },
+  { name: 'Herreklær', count: 289, color: '#ffffff' },
   { name: 'Sportsklær', count: 201, color: '#FF6900' },
-  { name: 'Barneklær', count: 156, color: '#111111' },
+  { name: 'Barneklær', count: 156, color: '#ffffff' },
   { name: 'Designer', count: 87, color: '#FF6900' },
-  { name: 'Vintage', count: 64, color: '#111111' },
+  { name: 'Vintage', count: 64, color: '#ffffff' },
 ];
 
 export default function CategoryChart() {
@@ -32,7 +32,7 @@ export default function CategoryChart() {
   const total = CATEGORIES.reduce((s, c) => s + c.count, 0);
 
   return (
-    <div ref={ref} className="bg-white border border-border rounded-2xl p-6 md:p-8">
+    <div ref={ref} className="bg-surface border border-border rounded-2xl p-6 md:p-8">
       <div className="flex items-center justify-between mb-6">
         <div>
           <p className="font-body text-xs font-bold text-accent mb-0.5">Fordeling</p>
@@ -60,7 +60,7 @@ export default function CategoryChart() {
                   style={{
                     width: visible ? `${pct}%` : '0%',
                     backgroundColor: cat.color,
-                    opacity: cat.color === '#111111' ? 0.12 : 0.18,
+                    opacity: cat.color === '#ffffff' ? 0.12 : 0.18,
                     transition: `width 1.2s cubic-bezier(0.4, 0, 0.2, 1) ${i * 0.12}s`,
                   }}
                 />

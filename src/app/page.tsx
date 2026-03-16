@@ -53,10 +53,10 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema(cities.map((c) => ({ name: `Klesbutikker i ${c.name}`, url: `/${c.slug}` })))) }} />
 
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-accent-light to-white">
+      <section className="relative overflow-hidden bg-gradient-to-b from-accent-light to-cream">
         <div className="max-w-8xl mx-auto section-padding pt-16 pb-20 md:pt-24 md:pb-28">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-white text-accent font-body text-xs font-bold px-5 py-2 rounded-full shadow-sm mb-8 border border-accent/10">
+            <div className="inline-flex items-center gap-2 bg-cream text-accent font-body text-xs font-bold px-5 py-2 rounded-full shadow-sm mb-8 border border-accent/10">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
               Norges største klesbutikkoversikt
             </div>
@@ -69,7 +69,7 @@ export default function HomePage() {
             <div className="flex justify-center mb-6"><SearchBar variant="hero" /></div>
             <div className="flex flex-wrap items-center justify-center gap-3 text-sm mb-8">
               {['Oslo', 'Bergen', 'Trondheim', 'Stavanger', 'Kristiansand'].map((c) => (
-                <Link key={c} href={`/${c.toLowerCase()}`} className="font-body text-xs font-medium text-muted hover:text-accent bg-white border border-border px-3 py-1.5 rounded-full transition-colors">{c}</Link>
+                <Link key={c} href={`/${c.toLowerCase()}`} className="font-body text-xs font-medium text-muted hover:text-accent bg-cream border border-border px-3 py-1.5 rounded-full transition-colors">{c}</Link>
               ))}
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-14">
@@ -81,7 +81,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── TRUST BAR ─── */}
-      <section className="bg-white border-y border-border">
+      <section className="bg-cream border-y border-border">
         <div className="max-w-8xl mx-auto section-padding py-5">
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2">
             {[
@@ -119,7 +119,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── CATEGORIES + CHARTS ─── */}
-      <section className="bg-white">
+      <section className="bg-cream">
         <div className="max-w-8xl mx-auto section-padding py-16 md:py-22">
           <div className="flex items-end justify-between mb-10">
             <div>
@@ -130,7 +130,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {CATS.map((c) => (
-              <Link key={c.slug} href={`/kategorier#${c.slug}`} className="group relative bg-white border-2 border-border rounded-2xl p-5 pb-4 hover:border-accent hover:shadow-lg transition-all duration-200 overflow-hidden">
+              <Link key={c.slug} href={`/kategorier#${c.slug}`} className="group relative bg-cream border-2 border-border rounded-2xl p-5 pb-4 hover:border-accent hover:shadow-lg transition-all duration-200 overflow-hidden">
                 <span className={`absolute -right-2 -top-3 font-body text-[56px] font-black leading-none select-none pointer-events-none transition-colors duration-200 ${c.accent ? 'text-accent/[0.06] group-hover:text-accent/[0.12]' : 'text-charcoal/[0.04] group-hover:text-charcoal/[0.08]'}`}>{c.letter}</span>
                 <div className="relative">
                   <h3 className="font-body text-sm font-extrabold text-charcoal mb-0.5 group-hover:text-accent transition-colors">{c.name}</h3>
@@ -174,7 +174,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── CITIES SEO TEXT + BARS ─── */}
-      <section className="bg-white">
+      <section className="bg-cream">
         <div className="max-w-8xl mx-auto section-padding py-14 md:py-20">
           <FadeInSection>
             <h2 className="font-body text-display-sm md:text-display font-extrabold text-charcoal mb-6">Klesbutikker i Norges største byer</h2>
@@ -214,7 +214,7 @@ export default function HomePage() {
 
       {/* ─── FEATURED STORES ─── */}
       {featured.length > 0 && (
-        <section className="bg-white">
+        <section className="bg-cream">
           <div className="max-w-8xl mx-auto section-padding py-16 md:py-22">
             <div className="flex items-end justify-between mb-10">
               <div>
@@ -249,7 +249,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── WHY US ─── */}
-      <section className="bg-white">
+      <section className="bg-cream">
         <div className="max-w-8xl mx-auto section-padding py-16 md:py-22">
           <div className="text-center mb-12">
             <p className="font-body text-sm font-bold text-accent mb-1">Hvorfor Klesbutikk.no</p>
@@ -289,7 +289,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── BÆREKRAFT + TREND ─── */}
-      <section className="bg-white">
+      <section className="bg-cream">
         <div className="max-w-8xl mx-auto section-padding py-14 md:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
             <FadeInSection className="lg:col-span-3">
@@ -320,7 +320,7 @@ export default function HomePage() {
 
 
       {/* ─── FAQ ─── */}
-      <section className="bg-white">
+      <section className="bg-cream">
         <div className="max-w-3xl mx-auto section-padding py-16 md:py-22">
           <FAQAccordion faqs={HOME_FAQS} title="Vanlige spørsmål" />
         </div>

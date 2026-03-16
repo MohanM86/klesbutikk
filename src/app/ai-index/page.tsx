@@ -116,7 +116,7 @@ export default function AIIndexPage() {
       </section>
 
       {/* ─── ABOUT ────────────────────────────────────────── */}
-      <section className="bg-white border-t border-border">
+      <section className="bg-cream border-t border-border">
         <div className="max-w-8xl mx-auto section-padding py-10 md:py-14">
           <div className="max-w-2xl">
             <h2 className="font-body text-display-sm font-extrabold text-charcoal mb-4">Om Klesbutikk.no</h2>
@@ -157,7 +157,7 @@ export default function AIIndexPage() {
               { title: 'Kategori + by', count: '~3 000+', pattern: '/kategori/{kat}/{by}', desc: 'Kryssider for kategori i en gitt by.' },
               { title: 'Artikler', count: 6, pattern: '/artikler/{slug}', desc: 'Redaksjonelle artikler om mote, shopping og klesbutikker i Norge.' },
             ].map((type) => (
-              <div key={type.title} className="bg-white border border-border rounded-2xl p-5">
+              <div key={type.title} className="bg-cream border border-border rounded-2xl p-5">
                 <div className="flex items-center gap-2 mb-2">
                   <h3 className="font-body text-base font-extrabold text-charcoal">{type.title}</h3>
                   <span className="font-body text-[10px] font-bold bg-accent-light text-accent px-2 py-0.5 rounded-md">{type.count}</span>
@@ -171,7 +171,7 @@ export default function AIIndexPage() {
       </section>
 
       {/* ─── TOP CITIES ───────────────────────────────────── */}
-      <section className="bg-white border-t border-border">
+      <section className="bg-cream border-t border-border">
         <div className="max-w-8xl mx-auto section-padding py-10 md:py-14">
           <div className="flex items-center gap-3 mb-6">
             <h2 className="font-body text-display-sm font-extrabold text-charcoal">Byer</h2>
@@ -196,12 +196,12 @@ export default function AIIndexPage() {
         <div className="max-w-8xl mx-auto section-padding py-10 md:py-14">
           <div className="flex items-center gap-3 mb-6">
             <h2 className="font-body text-display-sm font-extrabold text-charcoal">Merker</h2>
-            <span className="font-body text-xs font-bold text-muted bg-white px-2.5 py-1 rounded-lg">{brands.length} totalt</span>
+            <span className="font-body text-xs font-bold text-muted bg-surface px-2.5 py-1 rounded-lg">{brands.length} totalt</span>
           </div>
           <div className="flex flex-wrap gap-2">
             {topBrands.map((brand) => (
               <Link key={brand.slug} href={`/merke/${brand.slug}`}
-                className="font-body text-xs font-medium bg-white border border-border text-muted px-3 py-1.5 rounded-lg hover:border-accent hover:text-accent transition-colors">
+                className="font-body text-xs font-medium bg-cream border border-border text-muted px-3 py-1.5 rounded-lg hover:border-accent hover:text-accent transition-colors">
                 {brand.name} <span className="opacity-50">{brand.storeCount}</span>
               </Link>
             ))}
@@ -211,7 +211,7 @@ export default function AIIndexPage() {
       </section>
 
       {/* ─── CATEGORIES ───────────────────────────────────── */}
-      <section className="bg-white border-t border-border">
+      <section className="bg-cream border-t border-border">
         <div className="max-w-8xl mx-auto section-padding py-10 md:py-14">
           <h2 className="font-body text-display-sm font-extrabold text-charcoal mb-6">Kategorier</h2>
           <div className="flex flex-wrap gap-2">
@@ -232,7 +232,7 @@ export default function AIIndexPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
             {fylker.map((fylke) => (
               <Link key={fylke.slug} href={`/fylke/${fylke.slug}`}
-                className="bg-white border border-border rounded-xl p-4 hover:border-accent transition-colors">
+                className="bg-cream border border-border rounded-xl p-4 hover:border-accent transition-colors">
                 <span className="font-body text-sm font-bold text-charcoal">{fylke.name}</span>
                 <span className="block font-body text-[11px] text-muted mt-0.5">{fylke.storeCount} butikker</span>
               </Link>

@@ -16,7 +16,7 @@ export default function FAQAccordion({ faqs, title }: { faqs: FAQ[]; title?: str
       )}
       <div className="space-y-2">
         {faqs.map((faq, i) => (
-          <div key={i} className={`border rounded-xl overflow-hidden transition-colors ${openIndex === i ? 'border-accent/20 bg-accent-light/30' : 'border-border bg-white'}`}>
+          <div key={i} className={`border rounded-xl overflow-hidden transition-colors ${openIndex === i ? 'border-accent/20 bg-accent-light/30' : 'border-border bg-cream'}`}>
             <button onClick={() => setOpenIndex(openIndex === i ? null : i)}
               className="w-full flex items-center justify-between p-5 text-left group">
               <h3 className="font-body text-sm md:text-base font-bold text-charcoal pr-8 group-hover:text-accent transition-colors">

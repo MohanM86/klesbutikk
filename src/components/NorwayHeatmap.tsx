@@ -105,8 +105,8 @@ export default function NorwayHeatmap() {
               top: `${(f.y / 2980) * 100}%`,
               transform: 'translate(-50%, calc(-100% - 14px))',
             }}>
-            <div className="bg-white rounded-xl px-3 py-2 shadow-lg border border-border whitespace-nowrap">
-              <span className="font-body text-xs font-bold text-charcoal block">{f.name}</span>
+            <div className="bg-white rounded-xl px-3 py-2 shadow-lg border border-white/10 whitespace-nowrap">
+              <span className="font-body text-xs font-bold text-black block">{f.name}</span>
               <span className="font-body text-[11px] font-semibold text-accent">{f.stores} butikker</span>
               <div className="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-l-[5px] border-r-[5px] border-t-[5px] border-transparent border-t-white" />
             </div>

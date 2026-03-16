@@ -5,7 +5,7 @@ export default function CityCard({ city }: { city: CityData }) {
   return (
     <Link
       href={`/${city.slug}`}
-      className="group block bg-white border-2 border-border rounded-2xl overflow-hidden card-hover hover:border-accent"
+      className="group block bg-cream border-2 border-border rounded-2xl overflow-hidden card-hover hover:border-accent"
     >
       {/* Visual header */}
       <div className="h-24 bg-surface relative flex items-center justify-center overflow-hidden">

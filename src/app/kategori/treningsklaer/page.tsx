@@ -50,12 +50,12 @@ export default function TreningsklaerPage() {
       </section>
 
       {/* Sub-categories */}
-      <section className="bg-white border-t border-border">
+      <section className="bg-cream border-t border-border">
         <div className="max-w-8xl mx-auto section-padding py-12 md:py-16">
           <h2 className="font-display text-display-sm text-charcoal mb-6">Populære søk innen treningsklær</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {SUB_CATEGORIES.map((cat) => (
-              <div key={cat.name} className="bg-white border border-border rounded-2xl p-6 hover:border-accent hover:shadow-lg transition-all duration-200">
+              <div key={cat.name} className="bg-cream border border-border rounded-2xl p-6 hover:border-accent hover:shadow-lg transition-all duration-200">
                 <h3 className="font-body text-base font-semibold text-charcoal mb-2">{cat.name}</h3>
                 <p className="font-body text-sm text-muted leading-relaxed mb-3">{cat.desc}</p>
                 <span className="inline-block font-body text-[10px] font-semibold text-accent bg-accent-light px-2.5 py-1 rounded-full">{cat.volume} søk/mnd</span>
@@ -71,7 +71,7 @@ export default function TreningsklaerPage() {
           <h2 className="font-display text-display-sm text-charcoal mb-6">Finn treningsklær i din kommune</h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
             {topCities.map((city) => (
-              <Link key={city.slug} href={`/${city.slug}`} className="bg-white border border-border rounded-xl p-4 hover:border-accent transition-all">
+              <Link key={city.slug} href={`/${city.slug}`} className="bg-cream border border-border rounded-xl p-4 hover:border-accent transition-all">
                 <span className="font-body text-sm font-semibold text-charcoal block">{city.name}</span>
                 <span className="font-body text-xs text-muted">{city.storeCount} butikker</span>
               </Link>

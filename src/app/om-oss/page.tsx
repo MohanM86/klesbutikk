@@ -23,7 +23,7 @@ export default function OmOssPage() {
           </div>
         </div>
       </section>
-      <section className="bg-white border-t border-border">
+      <section className="bg-cream border-t border-border">
         <div className="max-w-3xl mx-auto section-padding py-10 md:py-14">
           <div className="font-body text-sm text-muted leading-relaxed space-y-4">
             <p>Klesbutikk.no samler alle registrerte klesbutikker i Norge og gjør dem søkbare etter by, fylke, merke og kategori. Vår database er basert på verifiserte data og oppdateres jevnlig.</p>

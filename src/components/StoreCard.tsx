@@ -4,7 +4,7 @@ import { Store } from '@/lib/types';
 export default function StoreCard({ store, showCity = false }: { store: Store; showCity?: boolean }) {
   return (
     <Link href={`/butikk/${store.slug}`}
-      className="group block bg-white border border-border rounded-xl p-5 card-hover relative hover:border-accent/30">
+      className="group block bg-cream border border-border rounded-xl p-5 card-hover relative hover:border-accent/30">
       {store.featured && (
         <span className="absolute top-4 right-4 inline-flex items-center gap-1 bg-accent text-white text-[10px] font-body font-bold px-2.5 py-1 rounded-md">
           Fremhevet

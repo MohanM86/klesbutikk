@@ -60,7 +60,7 @@ export default function GeolocateBar() {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 p-3 md:p-4 pointer-events-none">
       <div className="max-w-lg mx-auto pointer-events-auto">
-        <div className="bg-white border-2 border-border rounded-2xl shadow-xl p-4 md:p-5 relative">
+        <div className="bg-cream border-2 border-border rounded-2xl shadow-xl p-4 md:p-5 relative">
           {/* Close button */}
           <button onClick={dismiss} className="absolute top-3 right-3 w-7 h-7 rounded-lg bg-surface flex items-center justify-center text-muted hover:text-charcoal transition-colors" aria-label="Lukk">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

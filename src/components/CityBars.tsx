@@ -30,7 +30,7 @@ export default function CityBars() {
   }, []);
 
   return (
-    <div ref={ref} className="bg-white border border-border rounded-2xl p-6 md:p-8">
+    <div ref={ref} className="bg-surface border border-border rounded-2xl p-6 md:p-8">
       <div className="flex items-center justify-between mb-8">
         <div>
           <p className="font-body text-xs font-bold text-accent mb-0.5">Topp 10</p>
@@ -68,7 +68,7 @@ export default function CityBars() {
                 className="w-full rounded-t-lg transition-all duration-300 relative overflow-hidden"
                 style={{
                   height: visible ? `${pct}%` : '0%',
-                  backgroundColor: i === 0 ? '#FF6900' : isHot ? '#FF6900' : '#111111',
+                  backgroundColor: i === 0 ? '#FF6900' : isHot ? '#FF6900' : 'rgba(255,255,255,0.12)',
                   opacity: i === 0 ? 1 : isHot ? 0.8 : 0.08,
                   transition: `height 1s cubic-bezier(0.4, 0, 0.2, 1) ${i * 0.08}s, background-color 0.3s ease, opacity 0.3s ease`,
                 }}

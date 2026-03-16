@@ -3,9 +3,9 @@ import { useEffect, useRef, useState } from 'react';
 
 const SEGMENTS = [
   { label: 'Norske merker', pct: 38, color: '#FF6900' },
-  { label: 'Skandinavisk', pct: 22, color: '#111111' },
+  { label: 'Skandinavisk', pct: 22, color: 'rgba(255,255,255,0.2)' },
   { label: 'Europeisk', pct: 24, color: '#FF6900' },
-  { label: 'Internasjonal', pct: 16, color: '#111111' },
+  { label: 'Internasjonal', pct: 16, color: 'rgba(255,255,255,0.2)' },
 ];
 
 export default function BrandDonut() {
@@ -38,7 +38,7 @@ export default function BrandDonut() {
   });
 
   return (
-    <div ref={ref} className="bg-white border border-border rounded-2xl p-6 md:p-8">
+    <div ref={ref} className="bg-surface border border-border rounded-2xl p-6 md:p-8">
       <div className="mb-6">
         <p className="font-body text-xs font-bold text-accent mb-0.5">Merkeoversikt</p>
         <p className="font-body text-base font-extrabold text-charcoal">483 merker kartlagt</p>
@@ -65,7 +65,7 @@ export default function BrandDonut() {
                 strokeLinecap="butt"
                 className="cursor-pointer transition-all duration-500"
                 style={{
-                  opacity: visible ? (arc.color === '#111111' ? 0.15 : 1) : 0,
+                  opacity: visible ? (arc.color === 'rgba(255,255,255,0.2)' ? 0.15 : 1) : 0,
                   transition: `opacity 0.8s ease ${arc.index * 0.15}s, stroke-width 0.3s ease`,
                   filter: active === arc.index ? `drop-shadow(0 0 6px ${arc.color}44)` : 'none',
                 }}
@@ -110,7 +110,7 @@ export default function BrandDonut() {
                 className="w-3 h-3 rounded-full flex-shrink-0"
                 style={{
                   backgroundColor: seg.color,
-                  opacity: seg.color === '#111111' ? 0.15 : 1,
+                  opacity: seg.color === 'rgba(255,255,255,0.2)' ? 0.15 : 1,
                 }}
               />
               <span className="font-body text-sm font-semibold text-charcoal flex-1">{seg.label}</span>

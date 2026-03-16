@@ -25,7 +25,7 @@ export default function LeggTilButikkPage() {
         <div className="max-w-3xl mx-auto section-padding py-10 md:py-14">
           <div className="space-y-6">
             {[
-              { n: '1', title: 'Sjekk om butikken din allerede er listet', desc: 'Alle klesbutikker registrert med offisielle registerdata i offisielle registre er allerede på Klesbutikk.no helt gratis. Søk etter butikknavnet ditt i søkefeltet på forsiden for å se oppføringen din.' },
+              { n: '1', title: 'Sjekk om butikken din allerede er listet', desc: 'Alle klesbutikker i Norge er allerede på Klesbutikk.no helt gratis. Søk etter butikknavnet ditt i søkefeltet på forsiden for å se oppføringen din.' },
               { n: '2', title: 'Oppdater informasjonen', desc: 'Stemmer ikke adressen, telefonnummeret eller andre opplysninger? Send oss en epost på hei@klesbutikk.no, så ordner vi det.' },
               { n: '3', title: 'Bli fremhevet', desc: 'Ønsker du økt synlighet? En fremhevet oppføring gir deg prioritert plassering, et synlig badge og eksponering på relevante merke og kategorisider. Se priser på annonseringssiden vår.' },
             ].map((step) => (

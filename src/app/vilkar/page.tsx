@@ -26,12 +26,12 @@ export default function VilkarPage() {
 
             <div>
               <h2 className="font-body text-lg font-bold text-charcoal mb-2">1. Generelt</h2>
-              <p>Ved å bruke Klesbutikk.no aksepterer du disse vilkårene. Klesbutikk.no er en informasjonstjeneste som drives av IT-Firma (it-firma.no). Tjenesten gir oversikt over klesbutikker i Norge basert på offentlig tilgjengelige registerdata.</p>
+              <p>Ved å bruke Klesbutikk.no aksepterer du disse vilkårene. Klesbutikk.no er en informasjonstjeneste som drives av <a href="https://it-firma.no" target="_blank" rel="noopener" className="text-accent hover:underline">IT-Firma</a>. Tjenesten gir oversikt over klesbutikker i Norge og verifiserte data.</p>
             </div>
 
             <div>
               <h2 className="font-body text-lg font-bold text-charcoal mb-2">2. Innhold og nøyaktighet</h2>
-              <p>Vi tilstreber at all informasjon på Klesbutikk.no er korrekt og oppdatert. Butikkdata hentes primært fra Brønnøysundregistrene og andre offentlige kilder. Vi kan likevel ikke garantere at all informasjon til enhver tid er fullstendig eller korrekt. Brukere oppfordres til å verifisere informasjon direkte med butikkene.</p>
+              <p>Vi tilstreber at all informasjon på Klesbutikk.no er korrekt og oppdatert. Vi tilstreber at all informasjon er korrekt, men vi kan likevel ikke garantere at all informasjon til enhver tid er fullstendig eller korrekt. Brukere oppfordres til å verifisere informasjon direkte med butikkene.</p>
             </div>
 
             <div>

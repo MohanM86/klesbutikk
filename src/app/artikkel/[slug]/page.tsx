@@ -25,13 +25,13 @@ const BLOG_POSTS: BlogPost[] = [
     category: 'Guide',
     content: [
       'Norge har et overraskende rikt utvalg av klesbutikker, fra internasjonale kjeder til unike nisjebutikker med skandinavisk design. Enten du bor i Oslo, Bergen, Trondheim eller en mindre by, finnes det alltid spennende motebutikker å oppdage.',
-      'I denne guiden tar vi deg gjennom de beste klesbutikkene i Norge, sortert etter by og kategori. Vi har brukt verifiserte registerdata og vår egen database med over 1 500 butikker for å gi deg den mest komplette oversikten.',
+      'I denne guiden tar vi deg gjennom de beste klesbutikkene i Norge, sortert etter by og kategori. Vi har brukt vår database med over 1 500 butikker for å gi deg den mest komplette oversikten.',
       'Oslo er naturligvis Norges motehovedstad. Her finner du alt fra Holzweiler og Filippa K på Aker Brygge til vintage-perler på Grünerløkka. Bogstadveien er den klassiske handlegaten med et bredt utvalg av både norske og internasjonale merker. For luksus anbefaler vi Steen & Strøm og Eger.',
       'Bergen byr på en sjarmerende shoppingopplevelse med butikker langs Torgallmenningen og i Galleriet. Byen er spesielt kjent for skandinaviske merker og lokale designere som BRGN, som lager regntøy med stil – perfekt for vestlandsværet.',
       'Trondheim har en levende motescene sentrert rundt Nordre gate. Her finner du Retro, Kleins, og en rekke konseptbutikker som blander norsk og internasjonal mote. Bakklandet byr på sjarmerende småbutikker med unik karakter.',
       'Stavanger kombinerer oljeby-energi med skandinavisk design. Klubbgata og Kirkegata er hjertet av shopping i Stavanger, med alt fra Høyer til lokale designerbutikker. Stavanger Storsenter og Forus har også et bredt utvalg.',
       'Mindre byer som Haugesund, Tromsø, Kristiansand og Lillehammer har alle overraskende gode motetilbud. Mange av disse byene har sterke lokale butikker som har drevet i generasjoner og kjenner sine kunders smak.',
-      'For å finne klesbutikker i din by, bruk søkefunksjonen på Klesbutikk.no. Vi oppdaterer databasen jevnlig med verifiserte registerdata for å sikre at du alltid finner oppdatert informasjon.',
+      'For å finne klesbutikker i din by, bruk søkefunksjonen på Klesbutikk.no. Vi oppdaterer databasen jevnlig med verifiserte data for å sikre at du alltid finner oppdatert informasjon.',
     ],
   },
   {

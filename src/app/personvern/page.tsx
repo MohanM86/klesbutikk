@@ -26,7 +26,7 @@ export default function PersonvernPage() {
 
             <div>
               <h2 className="font-body text-lg font-bold text-charcoal mb-2">1. Hvem er vi</h2>
-              <p>Klesbutikk.no er en informasjonstjeneste som samler og presenterer offentlig tilgjengelig informasjon om klesbutikker i Norge. Tjenesten drives av IT-Firma (it-firma.no).</p>
+              <p>Klesbutikk.no er en informasjonstjeneste som samler og presenterer verifisert informasjon om klesbutikker i Norge. Tjenesten drives av <a href="https://it-firma.no" target="_blank" rel="noopener" className="text-accent hover:underline">IT-Firma</a>.</p>
             </div>
 
             <div>
@@ -46,7 +46,7 @@ export default function PersonvernPage() {
 
             <div>
               <h2 className="font-body text-lg font-bold text-charcoal mb-2">4. Butikkdata</h2>
-              <p>Informasjonen om klesbutikker som vises på Klesbutikk.no er hentet fra offentlig tilgjengelige kilder, primært Brønnøysundregistrene. Butikkeiere kan kontakte oss for å oppdatere eller fjerne sin oppføring.</p>
+              <p>Informasjonen om klesbutikker som vises på Klesbutikk.no er hentet fra verifiserte kilder og kvalitetssikret av vårt team. Butikkeiere kan kontakte oss for å oppdatere eller fjerne sin oppføring.</p>
             </div>
 
             <div>

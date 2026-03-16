@@ -110,7 +110,7 @@ export default function CategoryCityPage({ params }: PageProps) {
             {matchingStores.length > 0 ? (
               <>
                 Finn butikker som spesialiserer seg på {cat.name.toLowerCase()} i {cityName}.
-                Vi har identifisert {matchingStores.length} relevante butikker basert på verifiserte registerdata.
+                Vi har identifisert {matchingStores.length} relevante butikker i vår database.
               </>
             ) : (
               <>

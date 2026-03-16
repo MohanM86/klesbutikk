@@ -159,7 +159,7 @@ export default function NettbutikkerPage() {
               </p>
               <p>
                 Du kan filtrere etter by for å finne nettbutikker i ditt nærområde, eller etter fylke for
-                å se det regionale tilbudet. Alle data er hentet fra offisielle norske registre med offisielle registerdata.
+                å se det regionale tilbudet. Vi oppdaterer informasjonen jevnlig.
               </p>
             </div>
           </div>

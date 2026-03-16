@@ -12,9 +12,9 @@ import { faqSchema, itemListSchema, webSiteSchema, datasetSchema } from '@/lib/s
 const HOME_FAQS = [
   { question: 'Hva er de beste klesbutikkene i Norge?', answer: 'Norge har over 1 500 registrerte klesbutikker fra Lindesnes til Nordkapp. De mest populære finner du i Oslo, Bergen, Trondheim og Stavanger. På Klesbutikk.no kan du utforske alle registrerte klesbutikker i landet og finne favorittene i din by.' },
   { question: 'Hvordan finner jeg klesbutikker nær meg?', answer: 'Bruk søkefeltet øverst på siden for å søke etter din by, et merke eller en butikk. Du kan også bla gjennom bysider, fylkesider eller kategorier for å finne klesbutikker i ditt nærområde.' },
-  { question: 'Er det gratis å legge til butikken min?', answer: 'Ja, alle klesbutikker registrert med offisielle registerdata i offisielle registre er allerede listet helt gratis. For økt synlighet tilbyr vi fremhevede plasseringer fra 990 kr per måned.' },
+  { question: 'Er det gratis å legge til butikken min?', answer: 'Ja, alle klesbutikker i Norge er allerede oppført helt gratis hos oss. For økt synlighet tilbyr vi fremhevede plasseringer fra 990 kr per måned.' },
   { question: 'Hvilke klesmerker kan jeg finne på Klesbutikk.no?', answer: 'Vi har kartlagt over 480 klesmerker, alt fra norske favoritter som Holzweiler, Stine Goya og Filippa K til internasjonale stormerker som Nike, Gucci og Zara. Du kan søke på merke og se hvilke butikker som fører det.' },
-  { question: 'Hvor ofte oppdateres butikkoversikten?', answer: 'Databasen vår er basert på offisielle verifiserte registerdata med offisielle registerdata og oppdateres jevnlig for å sikre at informasjonen alltid er korrekt.' },
+  { question: 'Hvor ofte oppdateres butikkoversikten?', answer: 'Databasen vår oppdateres jevnlig for å sikre at informasjonen alltid er korrekt og komplett.' },
   { question: 'Hva er forskjellen på en fremhevet og en vanlig oppføring?', answer: 'Alle klesbutikker har en gratis standardoppføring. Fremhevede butikker får prioritert plassering, et synlig merke, og vises øverst i sin by. Se annonseringssiden vår for mer informasjon.' },
 ];
 
@@ -89,7 +89,7 @@ export default function HomePage() {
         <div className="max-w-8xl mx-auto section-padding py-5">
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2">
             {[
-              { icon: 'M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622', label: 'Verifiserte registerdata' },
+              { icon: 'M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622', label: 'Verifiserte data' },
               { icon: 'M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7', label: 'Oppdateres jevnlig' },
               { icon: 'M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3', label: 'Dekker hele Norge' },
               { icon: 'M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75', label: 'Helt gratis å bruke' },
@@ -144,7 +144,7 @@ export default function HomePage() {
           <div className="flex items-end justify-between mb-10">
             <div>
               <p className="font-body text-sm font-bold text-accent mb-1">Utforsk</p>
-              <h2 className="font-body text-display-sm md:text-display font-extrabold text-charcoal">Populære byer</h2>
+              <h2 className="font-body text-display-sm md:text-display font-extrabold text-charcoal">Populære kommuner</h2>
             </div>
             <Link href="/by" className="hidden sm:inline-flex items-center gap-1 font-body text-sm font-semibold text-accent hover:text-accent-hover transition-colors">
               Alle byer <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
@@ -197,10 +197,10 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              { title: 'Offisielle data', desc: 'Alle butikker er hentet fra offisielle norske registre med offisielle registerdata', icon: 'M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z' },
+              { title: 'Verifiserte data', desc: 'Alle butikker er kvalitetssikret og verifisert mot flere kilder', icon: 'M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z' },
               { title: 'Over 480 merker', desc: 'Fra norske favoritter som Holzweiler til internasjonale stormerker som Nike', icon: 'M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z' },
               { title: '7 900+ sider', desc: 'Unike sider for hver by, fylke, merke, kategori og alle kombinasjonene', icon: 'M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25' },
-              { title: 'Alltid oppdatert', desc: 'Databasen synkroniseres jevnlig med offisielle registerdata', icon: 'M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182' },
+              { title: 'Alltid oppdatert', desc: 'Databasen oppdateres jevnlig for å sikre korrekt informasjon', icon: 'M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182' },
             ].map((item) => (
               <div key={item.title} className="bg-surface border border-border rounded-2xl p-7 hover:border-accent/30 hover:shadow-md transition-all duration-200">
                 <div className="w-12 h-12 rounded-2xl bg-accent-light flex items-center justify-center mb-5">
@@ -272,7 +272,7 @@ export default function HomePage() {
             <div className="font-body text-sm text-muted leading-relaxed space-y-3">
               <p>
                 Klesbutikk.no er Norges mest komplette oversikt over klesbutikker. Vi har samlet alle
-                registrerte klesbutikker fra verifiserte registerdata og gjort dem
+                klesbutikker i Norge og gjort dem
                 søkbare etter by, fylke, merke og kategori.
               </p>
               <p>

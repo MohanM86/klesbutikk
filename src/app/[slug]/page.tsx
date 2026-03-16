@@ -242,7 +242,7 @@ export default function CityPage({ params }: PageProps) {
                 Alle klesbutikker i {city.name}
               </h2>
               <p className="font-body text-sm text-muted mt-1">
-                {stores.length} bedrifter registrert under offisielle registerdata i offisielle registre
+                {stores.length} klesbutikker kartlagt i denne kommunen
               </p>
             </div>
           </div>
@@ -276,7 +276,7 @@ export default function CityPage({ params }: PageProps) {
             </div>
 
             <p className="font-body text-xs text-muted">
-              Alle data er verifisert mot offisielle norske registre og oppdateres jevnlig.
+              Vi oppdaterer informasjonen jevnlig for å sikre at alt er korrekt.
             </p>
           </div>
         </section>

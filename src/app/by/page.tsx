@@ -124,7 +124,7 @@ export default function CitiesPage() {
                 Trondheim med rundt 39 butikker hver.
               </p>
               <p>
-                Alle data er hentet fra offisielle norske registre med offisielle registerdata. Oversikten
+                Oversikten
                 oppdateres jevnlig for å sikre at informasjonen er korrekt og oppdatert.
               </p>
             </div>

@@ -39,7 +39,7 @@ export default function NettbutikkerPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(FAQS)) }} />
 
       {/* ─── HERO ─────────────────────────────────────────── */}
-      <section className="bg-surface-alt">
+      <section className="bg-gradient-to-b from-warm-100 to-cream">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-0 md:pt-10">
           <Breadcrumbs items={[{ label: 'Nettbutikker' }]} />
 
@@ -122,12 +122,12 @@ export default function NettbutikkerPage() {
       <section className="bg-cream border-t border-border">
         <div className="max-w-3xl mx-auto section-padding py-14 md:py-20">
           <div className="mb-8">
-            <p className="font-body text-[11px] font-bold text-accent uppercase tracking-[0.08em] mb-3">Vanlige spørsmål</p>
+            <p className="overline mb-2">Vanlige spørsmål</p>
             <h2 className="font-body text-display-sm md:text-display font-extrabold text-charcoal">Netthandel av klær i Norge</h2>
           </div>
           <div className="space-y-2">
             {FAQS.map((faq, i) => (
-              <details key={i} className="border border-border rounded-xl overflow-hidden group" open={i === 0}>
+              <details key={i} className="border border-border rounded-lg overflow-hidden group" open={i === 0}>
                 <summary className="flex items-center justify-between p-5 cursor-pointer font-body text-sm font-bold text-charcoal hover:text-accent transition-colors list-none">
                   {faq.question}
                   <svg className="w-5 h-5 text-muted group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

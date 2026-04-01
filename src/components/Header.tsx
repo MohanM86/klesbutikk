@@ -14,52 +14,41 @@ const NAV = [
 export default function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <>
-      {/* Topbar */}
-      <div className="bg-surface-alt text-center py-2 border-b border-border text-xs text-slate">
-        <span>Verifiserte data</span>
-        <span className="mx-3 text-border-dark">|</span>
-        <span>1 566 butikker kartlagt</span>
-        <span className="mx-3 text-border-dark">|</span>
-        <span>Helt gratis</span>
-      </div>
-      {/* Main header */}
-      <header className="sticky top-0 z-50 bg-white border-b border-border">
-        <div className="max-w-8xl mx-auto section-padding">
-          <div className="flex items-center h-14 gap-6">
-            <Link href="/" className="font-body text-xl font-extrabold text-black tracking-tight whitespace-nowrap">
-              klesbutikk<span className="text-accent">.no</span>
-            </Link>
-            <nav className="hidden lg:flex items-center gap-0">
-              {NAV.map((n) => (
-                <Link key={n.href} href={n.href} className="font-body text-[13px] font-semibold text-slate hover:text-black px-3.5 py-4 border-b-2 border-transparent hover:border-black transition-all duration-150">
-                  {n.label}
-                </Link>
-              ))}
-            </nav>
-            <div className="relative flex-1 max-w-md ml-auto hidden md:block">
-              <svg className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" strokeWidth={2.5} /><path d="m20 20-3.5-3.5" strokeWidth={2.5} strokeLinecap="round" /></svg>
-              <input type="text" placeholder="Sok etter by, merke eller butikk"
-                className="w-full font-body text-sm bg-surface-alt border border-border rounded-full py-2.5 pl-10 pr-4 focus:outline-none focus:border-black transition-colors placeholder:text-muted" />
+    <header className="fixed top-0 left-0 right-0 z-50 bg-cream/92 backdrop-blur-xl border-b border-border h-[60px]">
+      <div className="max-w-8xl mx-auto section-padding">
+        <div className="flex items-center justify-between h-[60px]">
+          <Link href="/" className="flex items-center gap-2">
+            <div className="w-7 h-7 bg-accent rounded-lg flex items-center justify-center">
+              <svg className="w-4 h-4 text-white" viewBox="0 0 16 16" fill="none">
+                <path d="M4 10L8 6L12 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <circle cx="8" cy="6" r="1.8" fill="currentColor" />
+              </svg>
             </div>
-            <button onClick={() => setOpen(!open)} className="lg:hidden p-2 -mr-2" aria-label="Meny">
-              <div className="w-5 flex flex-col gap-1.5">
-                <span className={'block h-[2px] bg-black rounded-full transition-all duration-300 ' + (open ? 'rotate-45 translate-y-[7px]' : '')} />
-                <span className={'block h-[2px] bg-black rounded-full transition-all duration-300 ' + (open ? 'opacity-0' : '')} />
-                <span className={'block h-[2px] bg-black rounded-full transition-all duration-300 ' + (open ? '-rotate-45 -translate-y-[7px]' : '')} />
-              </div>
-            </button>
-          </div>
-        </div>
-        {/* Mobile nav */}
-        <div className={'lg:hidden overflow-hidden transition-all duration-300 ' + (open ? 'max-h-96' : 'max-h-0')}>
-          <nav className="section-padding py-3 flex flex-col gap-0.5 bg-white border-t border-border">
+            <span className="font-body text-[16px] font-bold tracking-tight text-charcoal">klesbutikk<span className="text-accent">.no</span></span>
+          </Link>
+          <nav className="hidden md:flex items-center gap-1">
             {NAV.map((n) => (
-              <Link key={n.href} href={n.href} onClick={() => setOpen(false)} className="font-body text-base font-semibold text-charcoal hover:text-accent py-2.5 px-3 transition-colors">{n.label}</Link>
+              <Link key={n.href} href={n.href} className="font-body text-[13px] font-medium text-slate hover:text-charcoal px-3 py-2 rounded-lg hover:bg-surface-alt transition-all duration-150">
+                {n.label}
+              </Link>
             ))}
           </nav>
+          <button onClick={() => setOpen(!open)} className="md:hidden p-2 -mr-2" aria-label="Meny">
+            <div className="w-5 flex flex-col gap-1.5">
+              <span className={`block h-[2px] bg-charcoal rounded-full transition-all duration-300 ${open ? 'rotate-45 translate-y-[7px]' : ''}`} />
+              <span className={`block h-[2px] bg-charcoal rounded-full transition-all duration-300 ${open ? 'opacity-0' : ''}`} />
+              <span className={`block h-[2px] bg-charcoal rounded-full transition-all duration-300 ${open ? '-rotate-45 -translate-y-[7px]' : ''}`} />
+            </div>
+          </button>
         </div>
-      </header>
-    </>
+      </div>
+      <div className={`md:hidden overflow-hidden transition-all duration-300 ${open ? 'max-h-96' : 'max-h-0'}`}>
+        <nav className="section-padding py-4 flex flex-col gap-1 bg-cream border-t border-border">
+          {NAV.map((n) => (
+            <Link key={n.href} href={n.href} onClick={() => setOpen(false)} className="font-body text-base font-medium text-charcoal hover:text-accent py-2.5 px-3 rounded-lg hover:bg-surface-alt transition-all">{n.label}</Link>
+          ))}
+        </nav>
+      </div>
+    </header>
   );
 }

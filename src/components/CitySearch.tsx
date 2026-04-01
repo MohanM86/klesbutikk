@@ -47,7 +47,7 @@ export default function CitySearch({ cities, fylker }: { cities: CityData[]; fyl
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Søk etter by eller fylke..."
-            className="w-full bg-surface border-2 border-border focus:border-accent rounded-lg pl-11 pr-4 py-3.5 font-body text-sm text-charcoal placeholder:text-muted/50 focus:outline-none transition-colors"
+            className="w-full bg-surface border border-border focus:border-accent rounded-lg pl-11 pr-4 py-3.5 font-body text-sm text-charcoal placeholder:text-muted/50 focus:outline-none transition-colors"
           />
           {query && (
             <button onClick={() => setQuery('')} className="absolute right-4 top-1/2 -translate-y-1/2 text-muted hover:text-charcoal transition-colors">
@@ -104,7 +104,7 @@ export default function CitySearch({ cities, fylker }: { cities: CityData[]; fyl
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
           {filtered.map((city) => (
             <Link key={city.slug} href={`/${city.slug}`}
-              className="group flex items-center gap-3 bg-cream border border-border rounded-lg p-3 hover:border-accent  transition-all duration-200">
+              className="group flex items-center gap-3 bg-cream border border-border rounded-lg p-3 hover:border-accent hover:shadow-md transition-all duration-200">
               <div className="w-10 h-10 rounded-lg bg-accent-light flex items-center justify-center flex-shrink-0 group-hover:bg-accent transition-colors duration-200">
                 <span className="font-body text-sm font-extrabold text-accent group-hover:text-white transition-colors">
                   {city.name.charAt(0)}

@@ -9,7 +9,7 @@ import { getAllStores, getStats, getAllCities } from '@/lib/stores';
 export const metadata: Metadata = createMetadata({
   title: 'Treningsklær i Norge | Finn butikker med treningsklær nær deg',
   description: 'Finn butikker som selger treningsklær i din kommune. Treningsklær dame, herre, junior og barn. Johaug, Nike, Under Armour, Norrøna og mer.',
-  path: '/kategori/treningsklaer',
+  path: '/kategori/treningsklær',
 });
 
 const SPORT_KEYWORDS = ['sport', 'trening', 'aktiv', 'fitness', 'outdoor', 'norrøna', 'helly', 'nike', 'adidas', 'under armour', 'johaug', 'kari traa', 'bergans', 'swix', 'devold', 'xxl'];
@@ -30,7 +30,7 @@ const TRENING_FAQS = [
   { question: 'Hva er forskjellen på treningsklær og friluftsklær?', answer: 'Treningsklær er laget for trening innendørs og utendørs med fokus på bevegelse, fuktransport og komfort. Friluftsklær er laget for tur og friluft med fokus på vær og vindtetthet, holdbarhet og lagprinsippet. Mange norske butikker fører begge deler.' },
 ];
 
-export default function TreningsklaerPage() {
+export default function TreningsklærPage() {
   const stats = getStats();
   const allStores = getAllStores();
   const sportStores = allStores.filter((s) => SPORT_KEYWORDS.some((kw) => s.navn.toLowerCase().includes(kw)));
@@ -38,11 +38,11 @@ export default function TreningsklaerPage() {
 
   return (
     <>
-      <section className="bg-surface-alt">
+      <section className="bg-gradient-to-b from-warm-100 to-cream">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Kategorier', href: '/kategorier' }, { label: 'Treningsklær' }]} />
           <div className="mt-4 max-w-2xl">
-            <p className="font-body text-[11px] font-bold text-accent uppercase tracking-[0.08em] mb-3">Norges mest søkte kleskategori</p>
+            <p className="overline mb-2">Norges mest søkte kleskategori</p>
             <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-3">Treningsklær <em className="text-accent italic">i hele Norge</em></h1>
             <p className="font-body text-base text-muted leading-relaxed">Treningsklær er det mest søkte kleskategorien i Norge med over 12 000 søk i måneden. Finn butikker som selger treningsklær og treningstøy i din kommune. Treningsklær for dame, herre, junior og barn fra populære merker som Johaug, Nike, Under Armour og Norrøna.</p>
           </div>
@@ -55,7 +55,7 @@ export default function TreningsklaerPage() {
           <h2 className="font-body text-display font-extrabold-sm text-charcoal mb-6">Populære søk innen treningsklær</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {SUB_CATEGORIES.map((cat) => (
-              <div key={cat.name} className="bg-cream border border-border rounded-lg p-6 hover:border-accent hover:shadow-lg transition-all duration-200">
+              <div key={cat.name} className="bg-cream border border-border rounded-lg p-6 hover:border-accent transition-all duration-200">
                 <h3 className="font-body text-base font-semibold text-charcoal mb-2">{cat.name}</h3>
                 <p className="font-body text-sm text-muted leading-relaxed mb-3">{cat.desc}</p>
                 <span className="inline-block font-body text-[10px] font-semibold text-accent bg-accent-light px-2.5 py-1 rounded-full">{cat.volume} søk/mnd</span>
@@ -71,7 +71,7 @@ export default function TreningsklaerPage() {
           <h2 className="font-body text-display font-extrabold-sm text-charcoal mb-6">Finn treningsklær i din kommune</h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
             {topCities.map((city) => (
-              <Link key={city.slug} href={`/${city.slug}`} className="bg-cream border border-border rounded-xl p-4 hover:border-accent transition-all">
+              <Link key={city.slug} href={`/${city.slug}`} className="bg-cream border border-border rounded-lg p-4 hover:border-accent transition-all">
                 <span className="font-body text-sm font-semibold text-charcoal block">{city.name}</span>
                 <span className="font-body text-xs text-muted">{city.storeCount} butikker</span>
               </Link>

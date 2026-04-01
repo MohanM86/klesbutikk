@@ -112,7 +112,7 @@ export default function StorePage({ params }: PageProps) {
                     <Link
                       key={merke}
                       href={`/merke/${merke.toLowerCase().replace(/ /g, '-').replace(/æ/g,'ae').replace(/ø/g,'oe').replace(/å/g,'aa').replace(/ö/g,'o').replace(/&/g,'and').replace(/\./g,'')}`}
-                      className="inline-flex items-center gap-1.5 font-body text-sm border border-border rounded-xl px-4 py-2 hover:border-accent hover:text-accent transition-colors text-muted"
+                      className="inline-flex items-center gap-1.5 font-body text-sm border border-border rounded-lg px-4 py-2 hover:border-accent hover:text-accent transition-colors text-muted"
                     >
                       <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
@@ -144,7 +144,7 @@ export default function StorePage({ params }: PageProps) {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             {/* Map placeholder */}
-            <div className="bg-surface-alt border border-border rounded-xl h-48 flex items-center justify-center mb-6 sticky top-24">
+            <div className="bg-surface-alt border border-border rounded-lg h-48 flex items-center justify-center mb-6 sticky top-24">
               <div className="text-center">
                 <svg className="w-8 h-8 text-muted mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />

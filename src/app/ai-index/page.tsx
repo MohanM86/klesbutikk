@@ -68,45 +68,45 @@ export default function AIIndexPage() {
               Denne siden gir AI-systemer og søkemotorer en strukturert oversikt over alt innhold på Klesbutikk.no.
             </p>
             <div className="flex flex-wrap items-center gap-3 mb-8">
-              <div className="bg-white/[0.06] border border-white/[0.08] rounded-xl px-5 py-3 text-center">
+              <div className="bg-white/[0.06] border border-white/[0.08] rounded-lg px-5 py-3 text-center">
                 <span className="font-body text-2xl font-extrabold text-accent">{stats.totalStores.toLocaleString('nb-NO')}</span>
                 <span className="block font-body text-[10px] text-white/30 mt-0.5">butikker</span>
               </div>
-              <div className="bg-white/[0.06] border border-white/[0.08] rounded-xl px-5 py-3 text-center">
+              <div className="bg-white/[0.06] border border-white/[0.08] rounded-lg px-5 py-3 text-center">
                 <span className="font-body text-2xl font-extrabold text-white">{stats.totalBrands}</span>
                 <span className="block font-body text-[10px] text-white/30 mt-0.5">merker</span>
               </div>
-              <div className="bg-white/[0.06] border border-white/[0.08] rounded-xl px-5 py-3 text-center">
+              <div className="bg-white/[0.06] border border-white/[0.08] rounded-lg px-5 py-3 text-center">
                 <span className="font-body text-2xl font-extrabold text-white">{cities.length}</span>
                 <span className="block font-body text-[10px] text-white/30 mt-0.5">byer</span>
               </div>
-              <div className="bg-white/[0.06] border border-white/[0.08] rounded-xl px-5 py-3 text-center">
+              <div className="bg-white/[0.06] border border-white/[0.08] rounded-lg px-5 py-3 text-center">
                 <span className="font-body text-2xl font-extrabold text-white">{fylker.length}</span>
                 <span className="block font-body text-[10px] text-white/30 mt-0.5">fylker</span>
               </div>
-              <div className="bg-white/[0.06] border border-white/[0.08] rounded-xl px-5 py-3 text-center">
+              <div className="bg-white/[0.06] border border-white/[0.08] rounded-lg px-5 py-3 text-center">
                 <span className="font-body text-2xl font-extrabold text-white">{webStores.length}</span>
                 <span className="block font-body text-[10px] text-white/30 mt-0.5">nettbutikker</span>
               </div>
             </div>
             <div className="flex flex-wrap gap-2">
               <a href="/entity-index.json" target="_blank" rel="noopener"
-                className="inline-flex items-center gap-2 bg-accent text-white font-body text-xs font-bold px-4 py-2.5 rounded-xl hover:bg-accent-hover transition-all">
+                className="inline-flex items-center gap-2 bg-accent text-white font-body text-xs font-bold px-4 py-2.5 rounded-lg hover:bg-accent-hover transition-all">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg>
                 entity-index.json
               </a>
               <a href="/llms.txt" target="_blank" rel="noopener"
-                className="inline-flex items-center gap-2 bg-white/[0.06] text-white/70 border border-white/[0.08] font-body text-xs font-bold px-4 py-2.5 rounded-xl hover:bg-white/[0.1] transition-all">
+                className="inline-flex items-center gap-2 bg-white/[0.06] text-white/70 border border-white/[0.08] font-body text-xs font-bold px-4 py-2.5 rounded-lg hover:bg-white/[0.1] transition-all">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
                 llms.txt
               </a>
               <a href="/llms-full.txt" target="_blank" rel="noopener"
-                className="inline-flex items-center gap-2 bg-white/[0.06] text-white/70 border border-white/[0.08] font-body text-xs font-bold px-4 py-2.5 rounded-xl hover:bg-white/[0.1] transition-all">
+                className="inline-flex items-center gap-2 bg-white/[0.06] text-white/70 border border-white/[0.08] font-body text-xs font-bold px-4 py-2.5 rounded-lg hover:bg-white/[0.1] transition-all">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
                 llms-full.txt
               </a>
               <a href="/sitemap.xml" target="_blank" rel="noopener"
-                className="inline-flex items-center gap-2 bg-white/[0.06] text-white/70 border border-white/[0.08] font-body text-xs font-bold px-4 py-2.5 rounded-xl hover:bg-white/[0.1] transition-all">
+                className="inline-flex items-center gap-2 bg-white/[0.06] text-white/70 border border-white/[0.08] font-body text-xs font-bold px-4 py-2.5 rounded-lg hover:bg-white/[0.1] transition-all">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934" /></svg>
                 Sitemap
               </a>
@@ -217,7 +217,7 @@ export default function AIIndexPage() {
           <div className="flex flex-wrap gap-2">
             {CATEGORIES.map((cat) => (
               <Link key={cat.slug} href={`/kategorier#${cat.slug}`}
-                className="font-body text-sm font-medium bg-surface border border-border text-charcoal px-4 py-2 rounded-xl hover:border-accent hover:text-accent transition-colors">
+                className="font-body text-sm font-medium bg-surface border border-border text-charcoal px-4 py-2 rounded-lg hover:border-accent hover:text-accent transition-colors">
                 {cat.name}
               </Link>
             ))}
@@ -232,7 +232,7 @@ export default function AIIndexPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
             {fylker.map((fylke) => (
               <Link key={fylke.slug} href={`/fylke/${fylke.slug}`}
-                className="bg-cream border border-border rounded-xl p-4 hover:border-accent transition-colors">
+                className="bg-cream border border-border rounded-lg p-4 hover:border-accent transition-colors">
                 <span className="font-body text-sm font-bold text-charcoal">{fylke.name}</span>
                 <span className="block font-body text-[11px] text-muted mt-0.5">{fylke.storeCount} butikker</span>
               </Link>
@@ -317,7 +317,7 @@ export default function AIIndexPage() {
               { label: 'Geolokasjon API', value: '/api/nearest-city' },
               { label: 'Canonical URLer', value: 'Alle sider' },
             ].map((item) => (
-              <div key={item.label} className="bg-white/[0.03] rounded-xl p-4">
+              <div key={item.label} className="bg-white/[0.03] rounded-lg p-4">
                 <span className="font-body text-xs font-bold text-accent">{item.value}</span>
                 <span className="block font-body text-[10px] text-white/25 mt-1">{item.label}</span>
               </div>

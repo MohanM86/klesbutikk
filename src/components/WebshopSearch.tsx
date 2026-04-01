@@ -28,7 +28,7 @@ export default function WebshopSearch({ stores }: { stores: Store[] }) {
         </div>
         <input
           type="text" value={query} onChange={(e) => setQuery(e.target.value)}
-          placeholder="Sok etter nettbutikk..."
+          placeholder="Søk etter nettbutikk..."
           className="w-full bg-surface border border-border rounded-lg font-body text-sm text-charcoal placeholder:text-muted/60 pl-10 pr-4 py-3 focus:outline-none focus:border-accent transition-colors"
         />
       </div>
@@ -41,7 +41,7 @@ export default function WebshopSearch({ stores }: { stores: Store[] }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {filtered.map((store) => (
           <Link key={store.organisasjonsnummer} href={'/butikk/' + store.slug}
-            className="group block bg-surface border border-border rounded-lg p-5 hover:border-accent/40  transition-all">
+            className="group block bg-surface border border-border rounded-lg p-5 hover:border-accent/40 hover:shadow-md transition-all">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-10 h-10 rounded-lg bg-surface-alt flex items-center justify-center flex-shrink-0 group-hover:bg-accent transition-colors">
                 <span className="font-body text-base font-extrabold text-charcoal group-hover:text-white transition-colors">

@@ -5,8 +5,8 @@ import { getAllStores } from '@/lib/stores';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Alle klesbutikker i Norge - 1 566 butikker fra A til A',
-  description: 'Komplett oversikt over alle registrerte klesbutikker i Norge. Sok, filtrer etter by, fylke og bokstav.',
+  title: 'Alle klesbutikker i Norge - 1 566 butikker fra A til Å',
+  description: 'Komplett oversikt over alle registrerte klesbutikker i Norge. Søk, filtrer etter by, fylke og bokstav.',
   path: '/butikk',
 });
 
@@ -17,7 +17,7 @@ export default function AllStoresPage() {
 
   return (
     <>
-      <section className="bg-surface-alt">
+      <section className="bg-gradient-to-b from-warm-100 to-cream">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Butikker' }]} />
           <div className="flex items-end justify-between mt-4">
@@ -27,7 +27,7 @@ export default function AllStoresPage() {
                 {stores.length.toLocaleString('nb-NO')} butikker
               </div>
               <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-2">Alle klesbutikker i Norge</h1>
-              <p className="font-body text-base text-muted max-w-lg">Sok, filtrer og bla gjennom alle registrerte klesbutikker fra A til A.</p>
+              <p className="font-body text-base text-muted max-w-lg">Søk, filtrer og bla gjennom alle registrerte klesbutikker fra A til Å.</p>
             </div>
             <div className="hidden lg:flex items-center gap-6 text-right">
               <div>

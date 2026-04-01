@@ -5,42 +5,48 @@ import { BrandData } from '@/lib/types';
 export default function BrandShowcase({ brands }: { brands: BrandData[] }) {
   const top = brands.filter((b) => b.storeCount >= 2);
   const mid = brands.filter((b) => b.storeCount === 1);
-  const rest = brands.filter((b) => b.storeCount === 0).slice(0, 16);
+  const rest = brands.filter((b) => b.storeCount === 0).slice(0, 20);
   const row1 = [...top, ...mid.slice(0, 8)];
-  const row2 = [...mid.slice(8, 20), ...rest];
+  const row2 = [...mid.slice(8), ...rest.slice(0, 12)];
 
   return (
-    <section className="border-y border-border overflow-hidden">
-      <div className="max-w-8xl mx-auto section-padding pt-10 pb-4 md:pt-14 md:pb-6">
-        <div className="flex items-baseline justify-between mb-6">
-          <h2 className="font-body text-display-sm md:text-display font-extrabold text-black">{brands.length} merker</h2>
-          <Link href="/merker" className="font-body text-[13px] font-semibold text-black border-b border-black pb-px hover:text-accent hover:border-accent transition-colors">Alle merker</Link>
+    <section className="bg-surface border-y border-border overflow-hidden">
+      <div className="max-w-8xl mx-auto section-padding pt-14 pb-6 md:pt-20 md:pb-8">
+        <div className="flex items-end justify-between mb-8">
+          <div>
+            <p className="overline mb-2">Klesmerker</p>
+            <h2 className="font-body text-display-sm font-extrabold md:text-display text-charcoal">{brands.length} merkevarer kartlagt</h2>
+          </div>
+          <Link href="/merker" className="hidden sm:inline-flex items-center gap-1 font-body text-sm font-semibold text-accent hover:text-accent-hover transition-colors">
+            Alle merker
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+          </Link>
         </div>
       </div>
-      <div className="relative pb-10 md:pb-14"
+      <div className="relative pb-14 md:pb-20"
         onMouseEnter={(e) => e.currentTarget.querySelectorAll<HTMLElement>('.btrack').forEach((el) => (el.style.animationPlayState = 'paused'))}
         onMouseLeave={(e) => e.currentTarget.querySelectorAll<HTMLElement>('.btrack').forEach((el) => (el.style.animationPlayState = 'running'))}>
-        <div className="absolute left-0 top-0 bottom-0 w-12 md:w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-12 md:w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
-        <div className="mb-2">
-          <div className="btrack flex gap-2" style={{ animation: 'marqueeLeft 45s linear infinite', width: 'max-content' }}>
+        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-28 bg-gradient-to-r from-surface to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-28 bg-gradient-to-l from-surface to-transparent z-10 pointer-events-none" />
+        <div className="mb-3">
+          <div className="btrack flex gap-3" style={{ animation: 'marqueeLeft 50s linear infinite', width: 'max-content' }}>
             {[...row1, ...row1].map((b, i) => (
               <Link key={'t-' + b.slug + '-' + i} href={'/merke/' + b.slug}
-                className={'flex-shrink-0 inline-flex items-center gap-2 px-4 py-2 rounded-full border transition-colors duration-150 hover:border-accent hover:text-accent ' +
-                  (b.storeCount >= 3 ? 'border-black text-black font-bold' : 'border-border text-slate font-semibold')
+                className={'flex-shrink-0 inline-flex items-center gap-2 px-4 py-2.5 rounded-full border transition-all duration-200 hover:border-accent/40 ' +
+                  (b.storeCount >= 3 ? 'bg-accent-light border-accent/20 hover:bg-accent-light' : 'bg-cream border-border hover:bg-surface-alt')
                 }>
-                <span className="font-body text-[13px]">{b.name}</span>
-                {b.storeCount > 0 && <span className="font-body text-[11px] text-muted">{b.storeCount}</span>}
+                <span className={'font-body text-[13px] font-semibold ' + (b.storeCount >= 3 ? 'text-accent' : 'text-slate')}>{b.name}</span>
+                {b.storeCount > 0 && <span className="font-body text-[11px] text-muted bg-surface-alt px-1.5 py-0.5 rounded-full">{b.storeCount}</span>}
               </Link>
             ))}
           </div>
         </div>
         <div>
-          <div className="btrack flex gap-2" style={{ animation: 'marqueeRight 55s linear infinite', width: 'max-content' }}>
+          <div className="btrack flex gap-3" style={{ animation: 'marqueeRight 60s linear infinite', width: 'max-content' }}>
             {[...row2, ...row2].map((b, i) => (
               <Link key={'g-' + b.slug + '-' + i} href={'/merke/' + b.slug}
-                className="flex-shrink-0 inline-flex items-center px-3 py-1.5 border border-border rounded-full hover:border-accent transition-colors duration-150">
-                <span className="font-body text-xs text-muted hover:text-accent">{b.name}</span>
+                className="flex-shrink-0 inline-flex items-center gap-2 px-3 py-2 bg-cream border border-border rounded-full hover:border-accent/30 hover:bg-surface-alt transition-all duration-200">
+                <span className="font-body text-xs text-muted">{b.name}</span>
               </Link>
             ))}
           </div>

@@ -42,7 +42,7 @@ export default function AllStoresSearch({ stores, cities, fylker }: {
           </div>
           <input
             type="text" value={query} onChange={(e) => setQuery(e.target.value)}
-            placeholder="Sok etter butikknavn..."
+            placeholder="Søk etter butikknavn..."
             className="w-full bg-surface border border-border rounded-lg font-body text-sm text-charcoal placeholder:text-muted/60 pl-10 pr-4 py-3 focus:outline-none focus:border-accent transition-colors"
           />
         </div>

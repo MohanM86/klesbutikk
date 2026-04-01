@@ -82,7 +82,7 @@ export default function CityPage({ params }: PageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(storeListSchema) }} />
 
       {/* ─── HERO ─────────────────────────────────────────── */}
-      <section className="bg-surface-alt">
+      <section className="bg-gradient-to-b from-warm-100 to-cream">
         <div className="max-w-8xl mx-auto section-padding pt-6 md:pt-10">
         <Breadcrumbs items={[{ label: 'Byer', href: '/by' }, { label: city.name }]} />
 
@@ -130,7 +130,7 @@ export default function CityPage({ params }: PageProps) {
               <a
                 key={item.href}
                 href={item.href}
-                className="font-body text-xs font-semibold text-muted hover:text-accent px-3 py-1.5 rounded-xl hover:bg-accent-light transition-colors whitespace-nowrap"
+                className="font-body text-xs font-semibold text-muted hover:text-accent px-3 py-1.5 rounded-lg hover:bg-accent-light transition-colors whitespace-nowrap"
               >
                 {item.label}
               </a>

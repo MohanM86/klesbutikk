@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const cat = CATEGORIES.find((c) => c.slug === params.kategori);
   if (!fylke || !cat) return {};
   return createMetadata({
-    title: `${cat.name} i ${fylke.name} – Klesbutikker i ${fylke.name}`,
+    title: `${cat.name} i ${fylke.name} | Klesbutikker i ${fylke.name}`,
     description: `Oversikt over butikker med ${cat.name.toLowerCase()} i ${fylke.name}. Finn ${cat.name.toLowerCase()}-butikker i ${fylke.cities.slice(0, 3).join(', ')} og flere byer.`,
     path: `/fylke/${fylke.slug}/${cat.slug}`,
   });

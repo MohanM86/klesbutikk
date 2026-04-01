@@ -6,7 +6,7 @@ import { getAllBrands } from '@/lib/stores';
 import { createMetadata, itemListSchema } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Klesmerker i Norge – Finn butikker med ditt favorittmerke',
+  title: 'Klesmerker i Norge | Finn butikker med ditt favorittmerke',
   description: 'Oversikt over 483 klesmerker i norske butikker. Finn hvor du kan kjøpe Holzweiler, Filippa K, Nike, Ganni og hundrevis av andre merker.',
   path: '/merker',
 });
@@ -56,7 +56,7 @@ export default function BrandsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(brandListSchema) }} />
 
       {/* ─── HERO ─────────────────────────────────────────── */}
-      <section className="bg-surface-alt">
+      <section className="bg-gradient-to-b from-warm-100 to-cream">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-0 md:pt-10">
           <Breadcrumbs items={[{ label: 'Merker' }]} />
 
@@ -97,7 +97,7 @@ export default function BrandsPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 pb-10">
             {heroBrands.map((brand, i) => (
               <Link key={brand.slug} href={`/merke/${brand.slug}`}
-                className={`group relative rounded-lg p-5 min-h-[130px] overflow-hidden transition-all duration-200 hover:shadow-xl hover:-translate-y-1 ${
+                className={`group relative rounded-lg p-5 min-h-[130px] overflow-hidden transition-all duration-200 hover:shadow-xl ${
                   i === 0 ? 'bg-charcoal text-white' :
                   i === 1 ? 'bg-accent text-white' :
                   'bg-cream border border-border hover:border-accent text-charcoal'

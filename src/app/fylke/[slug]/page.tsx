@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!fylke) return {};
 
   return createMetadata({
-    title: `Klesbutikker i ${fylke.name} – Alle motebutikker i fylket`,
+    title: `Klesbutikker i ${fylke.name} | Alle motebutikker i fylket`,
     description: `Se alle ${fylke.storeCount} klesbutikker i ${fylke.name}. Finn motebutikker i ${fylke.cities.slice(0, 3).join(', ')} og flere byer.`,
     path: `/fylke/${fylke.slug}`,
   });

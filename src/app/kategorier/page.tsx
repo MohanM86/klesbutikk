@@ -5,7 +5,7 @@ import { createMetadata } from '@/lib/seo';
 import { getAllStores, getAllCities } from '@/lib/stores';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Kategorier – Klesbutikker etter type',
+  title: 'Kategorier | Klesbutikker etter type',
   description: 'Utforsk klesbutikker etter kategori. Dameklær, herreklær, barneklær, designer, vintage, sport og mer.',
   path: '/kategorier',
 });
@@ -29,7 +29,7 @@ export default function KategorierPage() {
 
   return (
     <>
-      <section className="bg-surface-alt">
+      <section className="bg-gradient-to-b from-warm-100 to-cream">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Kategorier' }]} />
           <div className="mt-4">
@@ -49,7 +49,7 @@ export default function KategorierPage() {
               <div key={cat.slug} id={cat.slug} className={`rounded-lg p-6 border transition-all relative overflow-hidden ${
                 i === 0 ? 'bg-black text-white border-black md:col-span-2' :
                 i === 1 ? 'bg-accent text-white border-accent' :
-                'bg-surface border-border hover:border-accent/40 '
+                'bg-surface border-border hover:border-accent/40'
               }`}>
                 {/* Ghost letter */}
                 <span className={`absolute -right-2 -top-4 font-body text-[80px] md:text-[100px] font-black leading-none select-none pointer-events-none ${

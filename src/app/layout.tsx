@@ -7,7 +7,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: `${SITE_NAME} – Finn klesbutikker i hele Norge`, template: `%s | ${SITE_NAME}` },
+  title: { default: `${SITE_NAME} | Finn klesbutikker i hele Norge`, template: `%s | ${SITE_NAME}` },
   description: SITE_DESC,
   openGraph: { type: 'website', locale: 'nb_NO', siteName: SITE_NAME, images: [{ url: '/og-image.svg', width: 1200, height: 630 }] },
   twitter: { card: 'summary_large_image' },

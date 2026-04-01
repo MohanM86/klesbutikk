@@ -98,7 +98,7 @@ export default function NettbutikkerPage() {
       {/* ─── SEARCH + GRID ───────────────────────────────── */}
       <section className="bg-cream border-t border-border">
         <div className="max-w-8xl mx-auto section-padding py-10 md:py-14">
-          <WebshopSearch stores={webshops} cities={cities} fylker={fylker} />
+          <WebshopSearch stores={webshops} />
         </div>
       </section>
 

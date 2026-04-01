@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!store) return {};
 
   return createMetadata({
-    title: `${store.navn} – Klesbutikk i ${store.poststed}`,
+    title: `${store.navn} | Klesbutikk i ${store.poststed}`,
     description: `${store.navn} er en klesbutikk i ${store.poststed}, ${store.fylke}. Se adresse, kontaktinfo og lignende butikker i ${store.poststed}.`,
     path: `/butikk/${store.slug}`,
   });

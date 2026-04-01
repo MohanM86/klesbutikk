@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const city = getCityBySlug(params.slug);
   if (!city) return {};
   return createMetadata({
-    title: `Klesbutikker i ${city.name} – ${city.storeCount} butikker | Klesbutikk.no`,
+    title: `Klesbutikker i ${city.name} | ${city.storeCount} butikker | Klesbutikk.no`,
     description: `Komplett oversikt over alle ${city.storeCount} klesbutikker i ${city.name}. Finn motebutikker, designerbutikker og lokale favoritter i ${city.name}, ${city.fylke}.`,
     path: `/${city.slug}`,
   });
@@ -82,7 +82,7 @@ export default function CityPage({ params }: PageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(storeListSchema) }} />
 
       {/* ─── HERO ─────────────────────────────────────────── */}
-      <section className="bg-gradient-to-b from-warm-100 to-cream">
+      <section className="bg-surface-alt">
         <div className="max-w-8xl mx-auto section-padding pt-6 md:pt-10">
         <Breadcrumbs items={[{ label: 'Byer', href: '/by' }, { label: city.name }]} />
 

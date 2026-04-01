@@ -13,7 +13,7 @@ const ARTICLES = [
   { slug: 'beste-klesbutikker-oslo', title: 'De beste klesbutikkene i Oslo', desc: 'En komplett guide til Oslos beste klesbutikker, fra designerbutikker på Aker Brygge til vintage i Grünerløkka.', date: '2026-01-15', cat: 'Guide' },
   { slug: 'norske-klesmerker', title: 'Norske klesmerker du bør kjenne til', desc: 'Fra Holzweiler til Devold. En oversikt over de viktigste norske klesmerkene og hvor du kan kjøpe dem.', date: '2026-01-10', cat: 'Merker' },
   { slug: 'barekraftig-mote-norge', title: 'Bærekraftig mote i Norge', desc: 'Vintage, gjenbruk og bærekraftige merker. Slik handler du klær med god samvittighet.', date: '2026-01-08', cat: 'Bærekraft' },
-  { slug: 'handle-klær-pa-nett', title: 'Slik handler du klær på nett trygt', desc: 'Tips og råd for å handle klær på nett fra norske butikker. Størrelsesveiledning og returrettigheter.', date: '2026-01-05', cat: 'Tips' },
+  { slug: 'handle-klaer-pa-nett', title: 'Slik handler du klær på nett trygt', desc: 'Tips og råd for å handle klær på nett fra norske butikker. Størrelsesveiledning og returrettigheter.', date: '2026-01-05', cat: 'Tips' },
   { slug: 'motetrender-2026', title: 'Motetrender 2026: Hva er inn?', desc: 'De viktigste motetrendene for 2026 og hvilke norske butikker som fører dem.', date: '2025-12-28', cat: 'Trender' },
   { slug: 'klesbutikker-bergen', title: 'Klesbutikker i Bergen: En komplett guide', desc: 'Alt du trenger å vite om klesbutikkene i Bergen, fra sentrum til Lagunen.', date: '2025-12-20', cat: 'Guide' },
 ];
@@ -21,7 +21,7 @@ const ARTICLES = [
 export default function ArtiklerPage() {
   return (
     <>
-      <section className="bg-gradient-to-b from-warm-100 to-cream">
+      <section className="bg-surface-alt">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Artikler' }]} />
           <div className="mt-4">

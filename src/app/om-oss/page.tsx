@@ -5,7 +5,7 @@ import { createMetadata } from '@/lib/seo';
 import { getStats } from '@/lib/stores';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Om oss – Klesbutikk.no',
+  title: 'Om oss | Klesbutikk.no',
   description: 'Klesbutikk.no er Norges mest komplette oversikt over klesbutikker med verifiserte data.',
   path: '/om-oss',
 });
@@ -14,7 +14,7 @@ export default function OmOssPage() {
   const stats = getStats();
   return (
     <>
-      <section className="bg-gradient-to-b from-warm-100 to-cream">
+      <section className="bg-surface-alt">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Om oss' }]} />
           <div className="mt-4 max-w-2xl">

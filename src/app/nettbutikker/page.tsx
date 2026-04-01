@@ -7,7 +7,7 @@ import { getStoresWithWebsite, getAllBrands } from '@/lib/stores';
 import { createMetadata, faqSchema } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Norske nettbutikker for klær – Kjøp klær på nett',
+  title: 'Norske nettbutikker for klær | Kjøp klær på nett',
   description: 'Komplett oversikt over norske klesbutikker med nettbutikk. Handle klær på nett fra over 150 norske butikker med fri frakt og retur.',
   path: '/nettbutikker',
 });
@@ -39,7 +39,7 @@ export default function NettbutikkerPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(FAQS)) }} />
 
       {/* ─── HERO ─────────────────────────────────────────── */}
-      <section className="bg-gradient-to-b from-warm-100 to-cream">
+      <section className="bg-surface-alt">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-0 md:pt-10">
           <Breadcrumbs items={[{ label: 'Nettbutikker' }]} />
 

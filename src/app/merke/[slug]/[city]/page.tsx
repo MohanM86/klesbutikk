@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const cityName = TOP_CITIES.find((c) => slugify(c) === params.city) || params.city;
   if (!brand) return {};
   return createMetadata({
-    title: `${brand.name} i ${cityName} – Finn ${brand.name}-butikker`,
+    title: `${brand.name} i ${cityName} | Finn ${brand.name}-butikker`,
     description: `Se hvor du kan kjøpe ${brand.name} i ${cityName}. Komplett oversikt over klesbutikker som fører ${brand.name} i ${cityName} og nærområdet.`,
     path: `/merke/${brand.slug}/${params.city}`,
   });

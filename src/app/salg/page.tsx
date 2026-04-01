@@ -13,12 +13,12 @@ export const metadata: Metadata = createMetadata({
 });
 
 const SALG_CATEGORIES = [
-  { name: 'Barneklær salg', slug: 'barneklær', desc: 'Salg på barneklær, babyklær og klær til barn i alle aldre. Finn butikker med tilbud på barneklær i din kommune.', volume: '1k-10k søk/mnd' },
-  { name: 'Dameklær salg', slug: 'dameklær', desc: 'Salg på dameklær, kjoler, jakker og tilbehør for kvinner. Finn de beste tilbudene på dameklær nær deg.', volume: '590 søk/mnd' },
-  { name: 'Herreklær salg', slug: 'herreklær', desc: 'Salg på herreklær, dresser, skjorter og casualwear for menn. Finn butikker med tilbud på herreklær.', volume: '590 søk/mnd' },
-  { name: 'Treningsklær salg', slug: 'treningsklær', desc: 'Salg på treningsklær og treningstøy for dame, herre og barn. Nike, Johaug, Under Armour og mer.', volume: 'Populært søk' },
+  { name: 'Barneklær salg', slug: 'barneklaer', desc: 'Salg på barneklær, babyklær og klær til barn i alle aldre. Finn butikker med tilbud på barneklær i din kommune.', volume: '1k-10k søk/mnd' },
+  { name: 'Dameklær salg', slug: 'dameklaer', desc: 'Salg på dameklær, kjoler, jakker og tilbehør for kvinner. Finn de beste tilbudene på dameklær nær deg.', volume: '590 søk/mnd' },
+  { name: 'Herreklær salg', slug: 'herreklaer', desc: 'Salg på herreklær, dresser, skjorter og casualwear for menn. Finn butikker med tilbud på herreklær.', volume: '590 søk/mnd' },
+  { name: 'Treningsklær salg', slug: 'treningsklaer', desc: 'Salg på treningsklær og treningstøy for dame, herre og barn. Nike, Johaug, Under Armour og mer.', volume: 'Populært søk' },
   { name: 'Billige klær', slug: 'billige', desc: 'Finn billige klær og klær til gode priser i klesbutikker nær deg. Billige klær på nett og i butikk.', volume: '100-1k søk/mnd' },
-  { name: 'Sommerklær salg', slug: 'sommerklær', desc: 'Salg på sommerklær for hele familien. Finn sommertilbud i klesbutikker i din kommune.', volume: 'Sesongbasert' },
+  { name: 'Sommerklær salg', slug: 'sommerklaer', desc: 'Salg på sommerklær for hele familien. Finn sommertilbud i klesbutikker i din kommune.', volume: 'Sesongbasert' },
 ];
 
 const SALG_FAQS = [
@@ -32,7 +32,7 @@ export default function SalgPage() {
   const stats = getStats();
   return (
     <>
-      <section className="bg-gradient-to-b from-warm-100 to-cream">
+      <section className="bg-surface-alt">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Klær på salg' }]} />
           <div className="mt-4 max-w-2xl">
@@ -62,7 +62,7 @@ export default function SalgPage() {
           <div className="font-body text-sm text-muted leading-relaxed space-y-4 mb-12">
             <h2 className="font-body text-display font-extrabold-sm text-charcoal">Salg på klær i norske klesbutikker</h2>
             <p>Nordmenn elsker et godt tilbud, og salg på klær er blant de mest populære søkene i Norge. Barneklær salg alene har mellom 1 000 og 10 000 søk i måneden, og salg klær har tilsvarende volum. Vi jobber med å bygge en komplett salgseksjon der du kan se hvilke klesbutikker som har tilbud akkurat nå.</p>
-            <p>Foreløpig kan du utforske klesbutikker i din kommune og kontakte dem direkte for informasjon om aktuelle salg og kampanjer. Mange butikker har sesongsalg, opphørssalg og lopende tilbud som ikke alltid annonseres online. De lokale klesbutikkene har ofte de beste tilbudene fordi de onsker a trekke kunder til butikken.</p>
+            <p>Forelopig kan du utforske klesbutikker i din kommune og kontakte dem direkte for informasjon om aktuelle salg og kampanjer. Mange butikker har sesongsalg, opphorssalg og lopende tilbud som ikke alltid annonseres online. De lokale klesbutikkene har ofte de beste tilbudene fordi de onsker a trekke kunder til butikken.</p>
           </div>
           <FAQAccordion faqs={SALG_FAQS} title="Vanlige spørsmål om klær på salg" />
           <div className="mt-14">

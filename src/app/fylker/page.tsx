@@ -14,7 +14,7 @@ export default function FylkerPage() {
   const fylker = getAllFylker();
   return (
     <>
-      <section className="bg-gradient-to-b from-warm-100 to-cream">
+      <section className="bg-surface-alt">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Fylker' }]} />
           <div className="flex items-end justify-between mt-4">

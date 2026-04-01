@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const cityName = TOP_50_CITIES.find((c) => slugify(c) === params.city) || params.city;
   if (!cat) return {};
   return createMetadata({
-    title: `${cat.name} i ${cityName} – Klesbutikker med ${cat.name.toLowerCase()}`,
+    title: `${cat.name} i ${cityName} | Klesbutikker med ${cat.name.toLowerCase()}`,
     description: `Finn butikker med ${cat.name.toLowerCase()} i ${cityName}. Komplett oversikt over klesbutikker som spesialiserer seg på ${cat.name.toLowerCase()} i ${cityName}.`,
     path: `/kategori/${cat.slug}/${params.city}`,
   });
@@ -155,7 +155,7 @@ export default function CategoryCityPage({ params }: PageProps) {
         </section>
 
         {/* FAQ */}
-        <FAQAccordion faqs={faqs} title={`${cat.name} i ${cityName} – spørsmål og svar`} />
+        <FAQAccordion faqs={faqs} title={`${cat.name} i ${cityName} | spørsmål og svar`} />
 
         {/* Other cities */}
         <section className="mt-16">

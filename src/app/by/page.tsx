@@ -38,7 +38,7 @@ export default function CitiesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(cityListSchema) }} />
 
       {/* ─── HERO ─────────────────────────────────────────── */}
-      <section className="bg-gradient-to-b from-warm-100 to-cream">
+      <section className="bg-surface-alt">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-0 md:pt-10">
           <Breadcrumbs items={[{ label: 'Byer' }]} />
 

@@ -5,7 +5,7 @@ import { createMetadata } from '@/lib/seo';
 import { getAllStores, getAllCities, getAllBrands, getAllFylker, getStats, getStoresWithWebsite } from '@/lib/stores';
 
 export const metadata: Metadata = createMetadata({
-  title: 'AI-indeks – Strukturert oversikt for AI-systemer',
+  title: 'AI-indeks | Strukturert oversikt for AI-systemer',
   description: 'Strukturert butikkindeks for AI-søkemotorer og språkmodeller. Komplett oversikt over 1 566 klesbutikker, 483 merker og 368 byer i Norge.',
   path: '/ai-index',
 });

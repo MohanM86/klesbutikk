@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!brand) return {};
 
   return createMetadata({
-    title: `${brand.name} butikker i Norge – Finn ${brand.name} nær deg`,
+    title: `${brand.name} butikker i Norge | Finn ${brand.name} nær deg`,
     description: `Se alle butikker som fører ${brand.name} i Norge. Finn ${brand.name} i ${brand.cities.slice(0, 3).join(', ')} og ${brand.cities.length} andre byer.`,
     path: `/merke/${brand.slug}`,
   });
@@ -68,7 +68,7 @@ export default function BrandPage({ params }: PageProps) {
 
   const storeListSchema = itemListSchema(
     stores.map((s) => ({
-      name: `${s.navn} – ${brand.name} i ${s.poststed}`,
+      name: `${s.navn} | ${brand.name} i ${s.poststed}`,
       url: `/butikk/${s.slug}`,
     }))
   );

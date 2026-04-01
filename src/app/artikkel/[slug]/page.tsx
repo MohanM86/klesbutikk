@@ -19,7 +19,7 @@ const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'beste-klesbutikker-i-norge',
     title: 'De beste klesbutikkene i Norge i 2026',
-    metaTitle: 'De beste klesbutikkene i Norge (2026) – Komplett guide',
+    metaTitle: 'De beste klesbutikkene i Norge (2026) | Komplett guide',
     metaDescription: 'Vår guide til Norges beste klesbutikker fra Lindesnes til Nordkapp. Oppdag moteperler, designerbutikker og lokale favoritter over hele landet.',
     date: '2026-03-10',
     category: 'Guide',
@@ -27,7 +27,7 @@ const BLOG_POSTS: BlogPost[] = [
       'Norge har et overraskende rikt utvalg av klesbutikker, fra internasjonale kjeder til unike nisjebutikker med skandinavisk design. Enten du bor i Oslo, Bergen, Trondheim eller en mindre by, finnes det alltid spennende motebutikker å oppdage.',
       'I denne guiden tar vi deg gjennom de beste klesbutikkene i Norge, sortert etter by og kategori. Vi har brukt vår database med over 1 500 butikker for å gi deg den mest komplette oversikten.',
       'Oslo er naturligvis Norges motehovedstad. Her finner du alt fra Holzweiler og Filippa K på Aker Brygge til vintage-perler på Grünerløkka. Bogstadveien er den klassiske handlegaten med et bredt utvalg av både norske og internasjonale merker. For luksus anbefaler vi Steen & Strøm og Eger.',
-      'Bergen byr på en sjarmerende shoppingopplevelse med butikker langs Torgallmenningen og i Galleriet. Byen er spesielt kjent for skandinaviske merker og lokale designere som BRGN, som lager regntøy med stil – perfekt for vestlandsværet.',
+      'Bergen byr på en sjarmerende shoppingopplevelse med butikker langs Torgallmenningen og i Galleriet. Byen er spesielt kjent for skandinaviske merker og lokale designere som BRGN, som lager regntøy med stil | perfekt for vestlandsværet.',
       'Trondheim har en levende motescene sentrert rundt Nordre gate. Her finner du Retro, Kleins, og en rekke konseptbutikker som blander norsk og internasjonal mote. Bakklandet byr på sjarmerende småbutikker med unik karakter.',
       'Stavanger kombinerer oljeby-energi med skandinavisk design. Klubbgata og Kirkegata er hjertet av shopping i Stavanger, med alt fra Høyer til lokale designerbutikker. Stavanger Storsenter og Forus har også et bredt utvalg.',
       'Mindre byer som Haugesund, Tromsø, Kristiansand og Lillehammer har alle overraskende gode motetilbud. Mange av disse byene har sterke lokale butikker som har drevet i generasjoner og kjenner sine kunders smak.',
@@ -37,12 +37,12 @@ const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'klesbutikker-oslo-guide',
     title: 'Komplett guide til klesbutikker i Oslo',
-    metaTitle: 'Klesbutikker i Oslo – Komplett shoppingguide (2026)',
+    metaTitle: 'Klesbutikker i Oslo | Komplett shoppingguide (2026)',
     metaDescription: 'Alt du trenger å vite om shopping i Oslo. De beste handlegatene, kjøpesentrene og skjulte perlene for moteinteresserte.',
     date: '2026-03-05',
     category: 'Byguide',
     content: [
-      'Oslo er Norges ubestridte motehovedstad med over 250 registrerte klesbutikker. Fra eksklusive designerbutikker til budsjettvennlige kjeder – hovedstaden har noe for absolutt alle.',
+      'Oslo er Norges ubestridte motehovedstad med over 250 registrerte klesbutikker. Fra eksklusive designerbutikker til budsjettvennlige kjeder | hovedstaden har noe for absolutt alle.',
       'Karl Johans gate er Oslos mest kjente handlegate og strekker seg fra Sentralstasjonen til Slottet. Her finner du store kjeder som H&M, Zara og GANT, samt kjøpesentre som Paleet og Eger. For luksusmerker er Steen & Strøm uslåelig.',
       'Bogstadveien og Hegdehaugsveien er favorittområdet for de som søker en blanding av kjeder og nisjebutikker. Her finner du alt fra Filippa K og Holzweiler til lokale favoritter. Området har en mer avslappet stemning enn Karl Johan.',
       'Grünerløkka er Oslos hipster-paradis med vintage-butikker, secondhand-perler og uavhengige designerbutikker. Markveien og Thorvald Meyers gate er de viktigste handlegatene. Her finner du blant annet Velouria Vintage og Frøken Dianas Salonger.',
@@ -54,8 +54,8 @@ const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'norske-motemerker',
     title: 'Norske motemerker du bør kjenne til',
-    metaTitle: 'Norske klesmerker – De viktigste motmerkene fra Norge',
-    metaDescription: 'Fra Holzweiler til Stormberg – en oversikt over norske klesmerker som setter Norge på motekartet internasjonalt.',
+    metaTitle: 'Norske klesmerker | De viktigste motmerkene fra Norge',
+    metaDescription: 'Fra Holzweiler til Stormberg | en oversikt over norske klesmerker som setter Norge på motekartet internasjonalt.',
     date: '2026-02-28',
     category: 'Mote',
     content: [
@@ -70,8 +70,8 @@ const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'barekraftig-mote-norge',
-    title: 'Bærekraftig mote i Norge – hvor handler du?',
-    metaTitle: 'Bærekraftig mote i Norge – Guide til miljøvennlig shopping',
+    title: 'Bærekraftig mote i Norge | hvor handler du?',
+    metaTitle: 'Bærekraftig mote i Norge | Guide til miljøvennlig shopping',
     metaDescription: 'Stadig flere norske klesbutikker satser på bærekraft. Her er de beste stedene for miljøvennlig motet i Norge.',
     date: '2026-02-20',
     category: 'Bærekraft',
@@ -86,13 +86,13 @@ const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'shopping-bergen-guide',
-    title: 'Shopping i Bergen – en komplett guide',
-    metaTitle: 'Shopping i Bergen – Komplett guide til klesbutikker (2026)',
+    title: 'Shopping i Bergen | en komplett guide',
+    metaTitle: 'Shopping i Bergen | Komplett guide til klesbutikker (2026)',
     metaDescription: 'Utforsk Bergens varierte shopping-scene, fra Bryggen til Galleriet og de sjarmerende nisjebutikkene i Skostredet.',
     date: '2026-02-15',
     category: 'Byguide',
     content: [
-      'Bergen er mer enn bare regn og fjorder – byen har også en fantastisk shopping-scene med nesten 40 registrerte klesbutikker. Fra historiske Bryggen til moderne kjøpesentre, Bergen har noe for enhver smak.',
+      'Bergen er mer enn bare regn og fjorder | byen har også en fantastisk shopping-scene med nesten 40 registrerte klesbutikker. Fra historiske Bryggen til moderne kjøpesentre, Bergen har noe for enhver smak.',
       'Torgallmenningen er Bergens viktigste handlegate og strekker seg fra Bryggen til Festplassen. Her finner du store kjeder, Galleriet kjøpesenter, og en rekke fristende butikker. Xhibition er et annet populært kjøpesenter.',
       'Skostredet og Nøstet-området er Bergens kreative hjerte med uavhengige butikker, vintage-funn og lokale designere. Her finner du en mer alternativ shopping-opplevelse med butikker du ikke finner andre steder.',
       'For merkevareshopping er Galleriet og Xhibition de beste alternativene. Her finner du kjente kjeder som H&M, Zara, Companys og Høyer. Lagunen Storsenter i Rådal er Vestlandets største kjøpesenter.',
@@ -102,13 +102,13 @@ const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'skandinavisk-minimalisme',
-    title: 'Skandinavisk minimalisme – stilen som aldri dør',
-    metaTitle: 'Skandinavisk minimalisme – Guide til tidløs stil i norske butikker',
+    title: 'Skandinavisk minimalisme | stilen som aldri dør',
+    metaTitle: 'Skandinavisk minimalisme | Guide til tidløs stil i norske butikker',
     metaDescription: 'Lær mer om den skandinaviske motestilen og hvor du finner butikker som selger tidløse, minimalistiske klær i Norge.',
     date: '2026-02-10',
     category: 'Mote',
     content: [
-      'Skandinavisk minimalisme har blitt et globalt fenomen. Den rene, stilfulle estetikken med fokus på kvalitet fremfor kvantitet definerer hvordan nordboere kler seg – og resten av verden vil etterligne det.',
+      'Skandinavisk minimalisme har blitt et globalt fenomen. Den rene, stilfulle estetikken med fokus på kvalitet fremfor kvantitet definerer hvordan nordboere kler seg | og resten av verden vil etterligne det.',
       'Stilen kjennetegnes av nøytrale farger (sort, hvit, grå, beige), rene linjer, god passform og materialer av høy kvalitet. Det handler om å bygge en garderobe som varer, med plagg som kan kombineres på utallige måter.',
       'Norske og skandinaviske merker som Filippa K, Holzweiler, Samsøe Samsøe og Acne Studios er ledende innen denne estetikken. Filippa K har butikk i Oslo med et utvalg som perfekt representerer skandinavisk minimalisme.',
       'For å oppnå den skandinaviske stilen, start med basisplagg: en god hvit t-skjorte, en perfekt sort bukse, en klassisk ullfrakk og kvalitetsdenim. Deretter kan du bygge videre med statement-plagg fra norske designere.',

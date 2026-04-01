@@ -9,7 +9,7 @@ import { getAllStores, getStats, getAllCities } from '@/lib/stores';
 export const metadata: Metadata = createMetadata({
   title: 'Treningsklær i Norge | Finn butikker med treningsklær nær deg',
   description: 'Finn butikker som selger treningsklær i din kommune. Treningsklær dame, herre, junior og barn. Johaug, Nike, Under Armour, Norrøna og mer.',
-  path: '/kategori/treningsklær',
+  path: '/kategori/treningsklaer',
 });
 
 const SPORT_KEYWORDS = ['sport', 'trening', 'aktiv', 'fitness', 'outdoor', 'norrøna', 'helly', 'nike', 'adidas', 'under armour', 'johaug', 'kari traa', 'bergans', 'swix', 'devold', 'xxl'];
@@ -30,7 +30,7 @@ const TRENING_FAQS = [
   { question: 'Hva er forskjellen på treningsklær og friluftsklær?', answer: 'Treningsklær er laget for trening innendørs og utendørs med fokus på bevegelse, fuktransport og komfort. Friluftsklær er laget for tur og friluft med fokus på vær og vindtetthet, holdbarhet og lagprinsippet. Mange norske butikker fører begge deler.' },
 ];
 
-export default function TreningsklærPage() {
+export default function TreningsklaerPage() {
   const stats = getStats();
   const allStores = getAllStores();
   const sportStores = allStores.filter((s) => SPORT_KEYWORDS.some((kw) => s.navn.toLowerCase().includes(kw)));
@@ -38,7 +38,7 @@ export default function TreningsklærPage() {
 
   return (
     <>
-      <section className="bg-gradient-to-b from-warm-100 to-cream">
+      <section className="bg-surface-alt">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Kategorier', href: '/kategorier' }, { label: 'Treningsklær' }]} />
           <div className="mt-4 max-w-2xl">

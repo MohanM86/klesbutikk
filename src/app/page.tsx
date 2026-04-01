@@ -21,12 +21,12 @@ const HOME_FAQS = [
 ];
 
 const CATS = [
-  { name: 'Dameklær', slug: 'dameklar', desc: 'Kjoler, topper, jakker og alt for henne', count: 342 },
-  { name: 'Herreklær', slug: 'herreklar', desc: 'Dresser, skjorter, bukser og mer', count: 289 },
-  { name: 'Sportsklær', slug: 'sport', desc: 'Treningsklær, outdoor og friluftsutstyr', count: 201 },
-  { name: 'Barneklær', slug: 'barneklar', desc: 'Klær for barn og baby i alle aldre', count: 156 },
-  { name: 'Designer', slug: 'designer', desc: 'Eksklusive merker og luksusmote', count: 87 },
-  { name: 'Vintage', slug: 'vintage', desc: 'Secondhand, retro og bærekraftig mote', count: 64 },
+  { name: 'Dameklær', slug: 'dameklar', desc: 'Kjoler, topper, jakker og alt for henne' },
+  { name: 'Herreklær', slug: 'herreklar', desc: 'Dresser, skjorter, bukser og mer' },
+  { name: 'Sportsklær', slug: 'sport', desc: 'Treningsklær, outdoor og friluftsutstyr' },
+  { name: 'Barneklær', slug: 'barneklar', desc: 'Klær for barn og baby i alle aldre' },
+  { name: 'Designer', slug: 'designer', desc: 'Eksklusive merker og luksusmote' },
+  { name: 'Vintage', slug: 'vintage', desc: 'Secondhand, retro og bærekraftig mote' },
 ];
 
 const QUICKNAV = [
@@ -139,7 +139,7 @@ export default function HomePage() {
               <Link key={c.slug} href={'/kategorier#' + c.slug} className="group relative bg-white p-6 hover:bg-surface-alt transition-colors duration-150">
                 <h3 className="font-body text-[15px] font-bold text-black mb-1">{c.name}</h3>
                 <p className="font-body text-[13px] text-slate leading-relaxed mb-2.5">{c.desc}</p>
-                <span className="font-body text-xs font-bold text-accent">{c.count} butikker</span>
+                <span className="font-body text-xs font-bold text-accent">Les mer</span>
                 <svg className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-border-dark group-hover:text-black group-hover:translate-x-1 transition-all duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" /></svg>
               </Link>
             ))}

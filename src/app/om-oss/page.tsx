@@ -14,7 +14,7 @@ export default function OmOssPage() {
   const stats = getStats();
   return (
     <>
-      <section className="bg-gradient-to-b from-accent-light/50 to-white">
+      <section className="bg-surface-alt">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Om oss' }]} />
           <div className="mt-4 max-w-2xl">
@@ -37,7 +37,7 @@ export default function OmOssPage() {
               { val: '357', label: 'Kommuner' },
               { val: '7 928', label: 'Sider' },
             ].map((s) => (
-              <div key={s.label} className="bg-surface rounded-2xl p-5 text-center">
+              <div key={s.label} className="bg-surface rounded-lg p-5 text-center">
                 <span className="font-body text-2xl font-extrabold text-charcoal">{s.val}</span>
                 <span className="block font-body text-xs text-muted mt-0.5">{s.label}</span>
               </div>

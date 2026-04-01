@@ -46,7 +46,7 @@ export default function BrandSearch({ brands, norwegianNames }: { brands: BrandD
           </div>
           <input type="text" value={query} onChange={(e) => setQuery(e.target.value)}
             placeholder="Søk etter merke..."
-            className="w-full bg-surface border-2 border-border focus:border-accent rounded-xl pl-11 pr-4 py-3.5 font-body text-sm text-charcoal placeholder:text-muted/50 focus:outline-none transition-colors" />
+            className="w-full bg-surface border-2 border-border focus:border-accent rounded-lg pl-11 pr-4 py-3.5 font-body text-sm text-charcoal placeholder:text-muted/50 focus:outline-none transition-colors" />
           {query && (
             <button onClick={() => setQuery('')} className="absolute right-4 top-1/2 -translate-y-1/2 text-muted hover:text-charcoal transition-colors">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
@@ -61,7 +61,7 @@ export default function BrandSearch({ brands, norwegianNames }: { brands: BrandD
             { key: 'med-butikker' as Filter, label: 'Med butikker', count: withStores },
           ].map((f) => (
             <button key={f.key} onClick={() => setFilter(f.key)}
-              className={`font-body text-xs font-bold px-4 py-3 rounded-xl transition-all whitespace-nowrap ${
+              className={`font-body text-xs font-bold px-4 py-3 rounded-lg transition-all whitespace-nowrap ${
                 filter === f.key
                   ? 'bg-accent text-white shadow-md shadow-accent/20'
                   : 'bg-surface border border-border text-muted hover:text-charcoal hover:border-border-dark'
@@ -78,8 +78,8 @@ export default function BrandSearch({ brands, norwegianNames }: { brands: BrandD
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
           {filtered.map((brand) => (
             <Link key={brand.slug} href={`/merke/${brand.slug}`}
-              className="group flex items-center gap-3 bg-cream border border-border rounded-xl p-3 hover:border-accent hover:shadow-md transition-all duration-200">
-              <div className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors duration-200 ${
+              className="group flex items-center gap-3 bg-cream border border-border rounded-lg p-3 hover:border-accent  transition-all duration-200">
+              <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors duration-200 ${
                 brand.storeCount >= 3
                   ? 'bg-accent group-hover:bg-accent-hover'
                   : 'bg-accent-light group-hover:bg-accent'
@@ -112,7 +112,7 @@ export default function BrandSearch({ brands, norwegianNames }: { brands: BrandD
         </div>
       ) : (
         <div className="text-center py-16">
-          <div className="w-14 h-14 rounded-2xl bg-surface flex items-center justify-center mx-auto mb-4">
+          <div className="w-14 h-14 rounded-lg bg-surface flex items-center justify-center mx-auto mb-4">
             <svg className="w-7 h-7 text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
             </svg>

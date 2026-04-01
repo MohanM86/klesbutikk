@@ -199,7 +199,7 @@ export default function BlogPostPage({ params }: PageProps) {
               <Link
                 key={p.slug}
                 href={`/artikkel/${p.slug}`}
-                className="group block bg-cream border border-border rounded-2xl p-5 card-hover"
+                className="group block bg-cream border border-border rounded-lg p-5 card-hover"
               >
                 <span className="font-body text-[10px] font-semibold tracking-wider uppercase text-muted">
                   {p.category}

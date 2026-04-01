@@ -167,7 +167,7 @@ export default function CategoryCityPage({ params }: PageProps) {
               <Link
                 key={c}
                 href={`/kategori/${cat.slug}/${slugify(c)}`}
-                className="font-body text-sm text-muted hover:text-accent border-2 border-border rounded-2xl px-4 py-1.5 transition-colors hover:border-accent"
+                className="font-body text-sm text-muted hover:text-accent border border-border rounded-lg px-4 py-1.5 transition-colors hover:border-accent"
               >
                 {cat.name} i {c}
               </Link>

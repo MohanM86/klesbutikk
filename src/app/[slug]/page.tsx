@@ -44,7 +44,6 @@ export default function CityPage({ params }: PageProps) {
 
   const stores = getStoresByCitySlug(params.slug);
   const content = getCityContent(city.name);
-  const featured = stores.filter((s) => s.featured);
   const allBrands = getAllBrands();
 
   // Brands present in this city
@@ -83,7 +82,7 @@ export default function CityPage({ params }: PageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(storeListSchema) }} />
 
       {/* ─── HERO ─────────────────────────────────────────── */}
-      <section className="bg-gradient-to-b from-accent-light/50 to-white">
+      <section className="bg-surface-alt">
         <div className="max-w-8xl mx-auto section-padding pt-6 md:pt-10">
         <Breadcrumbs items={[{ label: 'Byer', href: '/by' }, { label: city.name }]} />
 
@@ -99,19 +98,15 @@ export default function CityPage({ params }: PageProps) {
 
           {/* Stats row */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            <div className="bg-accent rounded-2xl p-4 text-center">
+            <div className="bg-accent rounded-lg p-4 text-center">
               <span className="font-body text-2xl md:text-3xl font-extrabold text-white">{city.storeCount}</span>
               <span className="block font-body text-xs text-white/70 mt-1">Klesbutikker</span>
             </div>
-            <div className="bg-cream border-2 border-border rounded-2xl p-4 text-center">
-              <span className="font-body text-2xl md:text-3xl font-extrabold text-charcoal">{featured.length}</span>
-              <span className="block font-body text-xs text-muted mt-1">Fremhevede</span>
-            </div>
-            <div className="bg-cream border-2 border-border rounded-2xl p-4 text-center">
+            <div className="bg-surface border border-border rounded-lg p-4 text-center">
               <span className="font-body text-2xl md:text-3xl font-extrabold text-charcoal">{cityBrands.length}</span>
               <span className="block font-body text-xs text-muted mt-1">Merker</span>
             </div>
-            <div className="bg-cream border-2 border-border rounded-2xl p-4 text-center">
+            <div className="bg-surface border border-border rounded-lg p-4 text-center">
               <span className="font-body text-2xl md:text-3xl font-extrabold text-charcoal">{withEmployees}</span>
               <span className="block font-body text-xs text-muted mt-1">Med ansatte</span>
             </div>
@@ -146,43 +141,8 @@ export default function CityPage({ params }: PageProps) {
 
       <div className="max-w-8xl mx-auto section-padding pb-16 md:pb-22">
 
-        {/* ─── FEATURED ───────────────────────────────────── */}
-        {featured.length > 0 && (
-          <section id="oversikt" className="pt-12 mb-16">
-            <h2 className="font-body text-display-sm font-extrabold text-charcoal mb-6">
-              Fremhevede butikker i {city.name}
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {featured.slice(0, 4).map((store) => (
-                <Link
-                  key={store.organisasjonsnummer}
-                  href={`/butikk/${store.slug}`}
-                  className="group block bg-charcoal text-white rounded-2xl p-5 card-hover"
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
-                      <span className="font-body text-base font-extrabold">{store.navn.charAt(0)}</span>
-                    </div>
-                    <span className="text-[10px] font-body font-bold tracking-wider uppercase bg-accent px-2.5 py-0.5 rounded-lg">
-                      Fremhevet
-                    </span>
-                  </div>
-                  <h3 className="font-body text-base font-bold mb-1 line-clamp-1 group-hover:text-white/80 transition-colors">
-                    {store.navn}
-                  </h3>
-                  <p className="font-body text-sm text-white/60 line-clamp-1">{store.adresse}</p>
-                  {store.merker && store.merker.length > 0 && (
-                    <div className="flex flex-wrap gap-1 mt-3">
-                      {store.merker.slice(0, 3).map((m) => (
-                        <span key={m} className="font-body text-[10px] text-white/40 bg-white/10 rounded-lg px-2 py-0.5">{m}</span>
-                      ))}
-                    </div>
-                  )}
-                </Link>
-              ))}
-            </div>
-          </section>
-        )}
+        {/* ─── OVERVIEW ANCHOR ───────────────────────────── */}
+        <div id="oversikt" className="pt-8"></div>
 
         {/* ─── CATEGORIES ─────────────────────────────────── */}
         <section id="kategorier" className="mb-16 pt-8">

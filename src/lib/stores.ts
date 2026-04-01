@@ -15,11 +15,6 @@ export function getStoreBySlug(slug: string): Store | undefined {
   return stores.find((s) => s.slug === slug);
 }
 
-export function getFeaturedStores(limit?: number): Store[] {
-  const featured = stores.filter((s) => s.featured);
-  return limit ? featured.slice(0, limit) : featured;
-}
-
 export function searchStores(query: string): Store[] {
   const q = query.toLowerCase();
   return stores.filter(
@@ -34,16 +29,14 @@ export function searchStores(query: string): Store[] {
 
 // ─── CITIES ───────────────────────────────────────────────
 export function getAllCities(): CityData[] {
-  const cityMap = new Map<string, { fylke: string; count: number; featured: number }>();
+  const cityMap = new Map<string, { fylke: string; count: number }>();
 
   for (const s of stores) {
     const key = s.poststed;
     if (!cityMap.has(key)) {
-      cityMap.set(key, { fylke: s.fylke, count: 0, featured: 0 });
+      cityMap.set(key, { fylke: s.fylke, count: 0 });
     }
-    const city = cityMap.get(key)!;
-    city.count++;
-    if (s.featured) city.featured++;
+    cityMap.get(key)!.count++;
   }
 
   return Array.from(cityMap.entries())
@@ -52,7 +45,6 @@ export function getAllCities(): CityData[] {
       slug: slugify(name),
       fylke: data.fylke,
       storeCount: data.count,
-      featuredCount: data.featured,
     }))
     .sort((a, b) => b.storeCount - a.storeCount);
 }
@@ -159,7 +151,6 @@ export function getStats() {
     totalCities: getAllCities().length,
     totalFylker: getAllFylker().length,
     totalBrands: brands.length,
-    featuredStores: stores.filter((s) => s.featured).length,
   };
 }
 

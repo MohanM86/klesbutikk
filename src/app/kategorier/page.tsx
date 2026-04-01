@@ -29,7 +29,7 @@ export default function KategorierPage() {
 
   return (
     <>
-      <section className="bg-gradient-to-b from-accent-light/50 to-white">
+      <section className="bg-surface-alt">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Kategorier' }]} />
           <div className="mt-4">
@@ -46,10 +46,10 @@ export default function KategorierPage() {
         <div className="max-w-8xl mx-auto section-padding py-10 md:py-14">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {CATEGORIES.map((cat, i) => (
-              <div key={cat.slug} id={cat.slug} className={`rounded-2xl p-6 border-2 transition-all relative overflow-hidden ${
-                i === 0 ? 'bg-charcoal text-white border-charcoal md:col-span-2' :
+              <div key={cat.slug} id={cat.slug} className={`rounded-lg p-6 border transition-all relative overflow-hidden ${
+                i === 0 ? 'bg-black text-white border-black md:col-span-2' :
                 i === 1 ? 'bg-accent text-white border-accent' :
-                'bg-cream border-border hover:border-accent'
+                'bg-surface border-border hover:border-accent/40 '
               }`}>
                 {/* Ghost letter */}
                 <span className={`absolute -right-2 -top-4 font-body text-[80px] md:text-[100px] font-black leading-none select-none pointer-events-none ${
@@ -79,7 +79,7 @@ export default function KategorierPage() {
                         className={`font-body text-[11px] font-medium px-2.5 py-1 rounded-lg transition-colors ${
                           i === 0 ? 'bg-white/[0.06] text-white/60 hover:bg-white/10' :
                           i === 1 ? 'bg-white/10 text-white/70 hover:bg-white/20' :
-                          'bg-surface text-muted hover:bg-accent-light hover:text-accent'
+                          'bg-surface-alt text-muted hover:bg-accent-light hover:text-accent'
                         }`}>{cat.name} i {city.name}</Link>
                     ))}
                   </div>

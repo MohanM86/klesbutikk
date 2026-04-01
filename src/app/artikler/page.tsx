@@ -21,7 +21,7 @@ const ARTICLES = [
 export default function ArtiklerPage() {
   return (
     <>
-      <section className="bg-gradient-to-b from-accent-light/50 to-white">
+      <section className="bg-surface-alt">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Artikler' }]} />
           <div className="mt-4">
@@ -39,8 +39,8 @@ export default function ArtiklerPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {ARTICLES.map((a, i) => (
               <Link key={a.slug} href={`/artikkel/${a.slug}`}
-                className={`group rounded-2xl p-6 transition-all duration-200 hover:shadow-xl hover:-translate-y-1 ${
-                  i === 0 ? 'bg-charcoal text-white md:col-span-2 lg:col-span-1' : 'bg-cream border-2 border-border hover:border-accent'
+                className={`group rounded-lg p-6 transition-all duration-200 hover:shadow-xl hover:-translate-y-1 ${
+                  i === 0 ? 'bg-charcoal text-white md:col-span-2 lg:col-span-1' : 'bg-cream border border-border hover:border-accent'
                 }`}>
                 <div className={`inline-flex font-body text-[11px] font-bold px-2.5 py-1 rounded-lg mb-4 ${
                   i === 0 ? 'bg-accent text-white' : 'bg-accent-light text-accent'

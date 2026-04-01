@@ -69,7 +69,7 @@ export default function FylkePage({ params }: PageProps) {
               <Link
                 key={city.slug}
                 href={`/${city.slug}`}
-                className="font-body text-sm text-muted hover:text-accent border-2 border-border rounded-2xl px-4 py-2 transition-colors hover:border-accent"
+                className="font-body text-sm text-muted hover:text-accent border border-border rounded-lg px-4 py-2 transition-colors hover:border-accent"
               >
                 {city.name} ({city.storeCount})
               </Link>

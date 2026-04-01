@@ -11,7 +11,7 @@ export const metadata: Metadata = createMetadata({
 export default function PersonvernPage() {
   return (
     <>
-      <section className="bg-gradient-to-b from-accent-light/50 to-white">
+      <section className="bg-surface-alt">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Personvern' }]} />
           <div className="mt-4 max-w-2xl">

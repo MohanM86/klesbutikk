@@ -60,7 +60,7 @@ export default function StorePage({ params }: PageProps) {
           {/* Main content */}
           <div className="lg:col-span-2">
             <div className="flex items-start gap-4 mb-8">
-              <div className="w-16 h-16 rounded-2xl bg-accent flex items-center justify-center flex-shrink-0">
+              <div className="w-16 h-16 rounded-lg bg-accent flex items-center justify-center flex-shrink-0">
                 <span className="font-body text-2xl font-extrabold text-white">
                   {store.navn.charAt(0)}
                 </span>
@@ -70,11 +70,6 @@ export default function StorePage({ params }: PageProps) {
                   <h1 className="font-body text-2xl md:text-3xl font-extrabold text-charcoal">
                     {store.navn}
                   </h1>
-                  {store.featured && (
-                    <span className="inline-flex items-center gap-1 bg-accent text-white text-[10px] font-body font-semibold tracking-wider uppercase px-2.5 py-1 rounded-lg">
-                      Fremhevet
-                    </span>
-                  )}
                 </div>
                 <p className="font-body text-muted">
                   Klesbutikk i{' '}
@@ -148,24 +143,8 @@ export default function StorePage({ params }: PageProps) {
 
           {/* Sidebar */}
           <div className="lg:col-span-1">
-            {/* Actions card */}
-            <div className="bg-cream border border-border rounded-lg p-6 mb-6 sticky top-24">
-              <h3 className="font-body text-lg font-extrabold text-charcoal mb-4">
-                Er dette din butikk?
-              </h3>
-              <p className="font-body text-sm text-muted mb-5">
-                Krev denne oppføringen for å oppdatere informasjon og få en fremhevet plassering.
-              </p>
-              <Link href="/legg-til-butikk" className="btn-primary w-full text-sm mb-3">
-                Krev denne oppføringen
-              </Link>
-              <Link href="/annonser" className="btn-secondary w-full text-sm">
-                Bli fremhevet
-              </Link>
-            </div>
-
             {/* Map placeholder */}
-            <div className="bg-surface border border-border rounded-lg h-48 flex items-center justify-center mb-6">
+            <div className="bg-surface-alt border border-border rounded-xl h-48 flex items-center justify-center mb-6 sticky top-24">
               <div className="text-center">
                 <svg className="w-8 h-8 text-muted mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />

@@ -39,7 +39,7 @@ export default function NettbutikkerPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(FAQS)) }} />
 
       {/* ─── HERO ─────────────────────────────────────────── */}
-      <section className="bg-gradient-to-b from-accent-light/50 to-white">
+      <section className="bg-surface-alt">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-0 md:pt-10">
           <Breadcrumbs items={[{ label: 'Nettbutikker' }]} />
 
@@ -110,7 +110,7 @@ export default function NettbutikkerPage() {
               title="Har du nettbutikk?"
               description="Få din nettbutikk fremhevet på Klesbutikk.no og nå kunder som aktivt leter etter å handle klær på nett. Vi sender trafikk rett til din nettbutikk."
               primaryCta="Se annonsepriser"
-              primaryHref="/annonser"
+              primaryHref="/legg-til-butikk"
               secondaryCta="Kontakt oss"
               secondaryHref="mailto:hei@klesbutikk.no"
             />
@@ -122,7 +122,7 @@ export default function NettbutikkerPage() {
       <section className="bg-cream border-t border-border">
         <div className="max-w-3xl mx-auto section-padding py-14 md:py-20">
           <div className="mb-8">
-            <p className="font-body text-sm font-bold text-accent mb-1">Vanlige spørsmål</p>
+            <p className="font-body text-[11px] font-bold text-accent uppercase tracking-[0.08em] mb-3">Vanlige spørsmål</p>
             <h2 className="font-body text-display-sm md:text-display font-extrabold text-charcoal">Netthandel av klær i Norge</h2>
           </div>
           <div className="space-y-2">

@@ -11,7 +11,7 @@ export const metadata: Metadata = createMetadata({
 export default function VilkarPage() {
   return (
     <>
-      <section className="bg-gradient-to-b from-accent-light/50 to-white">
+      <section className="bg-surface-alt">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Vilkår' }]} />
           <div className="mt-4 max-w-2xl">
@@ -36,7 +36,7 @@ export default function VilkarPage() {
 
             <div>
               <h2 className="font-body text-lg font-bold text-charcoal mb-2">3. Butikkoppføringer</h2>
-              <p>Alle registrerte klesbutikker i Norge får en gratis oppføring på Klesbutikk.no. Butikkeiere kan når som helst kontakte oss for å oppdatere, forbedre eller fjerne sin oppføring. Fremhevede plasseringer og premium oppføringer er betalte tjenester med egne vilkår.</p>
+              <p>Alle registrerte klesbutikker i Norge får en gratis oppføring på Klesbutikk.no. Butikkeiere kan når som helst kontakte oss for å oppdatere, forbedre eller fjerne sin oppføring. </p>
             </div>
 
             <div>

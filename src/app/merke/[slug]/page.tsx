@@ -129,7 +129,7 @@ export default function BrandPage({ params }: PageProps) {
               <Link
                 key={city}
                 href={`/${slugify(city)}`}
-                className="font-body text-sm text-muted hover:text-accent border-2 border-border rounded-2xl px-4 py-2 transition-colors hover:border-accent"
+                className="font-body text-sm text-muted hover:text-accent border border-border rounded-lg px-4 py-2 transition-colors hover:border-accent"
               >
                 {city}
               </Link>
@@ -200,7 +200,7 @@ export default function BrandPage({ params }: PageProps) {
                 <Link
                   key={b.slug}
                   href={`/merke/${b.slug}`}
-                  className="font-body text-sm text-muted hover:text-accent border-2 border-border rounded-2xl px-4 py-1.5 transition-colors hover:border-accent"
+                  className="font-body text-sm text-muted hover:text-accent border border-border rounded-lg px-4 py-1.5 transition-colors hover:border-accent"
                 >
                   {b.name}
                 </Link>

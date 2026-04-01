@@ -31,7 +31,6 @@ export interface CityData {
   slug: string;
   fylke: string;
   storeCount: number;
-  featuredCount: number;
 }
 
 export interface FylkeData {

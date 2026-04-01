@@ -38,12 +38,12 @@ export default function TreningsklaerPage() {
 
   return (
     <>
-      <section className="bg-gradient-to-b from-accent-light to-white">
+      <section className="bg-surface-alt">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Kategorier', href: '/kategorier' }, { label: 'Treningsklær' }]} />
           <div className="mt-4 max-w-2xl">
-            <p className="overline mb-2">Norges mest søkte kleskategori</p>
-            <h1 className="font-display text-hero-sm md:text-display text-charcoal mb-3">Treningsklær <em className="text-accent italic">i hele Norge</em></h1>
+            <p className="font-body text-[11px] font-bold text-accent uppercase tracking-[0.08em] mb-3">Norges mest søkte kleskategori</p>
+            <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-3">Treningsklær <em className="text-accent italic">i hele Norge</em></h1>
             <p className="font-body text-base text-muted leading-relaxed">Treningsklær er det mest søkte kleskategorien i Norge med over 12 000 søk i måneden. Finn butikker som selger treningsklær og treningstøy i din kommune. Treningsklær for dame, herre, junior og barn fra populære merker som Johaug, Nike, Under Armour og Norrøna.</p>
           </div>
         </div>
@@ -52,10 +52,10 @@ export default function TreningsklaerPage() {
       {/* Sub-categories */}
       <section className="bg-cream border-t border-border">
         <div className="max-w-8xl mx-auto section-padding py-12 md:py-16">
-          <h2 className="font-display text-display-sm text-charcoal mb-6">Populære søk innen treningsklær</h2>
+          <h2 className="font-body text-display font-extrabold-sm text-charcoal mb-6">Populære søk innen treningsklær</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {SUB_CATEGORIES.map((cat) => (
-              <div key={cat.name} className="bg-cream border border-border rounded-2xl p-6 hover:border-accent hover:shadow-lg transition-all duration-200">
+              <div key={cat.name} className="bg-cream border border-border rounded-lg p-6 hover:border-accent hover:shadow-lg transition-all duration-200">
                 <h3 className="font-body text-base font-semibold text-charcoal mb-2">{cat.name}</h3>
                 <p className="font-body text-sm text-muted leading-relaxed mb-3">{cat.desc}</p>
                 <span className="inline-block font-body text-[10px] font-semibold text-accent bg-accent-light px-2.5 py-1 rounded-full">{cat.volume} søk/mnd</span>
@@ -68,7 +68,7 @@ export default function TreningsklaerPage() {
       {/* City links for treningsklær */}
       <section className="bg-surface border-t border-border">
         <div className="max-w-8xl mx-auto section-padding py-12 md:py-16">
-          <h2 className="font-display text-display-sm text-charcoal mb-6">Finn treningsklær i din kommune</h2>
+          <h2 className="font-body text-display font-extrabold-sm text-charcoal mb-6">Finn treningsklær i din kommune</h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
             {topCities.map((city) => (
               <Link key={city.slug} href={`/${city.slug}`} className="bg-cream border border-border rounded-xl p-4 hover:border-accent transition-all">
@@ -80,11 +80,11 @@ export default function TreningsklaerPage() {
 
           <div className="max-w-3xl">
             <div className="font-body text-sm text-muted leading-relaxed space-y-4 mb-12">
-              <h3 className="font-display text-xl text-charcoal">Treningsklær i norske butikker</h3>
+              <h3 className="font-body text-xl font-extrabold text-charcoal">Treningsklær i norske butikker</h3>
               <p>Norge er en av verdens mest aktive nasjoner, og det gjenspeiles i etterspørselen etter treningsklær. Over 12 000 nordmenn søker etter treningsklær hver eneste måned, noe som gjør det til den desidert mest populære kleskategorien i landet. Treningsklær for dame alene har 4 400 månedlige søk, mens treningsklær for herre har 2 900.</p>
               <p>Norske treningsmerker som Johaug, Kari Traa, Norrøna, Helly Hansen og Bergans er spesielt populære fordi de er utviklet for å tåle norske forhold. Johaug treningsklær har alene 1 000 månedlige søk i Norge. Internasjonale merker som Nike, Adidas og Under Armour har også sterk tilstedeværelse i norske sportsbutikker.</p>
               <p>Vi har kartlagt over 200 butikker som selger treningsklær og sportsklær i 112 kommuner over hele Norge. Enten du er ute etter treningstights, løpejakker, joggedresser eller funksjonelt treningstøy, hjelper vi deg å finne riktig butikk i din kommune.</p>
-              <p>For butikkeiere: selger din butikk treningsklær? <Link href="/annonser" className="text-accent font-medium">Bli synlig</Link> for de 12 000 som søker etter treningsklær hver måned.</p>
+              <p></p>
             </div>
             <FAQAccordion faqs={TRENING_FAQS} title="Vanlige spørsmål om treningsklær" />
             <div className="mt-14">

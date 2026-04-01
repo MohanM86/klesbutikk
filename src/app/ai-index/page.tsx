@@ -157,7 +157,7 @@ export default function AIIndexPage() {
               { title: 'Kategori + by', count: '~3 000+', pattern: '/kategori/{kat}/{by}', desc: 'Kryssider for kategori i en gitt by.' },
               { title: 'Artikler', count: 6, pattern: '/artikler/{slug}', desc: 'Redaksjonelle artikler om mote, shopping og klesbutikker i Norge.' },
             ].map((type) => (
-              <div key={type.title} className="bg-cream border border-border rounded-2xl p-5">
+              <div key={type.title} className="bg-cream border border-border rounded-lg p-5">
                 <div className="flex items-center gap-2 mb-2">
                   <h3 className="font-body text-base font-extrabold text-charcoal">{type.title}</h3>
                   <span className="font-body text-[10px] font-bold bg-accent-light text-accent px-2 py-0.5 rounded-md">{type.count}</span>
@@ -248,7 +248,7 @@ export default function AIIndexPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
             {/* Schema.org */}
-            <div className="bg-white/[0.04] border border-white/[0.06] rounded-2xl p-5">
+            <div className="bg-white/[0.04] border border-white/[0.06] rounded-lg p-5">
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
                   <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg>
@@ -264,7 +264,7 @@ export default function AIIndexPage() {
             </div>
 
             {/* AI Crawlers */}
-            <div className="bg-white/[0.04] border border-white/[0.06] rounded-2xl p-5">
+            <div className="bg-white/[0.04] border border-white/[0.06] rounded-lg p-5">
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
                   <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25" /></svg>
@@ -280,7 +280,7 @@ export default function AIIndexPage() {
             </div>
 
             {/* Machine-readable files */}
-            <div className="bg-white/[0.04] border border-white/[0.06] rounded-2xl p-5">
+            <div className="bg-white/[0.04] border border-white/[0.06] rounded-lg p-5">
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
                   <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>

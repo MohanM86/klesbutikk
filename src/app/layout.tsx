@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen flex flex-col bg-cream">
         <Header />
-        <main className="flex-1 pt-16">{children}</main>
+        <main className="flex-1 pt-[90px]">{children}</main>
         <Footer />
         <GeolocateBar />
       </body>

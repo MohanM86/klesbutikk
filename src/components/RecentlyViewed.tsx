@@ -44,7 +44,7 @@ export default function RecentlyViewed() {
           <span className="font-body text-xs font-bold text-muted whitespace-nowrap flex-shrink-0">Nylig sett</span>
           {items.map((item) => (
             <Link key={item.href} href={item.href}
-              className="flex items-center gap-2 bg-cream border border-border rounded-xl px-3 py-2 hover:border-accent transition-colors flex-shrink-0">
+              className="flex items-center gap-2 bg-cream border border-border rounded-lg px-3 py-2 hover:border-accent transition-colors flex-shrink-0">
               <div className="w-6 h-6 rounded-lg bg-accent-light flex items-center justify-center">
                 <span className="font-body text-[10px] font-extrabold text-accent">{item.name.charAt(0)}</span>
               </div>

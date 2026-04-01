@@ -14,7 +14,7 @@ export default function FylkerPage() {
   const fylker = getAllFylker();
   return (
     <>
-      <section className="bg-gradient-to-b from-accent-light/50 to-white">
+      <section className="bg-surface-alt">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Fylker' }]} />
           <div className="flex items-end justify-between mt-4">
@@ -34,8 +34,8 @@ export default function FylkerPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {fylker.map((fylke, i) => (
               <Link key={fylke.slug} href={`/fylke/${fylke.slug}`}
-                className={`group relative rounded-2xl p-6 overflow-hidden transition-all duration-200 hover:shadow-xl hover:-translate-y-1 ${
-                  i === 0 ? 'bg-charcoal text-white' : i === 1 ? 'bg-accent text-white' : 'bg-cream border-2 border-border hover:border-accent'
+                className={`group relative rounded-lg p-6 overflow-hidden transition-all duration-200 hover:shadow-xl hover:-translate-y-1 ${
+                  i === 0 ? 'bg-charcoal text-white' : i === 1 ? 'bg-accent text-white' : 'bg-cream border border-border hover:border-accent'
                 }`}>
                 <span className={`absolute right-2 -top-1 font-body text-[70px] font-black leading-none select-none pointer-events-none ${
                   i === 0 ? 'text-white/[0.04]' : i === 1 ? 'text-white/10' : 'text-charcoal/[0.03]'

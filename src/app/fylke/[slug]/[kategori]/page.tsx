@@ -154,7 +154,7 @@ export default function FylkeCategoryPage({ params }: PageProps) {
               <Link
                 key={c.slug}
                 href={`/fylke/${fylke.slug}/${c.slug}`}
-                className="font-body text-sm text-muted hover:text-accent border-2 border-border rounded-2xl px-4 py-1.5 transition-colors hover:border-accent"
+                className="font-body text-sm text-muted hover:text-accent border border-border rounded-lg px-4 py-1.5 transition-colors hover:border-accent"
               >
                 {c.name} i {fylke.name}
               </Link>

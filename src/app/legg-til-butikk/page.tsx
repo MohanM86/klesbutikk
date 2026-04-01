@@ -12,7 +12,7 @@ export const metadata: Metadata = createMetadata({
 export default function LeggTilButikkPage() {
   return (
     <>
-      <section className="bg-gradient-to-b from-accent-light/50 to-white">
+      <section className="bg-surface-alt">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Legg til butikk' }]} />
           <div className="mt-4 max-w-2xl">
@@ -27,22 +27,21 @@ export default function LeggTilButikkPage() {
             {[
               { n: '1', title: 'Sjekk om butikken din allerede er listet', desc: 'Alle klesbutikker i Norge er allerede på Klesbutikk.no helt gratis. Søk etter butikknavnet ditt i søkefeltet på forsiden for å se oppføringen din.' },
               { n: '2', title: 'Oppdater informasjonen', desc: 'Stemmer ikke adressen, telefonnummeret eller andre opplysninger? Send oss en epost på hei@klesbutikk.no, så ordner vi det.' },
-              { n: '3', title: 'Bli fremhevet', desc: 'Ønsker du økt synlighet? En fremhevet oppføring gir deg prioritert plassering, et synlig badge og eksponering på relevante merke og kategorisider. Se priser på annonseringssiden vår.' },
+              { n: '3', title: 'Kontakt oss', desc: 'Har du andre sporsmal eller onsker om tilleggstjenester? Ta kontakt pa hei@klesbutikk.no, sa hjelper vi deg.' },
             ].map((step) => (
               <div key={step.n} className="flex gap-5">
-                <div className="w-12 h-12 rounded-2xl bg-accent text-white flex items-center justify-center flex-shrink-0">
-                  <span className="font-body text-lg font-extrabold">{step.n}</span>
+                <div className="w-12 h-12 rounded-lg bg-accent text-white flex items-center justify-center flex-shrink-0">
+                  <span className="font-display text-lg">{step.n}</span>
                 </div>
                 <div>
-                  <h2 className="font-body text-base font-extrabold text-charcoal mb-1">{step.title}</h2>
+                  <h2 className="font-body text-base font-bold text-charcoal mb-1">{step.title}</h2>
                   <p className="font-body text-sm text-muted leading-relaxed">{step.desc}</p>
                 </div>
               </div>
             ))}
           </div>
-          <div className="mt-10 flex gap-3">
-            <Link href="/annonser" className="btn-primary">Se annonsepriser</Link>
-            <a href="mailto:hei@klesbutikk.no" className="btn-outline">Send oss en epost</a>
+          <div className="mt-10">
+            <a href="mailto:hei@klesbutikk.no" className="btn-primary">Send oss en epost</a>
           </div>
         </div>
       </section>

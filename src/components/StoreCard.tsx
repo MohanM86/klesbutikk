@@ -3,21 +3,20 @@ import { Store } from '@/lib/types';
 
 export default function StoreCard({ store, showCity = false }: { store: Store; showCity?: boolean }) {
   return (
-    <Link href={`/butikk/${store.slug}`}
-      className="group block bg-cream border border-border rounded-xl p-5 card-hover relative hover:border-accent/30">
-      {store.featured && (
-        <span className="absolute top-4 right-4 inline-flex items-center gap-1 bg-accent text-white text-[10px] font-body font-bold px-2.5 py-1 rounded-md">
-          Fremhevet
-        </span>
+    <Link href={'/butikk/' + store.slug}
+      className="group block border border-border rounded-lg p-4 transition-all duration-150 hover:border-black">
+      <div className="flex items-center gap-3 mb-2.5">
+        <div className="w-9 h-9 rounded-full bg-black flex items-center justify-center flex-shrink-0 text-white font-body text-sm font-extrabold">
+          {store.navn.charAt(0)}
+        </div>
+        <div className="min-w-0">
+          <h3 className="font-body text-[13px] font-bold text-black line-clamp-1">{store.navn}</h3>
+          <p className="font-body text-[11px] text-slate">{showCity ? store.poststed : store.kommune}, {store.fylke}</p>
+        </div>
+      </div>
+      {store.adresse && (
+        <p className="font-body text-[11px] text-muted line-clamp-1">{store.adresse}, {store.postnummer}</p>
       )}
-      <div className="w-11 h-11 rounded-xl bg-accent-light flex items-center justify-center mb-4 group-hover:bg-accent transition-colors duration-200">
-        <span className="font-body text-lg font-extrabold text-accent group-hover:text-white transition-colors">{store.navn.charAt(0)}</span>
-      </div>
-      <h3 className="font-body text-sm font-bold text-charcoal mb-1 group-hover:text-accent transition-colors line-clamp-1">{store.navn}</h3>
-      <div className="space-y-0.5">
-        {store.adresse && <p className="font-body text-xs text-muted line-clamp-1">{store.adresse}</p>}
-        <p className="font-body text-xs text-muted/70">{store.postnummer} {showCity ? store.poststed : store.kommune || ''}</p>
-      </div>
     </Link>
   );
 }

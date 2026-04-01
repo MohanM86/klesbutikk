@@ -38,7 +38,7 @@ export default function CitiesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(cityListSchema) }} />
 
       {/* ─── HERO ─────────────────────────────────────────── */}
-      <section className="bg-gradient-to-b from-accent-light/50 to-white">
+      <section className="bg-surface-alt">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-0 md:pt-10">
           <Breadcrumbs items={[{ label: 'Byer' }]} />
 
@@ -75,10 +75,10 @@ export default function CitiesPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 pb-10">
             {heroData.map((city) => (
               <Link key={city.slug} href={`/${city.slug}`}
-                className={`group relative rounded-2xl p-5 min-h-[140px] overflow-hidden transition-all duration-200 hover:shadow-xl hover:-translate-y-1 ${
+                className={`group relative rounded-lg p-5 min-h-[140px] overflow-hidden transition-all duration-200 hover:shadow-xl hover:-translate-y-1 ${
                   city.accent === 'dark' ? 'bg-charcoal text-white' :
                   city.accent === 'orange' ? 'bg-accent text-white' :
-                  'bg-cream border-2 border-border hover:border-accent text-charcoal'
+                  'bg-cream border border-border hover:border-accent text-charcoal'
                 }`}>
                 <span className={`absolute right-1 -top-2 font-body text-[90px] font-black leading-none select-none pointer-events-none ${
                   city.accent === 'dark' ? 'text-white/[0.04]' :

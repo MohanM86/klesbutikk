@@ -1,36 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { searchStores, getAllCities } from '@/lib/stores';
-import { slugify } from '@/lib/slugify';
 
-export async function GET(request: NextRequest) {
-  const q = request.nextUrl.searchParams.get('q') || '';
+export async function GET(req: NextRequest) {
+  const q = req.nextUrl.searchParams.get('q')?.trim() || '';
+  if (q.length < 2) return NextResponse.json({ results: [] });
 
-  if (q.length < 2) {
-    return NextResponse.json({ results: [] });
+  const results: { type: string; label: string; sublabel: string; href: string }[] = [];
+
+  const cities = getAllCities().filter((c) => c.name.toLowerCase().includes(q.toLowerCase()));
+  for (const city of cities.slice(0, 5)) {
+    results.push({ type: 'city', label: city.name, sublabel: city.fylke + ' · ' + city.storeCount + ' butikker', href: '/' + city.slug });
   }
 
-  const qLower = q.toLowerCase();
+  const stores = searchStores(q);
+  for (const store of stores.slice(0, 5)) {
+    results.push({ type: 'store', label: store.navn, sublabel: store.adresse + ', ' + store.poststed, href: '/butikk/' + store.slug });
+  }
 
-  // Search cities
-  const cities = getAllCities()
-    .filter((c) => c.name.toLowerCase().includes(qLower))
-    .slice(0, 3)
-    .map((c) => ({
-      type: 'city' as const,
-      label: c.name,
-      sublabel: `${c.storeCount} butikker · ${c.fylke}`,
-      href: `/${c.slug}`,
-    }));
-
-  // Search stores
-  const stores = searchStores(q)
-    .slice(0, 5)
-    .map((s) => ({
-      type: 'store' as const,
-      label: s.navn,
-      sublabel: `${s.poststed} · ${s.fylke}`,
-      href: `/butikk/${s.slug}`,
-    }));
-
-  return NextResponse.json({ results: [...cities, ...stores] });
+  return NextResponse.json({ results: results.slice(0, 8) });
 }

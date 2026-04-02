@@ -17,15 +17,6 @@ export interface Store {
   merker?: string[];
 }
 
-export interface BrandData {
-  name: string;
-  slug: string;
-  stores: string[];
-  cities: string[];
-  fylker: string[];
-  storeCount: number;
-}
-
 export interface CityData {
   name: string;
   slug: string;

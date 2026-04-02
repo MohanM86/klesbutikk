@@ -165,21 +165,24 @@ export default function BlogPostPage({ params }: PageProps) {
         }}
       />
 
-      <article className="max-w-3xl mx-auto section-padding pt-8 pb-16 md:pt-12 md:pb-22">
-        <Breadcrumbs items={[{ label: 'Artikler', href: '/artikler' }, { label: post.title }]} />
-
-        <div className="mb-10">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="font-body text-[10px] font-semibold tracking-wider uppercase text-muted bg-surface px-2.5 py-1 rounded-lg">
-              {post.category}
-            </span>
-            <time className="font-body text-xs text-muted">{post.date}</time>
+      <section className="bg-black text-white">
+        <div className="max-w-3xl mx-auto section-padding pt-6 pb-8 md:pt-10 md:pb-10">
+          <Breadcrumbs items={[{ label: 'Artikler', href: '/artikler' }, { label: post.title }]} />
+          <div className="mt-4">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="font-body text-[10px] font-semibold tracking-wider uppercase text-accent bg-white/10 px-2.5 py-1 rounded-lg">
+                {post.category}
+              </span>
+              <time className="font-body text-xs text-white/40">{post.date}</time>
+            </div>
+            <h1 className="font-body text-hero-sm md:text-display font-extrabold text-white">
+              {post.title}
+            </h1>
           </div>
-
-          <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-6">
-            {post.title}
-          </h1>
         </div>
+      </section>
+
+      <article className="max-w-3xl mx-auto section-padding pt-8 pb-16 md:pt-12 md:pb-22">
 
         <div className="space-y-5 mb-16">
           {post.content.map((paragraph, i) => (

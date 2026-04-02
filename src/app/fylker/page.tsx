@@ -14,17 +14,17 @@ export default function FylkerPage() {
   const fylker = getAllFylker();
   return (
     <>
-      <section className="bg-surface-alt">
+      <section className="bg-black text-white">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Fylker' }]} />
           <div className="flex items-end justify-between mt-4">
             <div>
-              <div className="inline-flex items-center gap-2 bg-surface text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/10 mb-3">
+              <div className="inline-flex items-center gap-2 bg-white/10 text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/20 mb-3">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" /></svg>
                 {fylker.length} fylker
               </div>
-              <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-2">Klesbutikker etter fylke</h1>
-              <p className="font-body text-base text-muted max-w-lg">Utforsk klesbutikker i alle norske fylker. Hvert fylke har sitt eget unike motetilbud.</p>
+              <h1 className="font-body text-hero-sm md:text-display font-extrabold text-white mb-2">Klesbutikker etter fylke</h1>
+              <p className="font-body text-base text-white/60 max-w-lg">Utforsk klesbutikker i alle norske fylker. Hvert fylke har sitt eget unike motetilbud.</p>
             </div>
           </div>
         </div>

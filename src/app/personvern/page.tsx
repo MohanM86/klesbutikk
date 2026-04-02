@@ -11,12 +11,12 @@ export const metadata: Metadata = createMetadata({
 export default function PersonvernPage() {
   return (
     <>
-      <section className="bg-surface-alt">
+      <section className="bg-black text-white">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Personvern' }]} />
           <div className="mt-4 max-w-2xl">
-            <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-2">Personvernerklæring</h1>
-            <p className="font-body text-base text-muted">Sist oppdatert: mars 2026</p>
+            <h1 className="font-body text-hero-sm md:text-display font-extrabold text-white mb-2">Personvernerklæring</h1>
+            <p className="font-body text-base text-white/60">Sist oppdatert: mars 2026</p>
           </div>
         </div>
       </section>

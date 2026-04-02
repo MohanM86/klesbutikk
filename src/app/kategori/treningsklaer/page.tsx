@@ -38,12 +38,12 @@ export default function TreningsklaerPage() {
 
   return (
     <>
-      <section className="bg-surface-alt">
+      <section className="bg-black text-white">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Kategorier', href: '/kategorier' }, { label: 'Treningsklær' }]} />
           <div className="mt-4 max-w-2xl">
             <p className="overline mb-2">Norges mest søkte kleskategori</p>
-            <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-3">Treningsklær <em className="text-accent italic">i hele Norge</em></h1>
+            <h1 className="font-body text-hero-sm md:text-display font-extrabold text-white mb-3">Treningsklær <em className="text-accent italic">i hele Norge</em></h1>
             <p className="font-body text-base text-muted leading-relaxed">Treningsklær er det mest søkte kleskategorien i Norge med over 12 000 søk i måneden. Finn butikker som selger treningsklær og treningstøy i din kommune. Treningsklær for dame, herre, junior og barn fra populære merker som Johaug, Nike, Under Armour og Norrøna.</p>
           </div>
         </div>

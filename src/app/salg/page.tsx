@@ -32,12 +32,12 @@ export default function SalgPage() {
   const stats = getStats();
   return (
     <>
-      <section className="bg-surface-alt">
+      <section className="bg-black text-white">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Klær på salg' }]} />
           <div className="mt-4 max-w-2xl">
             <p className="overline mb-2">Salg og tilbud</p>
-            <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-3">Klær på salg <em className="text-accent italic">i hele Norge</em></h1>
+            <h1 className="font-body text-hero-sm md:text-display font-extrabold text-white mb-3">Klær på salg <em className="text-accent italic">i hele Norge</em></h1>
             <p className="font-body text-base text-muted leading-relaxed">Finn klesbutikker med salg og tilbud i din kommune. Barneklær salg, dameklær salg, herreklær salg, treningsklær salg og mer. Vi dekker {stats.totalStores.toLocaleString('nb-NO')} klesbutikker i 227 kommuner.</p>
           </div>
         </div>

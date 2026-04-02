@@ -43,21 +43,25 @@ export default function FylkePage({ params }: PageProps) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bcSchema) }} />
 
-      <div className="max-w-8xl mx-auto section-padding pt-8 pb-16 md:pt-12 md:pb-22">
-        <Breadcrumbs items={[{ label: 'Fylker', href: '/fylker' }, { label: fylke.name }]} />
-
-        <div className="mb-12">
-          <p className="font-body text-xs font-semibold font-bold text-accent mb-3">
-            {fylke.storeCount} butikker · {fylke.cities.length} byer
-          </p>
-          <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-4">
-            Klesbutikker i {fylke.name}
-          </h1>
-          <p className="font-body text-base text-muted max-w-lg">
-            Utforsk alle {fylke.storeCount} klesbutikker i {fylke.name}. Fylket har klesbutikker
-            i {fylke.cities.length} byer, inkludert {fylke.cities.slice(0, 3).join(', ')}.
-          </p>
+      <section className="bg-black text-white">
+        <div className="max-w-8xl mx-auto section-padding pt-6 pb-8 md:pt-10 md:pb-10">
+          <Breadcrumbs items={[{ label: 'Fylker', href: '/fylker' }, { label: fylke.name }]} />
+          <div className="mt-4">
+            <p className="font-body text-xs font-bold text-accent mb-3">
+              {fylke.storeCount} butikker · {fylke.cities.length} byer
+            </p>
+            <h1 className="font-body text-hero-sm md:text-display font-extrabold text-white mb-4">
+              Klesbutikker i {fylke.name}
+            </h1>
+            <p className="font-body text-base text-white/60 max-w-lg">
+              Utforsk alle {fylke.storeCount} klesbutikker i {fylke.name}. Fylket har klesbutikker
+              i {fylke.cities.length} byer, inkludert {fylke.cities.slice(0, 3).join(', ')}.
+            </p>
+          </div>
         </div>
+      </section>
+
+      <div className="max-w-8xl mx-auto section-padding pt-8 pb-16 md:pt-12 md:pb-22">
 
         {/* Cities in this fylke */}
         <section className="mb-12">

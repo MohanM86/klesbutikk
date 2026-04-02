@@ -12,12 +12,12 @@ export const metadata: Metadata = createMetadata({
 export default function LeggTilButikkPage() {
   return (
     <>
-      <section className="bg-surface-alt">
+      <section className="bg-black text-white">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Legg til butikk' }]} />
           <div className="mt-4 max-w-2xl">
-            <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-2">Legg til butikken din</h1>
-            <p className="font-body text-base text-muted">Er du butikkeier? Slik kommer du i gang med Klesbutikk.no.</p>
+            <h1 className="font-body text-hero-sm md:text-display font-extrabold text-white mb-2">Legg til butikken din</h1>
+            <p className="font-body text-base text-white/60">Er du butikkeier? Slik kommer du i gang med Klesbutikk.no.</p>
           </div>
         </div>
       </section>

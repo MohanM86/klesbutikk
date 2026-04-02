@@ -14,12 +14,12 @@ export default function OmOssPage() {
   const stats = getStats();
   return (
     <>
-      <section className="bg-surface-alt">
+      <section className="bg-black text-white">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Om oss' }]} />
           <div className="mt-4 max-w-2xl">
-            <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-2">Om Klesbutikk.no</h1>
-            <p className="font-body text-base text-muted">Norges mest komplette oversikt over klesbutikker.</p>
+            <h1 className="font-body text-hero-sm md:text-display font-extrabold text-white mb-2">Om Klesbutikk.no</h1>
+            <p className="font-body text-base text-white/60">Norges mest komplette oversikt over klesbutikker.</p>
           </div>
         </div>
       </section>

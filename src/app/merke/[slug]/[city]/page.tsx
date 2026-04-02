@@ -87,28 +87,27 @@ export default function BrandCityPage({ params }: PageProps) {
       ])) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
 
-      <div className="max-w-8xl mx-auto section-padding pt-8 pb-16 md:pt-12 md:pb-22">
-        <Breadcrumbs items={[
-          { label: 'Merker', href: '/merker' },
-          { label: brand.name, href: `/merke/${brand.slug}` },
-          { label: cityName },
-        ]} />
-
-        <div className="mb-12">
-          <div className="flex items-center gap-4 mb-6">
+      <section className="bg-black text-white">
+        <div className="max-w-8xl mx-auto section-padding pt-6 pb-8 md:pt-10 md:pb-10">
+          <Breadcrumbs items={[
+            { label: 'Merker', href: '/merker' },
+            { label: brand.name, href: `/merke/${brand.slug}` },
+            { label: cityName },
+          ]} />
+          <div className="flex items-center gap-4 mt-4 mb-4">
             <div className="w-14 h-14 rounded-lg bg-accent flex items-center justify-center">
               <span className="font-body text-xl font-extrabold text-white">{brand.name.charAt(0)}</span>
             </div>
             <div>
-              <p className="font-body text-xs font-semibold font-bold text-accent mb-1">
+              <p className="font-body text-xs font-bold text-accent mb-1">
                 {brand.name} · {cityName}
               </p>
-              <h1 className="font-body text-display-sm md:text-display font-extrabold text-charcoal">
+              <h1 className="font-body text-display-sm md:text-display font-extrabold text-white">
                 {brand.name} <span className="italic font-normal">i {cityName}</span>
               </h1>
             </div>
           </div>
-          <p className="font-body text-base text-muted max-w-lg">
+          <p className="font-body text-base text-white/60 max-w-lg">
             {cityStores.length > 0 ? (
               <>
                 Finn {brand.name} i {cityName}. Det er {cityStores.length} registrerte
@@ -123,6 +122,9 @@ export default function BrandCityPage({ params }: PageProps) {
             )}
           </p>
         </div>
+      </section>
+
+      <div className="max-w-8xl mx-auto section-padding pt-8 pb-16 md:pt-12 md:pb-22">
 
         {/* Matching stores */}
         {cityStores.length > 0 && (

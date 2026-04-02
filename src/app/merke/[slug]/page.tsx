@@ -79,28 +79,25 @@ export default function BrandPage({ params }: PageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(storeListSchema) }} />
 
-      <div className="max-w-8xl mx-auto section-padding pt-8 pb-16 md:pt-12 md:pb-22">
-        <Breadcrumbs items={[{ label: 'Merker', href: '/merker' }, { label: brand.name }]} />
-
-        {/* Hero */}
-        <div className="mb-12 md:mb-16">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-16 h-16 rounded-lg bg-accent flex items-center justify-center">
-              <span className="font-body text-2xl font-extrabold text-white">
+      <section className="bg-black text-white">
+        <div className="max-w-8xl mx-auto section-padding pt-6 pb-8 md:pt-10 md:pb-10">
+          <Breadcrumbs items={[{ label: 'Merker', href: '/merker' }, { label: brand.name }]} />
+          <div className="flex items-center gap-4 mt-4 mb-4">
+            <div className="w-14 h-14 rounded-lg bg-accent flex items-center justify-center">
+              <span className="font-body text-xl font-extrabold text-white">
                 {brand.name.charAt(0)}
               </span>
             </div>
             <div>
-              <p className="font-body text-xs font-semibold font-bold text-accent mb-1">
+              <p className="font-body text-xs font-bold text-accent mb-1">
                 Klesmerke{brand.storeCount > 0 ? ` · ${brand.storeCount} butikker · ${brand.cities.length} byer` : ''}
               </p>
-              <h1 className="font-body text-display-sm md:text-display font-extrabold text-charcoal">
+              <h1 className="font-body text-display-sm md:text-display font-extrabold text-white">
                 {brand.name} <span className="italic font-normal">i Norge</span>
               </h1>
             </div>
           </div>
-
-          <p className="font-body text-base text-muted max-w-lg">
+          <p className="font-body text-base text-white/60 max-w-lg">
             {brand.storeCount > 0 ? (
               <>
                 Finn alle butikker som fører {brand.name} i Norge. Merket er tilgjengelig
@@ -118,7 +115,9 @@ export default function BrandPage({ params }: PageProps) {
             )}
           </p>
         </div>
+      </section>
 
+      <div className="max-w-8xl mx-auto section-padding pt-8 pb-16 md:pt-12 md:pb-22">
         {/* Cities with this brand */}
         <section className="mb-10">
           <h2 className="font-body text-xl font-extrabold text-charcoal mb-4">

@@ -21,16 +21,16 @@ const ARTICLES = [
 export default function ArtiklerPage() {
   return (
     <>
-      <section className="bg-surface-alt">
+      <section className="bg-black text-white">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Artikler' }]} />
           <div className="mt-4">
-            <div className="inline-flex items-center gap-2 bg-surface text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/10 mb-3">
+            <div className="inline-flex items-center gap-2 bg-white/10 text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/20 mb-3">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
               {ARTICLES.length} artikler
             </div>
-            <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-2">Artikler</h1>
-            <p className="font-body text-base text-muted max-w-lg">Les om norsk mote, handleguider, bærekraftig mote og de beste klesbutikkene i Norge.</p>
+            <h1 className="font-body text-hero-sm md:text-display font-extrabold text-white mb-2">Artikler</h1>
+            <p className="font-body text-base text-white/60 max-w-lg">Les om norsk mote, handleguider, bærekraftig mote og de beste klesbutikkene i Norge.</p>
           </div>
         </div>
       </section>

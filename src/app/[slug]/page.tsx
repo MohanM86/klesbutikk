@@ -82,19 +82,19 @@ export default function CityPage({ params }: PageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(storeListSchema) }} />
 
       {/* ─── HERO ─────────────────────────────────────────── */}
-      <section className="bg-surface-alt">
+      <section className="bg-black text-white">
         <div className="max-w-8xl mx-auto section-padding pt-6 md:pt-10">
         <Breadcrumbs items={[{ label: 'Byer', href: '/by' }, { label: city.name }]} />
 
         <div className="mt-4 mb-6 md:mb-10">
-          <div className="inline-flex items-center gap-2 bg-surface text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/10 mb-3">
+          <div className="inline-flex items-center gap-2 bg-white/10 text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/20 mb-3">
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
             {city.fylke}
           </div>
-          <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-3">
+          <h1 className="font-body text-hero-sm md:text-display font-extrabold text-white mb-3">
             Klesbutikker i {city.name}
           </h1>
-          <p className="font-body text-base text-muted max-w-lg mb-8">{content.intro}</p>
+          <p className="font-body text-base text-white/60 max-w-lg mb-8">{content.intro}</p>
 
           {/* Stats row */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -102,13 +102,13 @@ export default function CityPage({ params }: PageProps) {
               <span className="font-body text-2xl md:text-3xl font-extrabold text-white">{city.storeCount}</span>
               <span className="block font-body text-xs text-white/70 mt-1">Klesbutikker</span>
             </div>
-            <div className="bg-surface border border-border rounded-lg p-4 text-center">
-              <span className="font-body text-2xl md:text-3xl font-extrabold text-charcoal">{cityBrands.length}</span>
-              <span className="block font-body text-xs text-muted mt-1">Merker</span>
+            <div className="bg-white/10 rounded-lg p-4 text-center">
+              <span className="font-body text-2xl md:text-3xl font-extrabold text-white">{cityBrands.length}</span>
+              <span className="block font-body text-xs text-white/40 mt-1">Merker</span>
             </div>
-            <div className="bg-surface border border-border rounded-lg p-4 text-center">
-              <span className="font-body text-2xl md:text-3xl font-extrabold text-charcoal">{withEmployees}</span>
-              <span className="block font-body text-xs text-muted mt-1">Med ansatte</span>
+            <div className="bg-white/10 rounded-lg p-4 text-center">
+              <span className="font-body text-2xl md:text-3xl font-extrabold text-white">{withEmployees}</span>
+              <span className="block font-body text-xs text-white/40 mt-1">Med ansatte</span>
             </div>
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function CityPage({ params }: PageProps) {
       </section>
 
       {/* ─── STICKY NAV ───────────────────────────────────── */}
-      <div className="sticky top-0 z-30 bg-surface/80 backdrop-blur-md border-b border-border">
+      <div className="sticky top-[84px] z-30 bg-white/95 backdrop-blur-md border-b border-border">
         <div className="max-w-8xl mx-auto section-padding">
           <nav className="flex gap-1 overflow-x-auto py-3 scrollbar-hide -mx-1">
             {[
@@ -218,15 +218,15 @@ export default function CityPage({ params }: PageProps) {
           <div className="bg-cream border border-border rounded-lg p-6 md:p-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
               <div>
-                <span className="font-body text-3xl font-extrabold text-charcoal">{stores.length}</span>
+                <span className="font-body text-3xl font-extrabold text-white">{stores.length}</span>
                 <span className="block font-body text-xs text-muted mt-1">Registrerte bedrifter</span>
               </div>
               <div>
-                <span className="font-body text-3xl font-extrabold text-charcoal">{withEmployees}</span>
+                <span className="font-body text-3xl font-extrabold text-white">{withEmployees}</span>
                 <span className="block font-body text-xs text-muted mt-1">Med ansatte</span>
               </div>
               <div>
-                <span className="font-body text-3xl font-extrabold text-charcoal">{cityBrands.length}</span>
+                <span className="font-body text-3xl font-extrabold text-white">{cityBrands.length}</span>
                 <span className="block font-body text-xs text-muted mt-1">Identifiserte merker</span>
               </div>
               <div>
@@ -246,7 +246,7 @@ export default function CityPage({ params }: PageProps) {
           <h2 className="font-body text-display-sm font-extrabold text-charcoal mb-4">
             Shopping i {city.name}
           </h2>
-          <div className="font-body text-base text-muted max-w-lg">
+          <div className="font-body text-base text-white/60 max-w-lg">
             <p>{content.shoppingInfo}</p>
           </div>
         </section>

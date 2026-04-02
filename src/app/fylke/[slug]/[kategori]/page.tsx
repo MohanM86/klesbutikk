@@ -79,34 +79,38 @@ export default function FylkeCategoryPage({ params }: PageProps) {
         { name: cat.name, url: `/fylke/${fylke.slug}/${cat.slug}` },
       ])) }} />
 
-      <div className="max-w-8xl mx-auto section-padding pt-8 pb-16 md:pt-12 md:pb-22">
-        <Breadcrumbs items={[
-          { label: 'Fylker', href: '/fylker' },
-          { label: fylke.name, href: `/fylke/${fylke.slug}` },
-          { label: cat.name },
-        ]} />
-
-        <div className="mb-12">
-          <p className="font-body text-xs font-semibold font-bold text-accent mb-3">
-            {fylke.name} · {cat.name}
-          </p>
-          <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-4">
-            {cat.name} <span className="italic font-normal">i {fylke.name}</span>
-          </h1>
-          <p className="font-body text-base text-muted max-w-lg">
-            {matchingStores.length > 0 ? (
-              <>
-                Finn {cat.name.toLowerCase()}-butikker i {fylke.name}. Det er {matchingStores.length} registrerte
-                butikker fordelt over {citiesWithMatches.length} byer i fylket.
-              </>
-            ) : (
-              <>
-                Utforsk klesbutikker i {fylke.name}. Vi har {fylkeStores.length} registrerte
-                butikker i fylket. Se alle butikker nedenfor.
-              </>
-            )}
-          </p>
+      <section className="bg-black text-white">
+        <div className="max-w-8xl mx-auto section-padding pt-6 pb-8 md:pt-10 md:pb-10">
+          <Breadcrumbs items={[
+            { label: 'Fylker', href: '/fylker' },
+            { label: fylke.name, href: `/fylke/${fylke.slug}` },
+            { label: cat.name },
+          ]} />
+          <div className="mt-4">
+            <p className="font-body text-xs font-bold text-accent mb-3">
+              {fylke.name} · {cat.name}
+            </p>
+            <h1 className="font-body text-hero-sm md:text-display font-extrabold text-white mb-4">
+              {cat.name} <span className="italic font-normal">i {fylke.name}</span>
+            </h1>
+            <p className="font-body text-base text-white/60 max-w-lg">
+              {matchingStores.length > 0 ? (
+                <>
+                  Finn {cat.name.toLowerCase()}-butikker i {fylke.name}. Det er {matchingStores.length} registrerte
+                  butikker fordelt over {citiesWithMatches.length} byer i fylket.
+                </>
+              ) : (
+                <>
+                  Utforsk klesbutikker i {fylke.name}. Vi har {fylkeStores.length} registrerte
+                  butikker i fylket. Se alle butikker nedenfor.
+                </>
+              )}
+            </p>
+          </div>
         </div>
+      </section>
+
+      <div className="max-w-8xl mx-auto section-padding pt-8 pb-16 md:pt-12 md:pb-22">
 
         {/* Matching stores */}
         {matchingStores.length > 0 && (

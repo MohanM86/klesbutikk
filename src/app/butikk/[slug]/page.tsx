@@ -47,39 +47,41 @@ export default function StorePage({ params }: PageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bcSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(lbSchema) }} />
 
-      <div className="max-w-8xl mx-auto section-padding pt-8 pb-16 md:pt-12 md:pb-22">
-        <Breadcrumbs
-          items={[
-            { label: 'Butikker', href: '/butikk' },
-            { label: store.poststed, href: `/${citySlug}` },
-            { label: store.navn },
-          ]}
-        />
+      <section className="bg-black text-white">
+        <div className="max-w-8xl mx-auto section-padding pt-6 pb-8 md:pt-10 md:pb-10">
+          <Breadcrumbs
+            items={[
+              { label: 'Butikker', href: '/butikk' },
+              { label: store.poststed, href: `/${citySlug}` },
+              { label: store.navn },
+            ]}
+          />
+          <div className="flex items-start gap-4 mt-4">
+            <div className="w-14 h-14 rounded-lg bg-accent flex items-center justify-center flex-shrink-0">
+              <span className="font-body text-xl font-extrabold text-white">
+                {store.navn.charAt(0)}
+              </span>
+            </div>
+            <div>
+              <h1 className="font-body text-2xl md:text-3xl font-extrabold text-white">
+                {store.navn}
+              </h1>
+              <p className="font-body text-white/60">
+                Klesbutikk i{' '}
+                <Link href={`/${citySlug}`} className="underline hover:text-accent transition-colors">
+                  {store.poststed}
+                </Link>
+                , {store.fylke}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <div className="max-w-8xl mx-auto section-padding pt-8 pb-16 md:pt-12 md:pb-22">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16">
           {/* Main content */}
           <div className="lg:col-span-2">
-            <div className="flex items-start gap-4 mb-8">
-              <div className="w-16 h-16 rounded-lg bg-accent flex items-center justify-center flex-shrink-0">
-                <span className="font-body text-2xl font-extrabold text-white">
-                  {store.navn.charAt(0)}
-                </span>
-              </div>
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <h1 className="font-body text-2xl md:text-3xl font-extrabold text-charcoal">
-                    {store.navn}
-                  </h1>
-                </div>
-                <p className="font-body text-muted">
-                  Klesbutikk i{' '}
-                  <Link href={`/${citySlug}`} className="underline hover:text-accent transition-colors">
-                    {store.poststed}
-                  </Link>
-                  , {store.fylke}
-                </p>
-              </div>
-            </div>
 
             {/* Details */}
             <div className="bg-cream border border-border rounded-lg divide-y divide-border mb-8">
@@ -104,7 +106,7 @@ export default function StorePage({ params }: PageProps) {
             {/* Brands / Merker */}
             {store.merker && store.merker.length > 0 && (
               <div className="mb-8">
-                <h2 className="font-body text-xl font-extrabold text-charcoal mb-3">
+                <h2 className="font-body text-xl font-extrabold text-white mb-3">
                   Merker hos {store.navn}
                 </h2>
                 <div className="flex flex-wrap gap-2">

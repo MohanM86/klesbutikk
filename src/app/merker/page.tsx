@@ -56,39 +56,39 @@ export default function BrandsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(brandListSchema) }} />
 
       {/* ─── HERO ─────────────────────────────────────────── */}
-      <section className="bg-surface-alt">
+      <section className="bg-black text-white">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-0 md:pt-10">
           <Breadcrumbs items={[{ label: 'Merker' }]} />
 
           <div className="flex items-end justify-between mt-4 mb-8">
             <div>
-              <div className="inline-flex items-center gap-2 bg-surface text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/10 mb-3">
+              <div className="inline-flex items-center gap-2 bg-white/10 text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/20 mb-3">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
                 </svg>
                 {allBrands.length} klesmerker kartlagt
               </div>
-              <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-2">
+              <h1 className="font-body text-hero-sm md:text-display font-extrabold text-white mb-2">
                 Klesmerker i Norge
               </h1>
-              <p className="font-body text-base text-muted max-w-lg">
+              <p className="font-body text-base text-white/60 max-w-lg">
                 Finn hvor du kan kjøpe favorittmerket ditt. Vi har kartlagt over {allBrands.length} klesmerker og hvilke norske butikker som fører dem.
               </p>
             </div>
             <div className="hidden lg:flex items-center gap-6 text-right">
               <div>
-                <span className="font-body text-3xl font-extrabold text-charcoal">{allBrands.length}</span>
-                <span className="block font-body text-xs text-muted">Merker totalt</span>
+                <span className="font-body text-3xl font-extrabold text-white">{allBrands.length}</span>
+                <span className="block font-body text-xs text-white/40">Merker totalt</span>
               </div>
-              <div className="w-px h-10 bg-border" />
+              <div className="w-px h-10 bg-white/10" />
               <div>
                 <span className="font-body text-3xl font-extrabold text-accent">{withStores}</span>
-                <span className="block font-body text-xs text-muted">Med butikker</span>
+                <span className="block font-body text-xs text-white/40">Med butikker</span>
               </div>
-              <div className="w-px h-10 bg-border" />
+              <div className="w-px h-10 bg-white/10" />
               <div>
-                <span className="font-body text-3xl font-extrabold text-charcoal">{norwegian.length}</span>
-                <span className="block font-body text-xs text-muted">Norske merker</span>
+                <span className="font-body text-3xl font-extrabold text-white">{norwegian.length}</span>
+                <span className="block font-body text-xs text-white/40">Norske merker</span>
               </div>
             </div>
           </div>
@@ -97,20 +97,20 @@ export default function BrandsPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 pb-10">
             {heroBrands.map((brand, i) => (
               <Link key={brand.slug} href={`/merke/${brand.slug}`}
-                className={`group relative rounded-lg p-5 min-h-[130px] overflow-hidden transition-all duration-200 hover:shadow-xl ${
-                  i === 0 ? 'bg-charcoal text-white' :
+                className={`group relative rounded-lg p-5 min-h-[130px] overflow-hidden transition-all duration-200 ${
+                  i === 0 ? 'bg-white/10 text-white' :
                   i === 1 ? 'bg-accent text-white' :
-                  'bg-cream border border-border hover:border-accent text-charcoal'
+                  'bg-white/5 border border-white/10 hover:border-accent text-white'
                 }`}>
                 <span className={`absolute right-1 -top-2 font-body text-[80px] font-black leading-none select-none pointer-events-none ${
-                  i === 0 ? 'text-white/[0.04]' : i === 1 ? 'text-white/10' : 'text-charcoal/[0.03]'
+                  i === 0 ? 'text-white/[0.04]' : i === 1 ? 'text-white/10' : 'text-white/[0.03]'
                 }`}>{brand.name.charAt(0)}</span>
                 <div className="relative">
                   <h2 className={`font-body text-base font-extrabold mb-1 transition-colors ${
-                    i >= 2 ? 'text-charcoal group-hover:text-accent' : 'text-white'
+                    i >= 2 ? 'text-white group-hover:text-accent' : 'text-white'
                   }`}>{brand.name}</h2>
                   <p className={`font-body text-xs mb-3 ${
-                    i === 0 ? 'text-white/50' : i === 1 ? 'text-white/70' : 'text-muted'
+                    i === 0 ? 'text-white/50' : i === 1 ? 'text-white/70' : 'text-white/50'
                   }`}>
                     {NORWEGIAN_BRAND_NAMES.has(brand.name) ? 'Norsk' : 'Internasjonalt'} merke
                   </p>
@@ -142,7 +142,7 @@ export default function BrandsPage() {
       <section className="bg-surface border-t border-border">
         <div className="max-w-8xl mx-auto section-padding py-12 md:py-16">
           <div className="max-w-2xl">
-            <h2 className="font-body text-lg font-extrabold text-charcoal mb-3">Klesmerker i norske butikker</h2>
+            <h2 className="font-body text-lg font-extrabold text-white mb-3">Klesmerker i norske butikker</h2>
             <div className="font-body text-sm text-muted leading-relaxed space-y-2">
               <p>
                 Vi har kartlagt over {allBrands.length} klesmerker og identifisert hvilke norske klesbutikker

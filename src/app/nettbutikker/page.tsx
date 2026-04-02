@@ -39,39 +39,39 @@ export default function NettbutikkerPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(FAQS)) }} />
 
       {/* ─── HERO ─────────────────────────────────────────── */}
-      <section className="bg-surface-alt">
+      <section className="bg-black text-white">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-0 md:pt-10">
           <Breadcrumbs items={[{ label: 'Nettbutikker' }]} />
 
           <div className="flex items-end justify-between mt-4 mb-8">
             <div>
-              <div className="inline-flex items-center gap-2 bg-surface text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/10 mb-3">
+              <div className="inline-flex items-center gap-2 bg-white/10 text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/20 mb-3">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582" />
                 </svg>
                 {webshops.length} nettbutikker
               </div>
-              <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-2">
+              <h1 className="font-body text-hero-sm md:text-display font-extrabold text-white mb-2">
                 Norske nettbutikker for klær
               </h1>
-              <p className="font-body text-base text-muted max-w-lg">
+              <p className="font-body text-base text-white/60 max-w-lg">
                 Handle klær på nett fra {webshops.length} norske klesbutikker. Alle har fysisk butikk i Norge og nettbutikk med levering hjem til deg.
               </p>
             </div>
             <div className="hidden lg:flex items-center gap-6 text-right">
               <div>
                 <span className="font-body text-3xl font-extrabold text-accent">{webshops.length}</span>
-                <span className="block font-body text-xs text-muted">Nettbutikker</span>
+                <span className="block font-body text-xs text-white/40">Nettbutikker</span>
               </div>
-              <div className="w-px h-10 bg-border" />
+              <div className="w-px h-10 bg-white/10" />
               <div>
-                <span className="font-body text-3xl font-extrabold text-charcoal">{cities.length}</span>
-                <span className="block font-body text-xs text-muted">Byer</span>
+                <span className="font-body text-3xl font-extrabold text-white">{cities.length}</span>
+                <span className="block font-body text-xs text-white/40">Byer</span>
               </div>
-              <div className="w-px h-10 bg-border" />
+              <div className="w-px h-10 bg-white/10" />
               <div>
-                <span className="font-body text-3xl font-extrabold text-charcoal">{fylker.length}</span>
-                <span className="block font-body text-xs text-muted">Fylker</span>
+                <span className="font-body text-3xl font-extrabold text-white">{fylker.length}</span>
+                <span className="block font-body text-xs text-white/40">Fylker</span>
               </div>
             </div>
           </div>
@@ -145,7 +145,7 @@ export default function NettbutikkerPage() {
       <section className="bg-surface border-t border-border">
         <div className="max-w-8xl mx-auto section-padding py-14 md:py-20">
           <div className="max-w-2xl">
-            <h2 className="font-body text-lg font-extrabold text-charcoal mb-3">Handle klær på nett fra norske butikker</h2>
+            <h2 className="font-body text-lg font-extrabold text-white mb-3">Handle klær på nett fra norske butikker</h2>
             <div className="font-body text-sm text-muted leading-relaxed space-y-2">
               <p>
                 Stadig flere nordmenn handler klær på nett, men det kan være vanskelig å få oversikt over

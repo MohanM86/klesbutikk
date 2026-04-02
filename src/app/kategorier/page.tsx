@@ -124,16 +124,16 @@ const PAGE_FAQS = [
 export default function KategorierPage() {
   return (
     <>
-      <section className="bg-surface-alt">
+      <section className="bg-black text-white">
         <div className="max-w-8xl mx-auto section-padding pt-6 pb-10 md:pt-10">
           <Breadcrumbs items={[{ label: 'Kategorier' }]} />
           <div className="mt-4 max-w-2xl">
-            <div className="inline-flex items-center gap-2 bg-white text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/10 mb-3">
+            <div className="inline-flex items-center gap-2 bg-white/10 text-accent font-body text-xs font-bold px-3 py-1 rounded-full border border-accent/20 mb-3">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6z" /></svg>
               {CATEGORIES.length} kategorier
             </div>
-            <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-3">Kleskategorier i Norge</h1>
-            <p className="font-body text-[15px] text-slate leading-relaxed max-w-xl">Utforsk norske klesbutikker etter kategori. Her finner du trender, tips og oversikt over populære merker innen hver kategori.</p>
+            <h1 className="font-body text-hero-sm md:text-display font-extrabold text-white mb-3">Kleskategorier i Norge</h1>
+            <p className="font-body text-[15px] text-white/60 leading-relaxed max-w-xl">Utforsk norske klesbutikker etter kategori. Her finner du trender, tips og oversikt over populære merker innen hver kategori.</p>
           </div>
         </div>
       </section>

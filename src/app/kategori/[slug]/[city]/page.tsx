@@ -92,34 +92,38 @@ export default function CategoryCityPage({ params }: PageProps) {
       ])) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
 
-      <div className="max-w-8xl mx-auto section-padding pt-8 pb-16 md:pt-12 md:pb-22">
-        <Breadcrumbs items={[
-          { label: 'Kategorier', href: '/kategorier' },
-          { label: cat.name },
-          { label: cityName },
-        ]} />
-
-        <div className="mb-12">
-          <p className="font-body text-xs font-semibold font-bold text-accent mb-3">
-            {cat.name} · {cityName}
-          </p>
-          <h1 className="font-body text-hero-sm md:text-display font-extrabold text-charcoal mb-4">
-            {cat.name} <span className="italic font-normal">i {cityName}</span>
-          </h1>
-          <p className="font-body text-base text-muted max-w-lg">
-            {matchingStores.length > 0 ? (
-              <>
-                Finn butikker som spesialiserer seg på {cat.name.toLowerCase()} i {cityName}.
-                Vi har identifisert {matchingStores.length} relevante butikker i vår database.
-              </>
-            ) : (
-              <>
-                Leter du etter {cat.name.toLowerCase()} i {cityName}? Vi har {allCityStores.length} registrerte
-                klesbutikker i {cityName}. Utforsk dem nedenfor for å finne det du leter etter.
-              </>
-            )}
-          </p>
+      <section className="bg-black text-white">
+        <div className="max-w-8xl mx-auto section-padding pt-6 pb-8 md:pt-10 md:pb-10">
+          <Breadcrumbs items={[
+            { label: 'Kategorier', href: '/kategorier' },
+            { label: cat.name },
+            { label: cityName },
+          ]} />
+          <div className="mt-4">
+            <p className="font-body text-xs font-bold text-accent mb-3">
+              {cat.name} · {cityName}
+            </p>
+            <h1 className="font-body text-hero-sm md:text-display font-extrabold text-white mb-4">
+              {cat.name} <span className="italic font-normal">i {cityName}</span>
+            </h1>
+            <p className="font-body text-base text-white/60 max-w-lg">
+              {matchingStores.length > 0 ? (
+                <>
+                  Finn butikker som spesialiserer seg på {cat.name.toLowerCase()} i {cityName}.
+                  Vi har identifisert {matchingStores.length} relevante butikker i vår database.
+                </>
+              ) : (
+                <>
+                  Leter du etter {cat.name.toLowerCase()} i {cityName}? Vi har {allCityStores.length} registrerte
+                  klesbutikker i {cityName}. Utforsk dem nedenfor for å finne det du leter etter.
+                </>
+              )}
+            </p>
+          </div>
         </div>
+      </section>
+
+      <div className="max-w-8xl mx-auto section-padding pt-8 pb-16 md:pt-12 md:pb-22">
 
         {/* Matching stores */}
         {matchingStores.length > 0 && (

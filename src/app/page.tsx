@@ -30,10 +30,14 @@ const CATS = [
 ];
 
 const QUICKNAV = [
-  { label: 'Kommuner', desc: '357 kommuner dekket', href: '/by', iconStyle: 'bg-accent text-white', icon: 'M15 10.5a3 3 0 11-6 0 3 3 0 016 0zM19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z' },
-  { label: 'Merker', desc: '483 merkevarer', href: '/merker', iconStyle: 'bg-black text-white', icon: 'M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z' },
-  { label: 'Butikker', desc: '1 566 registrert', href: '/butikk', iconStyle: 'border-2 border-black text-black', icon: 'M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349' },
-  { label: 'Kategorier', desc: '10 kategorier', href: '/kategorier', iconStyle: 'bg-surface-alt text-black', icon: 'M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6z' },
+  { label: 'Kommuner', desc: '357 kommuner dekket', href: '/by', iconStyle: 'bg-accent text-white',
+    paths: ['M15 10.5a3 3 0 11-6 0 3 3 0 016 0z', 'M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z'] },
+  { label: 'Merker', desc: '483 merkevarer', href: '/merker', iconStyle: 'bg-black text-white',
+    paths: ['M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z', 'M6 6h.008v.008H6V6z'] },
+  { label: 'Butikker', desc: '1 566 registrert', href: '/butikk', iconStyle: 'border-2 border-black text-black',
+    paths: ['M2.25 12l8.954-8.955a1.126 1.126 0 011.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25'] },
+  { label: 'Kategorier', desc: '10 kategorier', href: '/kategorier', iconStyle: 'bg-surface-alt text-black',
+    paths: ['M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6z', 'M3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25z', 'M13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6z', 'M13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z'] },
 ];
 
 export default function HomePage() {
@@ -50,7 +54,7 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema(cities.map((c) => ({ name: 'Klesbutikker i ' + c.name, url: '/' + c.slug })))) }} />
 
       {/* HERO (black) */}
-      <section className="bg-black text-white py-16 md:py-20 text-center relative overflow-hidden">
+      <section className="bg-black text-white py-12 md:py-16 text-center relative overflow-hidden">
         <div className="max-w-2xl mx-auto section-padding relative z-10">
           <p className="font-body text-[11px] font-bold text-accent uppercase tracking-[0.1em] mb-5">Norges største klesbutikkoversikt</p>
           <h1 className="font-body text-hero-sm md:text-hero font-extrabold text-white mb-4 tracking-tight">
@@ -88,7 +92,7 @@ export default function HomePage() {
             {QUICKNAV.map((q) => (
               <Link key={q.label} href={q.href} className="group flex items-center gap-4 bg-white p-5 hover:bg-surface-alt transition-colors duration-150">
                 <div className={'w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 ' + q.iconStyle}>
-                  <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d={q.icon} /></svg>
+                  <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">{q.paths.map((d, i) => <path key={i} strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={d} />)}</svg>
                 </div>
                 <div>
                   <div className="font-body text-sm font-bold text-black">{q.label}</div>
